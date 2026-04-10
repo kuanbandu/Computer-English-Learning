@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#6366f1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CompEng">
+  <title>Computer English Learning - 计算机英语</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">💻</span>
+        <span class="logo-text">CompEng</span>
+      </div>
+      <nav class="main-nav">
+        <button class="nav-btn active" data-view="learn">
+          <span>📚</span> 学习
+        </button>
+        <button class="nav-btn" data-view="browse">
+          <span>🔍</span> 浏览
+        </button>
+        <button class="nav-btn" data-view="favorites">
+          <span>⭐</span> 收藏
+        </button>
+        <button class="nav-btn" data-view="progress">
+          <span>📊</span> 进度
+        </button>
+        <button class="theme-toggle" id="theme-toggle" title="切换主题">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section class="view learn-view active" id="learn-view">
+        <div class="learn-header">
+          <h2>今日学习</h2>
+          <div class="category-filter">
+            <select id="learn-category-select">
+              <option value="all">全部类别</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="card-container">
+          <div class="learning-card" id="learning-card">
+            <div class="card-front">
+              <span class="category-badge" id="card-category">Terminal</span>
+              <h3 class="card-title" id="card-english">cd</h3>
+              <p class="card-pronunciation" id="card-pronunciation">/siː diː/</p>
+              <button class="speak-btn" id="speak-btn" title="朗读">
+                <span>🔊</span>
+              </button>
+            </div>
+            <div class="card-back">
+              <h4 class="card-chinese" id="card-chinese">切换目录</h4>
+              <div class="card-example">
+                <span class="label">示例:</span>
+                <code id="card-example">cd /home/user</code>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-actions">
+            <button class="action-btn prev-btn" id="prev-btn">
+              <span>⬅️</span> 上一个
+            </button>
+            <button class="action-btn flip-btn" id="flip-btn">
+              <span>🔄</span> 翻转
+            </button>
+            <button class="action-btn favorite-btn" id="favorite-btn">
+              <span>⭐</span> 收藏
+            </button>
+            <button class="action-btn next-btn" id="next-btn">
+              <span>➡️</span> 下一个
+            </button>
+          </div>
+        </div>
+
+        <div class="progress-indicator">
+          <span id="progress-text">1 / 120</span>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view browse-view" id="browse-view">
+        <div class="browse-header">
+          <h2>内容浏览</h2>
+          <div class="search-box">
+            <input type="text" id="search-input" placeholder="搜索英文、中文或拼音...">
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+        
+        <div class="category-tabs" id="category-tabs">
+          <button class="tab-btn active" data-category="all">全部</button>
+        </div>
+        
+        <div class="items-grid" id="items-grid">
+        </div>
+      </section>
+
+      <section class="view favorites-view" id="favorites-view">
+        <div class="favorites-header">
+          <h2>我的收藏</h2>
+          <span class="favorites-count" id="favorites-count">0 个项目</span>
+        </div>
+        
+        <div class="items-grid" id="favorites-grid">
+          <div class="empty-state">
+            <span class="empty-icon">⭐</span>
+            <p>还没有收藏任何内容</p>
+            <p class="empty-hint">在学习模式下点击 ⭐ 收藏感兴趣的内容</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="view progress-view" id="progress-view">
+        <h2>学习进度</h2>
+        
+        <div class="stats-container">
+          <div class="stat-card">
+            <span class="stat-number" id="total-learned">0</span>
+            <span class="stat-label">已学习</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="total-favorites">0</span>
+            <span class="stat-label">已收藏</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="completion-rate">0%</span>
+            <span class="stat-label">完成率</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="streak-days">1</span>
+            <span class="stat-label">连续学习天数</span>
+          </div>
+        </div>
+
+        <div class="category-progress">
+          <h3>分类进度</h3>
+          <div class="category-bars" id="category-bars">
+          </div>
+        </div>
+
+        <div class="reset-section">
+          <button class="reset-btn" id="reset-progress-btn">
+            <span>🗑️</span> 重置所有进度
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="data/content.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker registration failed'));
+    }
+  </script>
+</body>
+</html>
