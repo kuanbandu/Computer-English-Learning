@@ -9807,6 +9807,1638 @@ const computerEnglishData = {
           "category": "growth"
         }
       ]
+    },
+    {
+      "id": "data-engineering",
+      "name": "Data Engineering",
+      "nameCN": "数据工程",
+      "description": "Pipelines, streaming and data platform vocabulary",
+      "items": [
+        {
+          "id": "de001",
+          "english": "ETL",
+          "chinese": "抽取-转换-加载",
+          "pronunciation": "/ˌiː tiː ˈel/",
+          "example": "The nightly ETL job loads yesterday's orders into the warehouse.",
+          "category": "pipeline"
+        },
+        {
+          "id": "de002",
+          "english": "ELT",
+          "chinese": "抽取-加载-转换",
+          "pronunciation": "/ˌiː el ˈtiː/",
+          "example": "With ELT, raw data lands first and transforms run inside the warehouse.",
+          "category": "pipeline"
+        },
+        {
+          "id": "de003",
+          "english": "data pipeline",
+          "chinese": "数据管道",
+          "pronunciation": "/ˈdeɪtə ˈpaɪplaɪn/",
+          "example": "The data pipeline broke upstream, so today's dashboard is stale.",
+          "category": "pipeline"
+        },
+        {
+          "id": "de004",
+          "english": "data warehouse",
+          "chinese": "数据仓库",
+          "pronunciation": "/ˈdeɪtə ˈwerhaʊs/",
+          "example": "The data warehouse powers all analyst queries.",
+          "category": "storage"
+        },
+        {
+          "id": "de005",
+          "english": "data lake",
+          "chinese": "数据湖",
+          "pronunciation": "/ˈdeɪtə leɪk/",
+          "example": "Dump everything raw into the data lake; sort it out later.",
+          "category": "storage"
+        },
+        {
+          "id": "de006",
+          "english": "data lakehouse",
+          "chinese": "湖仓一体",
+          "pronunciation": "/ˈdeɪtə ˈleɪkhaʊs/",
+          "example": "A lakehouse combines lake flexibility with warehouse performance.",
+          "category": "storage"
+        },
+        {
+          "id": "de007",
+          "english": "data mart",
+          "chinese": "数据集市",
+          "pronunciation": "/ˈdeɪtə mɑːrt/",
+          "example": "The finance data mart only serves finance analysts.",
+          "category": "storage"
+        },
+        {
+          "id": "de008",
+          "english": "staging area",
+          "chinese": "暂存区",
+          "pronunciation": "/ˈsteɪdʒɪŋ ˈeriə/",
+          "example": "Files land in the staging area before validation.",
+          "category": "pipeline"
+        },
+        {
+          "id": "de009",
+          "english": "ingestion",
+          "chinese": "数据摄取",
+          "pronunciation": "/ɪnˈdʒestʃən/",
+          "example": "We have three ingestion paths: batch, CDC and streaming.",
+          "category": "pipeline"
+        },
+        {
+          "id": "de010",
+          "english": "batch processing",
+          "chinese": "批处理",
+          "pronunciation": "/bætʃ ˈprɑːsesɪŋ/",
+          "example": "Batch processing is cheaper but adds a day of delay.",
+          "category": "processing"
+        },
+        {
+          "id": "de011",
+          "english": "stream processing",
+          "chinese": "流处理",
+          "pronunciation": "/striːm ˈprɑːsesɪŋ/",
+          "example": "Stream processing alerts on anomalies within seconds.",
+          "category": "processing"
+        },
+        {
+          "id": "de012",
+          "english": "real-time analytics",
+          "chinese": "实时分析",
+          "pronunciation": "/ˈriːəl taɪm əˈnælɪtɪks/",
+          "example": "Real-time analytics drove the live dashboard during the launch.",
+          "category": "processing"
+        },
+        {
+          "id": "de013",
+          "english": "message broker",
+          "chinese": "消息代理",
+          "pronunciation": "/ˈmesɪdʒ ˈbroʊkər/",
+          "example": "The message broker persists events until consumers catch up.",
+          "category": "streaming"
+        },
+        {
+          "id": "de014",
+          "english": "topic",
+          "chinese": "主题（消息分类）",
+          "pronunciation": "/ˈtɑːpɪk/",
+          "example": "Publish order events to the orders topic.",
+          "category": "streaming"
+        },
+        {
+          "id": "de015",
+          "english": "consumer group",
+          "chinese": "消费者组",
+          "pronunciation": "/kənˈsuːmər ɡruːp/",
+          "example": "Each consumer group gets the full stream on its own partitions.",
+          "category": "streaming"
+        },
+        {
+          "id": "de016",
+          "english": "offset",
+          "chinese": "偏移量",
+          "pronunciation": "/ˈɔːfset/",
+          "example": "The consumer resumed from its stored offset after restart.",
+          "category": "streaming"
+        },
+        {
+          "id": "de017",
+          "english": "partition",
+          "chinese": "分区",
+          "pronunciation": "/pɑːrˈtɪʃən/",
+          "example": "Key the events by user id so they land on the same partition.",
+          "category": "streaming"
+        },
+        {
+          "id": "de018",
+          "english": "replication factor",
+          "chinese": "副本因子",
+          "pronunciation": "/ˌreplɪˈkeɪʃən ˈfæktər/",
+          "example": "A replication factor of three survives two broker failures.",
+          "category": "streaming"
+        },
+        {
+          "id": "de019",
+          "english": "schema registry",
+          "chinese": "模式注册中心",
+          "pronunciation": "/ˈskiːmə ˈredʒɪstri/",
+          "example": "The schema registry rejects incompatible schema changes.",
+          "category": "governance"
+        },
+        {
+          "id": "de020",
+          "english": "schema evolution",
+          "chinese": "模式演进",
+          "pronunciation": "/ˈskiːmə ˌevəˈluːʃən/",
+          "example": "Plan schema evolution so old consumers keep working.",
+          "category": "governance"
+        },
+        {
+          "id": "de021",
+          "english": "schema-on-write",
+          "chinese": "写时模式（先定结构）",
+          "pronunciation": "/ˈskiːmə ɒn raɪt/",
+          "example": "Warehouses enforce schema-on-write; lakes allow schema-on-read.",
+          "category": "governance"
+        },
+        {
+          "id": "de022",
+          "english": "schema-on-read",
+          "chinese": "读时模式（后定结构）",
+          "pronunciation": "/ˈskiːmə ɒn riːd/",
+          "example": "Schema-on-read keeps ingestion fast and flexible.",
+          "category": "governance"
+        },
+        {
+          "id": "de023",
+          "english": "structured data",
+          "chinese": "结构化数据",
+          "pronunciation": "/ˈstrʌktʃərd ˈdeɪtə/",
+          "example": "Relational tables hold structured data with fixed columns.",
+          "category": "data"
+        },
+        {
+          "id": "de024",
+          "english": "semi-structured data",
+          "chinese": "半结构化数据",
+          "pronunciation": "/ˈsemi ˈstrʌktʃərd ˈdeɪtə/",
+          "example": "JSON logs are semi-structured data.",
+          "category": "data"
+        },
+        {
+          "id": "de025",
+          "english": "unstructured data",
+          "chinese": "非结构化数据",
+          "pronunciation": "/ʌnˈstrʌktʃərd ˈdeɪtə/",
+          "example": "Emails, images and free text are unstructured data.",
+          "category": "data"
+        },
+        {
+          "id": "de026",
+          "english": "fact table",
+          "chinese": "事实表",
+          "pronunciation": "/fækt ˈteɪbl/",
+          "example": "The fact table stores one row per order line item.",
+          "category": "modeling"
+        },
+        {
+          "id": "de027",
+          "english": "dimension table",
+          "chinese": "维度表",
+          "pronunciation": "/dəˈmenʃən ˈteɪbl/",
+          "example": "Join the fact table to the date and product dimension tables.",
+          "category": "modeling"
+        },
+        {
+          "id": "de028",
+          "english": "star schema",
+          "chinese": "星型模式",
+          "pronunciation": "/stɑːr ˈskiːmə/",
+          "example": "A star schema is the classic OLAP design.",
+          "category": "modeling"
+        },
+        {
+          "id": "de029",
+          "english": "snowflake schema",
+          "chinese": "雪花模式",
+          "pronunciation": "/ˈsnoʊfleɪk ˈskiːmə/",
+          "example": "The snowflake schema normalizes dimensions further.",
+          "category": "modeling"
+        },
+        {
+          "id": "de030",
+          "english": "OLAP",
+          "chinese": "联机分析处理",
+          "pronunciation": "/ˈoʊlæp/",
+          "example": "OLAP workloads scan billions of rows for aggregation.",
+          "category": "processing"
+        },
+        {
+          "id": "de031",
+          "english": "OLTP",
+          "chinese": "联机事务处理",
+          "pronunciation": "/ˈoʊltiːˈpiː/",
+          "example": "OLTP needs fast point writes, not heavy scans.",
+          "category": "processing"
+        },
+        {
+          "id": "de032",
+          "english": "data modeling",
+          "chinese": "数据建模",
+          "pronunciation": "/ˈdeɪtə ˈmɑːdlɪŋ/",
+          "example": "Data modeling decisions outlive any single tool.",
+          "category": "modeling"
+        },
+        {
+          "id": "de033",
+          "english": "normalization",
+          "chinese": "规范化（消除冗余）",
+          "pronunciation": "/ˌnɔːrmələˈzeɪʃən/",
+          "example": "Normalization removes redundancy at the cost of joins.",
+          "category": "modeling"
+        },
+        {
+          "id": "de034",
+          "english": "denormalization",
+          "chinese": "反规范化（以冗余换速度）",
+          "pronunciation": "/diːˌnɔːrmələˈzeɪʃən/",
+          "example": "Analytics tables use denormalization to avoid join storms.",
+          "category": "modeling"
+        },
+        {
+          "id": "de035",
+          "english": "columnar storage",
+          "chinese": "列式存储",
+          "pronunciation": "/kəˈlʌmnər ˈstɔːrɪdʒ/",
+          "example": "Columnar storage makes SUM over one column nearly free.",
+          "category": "storage"
+        },
+        {
+          "id": "de036",
+          "english": "row-oriented storage",
+          "chinese": "行式存储",
+          "pronunciation": "/roʊ ˈɔːrientɪd ˈstɔːrɪdʒ/",
+          "example": "Row-oriented storage suits OLTP point lookups.",
+          "category": "storage"
+        },
+        {
+          "id": "de037",
+          "english": "data cleansing",
+          "chinese": "数据清洗",
+          "pronunciation": "/ˈdeɪtə ˈklenzɪŋ/",
+          "example": "Data cleansing fixed the country codes in 12% of records.",
+          "category": "quality"
+        },
+        {
+          "id": "de038",
+          "english": "data quality",
+          "chinese": "数据质量",
+          "pronunciation": "/ˈdeɪtə ˈkwɑːləti/",
+          "example": "Data quality checks run right after ingestion.",
+          "category": "quality"
+        },
+        {
+          "id": "de039",
+          "english": "deduplication",
+          "chinese": "去重",
+          "pronunciation": "/ˌdiːdjuːplɪˈkeɪʃən/",
+          "example": "At-least-once delivery requires deduplication downstream.",
+          "category": "quality"
+        },
+        {
+          "id": "de040",
+          "english": "late-arriving data",
+          "chinese": "迟到数据",
+          "pronunciation": "/leɪt əˈraɪvɪŋ ˈdeɪtə/",
+          "example": "Handle late-arriving data by reprocessing the affected window.",
+          "category": "quality"
+        },
+        {
+          "id": "de041",
+          "english": "watermark",
+          "chinese": "水位线（进度标记）",
+          "pronunciation": "/ˈwɔːtərmɑːrk/",
+          "example": "Once the watermark passes 10:05, the 10:00 window closes.",
+          "category": "streaming"
+        },
+        {
+          "id": "de042",
+          "english": "windowing",
+          "chinese": "窗口化",
+          "pronunciation": "/ˈwɪndoʊɪŋ/",
+          "example": "Windowing splits an infinite stream into finite chunks.",
+          "category": "streaming"
+        },
+        {
+          "id": "de043",
+          "english": "tumbling window",
+          "chinese": "滚动窗口",
+          "pronunciation": "/ˈtʌmblɪŋ ˈwɪndoʊ/",
+          "example": "A tumbling window counts events per minute, non-overlapping.",
+          "category": "streaming"
+        },
+        {
+          "id": "de044",
+          "english": "sliding window",
+          "chinese": "滑动窗口",
+          "pronunciation": "/ˈslaɪdɪŋ ˈwɪndoʊ/",
+          "example": "Use a sliding window for a rolling five-minute average.",
+          "category": "streaming"
+        },
+        {
+          "id": "de045",
+          "english": "backfill",
+          "chinese": "回填（重算历史）",
+          "pronunciation": "/ˈbækfɪl/",
+          "example": "Backfill the last 90 days after fixing the bug in the transform.",
+          "category": "pipeline"
+        },
+        {
+          "id": "de046",
+          "english": "incremental load",
+          "chinese": "增量加载",
+          "pronunciation": "/ˌɪnkrəˈmentl loʊd/",
+          "example": "Incremental load copies only rows changed since the last run.",
+          "category": "pipeline"
+        },
+        {
+          "id": "de047",
+          "english": "change data capture",
+          "chinese": "变更数据捕获（CDC）",
+          "pronunciation": "/tʃeɪndʒ ˈdeɪtə ˈkæptʃər/",
+          "example": "CDC streams every row change from the database log.",
+          "category": "pipeline"
+        },
+        {
+          "id": "de048",
+          "english": "data lineage",
+          "chinese": "数据血缘",
+          "pronunciation": "/ˈdeɪtə ˈlɪniɪdʒ/",
+          "example": "Data lineage shows exactly which upstream table fed this metric.",
+          "category": "governance"
+        },
+        {
+          "id": "de049",
+          "english": "data catalog",
+          "chinese": "数据目录",
+          "pronunciation": "/ˈdeɪtə ˈkætəlɔːɡ/",
+          "example": "Search the data catalog to find the table's owner.",
+          "category": "governance"
+        },
+        {
+          "id": "de050",
+          "english": "data governance",
+          "chinese": "数据治理",
+          "pronunciation": "/ˈdeɪtə ˈɡʌvərnəns/",
+          "example": "Data governance defines who owns, masks and approves each dataset.",
+          "category": "governance"
+        }
+      ]
+    },
+    {
+      "id": "performance-optimization",
+      "name": "Performance Optimization",
+      "nameCN": "性能优化",
+      "description": "Profiling, caching and low-level performance vocabulary",
+      "items": [
+        {
+          "id": "pf001",
+          "english": "profiling",
+          "chinese": "性能剖析",
+          "pronunciation": "/ˈproʊfaɪlɪŋ/",
+          "example": "Start with profiling, never with guessing.",
+          "category": "method"
+        },
+        {
+          "id": "pf002",
+          "english": "profiler",
+          "chinese": "性能分析器",
+          "pronunciation": "/prəˈfaɪlər/",
+          "example": "The profiler shows 80% of CPU time in JSON parsing.",
+          "category": "method"
+        },
+        {
+          "id": "pf003",
+          "english": "CPU-bound",
+          "chinese": "CPU 密集型",
+          "pronunciation": "/ˌsiː piː ˈjuː baʊnd/",
+          "example": "Image resizing is CPU-bound, so more cores help.",
+          "category": "workload"
+        },
+        {
+          "id": "pf004",
+          "english": "I/O-bound",
+          "chinese": "I/O 密集型",
+          "pronunciation": "/ˌaɪ ˈoʊ baʊnd/",
+          "example": "The service is I/O-bound; async I/O fixed the throughput.",
+          "category": "workload"
+        },
+        {
+          "id": "pf005",
+          "english": "memory-bound",
+          "chinese": "内存受限型",
+          "pronunciation": "/ˈmeməri baʊnd/",
+          "example": "The matrix multiply is memory-bound, not compute-bound.",
+          "category": "workload"
+        },
+        {
+          "id": "pf006",
+          "english": "bottleneck",
+          "chinese": "瓶颈",
+          "pronunciation": "/ˈbɑːtlnek/",
+          "example": "Fix the slowest bottleneck first — everything else is noise.",
+          "category": "method"
+        },
+        {
+          "id": "pf007",
+          "english": "queries per second",
+          "chinese": "每秒查询数（QPS）",
+          "pronunciation": "/ˈkwɪriz pər ˈsekənd/",
+          "example": "The proxy handles 50k queries per second at p99 under 10 ms.",
+          "category": "metrics"
+        },
+        {
+          "id": "pf008",
+          "english": "memory leak",
+          "chinese": "内存泄漏",
+          "pronunciation": "/ˈmeməri liːk/",
+          "example": "The chart library had a memory leak on every redraw.",
+          "category": "memory"
+        },
+        {
+          "id": "pf009",
+          "english": "garbage collection",
+          "chinese": "垃圾回收（GC）",
+          "pronunciation": "/ˈɡɑːrbɪdʒ kəˈlekʃən/",
+          "example": "Frequent garbage collection pauses caused the jitter.",
+          "category": "memory"
+        },
+        {
+          "id": "pf010",
+          "english": "GC pause",
+          "chinese": "GC 停顿",
+          "pronunciation": "/ˌdʒiː ˈsiː pɔːz/",
+          "example": "A 400 ms GC pause is why the health check timed out.",
+          "category": "memory"
+        },
+        {
+          "id": "pf011",
+          "english": "off-heap memory",
+          "chinese": "堆外内存",
+          "pronunciation": "/ɔːf hiːp ˈmeməri/",
+          "example": "The cache stores entries in off-heap memory to avoid GC pressure.",
+          "category": "memory"
+        },
+        {
+          "id": "pf012",
+          "english": "memory pressure",
+          "chinese": "内存压力",
+          "pronunciation": "/ˈmeməri ˈpreʃər/",
+          "example": "Under memory pressure the kernel starts swapping.",
+          "category": "memory"
+        },
+        {
+          "id": "pf013",
+          "english": "object pool",
+          "chinese": "对象池",
+          "pronunciation": "/ˈɑːbdʒɪkt puːl/",
+          "example": "An object pool reuses buffers instead of allocating per request.",
+          "category": "memory"
+        },
+        {
+          "id": "pf014",
+          "english": "connection pool",
+          "chinese": "连接池",
+          "pronunciation": "/kəˈnekʃən puːl/",
+          "example": "Size the connection pool to the database's max limit.",
+          "category": "pooling"
+        },
+        {
+          "id": "pf015",
+          "english": "thread pool",
+          "chinese": "线程池",
+          "pronunciation": "/θred puːl/",
+          "example": "The thread pool saturated at 200 concurrent requests.",
+          "category": "pooling"
+        },
+        {
+          "id": "pf016",
+          "english": "cache hit rate",
+          "chinese": "缓存命中率",
+          "pronunciation": "/kæʃ hɪt reɪt/",
+          "example": "Push the cache hit rate above 95% to spare the database.",
+          "category": "cache"
+        },
+        {
+          "id": "pf017",
+          "english": "cache miss",
+          "chinese": "缓存未命中",
+          "pronunciation": "/kæʃ mɪs/",
+          "example": "A cache miss falls through to the origin server.",
+          "category": "cache"
+        },
+        {
+          "id": "pf018",
+          "english": "cache invalidation",
+          "chinese": "缓存失效",
+          "pronunciation": "/kæʃ ɪnˌvælɪˈdeɪʃən/",
+          "example": "Cache invalidation is the second hard problem in CS.",
+          "category": "cache"
+        },
+        {
+          "id": "pf019",
+          "english": "cache warming",
+          "chinese": "缓存预热",
+          "pronunciation": "/kæʃ ˈwɜːrmɪŋ/",
+          "example": "Cache warming after deploy avoids the cold-start spike.",
+          "category": "cache"
+        },
+        {
+          "id": "pf020",
+          "english": "lookup table",
+          "chinese": "查找表（空间换时间）",
+          "pronunciation": "/ˈlʊkʌp ˈteɪbl/",
+          "example": "Replace the trig calls with a lookup table.",
+          "category": "cache"
+        },
+        {
+          "id": "pf021",
+          "english": "lazy initialization",
+          "chinese": "惰性初始化",
+          "pronunciation": "/ˈleɪzi ɪˌnɪʃəliˈzeɪʃən/",
+          "example": "Lazy initialization cut startup time from 30 s to 2 s.",
+          "category": "strategy"
+        },
+        {
+          "id": "pf022",
+          "english": "eager loading",
+          "chinese": "预加载（防 N+1）",
+          "pronunciation": "/ˈiːɡər ˈloʊdɪŋ/",
+          "example": "Eager loading the association removed 200 extra queries.",
+          "category": "strategy"
+        },
+        {
+          "id": "pf023",
+          "english": "N+1 query problem",
+          "chinese": "N+1 查询问题",
+          "pronunciation": "/en plʌs wʌn ˈkwɪri ˈprɑːbləm/",
+          "example": "The page ran 1 + 500 queries — a classic N+1 query problem.",
+          "category": "database"
+        },
+        {
+          "id": "pf024",
+          "english": "query optimization",
+          "chinese": "查询优化",
+          "pronunciation": "/ˈkwɪri ˌɑːptɪməˈzeɪʃən/",
+          "example": "Query optimization dropped the report from 40 s to 800 ms.",
+          "category": "database"
+        },
+        {
+          "id": "pf025",
+          "english": "execution plan",
+          "chinese": "执行计划",
+          "pronunciation": "/ˌeksɪˈkjuːʃən plæn/",
+          "example": "Read the execution plan: it's doing a full scan on the join.",
+          "category": "database"
+        },
+        {
+          "id": "pf026",
+          "english": "full table scan",
+          "chinese": "全表扫描",
+          "pronunciation": "/fʊl ˈteɪbl skæn/",
+          "example": "The missing index forced a full table scan on every lookup.",
+          "category": "database"
+        },
+        {
+          "id": "pf027",
+          "english": "covering index",
+          "chinese": "覆盖索引",
+          "pronunciation": "/ˈkʌvərɪŋ ˈɪndeks/",
+          "example": "A covering index answers the query without touching the table.",
+          "category": "database"
+        },
+        {
+          "id": "pf028",
+          "english": "read replica",
+          "chinese": "读副本",
+          "pronunciation": "/riːd ˈreplɪkə/",
+          "example": "Point the analytics workload at the read replica.",
+          "category": "database"
+        },
+        {
+          "id": "pf029",
+          "english": "write-ahead log",
+          "chinese": "预写日志（WAL）",
+          "pronunciation": "/raɪt əˈhɛd lɔːɡ/",
+          "example": "The write-ahead log makes commits durable before the data files.",
+          "category": "database"
+        },
+        {
+          "id": "pf030",
+          "english": "lock contention",
+          "chinese": "锁竞争",
+          "pronunciation": "/lɑːk kənˈtenʃən/",
+          "example": "Lock contention on the counter row serialized all writers.",
+          "category": "concurrency"
+        },
+        {
+          "id": "pf031",
+          "english": "mutex",
+          "chinese": "互斥锁",
+          "pronunciation": "/ˈmjuːteks/",
+          "example": "Hold the mutex only for the critical section.",
+          "category": "concurrency"
+        },
+        {
+          "id": "pf032",
+          "english": "atomic operation",
+          "chinese": "原子操作",
+          "pronunciation": "/əˈtɑːmɪk ˌɑːpəˈreɪʃən/",
+          "example": "An atomic operation needs no lock at all.",
+          "category": "concurrency"
+        },
+        {
+          "id": "pf033",
+          "english": "false sharing",
+          "chinese": "伪共享",
+          "pronunciation": "/fɔːls ˈʃerɪŋ/",
+          "example": "Padding the struct fixed the false sharing between cores.",
+          "category": "concurrency"
+        },
+        {
+          "id": "pf034",
+          "english": "branch prediction",
+          "chinese": "分支预测",
+          "pronunciation": "/bræntʃ prɪˈdɪkʃən/",
+          "example": "Branch prediction makes sorted loops measurably faster.",
+          "category": "cpu"
+        },
+        {
+          "id": "pf035",
+          "english": "SIMD",
+          "chinese": "单指令多数据",
+          "pronunciation": "/sɪm d/",
+          "example": "SIMD processes four floats per instruction.",
+          "category": "cpu"
+        },
+        {
+          "id": "pf036",
+          "english": "loop unrolling",
+          "chinese": "循环展开",
+          "pronunciation": "/luːp ʌnˈroʊlɪŋ/",
+          "example": "Loop unrolling cuts loop overhead at the cost of code size.",
+          "category": "cpu"
+        },
+        {
+          "id": "pf037",
+          "english": "inline function",
+          "chinese": "内联函数",
+          "pronunciation": "/ˌɪnˈlaɪn ˈfʌŋkʃən/",
+          "example": "Marking it an inline function removed the call overhead.",
+          "category": "cpu"
+        },
+        {
+          "id": "pf038",
+          "english": "JIT compilation",
+          "chinese": "即时编译",
+          "pronunciation": "/dʒɪt ˌkɑːmpɪˈleɪʃən/",
+          "example": "JIT compilation optimizes the hot paths at runtime.",
+          "category": "runtime"
+        },
+        {
+          "id": "pf039",
+          "english": "ahead-of-time compilation",
+          "chinese": "预先编译（AOT）",
+          "pronunciation": "/əˈhɛd əv taɪm ˌkɑːmpɪˈleɪʃən/",
+          "example": "AOT compilation trades startup speed for peak throughput.",
+          "category": "runtime"
+        },
+        {
+          "id": "pf040",
+          "english": "flame graph",
+          "chinese": "火焰图",
+          "pronunciation": "/fleɪm ɡræf/",
+          "example": "The flame graph instantly showed the hot parse function.",
+          "category": "method"
+        },
+        {
+          "id": "pf041",
+          "english": "sampling profiler",
+          "chinese": "采样式分析器",
+          "pronunciation": "/ˈsæmplɪŋ prəˈfaɪlər/",
+          "example": "A sampling profiler adds little overhead and finds hot spots fast.",
+          "category": "method"
+        },
+        {
+          "id": "pf042",
+          "english": "benchmark",
+          "chinese": "基准测试",
+          "pronunciation": "/ˈbentʃmɑːrk/",
+          "example": "Commit the benchmark so regressions are caught in CI.",
+          "category": "method"
+        },
+        {
+          "id": "pf043",
+          "english": "microbenchmark",
+          "chinese": "微基准测试",
+          "pronunciation": "/ˈmaɪkroʊˌbentʃmɑːrk/",
+          "example": "A microbenchmark can lie: JIT warms up and dead code disappears.",
+          "category": "method"
+        },
+        {
+          "id": "pf044",
+          "english": "performance budget",
+          "chinese": "性能预算",
+          "pronunciation": "/pərˈfɔːrməns ˈbʌdʒɪt/",
+          "example": "The performance budget caps the JS bundle at 150 KB.",
+          "category": "method"
+        },
+        {
+          "id": "pf045",
+          "english": "capacity",
+          "chinese": "容量",
+          "pronunciation": "/kəˈpæsəti/",
+          "example": "We doubled capacity ahead of the Black Friday traffic.",
+          "category": "metrics"
+        },
+        {
+          "id": "pf046",
+          "english": "premature optimization",
+          "chinese": "过早优化",
+          "pronunciation": "/ˌpriːməˈtʃʊr ˌɑːptɪməˈzeɪʃən/",
+          "example": "Premature optimization is the root of all evil — Knuth.",
+          "category": "principle"
+        },
+        {
+          "id": "pf047",
+          "english": "hot path",
+          "chinese": "热点路径",
+          "pronunciation": "/hɑːt pæθ/",
+          "example": "Optimize the hot path; leave the cold path readable.",
+          "category": "principle"
+        },
+        {
+          "id": "pf048",
+          "english": "deoptimization",
+          "chinese": "去优化（反优化）",
+          "pronunciation": "/diːˌɑːptɪməˈzeɪʃən/",
+          "example": "A type change in the loop triggered deoptimization.",
+          "category": "runtime"
+        },
+        {
+          "id": "pf049",
+          "english": "escape analysis",
+          "chinese": "逃逸分析",
+          "pronunciation": "/ɪˈskeɪp əˈnæləsɪs/",
+          "example": "Escape analysis lets the JIT allocate the object on the stack.",
+          "category": "runtime"
+        },
+        {
+          "id": "pf050",
+          "english": "vectorization",
+          "chinese": "向量化",
+          "pronunciation": "/ˌvektərəˈzeɪʃən/",
+          "example": "Vectorization turned the pixel loop into one SIMD pass.",
+          "category": "cpu"
+        }
+      ]
+    },
+    {
+      "id": "testing-quality",
+      "name": "Testing & Quality",
+      "nameCN": "测试与质量",
+      "description": "Test types, tooling and defect management vocabulary",
+      "items": [
+        {
+          "id": "tq001",
+          "english": "test suite",
+          "chinese": "测试套件",
+          "pronunciation": "/test swiːt/",
+          "example": "The full test suite runs in four minutes.",
+          "category": "general"
+        },
+        {
+          "id": "tq002",
+          "english": "unit test",
+          "chinese": "单元测试",
+          "pronunciation": "/ˈjuːnɪt test/",
+          "example": "A unit test should fail for exactly one reason.",
+          "category": "types"
+        },
+        {
+          "id": "tq003",
+          "english": "integration test",
+          "chinese": "集成测试",
+          "pronunciation": "/ˌɪntɪˈɡreɪʃən test/",
+          "example": "Integration tests catch the wiring mistakes unit tests miss.",
+          "category": "types"
+        },
+        {
+          "id": "tq004",
+          "english": "end-to-end test",
+          "chinese": "端到端测试",
+          "pronunciation": "/end tuː end test/",
+          "example": "Keep a thin layer of end-to-end tests for critical flows.",
+          "category": "types"
+        },
+        {
+          "id": "tq005",
+          "english": "acceptance test",
+          "chinese": "验收测试",
+          "pronunciation": "/əkˈseptəns test/",
+          "example": "Acceptance tests encode the product owner's criteria.",
+          "category": "types"
+        },
+        {
+          "id": "tq006",
+          "english": "test pyramid",
+          "chinese": "测试金字塔",
+          "pronunciation": "/test ˈpɪrəmɪd/",
+          "example": "The test pyramid: many unit, fewer integration, few E2E.",
+          "category": "principle"
+        },
+        {
+          "id": "tq007",
+          "english": "test coverage",
+          "chinese": "测试覆盖率",
+          "pronunciation": "/test ˈkʌvərɪdʒ/",
+          "example": "100% test coverage proves nothing about correctness.",
+          "category": "metrics"
+        },
+        {
+          "id": "tq008",
+          "english": "assertion",
+          "chinese": "断言",
+          "pronunciation": "/əˈsɜːrʃən/",
+          "example": "Each assertion should pin down one expected behavior.",
+          "category": "general"
+        },
+        {
+          "id": "tq009",
+          "english": "test double",
+          "chinese": "测试替身（统称）",
+          "pronunciation": "/test ˈdʌbl/",
+          "example": "Mock, stub, fake and spy are all test doubles.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq010",
+          "english": "mock",
+          "chinese": "模拟对象（带验证）",
+          "pronunciation": "/mɑːk/",
+          "example": "The mock verifies that sendEmail was called exactly once.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq011",
+          "english": "stub",
+          "chinese": "桩（只给固定返回）",
+          "pronunciation": "/stʌb/",
+          "example": "A stub returns canned data; it never verifies calls.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq012",
+          "english": "spy",
+          "chinese": "侦测（记录调用）",
+          "pronunciation": "/spaɪ/",
+          "example": "Use a spy to record how many times the handler ran.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq013",
+          "english": "fixture",
+          "chinese": "测试夹具（固定数据）",
+          "pronunciation": "/ˈfɪkstʃər/",
+          "example": "The fixture loads a known database state before each test.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq014",
+          "english": "test data",
+          "chinese": "测试数据",
+          "pronunciation": "/test ˈdeɪtə/",
+          "example": "Generate test data that covers the edge cases.",
+          "category": "general"
+        },
+        {
+          "id": "tq015",
+          "english": "test case",
+          "chinese": "测试用例",
+          "pronunciation": "/test keɪs/",
+          "example": "Add a test case for the empty-input boundary.",
+          "category": "general"
+        },
+        {
+          "id": "tq016",
+          "english": "test plan",
+          "chinese": "测试计划",
+          "pronunciation": "/test plæn/",
+          "example": "The test plan lists scope, environments and exit criteria.",
+          "category": "process"
+        },
+        {
+          "id": "tq017",
+          "english": "test environment",
+          "chinese": "测试环境",
+          "pronunciation": "/test ɪnˈvaɪrənmənt/",
+          "example": "The bug reproduces only in the test environment with prod data.",
+          "category": "process"
+        },
+        {
+          "id": "tq018",
+          "english": "seed data",
+          "chinese": "种子数据",
+          "pronunciation": "/siːd ˈdeɪtə/",
+          "example": "Seed data makes the staging instance demo-ready.",
+          "category": "process"
+        },
+        {
+          "id": "tq019",
+          "english": "factory",
+          "chinese": "工厂（构造测试数据）",
+          "pronunciation": "/ˈfæktəri/",
+          "example": "Use the factory to build valid records without fixtures drifting.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq020",
+          "english": "setup and teardown",
+          "chinese": "前置与清理",
+          "pronunciation": "/ˈsetʌp ænd ˈterdaʊn/",
+          "example": "Setup creates the temp dir; teardown removes it.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq021",
+          "english": "test runner",
+          "chinese": "测试运行器",
+          "pronunciation": "/test ˈrʌnər/",
+          "example": "The test runner watches files and reruns affected specs.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq022",
+          "english": "test report",
+          "chinese": "测试报告",
+          "pronunciation": "/test rɪˈpɔːrt/",
+          "example": "The test report attaches screenshots of every failure.",
+          "category": "process"
+        },
+        {
+          "id": "tq023",
+          "english": "test failure",
+          "chinese": "测试失败",
+          "pronunciation": "/test ˈfeɪljər/",
+          "example": "A test failure on main blocks all merges.",
+          "category": "process"
+        },
+        {
+          "id": "tq024",
+          "english": "false positive",
+          "chinese": "假阳性（误报）",
+          "pronunciation": "/fɔːls ˈpɑːzətɪv/",
+          "example": "The alert was a false positive triggered by a timezone bug.",
+          "category": "analysis"
+        },
+        {
+          "id": "tq025",
+          "english": "false negative",
+          "chinese": "假阴性（漏报）",
+          "pronunciation": "/fɔːls ˈneɡətɪv/",
+          "example": "A false negative is worse: the bug ships undetected.",
+          "category": "analysis"
+        },
+        {
+          "id": "tq026",
+          "english": "defect",
+          "chinese": "缺陷",
+          "pronunciation": "/ˈdiːfekt/",
+          "example": "Log the defect with severity, priority and repro steps.",
+          "category": "defects"
+        },
+        {
+          "id": "tq027",
+          "english": "bug bash",
+          "chinese": "集中捉虫活动",
+          "pronunciation": "/bʌɡ bæʃ/",
+          "example": "We run a company-wide bug bash before every major release.",
+          "category": "process"
+        },
+        {
+          "id": "tq028",
+          "english": "reproduce",
+          "chinese": "复现",
+          "pronunciation": "/ˌriːprəˈduːs/",
+          "example": "I can't reproduce it locally — need your exact inputs.",
+          "category": "defects"
+        },
+        {
+          "id": "tq029",
+          "english": "reproduction steps",
+          "chinese": "复现步骤",
+          "pronunciation": "/ˌriːprəˈdʌkʃən steps/",
+          "example": "Good reproduction steps start from a clean session.",
+          "category": "defects"
+        },
+        {
+          "id": "tq030",
+          "english": "expected behavior",
+          "chinese": "预期行为",
+          "pronunciation": "/ɪkˈspektɪd bɪˈheɪvjər/",
+          "example": "State the expected behavior in the bug title.",
+          "category": "defects"
+        },
+        {
+          "id": "tq031",
+          "english": "actual behavior",
+          "chinese": "实际行为",
+          "pronunciation": "/ˈæktʃuəl bɪˈheɪvjər/",
+          "example": "Expected 200; actual behavior was a 500 with a stack trace.",
+          "category": "defects"
+        },
+        {
+          "id": "tq032",
+          "english": "edge case",
+          "chinese": "边界情况",
+          "pronunciation": "/edʒ keɪs/",
+          "example": "Empty string, timezone midnight — classic edge cases.",
+          "category": "analysis"
+        },
+        {
+          "id": "tq033",
+          "english": "happy path",
+          "chinese": "正常路径",
+          "pronunciation": "/ˈhæpi pæθ/",
+          "example": "The happy path works; now test the error branches.",
+          "category": "analysis"
+        },
+        {
+          "id": "tq034",
+          "english": "failure path",
+          "chinese": "失败路径",
+          "pronunciation": "/ˈfeɪljər pæθ/",
+          "example": "Every failure path needs its own test.",
+          "category": "analysis"
+        },
+        {
+          "id": "tq035",
+          "english": "fuzzing",
+          "chinese": "模糊测试",
+          "pronunciation": "/ˈfʌzɪŋ/",
+          "example": "Fuzzing found a crash on the third malformed input.",
+          "category": "types"
+        },
+        {
+          "id": "tq036",
+          "english": "mutation testing",
+          "chinese": "变异测试",
+          "pronunciation": "/mjuːˈteɪʃən ˈtestɪŋ/",
+          "example": "Mutation testing measures whether tests actually catch bugs.",
+          "category": "types"
+        },
+        {
+          "id": "tq037",
+          "english": "property-based testing",
+          "chinese": "基于属性的测试",
+          "pronunciation": "/ˈprɑːpərti beɪst ˈtestɪŋ/",
+          "example": "Property-based testing found the rounding bug at odd decimals.",
+          "category": "types"
+        },
+        {
+          "id": "tq038",
+          "english": "snapshot test",
+          "chinese": "快照测试",
+          "pronunciation": "/ˈsnæpʃɑːt test/",
+          "example": "Review snapshot diffs as carefully as code.",
+          "category": "types"
+        },
+        {
+          "id": "tq039",
+          "english": "UI test",
+          "chinese": "界面测试",
+          "pronunciation": "/ˌjuː ˈaɪ test/",
+          "example": "The UI test clicks through the checkout flow headlessly.",
+          "category": "types"
+        },
+        {
+          "id": "tq040",
+          "english": "load test",
+          "chinese": "负载测试",
+          "pronunciation": "/loʊd test/",
+          "example": "The load test simulates 10,000 concurrent shoppers.",
+          "category": "types"
+        },
+        {
+          "id": "tq041",
+          "english": "stress test",
+          "chinese": "压力测试",
+          "pronunciation": "/stress test/",
+          "example": "The stress test pushes until something breaks — then we know the ceiling.",
+          "category": "types"
+        },
+        {
+          "id": "tq042",
+          "english": "soak test",
+          "chinese": "浸泡测试（长稳测试）",
+          "pronunciation": "/soʊk test/",
+          "example": "A 48-hour soak test exposed the slow memory leak.",
+          "category": "types"
+        },
+        {
+          "id": "tq043",
+          "english": "spike test",
+          "chinese": "尖峰测试",
+          "pronunciation": "/spaɪk test/",
+          "example": "The spike test emulates a flash-sale traffic burst.",
+          "category": "types"
+        },
+        {
+          "id": "tq044",
+          "english": "test automation",
+          "chinese": "测试自动化",
+          "pronunciation": "/test ˌɔːtəˈmeɪʃən/",
+          "example": "Test automation pays back on the second run, not the first.",
+          "category": "process"
+        },
+        {
+          "id": "tq045",
+          "english": "quality gate",
+          "chinese": "质量门禁",
+          "pronunciation": "/ˈkwɑːləti ɡeɪt/",
+          "example": "The quality gate blocks merges when coverage drops 2%.",
+          "category": "process"
+        },
+        {
+          "id": "tq046",
+          "english": "static analysis",
+          "chinese": "静态分析",
+          "pronunciation": "/ˈstætɪk əˈnæləsɪs/",
+          "example": "Static analysis catches the null deref before runtime does.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq047",
+          "english": "linter",
+          "chinese": "代码检查器",
+          "pronunciation": "/ˈlɪntər/",
+          "example": "Let the linter win the style arguments.",
+          "category": "tooling"
+        },
+        {
+          "id": "tq048",
+          "english": "maintainability",
+          "chinese": "可维护性",
+          "pronunciation": "/ˌmeɪntənəˈbɪləti/",
+          "example": "Readable tests are a maintainability feature.",
+          "category": "quality"
+        },
+        {
+          "id": "tq049",
+          "english": "test isolation",
+          "chinese": "测试隔离",
+          "pronunciation": "/test ˌaɪsəˈleɪʃən/",
+          "example": "Without test isolation, order changes cause false failures.",
+          "category": "principle"
+        },
+        {
+          "id": "tq050",
+          "english": "deterministic test",
+          "chinese": "确定性测试",
+          "pronunciation": "/dɪˌtɜːrmɪˈnɪstɪk test/",
+          "example": "A deterministic test passes every time or fails every time.",
+          "category": "principle"
+        }
+      ]
+    },
+    {
+      "id": "open-source",
+      "name": "Open Source & Collaboration",
+      "nameCN": "开源协作",
+      "description": "Open source community, licensing and ecosystem vocabulary",
+      "items": [
+        {
+          "id": "os001",
+          "english": "open source",
+          "chinese": "开源",
+          "pronunciation": "/ˈoʊpən sɔːrs/",
+          "example": "The core is open source; the hosting is paid.",
+          "category": "general"
+        },
+        {
+          "id": "os002",
+          "english": "open-source license",
+          "chinese": "开源许可证",
+          "pronunciation": "/ˈoʊpən sɔːrs ˈlaɪsns/",
+          "example": "Check the open-source license before you copy the code.",
+          "category": "licensing"
+        },
+        {
+          "id": "os003",
+          "english": "permissive license",
+          "chinese": "宽松许可证（MIT/Apache）",
+          "pronunciation": "/pərˈmɪsɪv ˈlaɪsns/",
+          "example": "MIT is a permissive license with minimal conditions.",
+          "category": "licensing"
+        },
+        {
+          "id": "os004",
+          "english": "copyleft",
+          "chinese": "著佐权（传染性许可）",
+          "pronunciation": "/ˈkɑːpileft/",
+          "example": "GPL's copyleft requires derivatives to stay open.",
+          "category": "licensing"
+        },
+        {
+          "id": "os005",
+          "english": "attribution clause",
+          "chinese": "署名条款",
+          "pronunciation": "/ˌætrɪˈbjuːʃən klɔːz/",
+          "example": "Apache 2.0 adds a patent grant and attribution clause.",
+          "category": "licensing"
+        },
+        {
+          "id": "os006",
+          "english": "dual licensing",
+          "chinese": "双重许可",
+          "pronunciation": "/ˈduːəl ˈlaɪsnsɪŋ/",
+          "example": "Dual licensing sells a commercial license alongside AGPL.",
+          "category": "licensing"
+        },
+        {
+          "id": "os007",
+          "english": "semantic versioning",
+          "chinese": "语义化版本（SemVer）",
+          "pronunciation": "/sɪˈmæntɪk ˈvɜːrʒənɪŋ/",
+          "example": "Semantic versioning: breaking changes bump the major.",
+          "category": "release"
+        },
+        {
+          "id": "os008",
+          "english": "long-term support",
+          "chinese": "长期支持（LTS）",
+          "pronunciation": "/lɔːŋ tɜːrm səˈpɔːrt/",
+          "example": "Stay on the LTS release if you can't upgrade often.",
+          "category": "release"
+        },
+        {
+          "id": "os009",
+          "english": "maintainer",
+          "chinese": "维护者",
+          "pronunciation": "/meɪnˈteɪnər/",
+          "example": "Be kind to the maintainer — they're often unpaid.",
+          "category": "community"
+        },
+        {
+          "id": "os010",
+          "english": "contributor",
+          "chinese": "贡献者",
+          "pronunciation": "/kənˈtrɪbjətər/",
+          "example": "First-time contributors get extra review patience.",
+          "category": "community"
+        },
+        {
+          "id": "os011",
+          "english": "first-time contributor",
+          "chinese": "首次贡献者",
+          "pronunciation": "/fɜːrst taɪm kənˈtrɪbjətər/",
+          "example": "Label easy bugs to welcome the first-time contributor.",
+          "category": "community"
+        },
+        {
+          "id": "os012",
+          "english": "good first issue",
+          "chinese": "新手友好议题",
+          "pronunciation": "/ɡʊd fɜːrst ˈɪʃuː/",
+          "example": "Start with a good first issue to learn the workflow.",
+          "category": "community"
+        },
+        {
+          "id": "os013",
+          "english": "code of conduct",
+          "chinese": "行为准则",
+          "pronunciation": "/koʊd əv kənˈdʌkt/",
+          "example": "Every repo should ship a code of conduct.",
+          "category": "community"
+        },
+        {
+          "id": "os014",
+          "english": "contributing guide",
+          "chinese": "贡献指南",
+          "pronunciation": "/kənˈtrɪbjuːtɪŋ ɡaɪd/",
+          "example": "The contributing guide explains the PR checklist.",
+          "category": "community"
+        },
+        {
+          "id": "os015",
+          "english": "issue tracker",
+          "chinese": "议题追踪器",
+          "pronunciation": "/ˈɪʃuː ˈtrækər/",
+          "example": "Search the issue tracker before opening a new one.",
+          "category": "process"
+        },
+        {
+          "id": "os016",
+          "english": "triage",
+          "chinese": "议题分诊",
+          "pronunciation": "/triˈɑːʒ/",
+          "example": "Maintainers triage new issues every Monday.",
+          "category": "process"
+        },
+        {
+          "id": "os017",
+          "english": "duplicate issue",
+          "chinese": "重复议题",
+          "pronunciation": "/ˈduːplɪkət ˈɪʃuː/",
+          "example": "Close the duplicate issue with a link to the original.",
+          "category": "process"
+        },
+        {
+          "id": "os018",
+          "english": "minimal reproducible example",
+          "chinese": "最小可复现示例",
+          "pronunciation": "/ˈmɪnɪməl ˌriːprəˈduːsəbl ɪɡˈzæmpl/",
+          "example": "Attach a minimal reproducible example and you'll get help today.",
+          "category": "process"
+        },
+        {
+          "id": "os019",
+          "english": "upstream",
+          "chinese": "上游（主仓库）",
+          "pronunciation": "/ˌʌpˈstriːm/",
+          "example": "Send the fix upstream so everyone benefits.",
+          "category": "process"
+        },
+        {
+          "id": "os020",
+          "english": "backport",
+          "chinese": "向后移植",
+          "pronunciation": "/ˈbækpɔːrt/",
+          "example": "Backport the security fix to the 2.x branch.",
+          "category": "release"
+        },
+        {
+          "id": "os021",
+          "english": "release channel",
+          "chinese": "发布渠道",
+          "pronunciation": "/rɪˈliːs ˈtʃænl/",
+          "example": "Users on the beta release channel get builds weekly.",
+          "category": "release"
+        },
+        {
+          "id": "os022",
+          "english": "nightly build",
+          "chinese": "每日构建",
+          "pronunciation": "/ˈnaɪtli bɪld/",
+          "example": "Try the nightly build if the bug might be fixed already.",
+          "category": "release"
+        },
+        {
+          "id": "os023",
+          "english": "stable release",
+          "chinese": "稳定版",
+          "pronunciation": "/ˈsteɪbl rɪˈliːs/",
+          "example": "Pin production to the latest stable release.",
+          "category": "release"
+        },
+        {
+          "id": "os024",
+          "english": "feature request",
+          "chinese": "功能请求",
+          "pronunciation": "/ˈfiːtʃər rɪˈkwest/",
+          "example": "The feature request has 200 upvotes and no owner.",
+          "category": "process"
+        },
+        {
+          "id": "os025",
+          "english": "bounty",
+          "chinese": "赏金",
+          "pronunciation": "/ˈbaʊnti/",
+          "example": "A $500 bounty is attached to the accessibility issue.",
+          "category": "community"
+        },
+        {
+          "id": "os026",
+          "english": "sponsor",
+          "chinese": "赞助（资助项目）",
+          "pronunciation": "/ˈspɑːnsər/",
+          "example": "Sponsor the libraries your product depends on.",
+          "category": "community"
+        },
+        {
+          "id": "os027",
+          "english": "stewardship",
+          "chinese": "守护（长期维护责任）",
+          "pronunciation": "/ˈstuːərdʃɪp/",
+          "example": "Stewardship matters more than a flashy launch.",
+          "category": "community"
+        },
+        {
+          "id": "os028",
+          "english": "governance",
+          "chinese": "治理（决策机制）",
+          "pronunciation": "/ˈɡʌvərnəns/",
+          "example": "The project moved to foundation governance.",
+          "category": "community"
+        },
+        {
+          "id": "os029",
+          "english": "steering committee",
+          "chinese": "指导委员会",
+          "pronunciation": "/ˈstɪrɪŋ kəˈmɪti/",
+          "example": "The steering committee approves RFCs quarterly.",
+          "category": "community"
+        },
+        {
+          "id": "os030",
+          "english": "RFC",
+          "chinese": "征求意见稿",
+          "pronunciation": "/ˌɑːr ef ˈsiː/",
+          "example": "Write an RFC before rewriting the API.",
+          "category": "process"
+        },
+        {
+          "id": "os031",
+          "english": "design doc",
+          "chinese": "设计文档",
+          "pronunciation": "/dɪˈzaɪn dɑːk/",
+          "example": "The design doc settles the storage engine debate.",
+          "category": "process"
+        },
+        {
+          "id": "os032",
+          "english": "proof of concept",
+          "chinese": "概念验证（PoC）",
+          "pronunciation": "/pruːf əv ˈkɑːnsept/",
+          "example": "Build a proof of concept before committing the roadmap.",
+          "category": "process"
+        },
+        {
+          "id": "os033",
+          "english": "reference implementation",
+          "chinese": "参考实现",
+          "pronunciation": "/ˈrefrəns ˌɪmplɪmenˈteɪʃən/",
+          "example": "The spec ships with a reference implementation.",
+          "category": "process"
+        },
+        {
+          "id": "os034",
+          "english": "early adopter",
+          "chinese": "早期采用者",
+          "pronunciation": "/ˈɜːrli əˈdɑːptər/",
+          "example": "Early adopters find the rough edges first.",
+          "category": "community"
+        },
+        {
+          "id": "os035",
+          "english": "community",
+          "chinese": "社区",
+          "pronunciation": "/kəˈmjuːnəti/",
+          "example": "A healthy community answers questions faster than support.",
+          "category": "community"
+        },
+        {
+          "id": "os036",
+          "english": "ecosystem",
+          "chinese": "生态系统",
+          "pronunciation": "/ˈiːkoʊsɪstəm/",
+          "example": "Choose the language with the richest ecosystem for your domain.",
+          "category": "general"
+        },
+        {
+          "id": "os037",
+          "english": "plugin",
+          "chinese": "插件",
+          "pronunciation": "/ˈplʌɡɪn/",
+          "example": "Write a plugin instead of forking the core.",
+          "category": "extension"
+        },
+        {
+          "id": "os038",
+          "english": "SDK",
+          "chinese": "软件开发工具包",
+          "pronunciation": "/ˌes diː ˈkeɪ/",
+          "example": "The SDK handles auth, retries and serialization for you.",
+          "category": "extension"
+        },
+        {
+          "id": "os039",
+          "english": "zero-config",
+          "chinese": "零配置",
+          "pronunciation": "/ˈzɪroʊ kənˈfɪɡ/",
+          "example": "Zero-config tooling with sane defaults wins adoption.",
+          "category": "general"
+        },
+        {
+          "id": "os040",
+          "english": "license compliance",
+          "chinese": "许可证合规",
+          "pronunciation": "/ˈlaɪsns kəmˈplaɪəns/",
+          "example": "Legal reviews license compliance for every dependency.",
+          "category": "licensing"
+        },
+        {
+          "id": "os041",
+          "english": "license scanning",
+          "chinese": "许可证扫描",
+          "pronunciation": "/ˈlaɪsns ˈskænɪŋ/",
+          "example": "License scanning caught a hidden GPL dependency.",
+          "category": "licensing"
+        },
+        {
+          "id": "os042",
+          "english": "vendoring",
+          "chinese": "内嵌依赖（复制进库）",
+          "pronunciation": "/ˈvendərɪŋ/",
+          "example": "Vendoring the lib froze us on an old version for years.",
+          "category": "dependencies"
+        },
+        {
+          "id": "os043",
+          "english": "package registry",
+          "chinese": "包注册仓库",
+          "pronunciation": "/ˈpækɪdʒ ˈredʒɪstri/",
+          "example": "Publish the package to the public registry.",
+          "category": "dependencies"
+        },
+        {
+          "id": "os044",
+          "english": "transitive dependency",
+          "chinese": "传递依赖",
+          "pronunciation": "/ˈtrænzətɪv dɪˈpendənsi/",
+          "example": "The vulnerable package was a transitive dependency, three levels deep.",
+          "category": "dependencies"
+        },
+        {
+          "id": "os045",
+          "english": "lockfile",
+          "chinese": "锁文件",
+          "pronunciation": "/ˈlɑːkfaɪl/",
+          "example": "Commit the lockfile so CI builds are reproducible.",
+          "category": "dependencies"
+        },
+        {
+          "id": "os046",
+          "english": "supply-chain attack",
+          "chinese": "供应链攻击",
+          "pronunciation": "/səˈplaɪ tʃeɪn əˈtæk/",
+          "example": "The supply-chain attack hid malware in a popular package update.",
+          "category": "security"
+        },
+        {
+          "id": "os047",
+          "english": "checksum",
+          "chinese": "校验和",
+          "pronunciation": "/ˈtʃeksʌm/",
+          "example": "Verify the checksum before trusting the downloaded tarball.",
+          "category": "security"
+        },
+        {
+          "id": "os048",
+          "english": "signed commit",
+          "chinese": "签名提交",
+          "pronunciation": "/saɪnd kəˈmɪt/",
+          "example": "A signed commit proves the code really came from you.",
+          "category": "security"
+        },
+        {
+          "id": "os049",
+          "english": "provenance",
+          "chinese": "来源可溯",
+          "pronunciation": "/ˈprɑːvənəns/",
+          "example": "Build provenance proves the artifact came from that source.",
+          "category": "security"
+        },
+        {
+          "id": "os050",
+          "english": "migration path",
+          "chinese": "迁移路径",
+          "pronunciation": "/maɪˈɡreɪʃən pæθ/",
+          "example": "No migration path means users stay on v1 forever.",
+          "category": "release"
+        }
+      ]
     }
   ]
 };
