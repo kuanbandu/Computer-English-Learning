@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: JavaScript syntax check
+        run: |
+          node --check js/app.js
+          node --check js/core/srs.js
+          node --check sw.js
+          node --check data/content.js
+          node --check scripts/validate-data.js
+          node --check scripts/test-srs.js
+
+      - name: Data integrity validation (includes index.html asset refs)
+        run: node scripts/validate-data.js
+
+      - name: SRS algorithm unit tests
+        run: node scripts/test-srs.js
