@@ -789,3 +789,183 @@ option {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ============================================================
+   v2.0 — SRS rating bar, dictation mode, srs summary stats
+   ============================================================ */
+
+.rating-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-hint {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-right: 0.25rem;
+}
+
+.rating-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  min-width: 88px;
+  justify-content: center;
+}
+
+.rating-btn:hover {
+  transform: translateY(-1px);
+}
+
+.rating-btn .rating-key {
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.4em;
+  border-radius: 50%;
+  background: var(--background);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.rating-forgot { border-color: #ef4444; }
+.rating-forgot:hover { background: #fee2e2; }
+.rating-hard   { border-color: #f59e0b; }
+.rating-hard:hover   { background: #fef3c7; }
+.rating-good   { border-color: #10b981; }
+.rating-good:hover   { background: #d1fae5; }
+.rating-easy   { border-color: #3b82f6; }
+.rating-easy:hover   { background: #dbeafe; }
+
+[data-theme="dark"] .rating-forgot:hover { background: #4b1d1d; }
+[data-theme="dark"] .rating-hard:hover   { background: #4b3712; }
+[data-theme="dark"] .rating-good:hover   { background: #143c2c; }
+[data-theme="dark"] .rating-easy:hover   { background: #1c2e57; }
+
+/* ----- Dictation mode ----- */
+.dictation-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dictation-input {
+  flex: 1 1 220px;
+  min-width: 180px;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: 'Inter', monospace;
+}
+
+.dictation-input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+.dictation-speak,
+.dictation-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.dictation-check {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.dictation-check:hover {
+  background: var(--primary-dark);
+}
+
+.dictation-feedback {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  padding: 0.6rem 0.9rem;
+}
+
+.dictation-feedback.correct { background: #d1fae5; color: #065f46; }
+.dictation-feedback.wrong   { background: #fee2e2; color: #991b1b; }
+[data-theme="dark"] .dictation-feedback.correct { background: #143c2c; color: #d1fae5; }
+[data-theme="dark"] .dictation-feedback.wrong   { background: #4b1d1d; color: #fee2e2; }
+
+/* ----- Mode toggle ----- */
+.mode-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-left: 0.5rem;
+}
+
+.mode-toggle button {
+  background: var(--surface);
+  color: var(--text-secondary);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.mode-toggle button.active {
+  background: var(--primary);
+  color: white;
+}
+
+/* ----- SRS summary stats ----- */
+.srs-summary {
+  margin-top: 1rem;
+}
+
+.srs-summary h3 {
+  grid-column: 1 / -1;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.stat-card.stat-due .stat-number       { color: #ef4444; }
+.stat-card.stat-new .stat-number       { color: #3b82f6; }
+.stat-card.stat-learning .stat-number  { color: #f59e0b; }
+.stat-card.stat-mastered .stat-number  { color: #10b981; }
+
+@media (max-width: 768px) {
+  .rating-bar { flex-direction: column; align-items: stretch; }
+  .rating-btn { width: 100%; }
+}

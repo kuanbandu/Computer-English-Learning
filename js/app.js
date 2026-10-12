@@ -31,12 +31,15 @@
       this.allItems = this.flattenData();
       this.favorites = this.loadFavorites();
       this.learned = this.loadLearned();
+      this.srsState = this.loadSrs();
       this.currentIndex = 0;
       this.currentCategory = 'all';
-      this.currentItems = [...this.allItems];
+      this.currentItems = this.buildSrsQueue(this.allItems);
       this.synth = window.speechSynthesis;
       this.isSpeaking = false;
-      
+      this.currentMode = 'card'; // dialog | flashcard
+      this.dictation = { active: false, targetId: null, attempts: 0 };
+
       this.init();
     }
 
@@ -48,7 +51,6 @@
       this.initBrowseView();
       this.initFavoritesView();
       this.initProgressView();
-      this.shuffleItems();
       this.loadCard();
     }
 
@@ -90,6 +92,43 @@
 
     saveLearned() {
       localStorage.setItem(STORAGE_KEYS.LEARNED, JSON.stringify(this.learned));
+    }
+
+    loadSrs() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEYS.SRS);
+        const parsed = stored ? JSON.parse(stored) : {};
+        return (parsed && typeof parsed === 'object') ? parsed : {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    saveSrs() {
+      localStorage.setItem(STORAGE_KEYS.SRS, JSON.stringify(this.srsState));
+    }
+
+    /**
+     * Order items so that due/new cards appear first and future-due cards
+     * last, keeping a small amount of randomness within each bucket so
+     * the queue doesn't feel mechanical.
+     */
+    buildSrsQueue(items) {
+      if (!window.SRS) return items.slice();
+      const ids = items.map(i => i.id);
+      const prioritized = SRS.prioritize(ids, this.srsState, new Date());
+      const byId = new Map(items.map(i => [i.id, i]));
+      return prioritized.map(id => byId.get(id)).filter(Boolean);
+    }
+
+    /** Re-prioritize the current queue and keep currentIndex valid. */
+    refreshQueue() {
+      const cur = this.currentItems[this.currentIndex];
+      this.currentItems = this.buildSrsQueue(this.currentItems);
+      if (cur) {
+        const newIdx = this.currentItems.findIndex(i => i.id === cur.id);
+        this.currentIndex = newIdx >= 0 ? newIdx : 0;
+      }
     }
 
     updateStreak() {
@@ -187,17 +226,23 @@
             return category && category.items.some(i => i.id === item.id);
           });
         }
-        this.shuffleItems();
+        this.currentItems = this.buildSrsQueue(this.currentItems);
+        this.currentIndex = 0;
         this.loadCard();
       });
 
       document.getElementById('flip-btn').addEventListener('click', () => {
-        document.getElementById('learning-card').classList.toggle('flipped');
+        const card = document.getElementById('learning-card');
+        card.classList.toggle('flipped');
+        this.syncRatingBar();
       });
 
       document.getElementById('learning-card').addEventListener('click', (e) => {
+        if (this.currentMode !== 'card') return; // no flipping in dictation
         if (!e.target.closest('.speak-btn')) {
-          document.getElementById('learning-card').classList.toggle('flipped');
+          const card = document.getElementById('learning-card');
+          card.classList.toggle('flipped');
+          this.syncRatingBar();
         }
       });
 
@@ -217,6 +262,158 @@
       document.getElementById('prev-btn').addEventListener('click', () => {
         this.prevCard();
       });
+
+      // Rating bar buttons (4-button Anki-style rating)
+      document.querySelectorAll('#rating-bar .rating-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const q = parseInt(btn.dataset.rating, 10);
+          if (!Number.isNaN(q)) this.rateCurrent(q);
+        });
+      });
+
+      // Mode toggle: card / dictation
+      document.querySelectorAll('.mode-toggle button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          this.setMode(btn.dataset.mode);
+        });
+      });
+
+      // Dictation controls
+      const dictSpeak = document.getElementById('dictation-speak');
+      const dictCheck = document.getElementById('dictation-check');
+      const dictInput = document.getElementById('dictation-input');
+      if (dictSpeak) {
+        dictSpeak.addEventListener('click', () => this.speakCurrent());
+      }
+      if (dictCheck) {
+        dictCheck.addEventListener('click', () => this.checkDictation());
+      }
+      if (dictInput) {
+        dictInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            this.checkDictation();
+          }
+        });
+      }
+    }
+
+    /**
+     * Switch between flashcard and dictation modes. The card is rebuilt so
+     * the new mode's UI is shown and any leftover rating/dictation state
+     * is cleared.
+     */
+    setMode(mode) {
+      if (mode !== 'card' && mode !== 'dictation') return;
+      this.currentMode = mode;
+      document.querySelectorAll('.mode-toggle button').forEach(btn => {
+        const active = btn.dataset.mode === mode;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      this.loadCard();
+    }
+
+    /**
+     * Compare the user's typed answer with the canonical english field.
+     * Whitespace, casing, parentheses, and a few common shorthand are tolerated
+     * so the user isn't tripped up by minor format differences.
+     */
+    normalizeAnswer(s) {
+      return String(s || '')
+        .toLowerCase()
+        .replace(/[()]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    checkDictation() {
+      const item = this.currentItems[this.currentIndex];
+      if (!item) return;
+      const input = document.getElementById('dictation-input');
+      const feedback = document.getElementById('dictation-feedback');
+      if (!input || !feedback) return;
+
+      const guess = this.normalizeAnswer(input.value);
+      const target = this.normalizeAnswer(item.english);
+      const correct = guess.length > 0 && guess === target;
+
+      this.dictation.attempts++;
+      input.classList.remove('correct', 'wrong');
+      feedback.classList.remove('correct', 'wrong');
+      feedback.hidden = false;
+
+      if (correct) {
+        input.classList.add('correct');
+        feedback.classList.add('correct');
+        feedback.textContent = `✓ 正确：${item.english}`;
+        // SRS: rate as Good (q=4) — first-time correct with some effort.
+        const q = this.dictation.attempts === 1 ? SRS.RATING.GOOD : SRS.RATING.EASY;
+        this.rateCurrent(q);
+        input.value = '';
+      } else {
+        input.classList.add('wrong');
+        feedback.classList.add('wrong');
+        if (guess.length === 0) {
+          feedback.textContent = `✗ 请输入答案`;
+        } else {
+          feedback.textContent = `✗ 再试一次。提示：${item.chinese}`;
+        }
+        // If they have tried 3 times, mark as Forgot and reveal.
+        if (this.dictation.attempts >= 3) {
+          feedback.textContent = `正确答案：${item.english}`;
+          feedback.classList.remove('wrong');
+          feedback.classList.add('correct');
+          input.value = '';
+          this.rateCurrent(SRS.RATING.FORGOT);
+        }
+      }
+    }
+
+    /**
+     * Show rating bar only after the card is flipped. Hide it whenever the
+     * card is unflipped (i.e. on a fresh card or after a rating).
+     */
+    syncRatingBar() {
+      const flipped = document.getElementById('learning-card').classList.contains('flipped');
+      const bar = document.getElementById('rating-bar');
+      if (this.currentMode !== 'card') {
+        bar.hidden = true;
+        return;
+      }
+      bar.hidden = !flipped;
+    }
+
+    /**
+     * Apply SM-2 to the current item and advance. q is 1..5 (1=forgot,
+     * 3=hard, 4=good, 5=easy). A "Good" or higher rating marks the item
+     * as learned for the first time; a "Forgot" rating never marks it.
+     */
+    rateCurrent(q) {
+      const item = this.currentItems[this.currentIndex];
+      if (!item || !window.SRS) return;
+      const prev = this.srsState[item.id];
+      this.srsState[item.id] = SRS.review(prev, q, new Date());
+      this.saveSrs();
+
+      if (q >= 3 && !this.learned.includes(item.id)) {
+        this.learned.push(item.id);
+        this.saveLearned();
+      }
+
+      // Show a brief toast summarising the schedule.
+      const ns = this.srsState[item.id];
+      const nextDays = Math.max(0, Math.round((ns.due - SRS.todayKey()) / SRS.DAY_MS));
+      const labels = { 1: '忘了', 3: '模糊', 4: '记得', 5: '轻松' };
+      this.showToast(`${labels[q] || '已评'} | ${nextDays === 0 ? '今天再练' : nextDays + ' 天后复习'}`);
+
+      // For "Forgot" cards, keep them at the front of the queue by
+      // re-prioritizing and resetting the pointer.
+      if (q < 3) {
+        this.refreshQueue();
+      } else {
+        this.nextCard();
+      }
     }
 
     loadCard() {
@@ -225,16 +422,26 @@
       }
 
       const item = this.currentItems[this.currentIndex];
-      
-      document.getElementById('learning-card').classList.remove('flipped');
-      
+
+      // Hide rating bar and any dictation feedback while we are flipping
+      // to a new card. The rating bar will be re-shown if the user flips.
+      document.getElementById('rating-bar').hidden = true;
+      const dictBar = document.getElementById('dictation-bar');
+      if (dictBar) dictBar.hidden = this.currentMode !== 'dictation';
+      const dictFb = document.getElementById('dictation-feedback');
+      if (dictFb) dictFb.hidden = true;
+      this.dictation = { active: this.currentMode === 'dictation', targetId: item.id, attempts: 0 };
+
+      const card = document.getElementById('learning-card');
+      card.classList.remove('flipped');
+
       setTimeout(() => {
         document.getElementById('card-category').textContent = item.categoryName;
         document.getElementById('card-english').textContent = item.english;
         document.getElementById('card-pronunciation').textContent = item.pronunciation;
         document.getElementById('card-chinese').textContent = item.chinese;
         document.getElementById('card-example').textContent = item.example;
-        
+
         const favoriteBtn = document.getElementById('favorite-btn');
         if (this.favorites.includes(item.id)) {
           favoriteBtn.classList.add('active');
@@ -247,6 +454,16 @@
         // as "learned" after the user gives an explicit recall rating
         // (Hard / Good / Easy), or after a correct answer in dictation mode.
         // See markAsLearned() callers below.
+
+        // In dictation mode, hide the english text so the user must
+        // recall it. Show the chinese + pronunciation as hints, then
+        // auto-play the audio so the user hears the word.
+        if (this.currentMode === 'dictation') {
+          document.getElementById('card-english').textContent = '? ? ?';
+          this.speak(item.english);
+          const di = document.getElementById('dictation-input');
+          if (di) { di.value = ''; di.focus(); }
+        }
       }, 150);
     }
 
@@ -270,6 +487,7 @@
     }
 
     speak(text) {
+      if (this.isSpeaking) {
         this.synth.cancel();
         this.isSpeaking = false;
         document.querySelectorAll('.speak-btn').forEach(btn => {
@@ -564,8 +782,10 @@
         if (confirm('确定要重置所有学习进度和收藏吗？此操作不可撤销。')) {
           this.favorites = [];
           this.learned = [];
+          this.srsState = {};
           this.saveFavorites();
           this.saveLearned();
+          this.saveSrs();
           this.updateProgressView();
           this.showToast('已重置所有进度');
         }
@@ -576,16 +796,24 @@
       document.getElementById('total-learned').textContent = this.learned.length;
       document.getElementById('total-favorites').textContent = this.favorites.length;
       document.getElementById('streak-days').textContent = this.streak;
-      
+
       const completionRate = Math.round((this.learned.length / this.allItems.length) * 100);
       document.getElementById('completion-rate').textContent = `${completionRate}%`;
+
+      if (window.SRS) {
+        const stats = SRS.summarize(this.srsState, new Date());
+        document.getElementById('srs-due').textContent = stats.due;
+        document.getElementById('srs-new').textContent = stats.newCards;
+        document.getElementById('srs-learning').textContent = stats.learning;
+        document.getElementById('srs-mastered').textContent = stats.mastered;
+      }
 
       const categoryBars = document.getElementById('category-bars');
       categoryBars.innerHTML = this.data.categories.map(cat => {
         const catItems = cat.items.map(i => i.id);
         const learnedInCategory = this.learned.filter(id => catItems.includes(id)).length;
         const progress = Math.round((learnedInCategory / cat.items.length) * 100);
-        
+
         return `
           <div class="category-bar">
             <div class="category-bar-header">

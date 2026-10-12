@@ -1,9 +1,10 @@
-const CACHE_NAME = 'computer-english-v1';
+const CACHE_NAME = 'computer-english-v2';
 const urlsToCache = [
   './',
   './index.html',
   './css/style.css',
   './js/app.js',
+  './js/core/srs.js',
   './data/content.js',
   './manifest.json'
 ];
