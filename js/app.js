@@ -51,6 +51,8 @@
       this.initBrowseView();
       this.initFavoritesView();
       this.initProgressView();
+      this.initKeyboardShortcuts();
+      this.initTouchGestures();
       this.loadCard();
     }
 
@@ -832,10 +834,115 @@
       const toast = document.getElementById('toast');
       toast.textContent = message;
       toast.classList.add('show');
-      
+
       setTimeout(() => {
         toast.classList.remove('show');
       }, 2000);
+    }
+
+    /**
+     * Keyboard shortcuts:
+     *   Space / Enter    flip card (card mode) | submit (dictation mode)
+     *   ArrowRight       next card
+     *   ArrowLeft        prev card
+     *   f                toggle favorite
+     *   s                speak current
+     *   1/2/3/4          rate Forgot/Hard/Good/Easy (card mode, after flip)
+     *
+     * Shortcuts are suppressed when focus is in an input/textarea or when
+     * a modal is open.
+     */
+    initKeyboardShortcuts() {
+      document.addEventListener('keydown', (e) => {
+        const target = e.target;
+        if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) {
+          return;
+        }
+        if (document.querySelector('.modal-overlay')) return;
+
+        // Only react when the learn view is active.
+        const learnView = document.getElementById('learn-view');
+        if (!learnView || !learnView.classList.contains('active')) return;
+
+        const key = e.key;
+        const lower = typeof key === 'string' ? key.toLowerCase() : key;
+
+        if (key === ' ' || key === 'Enter') {
+          e.preventDefault();
+          if (this.currentMode === 'dictation') {
+            this.checkDictation();
+          } else {
+            const card = document.getElementById('learning-card');
+            card.classList.toggle('flipped');
+            this.syncRatingBar();
+          }
+          return;
+        }
+        if (key === 'ArrowRight') {
+          e.preventDefault();
+          this.nextCard();
+          return;
+        }
+        if (key === 'ArrowLeft') {
+          e.preventDefault();
+          this.prevCard();
+          return;
+        }
+        if (lower === 'f') {
+          e.preventDefault();
+          this.toggleFavorite();
+          return;
+        }
+        if (lower === 's') {
+          e.preventDefault();
+          this.speakCurrent();
+          return;
+        }
+        if (this.currentMode === 'card' &&
+            document.getElementById('learning-card').classList.contains('flipped')) {
+          const ratingKeyMap = { '1': 1, '2': 3, '3': 4, '4': 5 };
+          if (Object.prototype.hasOwnProperty.call(ratingKeyMap, key)) {
+            e.preventDefault();
+            this.rateCurrent(ratingKeyMap[key]);
+            return;
+          }
+        }
+      });
+    }
+
+    /**
+     * Touch gestures: swipe left -> next, swipe right -> prev.
+     * Implemented with simple pointer events so it works on both touch
+     * screens and trackpads without depending on a library.
+     */
+    initTouchGestures() {
+      const card = document.getElementById('learning-card');
+      if (!card) return;
+      let startX = 0;
+      let startY = 0;
+      let active = false;
+      const SWIPE_THRESHOLD = 50;
+      const VERTICAL_LIMIT = 80;
+
+      card.addEventListener('pointerdown', (ev) => {
+        if (this.currentMode !== 'card') return;
+        startX = ev.clientX;
+        startY = ev.clientY;
+        active = true;
+      });
+
+      card.addEventListener('pointerup', (ev) => {
+        if (!active) return;
+        active = false;
+        const dx = ev.clientX - startX;
+        const dy = ev.clientY - startY;
+        if (Math.abs(dx) < SWIPE_THRESHOLD) return;
+        if (Math.abs(dy) > VERTICAL_LIMIT) return; // mostly vertical -> not swipe
+        if (dx < 0) this.nextCard();
+        else this.prevCard();
+      });
+
+      card.addEventListener('pointercancel', () => { active = false; });
     }
   }
 
