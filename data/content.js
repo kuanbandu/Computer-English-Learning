@@ -11439,6 +11439,1230 @@ const computerEnglishData = {
           "category": "release"
         }
       ]
+    },
+    {
+      "id": "blockchain-web3",
+      "name": "Blockchain & Web3",
+      "nameCN": "区块链与 Web3",
+      "description": "Blockchain, crypto and decentralized application vocabulary",
+      "items": [
+        {
+          "id": "bw001",
+          "english": "decentralized",
+          "chinese": "去中心化的",
+          "pronunciation": "/diːˈsentrəlaɪzd/",
+          "example": "The whole point is a decentralized network with no single owner.",
+          "category": "core"
+        },
+        {
+          "id": "bw002",
+          "english": "blockchain",
+          "chinese": "区块链",
+          "pronunciation": "/ˈblɑːktʃeɪn/",
+          "example": "The blockchain appends a new block roughly every ten minutes.",
+          "category": "core"
+        },
+        {
+          "id": "bw003",
+          "english": "distributed ledger",
+          "chinese": "分布式账本",
+          "pronunciation": "/dɪˈstrɪbjuːtɪd ˈledʒər/",
+          "example": "A distributed ledger keeps every participant's copy in sync.",
+          "category": "core"
+        },
+        {
+          "id": "bw004",
+          "english": "smart contract",
+          "chinese": "智能合约",
+          "pronunciation": "/smɑːrt ˈkɑːntrækt/",
+          "example": "The smart contract releases payment when the oracle confirms delivery.",
+          "category": "core"
+        },
+        {
+          "id": "bw005",
+          "english": "gas fee",
+          "chinese": "手续费（Gas 费）",
+          "pronunciation": "/ɡæs fiː/",
+          "example": "Gas fees spiked to $40 per swap during the mint.",
+          "category": "fees"
+        },
+        {
+          "id": "bw006",
+          "english": "gas limit",
+          "chinese": "Gas 上限",
+          "pronunciation": "/ɡæs ˈlɪmɪt/",
+          "example": "The transaction reverted because it hit the gas limit.",
+          "category": "fees"
+        },
+        {
+          "id": "bw007",
+          "english": "mint",
+          "chinese": "铸造（NFT/代币）",
+          "pronunciation": "/mɪnt/",
+          "example": "You can mint one NFT per wallet during the allowlist phase.",
+          "category": "actions"
+        },
+        {
+          "id": "bw008",
+          "english": "crypto wallet",
+          "chinese": "加密钱包",
+          "pronunciation": "/ˈkrɪptoʊ ˈwɑːlɪt/",
+          "example": "Connect your crypto wallet to sign the transaction.",
+          "category": "wallet"
+        },
+        {
+          "id": "bw009",
+          "english": "private key",
+          "chinese": "私钥",
+          "pronunciation": "/ˈpraɪvət kiː/",
+          "example": "Never share your private key — not even with support staff.",
+          "category": "wallet"
+        },
+        {
+          "id": "bw010",
+          "english": "public key",
+          "chinese": "公钥",
+          "pronunciation": "/ˈpʌblɪk kiː/",
+          "example": "The public key is safe to share; it derives your address.",
+          "category": "wallet"
+        },
+        {
+          "id": "bw011",
+          "english": "seed phrase",
+          "chinese": "助记词（种子短语）",
+          "pronunciation": "/siːd freɪz/",
+          "example": "Write the seed phrase on paper, never in a screenshot.",
+          "category": "wallet"
+        },
+        {
+          "id": "bw012",
+          "english": "dApp",
+          "chinese": "去中心化应用",
+          "pronunciation": "/diː æp/",
+          "example": "A dApp's frontend is normal web code; the backend is contracts.",
+          "category": "core"
+        },
+        {
+          "id": "bw013",
+          "english": "DeFi",
+          "chinese": "去中心化金融",
+          "pronunciation": "/ˌdiː ef ˈaɪ/",
+          "example": "DeFi lending lets you borrow against your collateral.",
+          "category": "domains"
+        },
+        {
+          "id": "bw014",
+          "english": "NFT",
+          "chinese": "非同质化代币",
+          "pronunciation": "/ˌen ef ˈtiː/",
+          "example": "The NFT proves you own this specific artwork, not a copy.",
+          "category": "domains"
+        },
+        {
+          "id": "bw015",
+          "english": "DAO",
+          "chinese": "去中心化自治组织",
+          "pronunciation": "/daʊ/",
+          "example": "The DAO treasury spends funds only by token vote.",
+          "category": "domains"
+        },
+        {
+          "id": "bw016",
+          "english": "tokenomics",
+          "chinese": "代币经济模型",
+          "pronunciation": "/ˌtoʊkənˈɑːmɪks/",
+          "example": "Read the tokenomics: 40% to the team with a four-year vest.",
+          "category": "domains"
+        },
+        {
+          "id": "bw017",
+          "english": "stablecoin",
+          "chinese": "稳定币",
+          "pronunciation": "/ˈsteɪblkoʊn/",
+          "example": "Pay the invoice in a dollar-pegged stablecoin.",
+          "category": "domains"
+        },
+        {
+          "id": "bw018",
+          "english": "proof of work",
+          "chinese": "工作量证明（PoW）",
+          "pronunciation": "/pruːf əv wɜːrk/",
+          "example": "Proof of work secures Bitcoin by making attacks expensive.",
+          "category": "consensus-mech"
+        },
+        {
+          "id": "bw019",
+          "english": "proof of stake",
+          "chinese": "权益证明（PoS）",
+          "pronunciation": "/pruːf əv steɪk/",
+          "example": "After the merge, Ethereum runs on proof of stake.",
+          "category": "consensus-mech"
+        },
+        {
+          "id": "bw020",
+          "english": "staking",
+          "chinese": "质押",
+          "pronunciation": "/ˈsteɪkɪŋ/",
+          "example": "Staking locks your tokens to earn protocol rewards.",
+          "category": "actions"
+        },
+        {
+          "id": "bw021",
+          "english": "validator node",
+          "chinese": "验证节点",
+          "pronunciation": "/ˈvælɪdeɪtər noʊd/",
+          "example": "Running a validator node requires bonded collateral.",
+          "category": "network"
+        },
+        {
+          "id": "bw022",
+          "english": "block explorer",
+          "chinese": "区块浏览器",
+          "pronunciation": "/blɑːk ɪkˈsplɔːrər/",
+          "example": "Paste the tx hash into a block explorer to watch it confirm.",
+          "category": "tools"
+        },
+        {
+          "id": "bw023",
+          "english": "mempool",
+          "chinese": "待处理交易池",
+          "pronunciation": "/ˈmempuːl/",
+          "example": "Low-fee transactions sit in the mempool for hours.",
+          "category": "network"
+        },
+        {
+          "id": "bw024",
+          "english": "confirmation",
+          "chinese": "交易确认数",
+          "pronunciation": "/ˌkɑːnfərˈmeɪʃən/",
+          "example": "Wait for six confirmations before shipping the goods.",
+          "category": "network"
+        },
+        {
+          "id": "bw025",
+          "english": "immutable",
+          "chinese": "不可篡改的",
+          "pronunciation": "/ɪˈmjuːtəbl/",
+          "example": "The ledger is immutable: history can never be edited.",
+          "category": "properties"
+        },
+        {
+          "id": "bw026",
+          "english": "on-chain",
+          "chinese": "链上（数据/操作）",
+          "pronunciation": "/ɒn tʃeɪn/",
+          "example": "Keep the vote tally on-chain so anyone can audit it.",
+          "category": "properties"
+        },
+        {
+          "id": "bw027",
+          "english": "off-chain",
+          "chinese": "链下（数据/操作）",
+          "pronunciation": "/ɔːf tʃeɪn/",
+          "example": "Store images off-chain; only the hash goes on-chain.",
+          "category": "properties"
+        },
+        {
+          "id": "bw028",
+          "english": "Layer 2",
+          "chinese": "二层网络（L2）",
+          "pronunciation": "/ˈleɪər tuː/",
+          "example": "A Layer 2 rollup batches transactions and posts one proof to mainnet.",
+          "category": "scaling"
+        },
+        {
+          "id": "bw029",
+          "english": "sidechain",
+          "chinese": "侧链",
+          "pronunciation": "/ˈsaɪdtʃeɪn/",
+          "example": "The game assets live on a low-fee sidechain.",
+          "category": "scaling"
+        },
+        {
+          "id": "bw030",
+          "english": "rollup",
+          "chinese": "滚动汇总（扩容方案）",
+          "pronunciation": "/ˈroʊlʌp/",
+          "example": "A zk rollup proves correctness with a single validity proof.",
+          "category": "scaling"
+        },
+        {
+          "id": "bw031",
+          "english": "cross-chain bridge",
+          "chinese": "跨链桥",
+          "pronunciation": "/krɔːs tʃeɪn brɪdʒ/",
+          "example": "Use the cross-chain bridge to move assets between networks.",
+          "category": "scaling"
+        },
+        {
+          "id": "bw032",
+          "english": "oracle",
+          "chinese": "预言机（喂价/外部数据）",
+          "pronunciation": "/ˈɔːrəkl/",
+          "example": "The contract reads prices from a decentralized oracle feed.",
+          "category": "network"
+        },
+        {
+          "id": "bw033",
+          "english": "mainnet",
+          "chinese": "主网",
+          "pronunciation": "/ˈmeɪnnet/",
+          "example": "Deploy to testnet first; mainnet is forever.",
+          "category": "network"
+        },
+        {
+          "id": "bw034",
+          "english": "testnet",
+          "chinese": "测试网",
+          "pronunciation": "/ˈtestnet/",
+          "example": "Testnet ETH is free and holds no real value.",
+          "category": "network"
+        },
+        {
+          "id": "bw035",
+          "english": "faucet",
+          "chinese": "测试币水龙头",
+          "pronunciation": "/ˈfɔːsɪt/",
+          "example": "The faucet drips 0.5 test ETH per request.",
+          "category": "tools"
+        },
+        {
+          "id": "bw036",
+          "english": "airdrop",
+          "chinese": "空投",
+          "pronunciation": "/ˈerdrɑːp/",
+          "example": "Early users qualified for the governance airdrop.",
+          "category": "actions"
+        },
+        {
+          "id": "bw037",
+          "english": "rug pull",
+          "chinese": "卷款跑路（貔貅盘）",
+          "pronunciation": "/rʌɡ pʊl/",
+          "example": "The founders dumped their tokens — a textbook rug pull.",
+          "category": "risks"
+        },
+        {
+          "id": "bw038",
+          "english": "cold storage",
+          "chinese": "冷存储（离线保存）",
+          "pronunciation": "/koʊld ˈstɔːrɪdʒ/",
+          "example": "Keep long-term holdings in cold storage.",
+          "category": "wallet"
+        },
+        {
+          "id": "bw039",
+          "english": "hardware wallet",
+          "chinese": "硬件钱包",
+          "pronunciation": "/ˈhɑːrdwer ˈwɑːlɪt/",
+          "example": "A hardware wallet signs transactions without exposing the key.",
+          "category": "wallet"
+        },
+        {
+          "id": "bw040",
+          "english": "custody",
+          "chinese": "托管",
+          "pronunciation": "/ˈkʌstədi/",
+          "example": "Exchanges hold custody; wallets give you control.",
+          "category": "wallet"
+        },
+        {
+          "id": "bw041",
+          "english": "non-custodial wallet",
+          "chinese": "非托管钱包",
+          "pronunciation": "/nɑːn kʌˈstoʊdiəl ˈwɑːlɪt/",
+          "example": "With a non-custodial wallet, you are the bank.",
+          "category": "wallet"
+        },
+        {
+          "id": "bw042",
+          "english": "whale",
+          "chinese": "巨鲸（大户）",
+          "pronunciation": "/weɪl/",
+          "example": "A whale moved 10,000 ETH and the market noticed.",
+          "category": "community"
+        },
+        {
+          "id": "bw043",
+          "english": "double spending",
+          "chinese": "双花（重复支付）",
+          "pronunciation": "/ˈdʌbl ˈspendɪŋ/",
+          "example": "Confirmations exist to make double spending impossible.",
+          "category": "risks"
+        },
+        {
+          "id": "bw044",
+          "english": "51% attack",
+          "chinese": "51% 攻击（算力多数攻击）",
+          "pronunciation": "/ˌfaɪfti wʌn pərˈsent əˈtæk/",
+          "example": "Small chains are vulnerable to a 51% attack.",
+          "category": "risks"
+        },
+        {
+          "id": "bw045",
+          "english": "zero-knowledge proof",
+          "chinese": "零知识证明",
+          "pronunciation": "/ˈzɪroʊ ˈnɑːlɪdʒ pruːf/",
+          "example": "A zero-knowledge proof shows you're over 18 without revealing your age.",
+          "category": "crypto"
+        },
+        {
+          "id": "bw046",
+          "english": "Solidity",
+          "chinese": "Solidity 语言",
+          "pronunciation": "/səˈlɪdəti/",
+          "example": "Solidity is the contract language of the EVM world.",
+          "category": "dev"
+        },
+        {
+          "id": "bw047",
+          "english": "EVM",
+          "chinese": "以太坊虚拟机",
+          "pronunciation": "/ˌiː viː ˈem/",
+          "example": "Any EVM-compatible chain can run the same bytecode.",
+          "category": "dev"
+        },
+        {
+          "id": "bw048",
+          "english": "reentrancy attack",
+          "chinese": "重入攻击",
+          "pronunciation": "/riːˈentrənsi əˈtæk/",
+          "example": "The DAO hack was a reentrancy attack draining the contract.",
+          "category": "risks"
+        },
+        {
+          "id": "bw049",
+          "english": "block reward",
+          "chinese": "区块奖励",
+          "pronunciation": "/blɑːk rɪˈwɔːrd/",
+          "example": "Miners compete for the block reward plus fees.",
+          "category": "consensus-mech"
+        },
+        {
+          "id": "bw050",
+          "english": "halving",
+          "chinese": "减半（奖励减半事件）",
+          "pronunciation": "/ˈhælvɪŋ/",
+          "example": "After each halving, new supply drops by 50%.",
+          "category": "consensus-mech"
+        }
+      ]
+    },
+    {
+      "id": "game-development",
+      "name": "Game Development",
+      "nameCN": "游戏开发",
+      "description": "Game engines, rendering and gameplay programming vocabulary",
+      "items": [
+        {
+          "id": "gd001",
+          "english": "game loop",
+          "chinese": "游戏主循环",
+          "pronunciation": "/ɡeɪm luːp/",
+          "example": "The game loop runs input → update → render, 60 times a second.",
+          "category": "core"
+        },
+        {
+          "id": "gd002",
+          "english": "frame rate",
+          "chinese": "帧率",
+          "pronunciation": "/freɪm reɪt/",
+          "example": "The frame rate dips in the forest scene — too many draw calls.",
+          "category": "performance"
+        },
+        {
+          "id": "gd003",
+          "english": "delta time",
+          "chinese": "帧间隔时间（Δt）",
+          "pronunciation": "/ˈdeltə taɪm/",
+          "example": "Multiply speed by delta time so movement is framerate-independent.",
+          "category": "core"
+        },
+        {
+          "id": "gd004",
+          "english": "sprite",
+          "chinese": "精灵图（2D 图像）",
+          "pronunciation": "/spraɪt/",
+          "example": "The character sprite flips horizontally when walking left.",
+          "category": "2d"
+        },
+        {
+          "id": "gd005",
+          "english": "sprite sheet",
+          "chinese": "精灵图集",
+          "pronunciation": "/spraɪt ʃiːt/",
+          "example": "All animation frames live in one sprite sheet.",
+          "category": "2d"
+        },
+        {
+          "id": "gd006",
+          "english": "tilemap",
+          "chinese": "瓦片地图",
+          "pronunciation": "/ˈtaɪlmæp/",
+          "example": "The level is a 100×100 tilemap of 16-pixel tiles.",
+          "category": "2d"
+        },
+        {
+          "id": "gd007",
+          "english": "draw call",
+          "chinese": "绘制调用",
+          "pronunciation": "/drɔː kɔːl/",
+          "example": "Batching sprites cut draw calls from 2000 to 40.",
+          "category": "performance"
+        },
+        {
+          "id": "gd008",
+          "english": "culling",
+          "chinese": "剔除（不渲染不可见物）",
+          "pronunciation": "/ˈkʌlɪŋ/",
+          "example": "Frustum culling skips everything outside the camera.",
+          "category": "performance"
+        },
+        {
+          "id": "gd009",
+          "english": "level of detail",
+          "chinese": "细节层次（LOD）",
+          "pronunciation": "/ˈlevl əv dɪˈteɪl/",
+          "example": "Distant rocks swap to a low-poly level of detail mesh.",
+          "category": "performance"
+        },
+        {
+          "id": "gd010",
+          "english": "tween",
+          "chinese": "补间动画",
+          "pronunciation": "/twiːn/",
+          "example": "A tween moves the button in over 200 ms.",
+          "category": "animation"
+        },
+        {
+          "id": "gd011",
+          "english": "easing",
+          "chinese": "缓动（曲线）",
+          "pronunciation": "/ˈiːzɪŋ/",
+          "example": "Ease-out easing makes the jump feel snappy at the start.",
+          "category": "animation"
+        },
+        {
+          "id": "gd012",
+          "english": "state machine",
+          "chinese": "状态机",
+          "pronunciation": "/steɪt məˈʃiːn/",
+          "example": "The boss runs a finite state machine: idle, chase, attack, dead.",
+          "category": "gameplay"
+        },
+        {
+          "id": "gd013",
+          "english": "collision detection",
+          "chinese": "碰撞检测",
+          "pronunciation": "/kəˈlɪʒən dɪˈtekʃən/",
+          "example": "Use broad-phase collision detection before expensive polygon checks.",
+          "category": "physics"
+        },
+        {
+          "id": "gd014",
+          "english": "hitbox",
+          "chinese": "判定框（碰撞盒）",
+          "pronunciation": "/ˈhɪtbɑːks/",
+          "example": "Make the hitbox smaller than the sprite — it feels fairer.",
+          "category": "physics"
+        },
+        {
+          "id": "gd015",
+          "english": "physics engine",
+          "chinese": "物理引擎",
+          "pronunciation": "/ˈfɪzɪks ˈendʒɪn/",
+          "example": "The physics engine resolves gravity, friction and restitution.",
+          "category": "physics"
+        },
+        {
+          "id": "gd016",
+          "english": "rigid body",
+          "chinese": "刚体",
+          "pronunciation": "/ˈrɪdʒɪd ˈbɑːdi/",
+          "example": "Attach a rigid body and the crate starts obeying gravity.",
+          "category": "physics"
+        },
+        {
+          "id": "gd017",
+          "english": "particle system",
+          "chinese": "粒子系统",
+          "pronunciation": "/ˈpɑːrtɪkl ˈsɪstəm/",
+          "example": "Explosions, sparks and smoke all come from one particle system.",
+          "category": "graphics"
+        },
+        {
+          "id": "gd018",
+          "english": "spawn point",
+          "chinese": "出生点",
+          "pronunciation": "/spɔːn pɔɪnt/",
+          "example": "Move the spawn point closer to the boss room.",
+          "category": "gameplay"
+        },
+        {
+          "id": "gd019",
+          "english": "respawn",
+          "chinese": "重生",
+          "pronunciation": "/ˌriːˈspɔːn/",
+          "example": "Enemies respawn 30 seconds after being defeated.",
+          "category": "gameplay"
+        },
+        {
+          "id": "gd020",
+          "english": "NPC",
+          "chinese": "非玩家角色",
+          "pronunciation": "/ˌen piː ˈsiː/",
+          "example": "The NPC greets you differently based on quest state.",
+          "category": "gameplay"
+        },
+        {
+          "id": "gd021",
+          "english": "pathfinding",
+          "chinese": "寻路",
+          "pronunciation": "/ˈpæθfaɪndɪŋ/",
+          "example": "A* pathfinding walks the grid around obstacles.",
+          "category": "ai"
+        },
+        {
+          "id": "gd022",
+          "english": "behavior tree",
+          "chinese": "行为树（AI）",
+          "pronunciation": "/bɪˈheɪvjər triː/",
+          "example": "Guard AI: a behavior tree of patrol, investigate, attack.",
+          "category": "ai"
+        },
+        {
+          "id": "gd023",
+          "english": "fog of war",
+          "chinese": "战争迷雾",
+          "pronunciation": "/fɔːɡ əv wɔːr/",
+          "example": "The map hides unexplored areas under fog of war.",
+          "category": "gameplay"
+        },
+        {
+          "id": "gd024",
+          "english": "level design",
+          "chinese": "关卡设计",
+          "pronunciation": "/ˈlevl dɪˈzaɪn/",
+          "example": "Good level design teaches mechanics without a tutorial.",
+          "category": "design"
+        },
+        {
+          "id": "gd025",
+          "english": "procedural generation",
+          "chinese": "程序化生成",
+          "pronunciation": "/prəˈsiːdʒərəl ˌdʒenəˈreɪʃən/",
+          "example": "The dungeon layout uses procedural generation from a seed.",
+          "category": "design"
+        },
+        {
+          "id": "gd026",
+          "english": "game engine",
+          "chinese": "游戏引擎",
+          "pronunciation": "/ɡeɪm ˈendʒɪn/",
+          "example": "Unity, Unreal and Godot are the big three game engines.",
+          "category": "core"
+        },
+        {
+          "id": "gd027",
+          "english": "prefab",
+          "chinese": "预制体（可复用对象模板）",
+          "pronunciation": "/ˈpriːfæb/",
+          "example": "Turn the finished enemy into a prefab and instantiate it anywhere.",
+          "category": "engines"
+        },
+        {
+          "id": "gd028",
+          "english": "asset",
+          "chinese": "美术资源",
+          "pronunciation": "/ˈæset/",
+          "example": "The asset bundle downloads on first launch.",
+          "category": "engines"
+        },
+        {
+          "id": "gd029",
+          "english": "texture",
+          "chinese": "贴图／纹理",
+          "pronunciation": "/ˈtekstʃər/",
+          "example": "A 4K texture looks great but doubles memory use.",
+          "category": "graphics"
+        },
+        {
+          "id": "gd030",
+          "english": "shader",
+          "chinese": "着色器",
+          "pronunciation": "/ˈʃeɪdər/",
+          "example": "The water shader handles reflection and waves on the GPU.",
+          "category": "graphics"
+        },
+        {
+          "id": "gd031",
+          "english": "vertex",
+          "chinese": "顶点",
+          "pronunciation": "/ˈvɜːrteks/",
+          "example": "The mesh deforms by moving each vertex along a bone weight.",
+          "category": "graphics"
+        },
+        {
+          "id": "gd032",
+          "english": "polygon count",
+          "chinese": "多边形数量（面数）",
+          "pronunciation": "/ˈpɑːliɡɑːn kaʊnt/",
+          "example": "Keep the polygon count under 30k for mobile.",
+          "category": "graphics"
+        },
+        {
+          "id": "gd033",
+          "english": "mesh",
+          "chinese": "网格模型",
+          "pronunciation": "/meʃ/",
+          "example": "The character mesh is skinned to 52 bones.",
+          "category": "graphics"
+        },
+        {
+          "id": "gd034",
+          "english": "rigging",
+          "chinese": "绑骨（骨骼绑定）",
+          "pronunciation": "/ˈrɪɡɪŋ/",
+          "example": "Rigging took a week; the model had 80 joints.",
+          "category": "animation"
+        },
+        {
+          "id": "gd035",
+          "english": "skeletal animation",
+          "chinese": "骨骼动画",
+          "pronunciation": "/ˈskelətl ˌænɪˈmeɪʃən/",
+          "example": "Skeletal animation blends a run cycle with an aim pose.",
+          "category": "animation"
+        },
+        {
+          "id": "gd036",
+          "english": "cutscene",
+          "chinese": "过场动画",
+          "pronunciation": "/ˈkʌtsiːn/",
+          "example": "Skip the cutscene after the player has seen it once.",
+          "category": "design"
+        },
+        {
+          "id": "gd037",
+          "english": "game feel",
+          "chinese": "游戏手感（打击感）",
+          "pronunciation": "/ɡeɪm fiːl/",
+          "example": "Screen shake and hit-stop are cheap game feel wins.",
+          "category": "design"
+        },
+        {
+          "id": "gd038",
+          "english": "hit-stop",
+          "chinese": "打击停顿（顿帧）",
+          "pronunciation": "/hɪt stɑːp/",
+          "example": "Two frames of hit-stop make every punch land.",
+          "category": "design"
+        },
+        {
+          "id": "gd039",
+          "english": "cooldown",
+          "chinese": "冷却时间",
+          "pronunciation": "/ˈkoʊldaʊn/",
+          "example": "The dash has a 1.5-second cooldown.",
+          "category": "gameplay"
+        },
+        {
+          "id": "gd040",
+          "english": "drop rate",
+          "chinese": "掉落率",
+          "pronunciation": "/drɑːp reɪt/",
+          "example": "The sword's drop rate is 0.5% — expect a grind.",
+          "category": "gameplay"
+        },
+        {
+          "id": "gd041",
+          "english": "checkpoint",
+          "chinese": "存档点（检查点）",
+          "pronunciation": "/ˈtʃekpɔɪnt/",
+          "example": "You respawn at the last checkpoint with half health.",
+          "category": "gameplay"
+        },
+        {
+          "id": "gd042",
+          "english": "difficulty curve",
+          "chinese": "难度曲线",
+          "pronunciation": "/ˈdɪfɪkəlti kɜːrv/",
+          "example": "Playtest data showed the difficulty curve spikes at level 4.",
+          "category": "design"
+        },
+        {
+          "id": "gd043",
+          "english": "playtesting",
+          "chinese": "试玩测试",
+          "pronunciation": "/ˈpleɪtestɪŋ/",
+          "example": "Watch playtesting sessions without saying a word.",
+          "category": "process"
+        },
+        {
+          "id": "gd044",
+          "english": "vertical slice",
+          "chinese": "垂直切片（核心玩法完整样段）",
+          "pronunciation": "/ˈvɜːrtɪkl slaɪs/",
+          "example": "Build a vertical slice before greenlighting the full game.",
+          "category": "process"
+        },
+        {
+          "id": "gd045",
+          "english": "physics tick",
+          "chinese": "物理帧（固定步长）",
+          "pronunciation": "/ˈfɪzɪks tɪk/",
+          "example": "Run the physics tick at a fixed 60 Hz, render unlocked.",
+          "category": "physics"
+        },
+        {
+          "id": "gd046",
+          "english": "input lag",
+          "chinese": "输入延迟",
+          "pronunciation": "/ˈɪnpʊt læɡ/",
+          "example": "Above 50 ms of input lag, the game feels mushy.",
+          "category": "performance"
+        },
+        {
+          "id": "gd047",
+          "english": "render pipeline",
+          "chinese": "渲染管线",
+          "pronunciation": "/ˈrendər ˈpaɪplaɪn/",
+          "example": "The new render pipeline uses deferred shading.",
+          "category": "graphics"
+        },
+        {
+          "id": "gd048",
+          "english": "draw order",
+          "chinese": "绘制顺序（层叠顺序）",
+          "pronunciation": "/drɔː ˈɔːrdər/",
+          "example": "Sort by draw order so clouds render behind the player.",
+          "category": "2d"
+        },
+        {
+          "id": "gd049",
+          "english": "isometric view",
+          "chinese": "等距视角",
+          "pronunciation": "/ˌaɪsəˈmetrɪk vjuː/",
+          "example": "The farm sim uses a classic isometric view.",
+          "category": "design"
+        },
+        {
+          "id": "gd050",
+          "english": "hit point",
+          "chinese": "生命值（HP）",
+          "pronunciation": "/hɪt pɔɪnt/",
+          "example": "The shield adds 50 hit points for three seconds.",
+          "category": "gameplay"
+        }
+      ]
+    },
+    {
+      "id": "embedded-systems",
+      "name": "Embedded Systems",
+      "nameCN": "嵌入式系统",
+      "description": "Firmware, microcontrollers and hardware interface vocabulary",
+      "items": [
+        {
+          "id": "em001",
+          "english": "firmware",
+          "chinese": "固件",
+          "pronunciation": "/ˈfɜːrmwer/",
+          "example": "The firmware update adds Matter support to the hub.",
+          "category": "core"
+        },
+        {
+          "id": "em002",
+          "english": "microcontroller",
+          "chinese": "微控制器（MCU）",
+          "pronunciation": "/ˈmaɪkroʊkənˌtroʊlər/",
+          "example": "An ESP32 microcontroller drives the whole sensor node.",
+          "category": "core"
+        },
+        {
+          "id": "em003",
+          "english": "GPIO",
+          "chinese": "通用输入输出引脚",
+          "pronunciation": "/ˌdʒiː piː aɪ ˈoʊ/",
+          "example": "Blink the LED by toggling GPIO 2.",
+          "category": "pins"
+        },
+        {
+          "id": "em004",
+          "english": "PWM",
+          "chinese": "脉宽调制",
+          "pronunciation": "/ˌpiː dʌbljuː ˈem/",
+          "example": "PWM controls motor speed by varying duty cycle.",
+          "category": "signals"
+        },
+        {
+          "id": "em005",
+          "english": "analog-to-digital converter",
+          "chinese": "模数转换器（ADC）",
+          "pronunciation": "/ˈænəlɔːɡ tuː ˈdɪdʒɪtl kənˈvɜːrtər/",
+          "example": "The ADC reads the temperature sensor at 12-bit resolution.",
+          "category": "signals"
+        },
+        {
+          "id": "em006",
+          "english": "register",
+          "chinese": "寄存器",
+          "pronunciation": "/ˈredʒɪstər/",
+          "example": "Write the config value to the status register.",
+          "category": "core"
+        },
+        {
+          "id": "em007",
+          "english": "memory-mapped I/O",
+          "chinese": "内存映射 I/O",
+          "pronunciation": "/ˈmeməri mæpt ˌaɪ ˈoʊ/",
+          "example": "With memory-mapped I/O, peripherals look like normal memory addresses.",
+          "category": "core"
+        },
+        {
+          "id": "em008",
+          "english": "interrupt handler",
+          "chinese": "中断处理函数",
+          "pronunciation": "/ˌɪntəˈrʌpt ˈhændlər/",
+          "example": "Keep the interrupt handler short; set a flag and return.",
+          "category": "interrupts"
+        },
+        {
+          "id": "em009",
+          "english": "interrupt latency",
+          "chinese": "中断延迟",
+          "pronunciation": "/ˌɪntəˈrʌpt ˈleɪtənsi/",
+          "example": "Interrupt latency must stay under 10 µs for motor control.",
+          "category": "interrupts"
+        },
+        {
+          "id": "em010",
+          "english": "interrupt priority",
+          "chinese": "中断优先级",
+          "pronunciation": "/ˌɪntəˈrʌpt praɪˈɔːrəti/",
+          "example": "The safety stop gets the highest interrupt priority.",
+          "category": "interrupts"
+        },
+        {
+          "id": "em011",
+          "english": "real-time operating system",
+          "chinese": "实时操作系统（RTOS）",
+          "pronunciation": "/ˈriːəl taɪm ˈɑːpəreɪtɪŋ ˈsɪstəm/",
+          "example": "FreeRTOS is a small real-time operating system for MCUs.",
+          "category": "software"
+        },
+        {
+          "id": "em012",
+          "english": "watchdog timer",
+          "chinese": "看门狗定时器",
+          "pronunciation": "/ˈwɑːtʃdɔːɡ ˈtaɪmər/",
+          "example": "If the main loop hangs, the watchdog timer resets the chip.",
+          "category": "reliability"
+        },
+        {
+          "id": "em013",
+          "english": "cross-compilation",
+          "chinese": "交叉编译",
+          "pronunciation": "/krɔːs ˌkɑːmpɪˈleɪʃən/",
+          "example": "Cross-compilation builds ARM binaries on your x86 laptop.",
+          "category": "toolchain"
+        },
+        {
+          "id": "em014",
+          "english": "toolchain",
+          "chinese": "工具链",
+          "pronunciation": "/ˈtuːltʃeɪn/",
+          "example": "The toolchain bundles compiler, linker and debugger for the target.",
+          "category": "toolchain"
+        },
+        {
+          "id": "em015",
+          "english": "flashing",
+          "chinese": "烧录固件",
+          "pronunciation": "/ˈflæʃɪŋ/",
+          "example": "Flashing new firmware takes about 20 seconds over USB.",
+          "category": "toolchain"
+        },
+        {
+          "id": "em016",
+          "english": "JTAG",
+          "chinese": "JTAG 调试接口",
+          "pronunciation": "/ˈdʒeɪtæɡ/",
+          "example": "Connect the JTAG probe to step through the boot code.",
+          "category": "toolchain"
+        },
+        {
+          "id": "em017",
+          "english": "datasheet",
+          "chinese": "数据手册",
+          "pronunciation": "/ˈdeɪtəʃiːt/",
+          "example": "The datasheet says max clock is 133 MHz at 3.3 V.",
+          "category": "hardware"
+        },
+        {
+          "id": "em018",
+          "english": "schematic",
+          "chinese": "电路原理图",
+          "pronunciation": "/skiːˈmætɪk/",
+          "example": "Check the schematic before wiring the sensor.",
+          "category": "hardware"
+        },
+        {
+          "id": "em019",
+          "english": "pull-up resistor",
+          "chinese": "上拉电阻",
+          "pronunciation": "/pʊl ʌp rɪˈzɪstər/",
+          "example": "The I2C bus needs a 4.7 kΩ pull-up resistor on each line.",
+          "category": "hardware"
+        },
+        {
+          "id": "em020",
+          "english": "breadboard",
+          "chinese": "面包板",
+          "pronunciation": "/ˈbredbɔːrd/",
+          "example": "Prototype the circuit on a breadboard before soldering.",
+          "category": "hardware"
+        },
+        {
+          "id": "em021",
+          "english": "oscilloscope",
+          "chinese": "示波器",
+          "pronunciation": "/əˈsɪləskoʊp/",
+          "example": "The oscilloscope shows the SPI clock at 2 MHz.",
+          "category": "hardware"
+        },
+        {
+          "id": "em022",
+          "english": "logic analyzer",
+          "chinese": "逻辑分析仪",
+          "pronunciation": "/ˈlɑːdʒɪk ˈænəlaɪzər/",
+          "example": "A cheap logic analyzer decodes the I2C traffic for you.",
+          "category": "hardware"
+        },
+        {
+          "id": "em023",
+          "english": "bare-metal programming",
+          "chinese": "裸机编程（无操作系统）",
+          "pronunciation": "/ber ˈmetl ˈproʊɡræmɪŋ/",
+          "example": "Bare-metal programming means you own every clock cycle.",
+          "category": "software"
+        },
+        {
+          "id": "em024",
+          "english": "peripheral",
+          "chinese": "外设",
+          "pronunciation": "/pəˈrɪfərəl/",
+          "example": "Enable the UART peripheral before configuring its pins.",
+          "category": "core"
+        },
+        {
+          "id": "em025",
+          "english": "UART",
+          "chinese": "通用异步收发器（串口）",
+          "pronunciation": "/ˈjuːɑːrt/",
+          "example": "Debug logs go out over UART at 115200 baud.",
+          "category": "buses"
+        },
+        {
+          "id": "em026",
+          "english": "SPI",
+          "chinese": "串行外设接口",
+          "pronunciation": "/ˌes piː ˈaɪ/",
+          "example": "The display connects over SPI at 40 MHz.",
+          "category": "buses"
+        },
+        {
+          "id": "em027",
+          "english": "I2C",
+          "chinese": "I2C 总线（两线制）",
+          "pronunciation": "/ˌaɪ skweərd ˈsiː/",
+          "example": "Both sensors share one I2C bus with different addresses.",
+          "category": "buses"
+        },
+        {
+          "id": "em028",
+          "english": "CAN bus",
+          "chinese": "CAN 总线（车载）",
+          "pronunciation": "/kæn bʌs/",
+          "example": "Modern cars run dozens of ECUs on a CAN bus.",
+          "category": "buses"
+        },
+        {
+          "id": "em029",
+          "english": "direct memory access",
+          "chinese": "直接内存访问（DMA）",
+          "pronunciation": "/dəˈrekt ˈmeməri ˈækˌses/",
+          "example": "DMA moves the ADC samples to RAM without CPU help.",
+          "category": "core"
+        },
+        {
+          "id": "em030",
+          "english": "bit manipulation",
+          "chinese": "位运算操作",
+          "pronunciation": "/bɪt məˌnɪpjuˈleɪʃən/",
+          "example": "Bit manipulation sets bit 3 without touching the others.",
+          "category": "software"
+        },
+        {
+          "id": "em031",
+          "english": "bitmask",
+          "chinese": "位掩码",
+          "pronunciation": "/ˈbɪtmæsk/",
+          "example": "Pass a bitmask of enabled features to init().",
+          "category": "software"
+        },
+        {
+          "id": "em032",
+          "english": "endianness",
+          "chinese": "字节序",
+          "pronunciation": "/ˈendiənnəs/",
+          "example": "The protocol is big-endian; your MCU is little-endian — swap.",
+          "category": "software"
+        },
+        {
+          "id": "em033",
+          "english": "volatile keyword",
+          "chinese": "volatile 关键字",
+          "pronunciation": "/ˈvɑːlətl ˈkiːwɜːrd/",
+          "example": "Mark hardware registers volatile or the optimizer breaks them.",
+          "category": "software"
+        },
+        {
+          "id": "em034",
+          "english": "soft reset",
+          "chinese": "软复位",
+          "pronunciation": "/sɔːft ˈriːset/",
+          "example": "A soft reset reboots the firmware without power cycling.",
+          "category": "reliability"
+        },
+        {
+          "id": "em035",
+          "english": "hard fault",
+          "chinese": "硬错误（异常崩溃）",
+          "pronunciation": "/hɑːrd fɔːlt/",
+          "example": "A null pointer dereference triggers a hard fault handler.",
+          "category": "reliability"
+        },
+        {
+          "id": "em036",
+          "english": "brown-out detection",
+          "chinese": "欠压检测",
+          "pronunciation": "/braʊn aʊt dɪˈtekʃən/",
+          "example": "Brown-out detection saves flash when the battery sags.",
+          "category": "power"
+        },
+        {
+          "id": "em037",
+          "english": "deep sleep mode",
+          "chinese": "深度睡眠模式",
+          "pronunciation": "/diːp sliːp moʊd/",
+          "example": "In deep sleep mode the board draws 10 µA.",
+          "category": "power"
+        },
+        {
+          "id": "em038",
+          "english": "duty cycle",
+          "chinese": "占空比",
+          "pronunciation": "/ˈduːti ˈsaɪkl/",
+          "example": "A 25% duty cycle keeps the heater at quarter power.",
+          "category": "power"
+        },
+        {
+          "id": "em039",
+          "english": "power consumption",
+          "chinese": "功耗",
+          "pronunciation": "/ˈpaʊər kənˈsʌmpʃən/",
+          "example": "Power consumption matters more than speed on battery devices.",
+          "category": "power"
+        },
+        {
+          "id": "em040",
+          "english": "sensor fusion",
+          "chinese": "传感器融合",
+          "pronunciation": "/ˈsensər ˈfjuːʒən/",
+          "example": "Sensor fusion merges accelerometer and gyro data for stable orientation.",
+          "category": "applications"
+        },
+        {
+          "id": "em041",
+          "english": "firmware over-the-air",
+          "chinese": "OTA 固件升级",
+          "pronunciation": "/ˈfɜːrmwer ˈoʊvər ði ˈer/",
+          "example": "Firmware over-the-air updates ship in signed A/B partitions.",
+          "category": "reliability"
+        },
+        {
+          "id": "em042",
+          "english": "real-time constraint",
+          "chinese": "实时性约束",
+          "pronunciation": "/ˈriːəl taɪm kənˈstreɪnt/",
+          "example": "The control loop has a 1 ms real-time constraint.",
+          "category": "core"
+        },
+        {
+          "id": "em043",
+          "english": "determinism",
+          "chinese": "确定性（时间可预测）",
+          "pronunciation": "/dɪˌtɜːrmɪˈnɪzəm/",
+          "example": "Hard real-time systems demand timing determinism.",
+          "category": "core"
+        },
+        {
+          "id": "em044",
+          "english": "hard real-time",
+          "chinese": "硬实时",
+          "pronunciation": "/hɑːrd ˈriːəl taɪm/",
+          "example": "Airbag deployment is a hard real-time task.",
+          "category": "core"
+        },
+        {
+          "id": "em045",
+          "english": "soft real-time",
+          "chinese": "软实时",
+          "pronunciation": "/sɔːft ˈriːəl taɪm/",
+          "example": "Video streaming is soft real-time: late frames degrade, not kill.",
+          "category": "core"
+        },
+        {
+          "id": "em046",
+          "english": "single-board computer",
+          "chinese": "单板计算机",
+          "pronunciation": "/ˈsɪŋɡəl bɔːrd kəmˈpjuːtər/",
+          "example": "A Raspberry Pi is a single-board computer running Linux.",
+          "category": "hardware"
+        },
+        {
+          "id": "em047",
+          "english": "System on a Chip",
+          "chinese": "片上系统（SoC）",
+          "pronunciation": "/ˈsɪstəm ɑːn ə tʃɪp/",
+          "example": "The SoC integrates CPU, radio and flash on one die.",
+          "category": "hardware"
+        },
+        {
+          "id": "em048",
+          "english": "analog pin",
+          "chinese": "模拟引脚",
+          "pronunciation": "/ˈænəlɔːɡ pɪn/",
+          "example": "Plug the potentiometer into an analog pin.",
+          "category": "pins"
+        },
+        {
+          "id": "em049",
+          "english": "debouncing",
+          "chinese": "按键消抖",
+          "pronunciation": "/diˈbaʊnsɪŋ/",
+          "example": "Without debouncing, one button press registers as five.",
+          "category": "software"
+        },
+        {
+          "id": "em050",
+          "english": "pulse sensor",
+          "chinese": "脉冲传感器",
+          "pronunciation": "/pʌls ˈsensər/",
+          "example": "The pulse sensor counts wheel rotations for the odometer.",
+          "category": "applications"
+        }
+      ]
     }
   ]
 };
