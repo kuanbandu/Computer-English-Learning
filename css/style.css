@@ -857,6 +857,10 @@ option {
 [data-theme="dark"] .rating-easy:hover   { background: #1c2e57; }
 
 /* ----- Dictation mode ----- */
+/* The hidden attribute must win over any display:flex/grid rule below,
+   otherwise the dictation bar leaks into card and quiz modes. */
+[hidden] { display: none !important; }
+
 .dictation-bar {
   display: flex;
   gap: 0.5rem;
