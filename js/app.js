@@ -1,11 +1,29 @@
 (function() {
+  'use strict';
+
   const STORAGE_KEYS = {
     FAVORITES: 'computer-english-favorites',
     LEARNED: 'computer-english-learned',
     LAST_VISIT: 'computer-english-last-visit',
     STREAK: 'computer-english-streak',
-    THEME: 'computer-english-theme'
+    THEME: 'computer-english-theme',
+    SRS: 'computer-english-srs-v1'
   };
+
+  /**
+   * Escape HTML special characters to prevent XSS when inserting
+   * user-editable strings via innerHTML. Static content (category names
+   * from data/content.js) is also escaped defensively.
+   */
+  function escapeHtml(value) {
+    if (value === null || value === undefined) return '';
+    return String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
 
   class ComputerEnglishApp {
     constructor() {
@@ -75,24 +93,28 @@
     }
 
     updateStreak() {
-      const today = new Date().toDateString();
+      // Use UTC midnight for day-difference calculation to avoid
+      // timezone / DST drift across days.
+      const todayUtc = new Date();
+      const todayKey = Date.UTC(todayUtc.getUTCFullYear(), todayUtc.getUTCMonth(), todayUtc.getUTCDate());
       const lastVisit = localStorage.getItem(STORAGE_KEYS.LAST_VISIT);
       let streak = parseInt(localStorage.getItem(STORAGE_KEYS.STREAK) || '1');
 
       if (lastVisit) {
-        const lastDate = new Date(lastVisit);
-        const todayDate = new Date();
-        const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
-
-        if (diffDays === 0) {
-        } else if (diffDays === 1) {
-          streak++;
-        } else {
-          streak = 1;
+        const lastKey = parseInt(lastVisit, 10);
+        if (!Number.isNaN(lastKey)) {
+          const diffDays = Math.round((todayKey - lastKey) / (1000 * 60 * 60 * 24));
+          if (diffDays === 0) {
+            // same day, streak unchanged
+          } else if (diffDays === 1) {
+            streak++;
+          } else if (diffDays > 1) {
+            streak = 1;
+          }
         }
       }
 
-      localStorage.setItem(STORAGE_KEYS.LAST_VISIT, today);
+      localStorage.setItem(STORAGE_KEYS.LAST_VISIT, todayKey.toString());
       localStorage.setItem(STORAGE_KEYS.STREAK, streak.toString());
       this.streak = streak;
     }
@@ -221,7 +243,10 @@
         }
         
         this.updateProgressIndicator();
-        this.markAsLearned(item.id);
+        // NOTE: do NOT auto-mark as learned here. A card is only counted
+        // as "learned" after the user gives an explicit recall rating
+        // (Hard / Good / Easy), or after a correct answer in dictation mode.
+        // See markAsLearned() callers below.
       }, 150);
     }
 
@@ -245,7 +270,6 @@
     }
 
     speak(text) {
-      if (this.isSpeaking) {
         this.synth.cancel();
         this.isSpeaking = false;
         document.querySelectorAll('.speak-btn').forEach(btn => {
@@ -396,14 +420,14 @@
       }
 
       grid.innerHTML = items.map(item => `
-        <div class="item-card" data-id="${item.id}">
+        <div class="item-card" data-id="${escapeHtml(item.id)}">
           <div class="item-header">
-            <span class="item-english">${item.english}</span>
-            <button class="item-speak" data-id="${item.id}">🔊</button>
+            <span class="item-english">${escapeHtml(item.english)}</span>
+            <button class="item-speak" data-id="${escapeHtml(item.id)}">🔊</button>
           </div>
-          <div class="item-chinese">${item.chinese}</div>
-          <div class="item-pronunciation">${item.pronunciation}</div>
-          <span class="item-category">${item.categoryNameCN}</span>
+          <div class="item-chinese">${escapeHtml(item.chinese)}</div>
+          <div class="item-pronunciation">${escapeHtml(item.pronunciation)}</div>
+          <span class="item-category">${escapeHtml(item.categoryNameCN)}</span>
         </div>
       `).join('');
 
@@ -434,22 +458,27 @@
       modal.innerHTML = `
         <div class="modal-content">
           <button class="modal-close">&times;</button>
-          <span class="category-badge">${item.categoryName}</span>
-          <h2>${item.english}</h2>
-          <p class="pronunciation">${item.pronunciation}</p>
-          <p class="chinese">${item.chinese}</p>
+          <span class="category-badge">${escapeHtml(item.categoryName)}</span>
+          <h2>${escapeHtml(item.english)}</h2>
+          <p class="pronunciation">${escapeHtml(item.pronunciation)}</p>
+          <p class="chinese">${escapeHtml(item.chinese)}</p>
           <div class="example">
             <span class="label">示例:</span>
-            <code>${item.example}</code>
+            <code>${escapeHtml(item.example)}</code>
           </div>
-          <button class="speak-btn-large" onclick="app.speak('${item.english.replace(/'/g, "\\'")}')">
+          <button class="speak-btn-large" data-action="speak">
             <span>🔊</span> 朗读
           </button>
         </div>
       `;
-      
+
       modal.querySelector('.modal-close').addEventListener('click', () => {
         modal.remove();
+      });
+
+      const speakBtn = modal.querySelector('.speak-btn-large');
+      speakBtn.addEventListener('click', () => {
+        this.speak(item.english);
       });
       
       modal.addEventListener('click', (e) => {
@@ -483,15 +512,15 @@
       }
 
       grid.innerHTML = favoriteItems.map(item => `
-        <div class="item-card" data-id="${item.id}">
+        <div class="item-card" data-id="${escapeHtml(item.id)}">
           <div class="item-header">
-            <span class="item-english">${item.english}</span>
-            <button class="item-speak" data-id="${item.id}">🔊</button>
+            <span class="item-english">${escapeHtml(item.english)}</span>
+            <button class="item-speak" data-id="${escapeHtml(item.id)}">🔊</button>
           </div>
-          <div class="item-chinese">${item.chinese}</div>
-          <div class="item-pronunciation">${item.pronunciation}</div>
-          <span class="item-category">${item.categoryNameCN}</span>
-          <button class="remove-favorite" data-id="${item.id}">❌</button>
+          <div class="item-chinese">${escapeHtml(item.chinese)}</div>
+          <div class="item-pronunciation">${escapeHtml(item.pronunciation)}</div>
+          <span class="item-category">${escapeHtml(item.categoryNameCN)}</span>
+          <button class="remove-favorite" data-id="${escapeHtml(item.id)}">❌</button>
         </div>
       `).join('');
 
@@ -560,7 +589,7 @@
         return `
           <div class="category-bar">
             <div class="category-bar-header">
-              <span class="category-bar-name">${cat.nameCN}</span>
+              <span class="category-bar-name">${escapeHtml(cat.nameCN)}</span>
               <span class="category-bar-value">${learnedInCategory}/${cat.items.length}</span>
             </div>
             <div class="category-bar-track">
