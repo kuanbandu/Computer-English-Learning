@@ -13887,6 +13887,1638 @@ const computerEnglishData = {
           "category": "workflow"
         }
       ]
+    },
+    {
+      "id": "mobile-development",
+      "name": "Mobile Development",
+      "nameCN": "移动开发",
+      "description": "iOS / Android app development and app store vocabulary",
+      "items": [
+        {
+          "id": "md001",
+          "english": "push notification",
+          "chinese": "推送通知",
+          "pronunciation": "/pʊʃ ˌnoʊtɪfɪˈkeɪʃən/",
+          "example": "Push notification delivery depends on the OS battery policy.",
+          "category": "notifications"
+        },
+        {
+          "id": "md002",
+          "english": "deep link",
+          "chinese": "深度链接",
+          "pronunciation": "/diːp lɪŋk/",
+          "example": "The deep link opens the product page inside the app.",
+          "category": "navigation"
+        },
+        {
+          "id": "md003",
+          "english": "universal link",
+          "chinese": "通用链接（iOS）",
+          "pronunciation": "/ˌjuːnɪˈvɜːrsl lɪŋk/",
+          "example": "A universal link falls back to the website if the app isn't installed.",
+          "category": "navigation"
+        },
+        {
+          "id": "md004",
+          "english": "hot reload",
+          "chinese": "热重载",
+          "pronunciation": "/hɑːt ˈriːloʊd/",
+          "example": "Hot reload keeps the app state while you edit the UI code.",
+          "category": "tooling"
+        },
+        {
+          "id": "md005",
+          "english": "live reload",
+          "chinese": "实时重载",
+          "pronunciation": "/laɪv ˈriːloʊd/",
+          "example": "Live reload restarts the whole app on every change.",
+          "category": "tooling"
+        },
+        {
+          "id": "md006",
+          "english": "app store review",
+          "chinese": "应用商店审核",
+          "pronunciation": "/æp stɔːr rɪˈvjuː/",
+          "example": "App store review rejected us for missing a privacy policy.",
+          "category": "release"
+        },
+        {
+          "id": "md007",
+          "english": "in-app purchase",
+          "chinese": "应用内购买（IAP）",
+          "pronunciation": "/ɪn æp ˈpɜːrtʃəs/",
+          "example": "Subscriptions must use in-app purchase on iOS.",
+          "category": "monetization"
+        },
+        {
+          "id": "md008",
+          "english": "subscription renewal",
+          "chinese": "订阅续费",
+          "pronunciation": "/səbˈskrɪpʃən rɪˈnjuːəl/",
+          "example": "Handle the subscription renewal webhook server-side.",
+          "category": "monetization"
+        },
+        {
+          "id": "md009",
+          "english": "app bundle",
+          "chinese": "应用包（AAB）",
+          "pronunciation": "/æp ˈbʌndl/",
+          "example": "Upload the app bundle so the store generates optimized APKs.",
+          "category": "release"
+        },
+        {
+          "id": "md010",
+          "english": "APK",
+          "chinese": "安卓安装包",
+          "pronunciation": "/ˌeɪ piː ˈkeɪ/",
+          "example": "Sideload this debug APK on the test device.",
+          "category": "release"
+        },
+        {
+          "id": "md011",
+          "english": "provisioning profile",
+          "chinese": "描述文件（签名配置）",
+          "pronunciation": "/prəˈvɪʒənɪŋ ˈproʊfaɪl/",
+          "example": "The expired provisioning profile broke all our test devices.",
+          "category": "signing"
+        },
+        {
+          "id": "md012",
+          "english": "code signing identity",
+          "chinese": "签名身份（证书）",
+          "pronunciation": "/koʊd ˈsaɪnɪŋ aɪˈdentəti/",
+          "example": "Store the code signing identity in the CI keychain.",
+          "category": "signing"
+        },
+        {
+          "id": "md013",
+          "english": "minimum SDK",
+          "chinese": "最低系统版本",
+          "pronunciation": "/ˈmɪnəməm ˌes diː ˈkeɪ/",
+          "example": "We raised the minimum SDK to Android 10 to use modern APIs.",
+          "category": "compatibility"
+        },
+        {
+          "id": "md014",
+          "english": "backward compatibility",
+          "chinese": "向后兼容",
+          "pronunciation": "/ˈbækwərd kəmˌpætəˈbɪləti/",
+          "example": "Keep backward compatibility with the v1 database schema.",
+          "category": "compatibility"
+        },
+        {
+          "id": "md015",
+          "english": "runtime permission",
+          "chinese": "运行时权限",
+          "pronunciation": "/ˈrʌntaɪm pərˈmɪʃən/",
+          "example": "Request the camera as a runtime permission, not at install time.",
+          "category": "permissions"
+        },
+        {
+          "id": "md016",
+          "english": "permission request",
+          "chinese": "权限请求",
+          "pronunciation": "/pərˈmɪʃən rɪˈkwest/",
+          "example": "Explain why before showing the permission request dialog.",
+          "category": "permissions"
+        },
+        {
+          "id": "md017",
+          "english": "background task",
+          "chinese": "后台任务",
+          "pronunciation": "/ˈbækɡraʊnd tæsk/",
+          "example": "The OS may kill any background task after 30 seconds.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "md018",
+          "english": "background refresh",
+          "chinese": "后台刷新",
+          "pronunciation": "/ˈbækɡraʊnd rɪˈfreʃ/",
+          "example": "Users can disable background refresh per app.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "md019",
+          "english": "offline-first",
+          "chinese": "离线优先",
+          "pronunciation": "/ˈɔːflaɪn fɜːrst/",
+          "example": "An offline-first design assumes the network will fail.",
+          "category": "architecture"
+        },
+        {
+          "id": "md020",
+          "english": "app icon",
+          "chinese": "应用图标",
+          "pronunciation": "/æp ˈaɪkɑːn/",
+          "example": "Ship every app icon size listed in the design spec.",
+          "category": "ui"
+        },
+        {
+          "id": "md021",
+          "english": "splash screen",
+          "chinese": "启动屏",
+          "pronunciation": "/splæʃ skriːn/",
+          "example": "A splash screen should disappear the moment content is ready.",
+          "category": "ui"
+        },
+        {
+          "id": "md022",
+          "english": "adaptive icon",
+          "chinese": "自适应图标",
+          "pronunciation": "/əˈdæptɪv ˈaɪkɑːn/",
+          "example": "An adaptive icon renders as circle on one launcher, squircle on another.",
+          "category": "ui"
+        },
+        {
+          "id": "md023",
+          "english": "screen density",
+          "chinese": "屏幕密度（DPI）",
+          "pronunciation": "/skriːn ˈdensəti/",
+          "example": "Provide images for each screen density bucket.",
+          "category": "ui"
+        },
+        {
+          "id": "md024",
+          "english": "device fragmentation",
+          "chinese": "设备碎片化",
+          "pronunciation": "/dɪˈvaɪs ˌfræɡmenˈteɪʃən/",
+          "example": "Android device fragmentation makes QA a matrix problem.",
+          "category": "testing"
+        },
+        {
+          "id": "md025",
+          "english": "aspect ratio",
+          "chinese": "宽高比",
+          "pronunciation": "/ˈæspekt ˈreɪʃioʊ/",
+          "example": "New phones with a 20:9 aspect ratio stretched our layout.",
+          "category": "ui"
+        },
+        {
+          "id": "md026",
+          "english": "gesture navigation",
+          "chinese": "手势导航",
+          "pronunciation": "/ˈdʒestʃər ˌnævɪˈɡeɪʃən/",
+          "example": "Respect gesture navigation areas when placing buttons.",
+          "category": "ui"
+        },
+        {
+          "id": "md027",
+          "english": "haptic feedback",
+          "chinese": "触觉反馈（震动）",
+          "pronunciation": "/ˈhæptɪk ˈfiːdbæk/",
+          "example": "A light haptic feedback confirms each toggle.",
+          "category": "ui"
+        },
+        {
+          "id": "md028",
+          "english": "biometric login",
+          "chinese": "生物识别登录",
+          "pronunciation": "/ˌbaɪoʊˈmetrɪk ˈlɔɡɪn/",
+          "example": "Biometric login with a PIN fallback covers everyone.",
+          "category": "security"
+        },
+        {
+          "id": "md029",
+          "english": "location service",
+          "chinese": "定位服务",
+          "pronunciation": "/loʊˈkeɪʃən ˈsɜːrvɪs/",
+          "example": "Use significant-change location service to save battery.",
+          "category": "permissions"
+        },
+        {
+          "id": "md030",
+          "english": "crash report",
+          "chinese": "崩溃报告",
+          "pronunciation": "/kræʃ rɪˈpɔːrt/",
+          "example": "The crash report points to a nil delegate callback.",
+          "category": "quality"
+        },
+        {
+          "id": "md031",
+          "english": "crash-free rate",
+          "chinese": "无崩溃率",
+          "pronunciation": "/kræʃ friː reɪt/",
+          "example": "We keep the crash-free rate above 99.7%.",
+          "category": "quality"
+        },
+        {
+          "id": "md032",
+          "english": "battery optimization",
+          "chinese": "电池优化（省电策略）",
+          "pronunciation": "/ˈbætəri ˌɑːptɪməˈzeɪʃən/",
+          "example": "Battery optimization delays our sync — request an exemption.",
+          "category": "performance"
+        },
+        {
+          "id": "md033",
+          "english": "home screen widget",
+          "chinese": "桌面小组件",
+          "pronunciation": "/hoʊm skriːn ˈwɪdʒɪt/",
+          "example": "The home screen widget shows today's streak at a glance.",
+          "category": "ui"
+        },
+        {
+          "id": "md034",
+          "english": "app shortcut",
+          "chinese": "应用快捷方式（长按）",
+          "pronunciation": "/æp ˈʃɔːrtkʌt/",
+          "example": "Long-press the icon to see pinned app shortcuts.",
+          "category": "navigation"
+        },
+        {
+          "id": "md035",
+          "english": "universal app",
+          "chinese": "通用应用（手机/平板）",
+          "pronunciation": "/ˌjuːnɪˈvɜːrsl æp/",
+          "example": "Ship one universal app for iPhone and iPad.",
+          "category": "architecture"
+        },
+        {
+          "id": "md036",
+          "english": "tablet layout",
+          "chinese": "平板布局",
+          "pronunciation": "/ˈtæblət ˈlaɪaʊt/",
+          "example": "The tablet layout shows list and detail side by side.",
+          "category": "ui"
+        },
+        {
+          "id": "md037",
+          "english": "push token",
+          "chinese": "推送令牌",
+          "pronunciation": "/pʊʃ ˈtoʊkən/",
+          "example": "Register the push token with your backend after login.",
+          "category": "notifications"
+        },
+        {
+          "id": "md038",
+          "english": "notification payload",
+          "chinese": "通知载荷",
+          "pronunciation": "/ˌnoʊtɪfɪˈkeɪʃən ˈpeɪloʊd/",
+          "example": "Keep the notification payload under 4 KB.",
+          "category": "notifications"
+        },
+        {
+          "id": "md039",
+          "english": "notification channel",
+          "chinese": "通知渠道（Android）",
+          "pronunciation": "/ˌnoʊtɪfɪˈkeɪʃən ˈtʃænl/",
+          "example": "Create separate notification channels for alerts and marketing.",
+          "category": "notifications"
+        },
+        {
+          "id": "md040",
+          "english": "app thinning",
+          "chinese": "应用瘦身",
+          "pronunciation": "/æp ˈθɪnɪŋ/",
+          "example": "App thinning ships each device only the assets it needs.",
+          "category": "release"
+        },
+        {
+          "id": "md041",
+          "english": "delta update",
+          "chinese": "增量更新",
+          "pronunciation": "/ˈdeltə ˈʌpdeɪt/",
+          "example": "A 3 MB delta update instead of a 90 MB full download.",
+          "category": "release"
+        },
+        {
+          "id": "md042",
+          "english": "store listing",
+          "chinese": "商店详情页",
+          "pronunciation": "/stɔːr ˈlɪstɪŋ/",
+          "example": "A/B test the store listing screenshots — it moves installs.",
+          "category": "release"
+        },
+        {
+          "id": "md043",
+          "english": "app localization",
+          "chinese": "应用本地化",
+          "pronunciation": "/æp ˌloʊkələˈzeɪʃən/",
+          "example": "App localization is more than translation — dates, plurals, layouts.",
+          "category": "i18n"
+        },
+        {
+          "id": "md044",
+          "english": "accessibility label",
+          "chinese": "无障碍标签",
+          "pronunciation": "/əkˌsesəˈbɪləti ˈleɪbl/",
+          "example": "Give every icon button an accessibility label.",
+          "category": "i18n"
+        },
+        {
+          "id": "md045",
+          "english": "layout constraint",
+          "chinese": "布局约束",
+          "pronunciation": "/ˈlaɪaʊt kənˈstreɪnt/",
+          "example": "Pin the button with a layout constraint to the safe area.",
+          "category": "ui"
+        },
+        {
+          "id": "md046",
+          "english": "view hierarchy",
+          "chinese": "视图层级",
+          "pronunciation": "/vjuː ˈhaɪərɑːrki/",
+          "example": "A deep view hierarchy slows every layout pass.",
+          "category": "architecture"
+        },
+        {
+          "id": "md047",
+          "english": "view binding",
+          "chinese": "视图绑定",
+          "pronunciation": "/vjuː ˈbaɪndɪŋ/",
+          "example": "View binding removes all the findViewById calls.",
+          "category": "architecture"
+        },
+        {
+          "id": "md048",
+          "english": "state restoration",
+          "chinese": "状态恢复",
+          "pronunciation": "/steɪt ˌrestəˈreɪʃən/",
+          "example": "State restoration returns the user to the exact screen after a kill.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "md049",
+          "english": "configuration change",
+          "chinese": "配置变更（旋转等）",
+          "pronunciation": "/kənˌfɪɡjəˈreɪʃən tʃeɪndʒ/",
+          "example": "Rotating the screen triggers a configuration change and recreation.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "md050",
+          "english": "app release track",
+          "chinese": "发布轨道（内测/公测/正式）",
+          "pronunciation": "/æp rɪˈliːs træk/",
+          "example": "Promote the build from beta to the production app release track.",
+          "category": "release"
+        }
+      ]
+    },
+    {
+      "id": "desktop-development",
+      "name": "Desktop Development",
+      "nameCN": "桌面开发",
+      "description": "Electron / Qt and native desktop application vocabulary",
+      "items": [
+        {
+          "id": "dt001",
+          "english": "system tray",
+          "chinese": "系统托盘",
+          "pronunciation": "/ˈsɪstəm treɪ/",
+          "example": "Closing the window just hides the app to the system tray.",
+          "category": "shell"
+        },
+        {
+          "id": "dt002",
+          "english": "tray icon",
+          "chinese": "托盘图标",
+          "pronunciation": "/treɪ ˈaɪkɑːn/",
+          "example": "The tray icon shows unread count as a badge.",
+          "category": "shell"
+        },
+        {
+          "id": "dt003",
+          "english": "menu bar",
+          "chinese": "菜单栏",
+          "pronunciation": "/ˈmenjuː bɑːr/",
+          "example": "Add 'Check for Updates' to the menu bar.",
+          "category": "shell"
+        },
+        {
+          "id": "dt004",
+          "english": "context menu",
+          "chinese": "右键菜单（上下文菜单）",
+          "pronunciation": "/ˈkɑːntekst ˈmenjuː/",
+          "example": "Right-click the file to open the context menu.",
+          "category": "shell"
+        },
+        {
+          "id": "dt005",
+          "english": "keyboard shortcut",
+          "chinese": "键盘快捷键",
+          "pronunciation": "/ˈkiːbɔːrd ˈʃɔːrtkʌt/",
+          "example": "Ctrl+Shift+P is the keyboard shortcut for the command palette.",
+          "category": "input"
+        },
+        {
+          "id": "dt006",
+          "english": "global shortcut",
+          "chinese": "全局快捷键（系统级）",
+          "pronunciation": "/ˈɡloʊbl ˈʃɔːrtkʌt/",
+          "example": "The global shortcut summons the app from any window.",
+          "category": "input"
+        },
+        {
+          "id": "dt007",
+          "english": "native module",
+          "chinese": "原生模块",
+          "pronunciation": "/ˈneɪtɪv ˈmɑːdjuːl/",
+          "example": "The native module talks to the OS keychain.",
+          "category": "architecture"
+        },
+        {
+          "id": "dt008",
+          "english": "main process",
+          "chinese": "主进程（Electron）",
+          "pronunciation": "/meɪn ˈprɑːses/",
+          "example": "The main process owns the windows and system APIs.",
+          "category": "electron"
+        },
+        {
+          "id": "dt009",
+          "english": "renderer process",
+          "chinese": "渲染进程",
+          "pronunciation": "/ˈrendərər ˈprɑːses/",
+          "example": "Each window runs in its own renderer process.",
+          "category": "electron"
+        },
+        {
+          "id": "dt010",
+          "english": "process isolation",
+          "chinese": "进程隔离",
+          "pronunciation": "/ˈprɑːses ˌaɪsəˈleɪʃən/",
+          "example": "Process isolation contains a crash to one window.",
+          "category": "architecture"
+        },
+        {
+          "id": "dt011",
+          "english": "auto-update",
+          "chinese": "自动更新",
+          "pronunciation": "/ˈɔːtoʊ ʌpˈdeɪt/",
+          "example": "Auto-update checks the feed and applies patches on restart.",
+          "category": "release"
+        },
+        {
+          "id": "dt012",
+          "english": "installer",
+          "chinese": "安装程序",
+          "pronunciation": "/ɪnˈstɔːlər/",
+          "example": "The installer bundles the runtime and signs every file.",
+          "category": "release"
+        },
+        {
+          "id": "dt013",
+          "english": "portable build",
+          "chinese": "便携版（免安装）",
+          "pronunciation": "/ˈpɔːrtəbl bɪld/",
+          "example": "Ship a portable build for users without admin rights.",
+          "category": "release"
+        },
+        {
+          "id": "dt014",
+          "english": "single-instance lock",
+          "chinese": "单实例锁",
+          "pronunciation": "/ˈsɪŋɡəl ˈɪnstəns lɑːk/",
+          "example": "A single-instance lock focuses the existing window instead of launching twice.",
+          "category": "architecture"
+        },
+        {
+          "id": "dt015",
+          "english": "window management",
+          "chinese": "窗口管理",
+          "pronunciation": "/ˈwɪndoʊ ˈmænɪdʒmənt/",
+          "example": "Window management includes z-order, focus and minimize state.",
+          "category": "shell"
+        },
+        {
+          "id": "dt016",
+          "english": "frameless window",
+          "chinese": "无边框窗口",
+          "pronunciation": "/ˈfreɪmləs ˈwɪndoʊ/",
+          "example": "A frameless window needs its own drag regions.",
+          "category": "shell"
+        },
+        {
+          "id": "dt017",
+          "english": "file dialog",
+          "chinese": "文件对话框",
+          "pronunciation": "/faɪl ˈdaɪəlɔːɡ/",
+          "example": "The file dialog remembers the last opened directory.",
+          "category": "shell"
+        },
+        {
+          "id": "dt018",
+          "english": "drag and drop",
+          "chinese": "拖放",
+          "pronunciation": "/dræɡ ænd drɑːp/",
+          "example": "Support drag and drop of folders onto the main window.",
+          "category": "input"
+        },
+        {
+          "id": "dt019",
+          "english": "clipboard integration",
+          "chinese": "剪贴板集成",
+          "pronunciation": "/ˈklɪpbɔːrd ˌɪntɪˈɡreɪʃən/",
+          "example": "Clipboard integration copies the formatted result.",
+          "category": "shell"
+        },
+        {
+          "id": "dt020",
+          "english": "native menu",
+          "chinese": "原生菜单",
+          "pronunciation": "/ˈneɪtɪv ˈmenjuː/",
+          "example": "On macOS the native menu must live at the top of the screen.",
+          "category": "shell"
+        },
+        {
+          "id": "dt021",
+          "english": "IPC bridge",
+          "chinese": "进程通信桥",
+          "pronunciation": "/ˌaɪ piː ˈsiː brɪdʒ/",
+          "example": "Expose only whitelisted methods through the IPC bridge.",
+          "category": "electron"
+        },
+        {
+          "id": "dt022",
+          "english": "WebView",
+          "chinese": "内嵌浏览器视图",
+          "pronunciation": "/ˈwebvjuː/",
+          "example": "The login page renders in a WebView.",
+          "category": "architecture"
+        },
+        {
+          "id": "dt023",
+          "english": "context isolation",
+          "chinese": "上下文隔离",
+          "pronunciation": "/ˈkɑːntekst ˌaɪsəˈleɪʃən/",
+          "example": "Context isolation blocks page scripts from touching Node APIs.",
+          "category": "electron"
+        },
+        {
+          "id": "dt024",
+          "english": "preload script",
+          "chinese": "预加载脚本",
+          "pronunciation": "/ˈpriːloʊd skrɪpt/",
+          "example": "The preload script is the only bridge between renderer and main.",
+          "category": "electron"
+        },
+        {
+          "id": "dt025",
+          "english": "custom protocol",
+          "chinese": "自定义协议（myapp://）",
+          "pronunciation": "/ˈkʌstəm ˈproʊtəkɔːl/",
+          "example": "Register a custom protocol so links open the app directly.",
+          "category": "architecture"
+        },
+        {
+          "id": "dt026",
+          "english": "file association",
+          "chinese": "文件关联",
+          "pronunciation": "/faɪl əˌsoʊʃiˈeɪʃən/",
+          "example": "Add a file association so .myproj opens in the app.",
+          "category": "shell"
+        },
+        {
+          "id": "dt027",
+          "english": "launch on startup",
+          "chinese": "开机自启",
+          "pronunciation": "/lɔːntʃ ɑːn ˈstɑːrtʌp/",
+          "example": "Launch on startup is opt-in, never default.",
+          "category": "shell"
+        },
+        {
+          "id": "dt028",
+          "english": "notification center",
+          "chinese": "通知中心",
+          "pronunciation": "/ˌnoʊtɪfɪˈkeɪʃən ˈsentər/",
+          "example": "Post the update alert through the OS notification center.",
+          "category": "shell"
+        },
+        {
+          "id": "dt029",
+          "english": "widget toolkit",
+          "chinese": "部件工具包（GUI 框架）",
+          "pronunciation": "/ˈwɪdʒɪt ˈtuːlkɪt/",
+          "example": "Qt is a mature cross-platform widget toolkit.",
+          "category": "native"
+        },
+        {
+          "id": "dt030",
+          "english": "cross-platform UI",
+          "chinese": "跨平台界面",
+          "pronunciation": "/krɔːs ˈplætfɔːrm ˌjuː ˈaɪ/",
+          "example": "A cross-platform UI beats three separate codebases for most teams.",
+          "category": "native"
+        },
+        {
+          "id": "dt031",
+          "english": "native look and feel",
+          "chinese": "原生外观与手感",
+          "pronunciation": "/ˈneɪtɪv lʊk ænd fiːl/",
+          "example": "Users notice the missing native look and feel instantly.",
+          "category": "native"
+        },
+        {
+          "id": "dt032",
+          "english": "signal-slot mechanism",
+          "chinese": "信号槽机制（Qt）",
+          "pronunciation": "/ˈsɪɡnəl slɑːt ˈmekənɪzəm/",
+          "example": "Qt's signal-slot mechanism wires events to handlers.",
+          "category": "native"
+        },
+        {
+          "id": "dt033",
+          "english": "event dispatch",
+          "chinese": "事件分发",
+          "pronunciation": "/ɪˈvent dɪˈspætʃ/",
+          "example": "Event dispatch walks the window hierarchy to find the handler.",
+          "category": "native"
+        },
+        {
+          "id": "dt034",
+          "english": "high DPI support",
+          "chinese": "高分屏支持",
+          "pronunciation": "/haɪ ˌdiː piː ˈaɪ səˈpɔːrt/",
+          "example": "Without high DPI support the icons look like mush on 4K.",
+          "category": "ui"
+        },
+        {
+          "id": "dt035",
+          "english": "multi-monitor setup",
+          "chinese": "多显示器环境",
+          "pronunciation": "/ˈmʌlti ˈmɑːnɪtər ˈsɛtʌp/",
+          "example": "Remember the window position per screen in multi-monitor setups.",
+          "category": "ui"
+        },
+        {
+          "id": "dt036",
+          "english": "offline license",
+          "chinese": "离线授权",
+          "pronunciation": "/ˈɔːflaɪn ˈlaɪsns/",
+          "example": "An offline license file works in air-gapped environments.",
+          "category": "licensing"
+        },
+        {
+          "id": "dt037",
+          "english": "software activation",
+          "chinese": "软件激活",
+          "pronunciation": "/ˈsɔːftwer ˌæktɪˈveɪʃən/",
+          "example": "Software activation is a one-time online check.",
+          "category": "licensing"
+        },
+        {
+          "id": "dt038",
+          "english": "crash dump",
+          "chinese": "崩溃转储",
+          "pronunciation": "/kræʃ dʌmp/",
+          "example": "Attach the crash dump so we can see the faulting stack.",
+          "category": "quality"
+        },
+        {
+          "id": "dt039",
+          "english": "symbol server",
+          "chinese": "符号服务器",
+          "pronunciation": "/ˈsɪmbl ˈsɜːrvər/",
+          "example": "Point the debugger at the symbol server to un-minify the stack.",
+          "category": "quality"
+        },
+        {
+          "id": "dt040",
+          "english": "usage analytics",
+          "chinese": "使用统计",
+          "pronunciation": "/ˈjuːsɪdʒ əˈnælɪtɪks/",
+          "example": "Usage analytics must be anonymous and opt-out-able.",
+          "category": "quality"
+        },
+        {
+          "id": "dt041",
+          "english": "silent install",
+          "chinese": "静默安装",
+          "pronunciation": "/ˈsaɪlənt ɪnˈstɔːl/",
+          "example": "IT departments deploy via silent install with no UI.",
+          "category": "release"
+        },
+        {
+          "id": "dt042",
+          "english": "package manager distribution",
+          "chinese": "包管理器分发（winget/brew）",
+          "pronunciation": "/ˈpækɪdʒ ˈmænɪdʒər ˌdɪstrɪˈbjuːʃən/",
+          "example": "Package manager distribution keeps updates automatic.",
+          "category": "release"
+        },
+        {
+          "id": "dt043",
+          "english": "insider build",
+          "chinese": "预览版构建",
+          "pronunciation": "/ˌɪnˈsaɪdər bɪld/",
+          "example": "Insider builds get fixes days before everyone else.",
+          "category": "release"
+        },
+        {
+          "id": "dt044",
+          "english": "stable ABI",
+          "chinese": "稳定二进制接口",
+          "pronunciation": "/ˈsteɪbl ˌeɪ biː ˈaɪ/",
+          "example": "A stable ABI lets plugins survive major upgrades.",
+          "category": "native"
+        },
+        {
+          "id": "dt045",
+          "english": "GPU acceleration",
+          "chinese": "GPU 加速",
+          "pronunciation": "/ˌdʒiː piː ˈjuː əkˌseləˈreɪʃən/",
+          "example": "Enable GPU acceleration for smooth 120 fps scrolling.",
+          "category": "performance"
+        },
+        {
+          "id": "dt046",
+          "english": "headless mode",
+          "chinese": "无头模式",
+          "pronunciation": "/ˈhedləs moʊd/",
+          "example": "CI runs the export pipeline in headless mode.",
+          "category": "performance"
+        },
+        {
+          "id": "dt047",
+          "english": "command-line flag",
+          "chinese": "命令行参数",
+          "pronunciation": "/kəˈmænd laɪn flæɡ/",
+          "example": "A hidden command-line flag enables verbose logging.",
+          "category": "input"
+        },
+        {
+          "id": "dt048",
+          "english": "accessibility tree",
+          "chinese": "无障碍树",
+          "pronunciation": "/əkˌsesəˈbɪləti triː/",
+          "example": "Screen readers navigate the accessibility tree, not pixels.",
+          "category": "a11y"
+        },
+        {
+          "id": "dt049",
+          "english": "screen reader compatibility",
+          "chinese": "屏幕阅读器兼容性",
+          "pronunciation": "/skriːn ˈriːdər kəmˌpætəˈbɪləti/",
+          "example": "Test screen reader compatibility before every release.",
+          "category": "a11y"
+        },
+        {
+          "id": "dt050",
+          "english": "UI responsiveness",
+          "chinese": "界面响应性",
+          "pronunciation": "/ˌjuː ˈaɪ riːˈspɑːnsɪvnəs/",
+          "example": "UI responsiveness budget: any click reacts within 100 ms.",
+          "category": "performance"
+        }
+      ]
+    },
+    {
+      "id": "mlops",
+      "name": "MLOps & Model Lifecycle",
+      "nameCN": "MLOps 机器学习工程",
+      "description": "ML productionization, monitoring and model lifecycle vocabulary",
+      "items": [
+        {
+          "id": "mo001",
+          "english": "MLOps",
+          "chinese": "机器学习运维",
+          "pronunciation": "/ˌem el ˈɑːps/",
+          "example": "MLOps applies Devops discipline to the model lifecycle.",
+          "category": "core"
+        },
+        {
+          "id": "mo002",
+          "english": "feature store",
+          "chinese": "特征仓库",
+          "pronunciation": "/ˈfiːtʃər stɔːr/",
+          "example": "A feature store guarantees training and serving use the same features.",
+          "category": "data"
+        },
+        {
+          "id": "mo003",
+          "english": "feature engineering",
+          "chinese": "特征工程",
+          "pronunciation": "/ˈfiːtʃər ˌendʒɪˈnɪrɪŋ/",
+          "example": "Feature engineering still beats architecture changes.",
+          "category": "data"
+        },
+        {
+          "id": "mo004",
+          "english": "model registry",
+          "chinese": "模型仓库（注册表）",
+          "pronunciation": "/ˈmɑːdl ˈredʒɪstri/",
+          "example": "The model registry tracks lineage, owner and approval for every model.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "mo005",
+          "english": "model versioning",
+          "chinese": "模型版本管理",
+          "pronunciation": "/ˈmɑːdl ˈvɜːrʒənɪŋ/",
+          "example": "Model versioning pairs each binary with its training data hash.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "mo006",
+          "english": "experiment tracking",
+          "chinese": "实验追踪",
+          "pronunciation": "/ɪkˈsperɪmənt ˈtrækɪŋ/",
+          "example": "Experiment tracking logs params, metrics and artifacts per run.",
+          "category": "process"
+        },
+        {
+          "id": "mo007",
+          "english": "ML metadata",
+          "chinese": "ML 元数据",
+          "pronunciation": "/ˌem ˈel ˈmetədeɪtə/",
+          "example": "ML metadata answers: which data, which code, which GPU trained this?",
+          "category": "process"
+        },
+        {
+          "id": "mo008",
+          "english": "reproducibility",
+          "chinese": "可复现性",
+          "pronunciation": "/riːprəˌduːsəˈbɪləti/",
+          "example": "Pin seeds and library versions for reproducibility.",
+          "category": "process"
+        },
+        {
+          "id": "mo009",
+          "english": "data versioning",
+          "chinese": "数据版本管理",
+          "pronunciation": "/ˈdeɪtə ˈvɜːrʒənɪŋ/",
+          "example": "Data versioning lets you diff the dataset between experiments.",
+          "category": "data"
+        },
+        {
+          "id": "mo010",
+          "english": "data labeling",
+          "chinese": "数据标注",
+          "pronunciation": "/ˈdeɪtə ˈleɪblɪŋ/",
+          "example": "Outsource data labeling only with a strict guideline doc.",
+          "category": "data"
+        },
+        {
+          "id": "mo011",
+          "english": "label quality",
+          "chinese": "标注质量",
+          "pronunciation": "/ˈleɪbl ˈkwɑːləti/",
+          "example": "Adjudicate disagreements to raise label quality.",
+          "category": "data"
+        },
+        {
+          "id": "mo012",
+          "english": "ground truth",
+          "chinese": "真值（标准答案）",
+          "pronunciation": "/ɡraʊnd truːθ/",
+          "example": "The model disagrees with ground truth on 4% of rows.",
+          "category": "data"
+        },
+        {
+          "id": "mo013",
+          "english": "human-in-the-loop",
+          "chinese": "人在回路",
+          "pronunciation": "/ˈhjuːmən ɪn ðə luːp/",
+          "example": "Human-in-the-loop review catches the model's low-confidence cases.",
+          "category": "process"
+        },
+        {
+          "id": "mo014",
+          "english": "active learning",
+          "chinese": "主动学习",
+          "pronunciation": "/ˈæktɪv ˈlɜːrnɪŋ/",
+          "example": "Active learning picks the samples worth labeling next.",
+          "category": "training"
+        },
+        {
+          "id": "mo015",
+          "english": "model serving",
+          "chinese": "模型服务化",
+          "pronunciation": "/ˈmɑːdl ˈsɜːrvɪŋ/",
+          "example": "Model serving scales to thousands of predictions per second.",
+          "category": "serving"
+        },
+        {
+          "id": "mo016",
+          "english": "real-time inference",
+          "chinese": "实时推理",
+          "pronunciation": "/ˈriːəl taɪm ˈɪnfərəns/",
+          "example": "Real-time inference must return in under 50 ms.",
+          "category": "serving"
+        },
+        {
+          "id": "mo017",
+          "english": "batch inference",
+          "chinese": "批量推理",
+          "pronunciation": "/bætʃ ˈɪnfərəns/",
+          "example": "Batch inference overnight is 10x cheaper than on-demand.",
+          "category": "serving"
+        },
+        {
+          "id": "mo018",
+          "english": "inference latency",
+          "chinese": "推理延迟",
+          "pronunciation": "/ˈɪnfərəns ˈleɪtənsi/",
+          "example": "Quantization cut inference latency in half.",
+          "category": "serving"
+        },
+        {
+          "id": "mo019",
+          "english": "model rollout",
+          "chinese": "模型上线（放量）",
+          "pronunciation": "/ˈmɑːdl ˈroʊlaʊt/",
+          "example": "Stage the model rollout: 1% → 10% → 100% of traffic.",
+          "category": "serving"
+        },
+        {
+          "id": "mo020",
+          "english": "model monitoring",
+          "chinese": "模型监控",
+          "pronunciation": "/ˈmɑːdl ˈmɑːnɪtərɪŋ/",
+          "example": "Model monitoring alerts when precision drops below the SLA.",
+          "category": "monitoring"
+        },
+        {
+          "id": "mo021",
+          "english": "model drift",
+          "chinese": "模型漂移",
+          "pronunciation": "/ˈmɑːdl drɪft/",
+          "example": "Model drift means the world changed and the model didn't.",
+          "category": "monitoring"
+        },
+        {
+          "id": "mo022",
+          "english": "data drift",
+          "chinese": "数据漂移",
+          "pronunciation": "/ˈdeɪtə drɪft/",
+          "example": "Data drift showed up first in the input distribution plot.",
+          "category": "monitoring"
+        },
+        {
+          "id": "mo023",
+          "english": "retraining",
+          "chinese": "再训练",
+          "pronunciation": "/ˌriːˈtreɪnɪŋ/",
+          "example": "Schedule weekly retraining on fresh labeled data.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "mo024",
+          "english": "automated retraining",
+          "chinese": "自动再训练",
+          "pronunciation": "/ˈɔːtəmeɪtɪd ˌriːˈtreɪnɪŋ/",
+          "example": "Automated retraining triggers when drift exceeds the threshold.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "mo025",
+          "english": "shadow testing",
+          "chinese": "影子测试",
+          "pronunciation": "/ˈʃædoʊ ˈtestɪŋ/",
+          "example": "Shadow testing sends live traffic to the new model without acting on it.",
+          "category": "evaluation"
+        },
+        {
+          "id": "mo026",
+          "english": "champion-challenger",
+          "chinese": "冠军-挑战者模式",
+          "pronunciation": "/ˈtʃæmpiən ˈtʃælɪndʒər/",
+          "example": "Run champion-challenger so the best model wins on real traffic.",
+          "category": "evaluation"
+        },
+        {
+          "id": "mo027",
+          "english": "online evaluation",
+          "chinese": "在线评估",
+          "pronunciation": "/ˌɑːnˈlaɪn ɪˌvæljuˈeɪʃən/",
+          "example": "Online evaluation measures what users do, not what we predict.",
+          "category": "evaluation"
+        },
+        {
+          "id": "mo028",
+          "english": "offline evaluation",
+          "chinese": "离线评估",
+          "pronunciation": "/ˌɔːfˈlaɪn ɪˌvæljuˈeɪʃən/",
+          "example": "Offline evaluation uses the held-out test set.",
+          "category": "evaluation"
+        },
+        {
+          "id": "mo029",
+          "english": "holdout set",
+          "chinese": "留出集（测试集）",
+          "pronunciation": "/ˈhoʊldaʊt set/",
+          "example": "Touch the holdout set exactly once, at the end.",
+          "category": "evaluation"
+        },
+        {
+          "id": "mo030",
+          "english": "training pipeline",
+          "chinese": "训练流水线",
+          "pronunciation": "/ˈtreɪnɪŋ ˈpaɪplaɪn/",
+          "example": "The training pipeline runs data validation before training.",
+          "category": "training"
+        },
+        {
+          "id": "mo031",
+          "english": "training job",
+          "chinese": "训练任务",
+          "pronunciation": "/ˈtreɪnɪŋ dʒɑːb/",
+          "example": "The training job checkpoints every 1000 steps.",
+          "category": "training"
+        },
+        {
+          "id": "mo032",
+          "english": "distributed training",
+          "chinese": "分布式训练",
+          "pronunciation": "/dɪˈstrɪbjuːtɪd ˈtreɪnɪŋ/",
+          "example": "Distributed training shards the batch across eight GPUs.",
+          "category": "training"
+        },
+        {
+          "id": "mo033",
+          "english": "GPU utilization",
+          "chinese": "GPU 利用率",
+          "pronunciation": "/ˌdʒiː piː ˈjuː ˌjuːtələˈzeɪʃən/",
+          "example": "GPU utilization at 30% means your data loading is the bottleneck.",
+          "category": "training"
+        },
+        {
+          "id": "mo034",
+          "english": "hardware acceleration",
+          "chinese": "硬件加速",
+          "pronunciation": "/ˈhɑːrdwer əkˌseləˈreɪʃən/",
+          "example": "Edge devices need hardware acceleration for real-time vision.",
+          "category": "optimization"
+        },
+        {
+          "id": "mo035",
+          "english": "quantization",
+          "chinese": "量化（模型压缩）",
+          "pronunciation": "/ˌkwɑːntəˈzeɪʃən/",
+          "example": "Int8 quantization shrank the model 4x with minimal loss.",
+          "category": "optimization"
+        },
+        {
+          "id": "mo036",
+          "english": "pruning",
+          "chinese": "剪枝",
+          "pronunciation": "/ˈpruːnɪŋ/",
+          "example": "Pruning removes weights that barely matter.",
+          "category": "optimization"
+        },
+        {
+          "id": "mo037",
+          "english": "knowledge distillation",
+          "chinese": "知识蒸馏",
+          "pronunciation": "/ˈnɑːlɪdʒ ˌdɪstɪˈleɪʃən/",
+          "example": "Knowledge distillation packs a big model into a small one.",
+          "category": "optimization"
+        },
+        {
+          "id": "mo038",
+          "english": "model compression",
+          "chinese": "模型压缩",
+          "pronunciation": "/ˈmɑːdl kəmˈpreʃən/",
+          "example": "Model compression made the model fit on a phone.",
+          "category": "optimization"
+        },
+        {
+          "id": "mo039",
+          "english": "ONNX",
+          "chinese": "开放神经网络交换格式",
+          "pronunciation": "/ˈɒnks/",
+          "example": "Export to ONNX so any runtime can load the model.",
+          "category": "serving"
+        },
+        {
+          "id": "mo040",
+          "english": "inference engine",
+          "chinese": "推理引擎",
+          "pronunciation": "/ˈɪnfərəns ˈendʒɪn/",
+          "example": "The inference engine fuses kernels for faster execution.",
+          "category": "serving"
+        },
+        {
+          "id": "mo041",
+          "english": "edge deployment",
+          "chinese": "边缘部署",
+          "pronunciation": "/edʒ dɪˈplɔɪmənt/",
+          "example": "Edge deployment puts the model on-device for privacy.",
+          "category": "serving"
+        },
+        {
+          "id": "mo042",
+          "english": "recommendation system",
+          "chinese": "推荐系统",
+          "pronunciation": "/ˌrekəmenˈdeɪʃən ˈsɪstəm/",
+          "example": "The recommendation system ranks candidates in two stages.",
+          "category": "applications"
+        },
+        {
+          "id": "mo043",
+          "english": "bias audit",
+          "chinese": "偏见审计",
+          "pronunciation": "/ˈbaɪəs ˈɔːdɪt/",
+          "example": "Run a bias audit across demographic slices before launch.",
+          "category": "governance"
+        },
+        {
+          "id": "mo044",
+          "english": "fairness metric",
+          "chinese": "公平性指标",
+          "pronunciation": "/ˈfernəs ˈmetrɪk/",
+          "example": "No single fairness metric fits every problem — pick and justify one.",
+          "category": "governance"
+        },
+        {
+          "id": "mo045",
+          "english": "explainability",
+          "chinese": "可解释性",
+          "pronunciation": "/ɪkˌspleɪnəˈbɪləti/",
+          "example": "Regulators increasingly demand model explainability.",
+          "category": "governance"
+        },
+        {
+          "id": "mo046",
+          "english": "feature importance",
+          "chinese": "特征重要性",
+          "pronunciation": "/ˈfiːtʃər ɪmˈpɔːrtəns/",
+          "example": "Feature importance showed tenure dominates the prediction.",
+          "category": "analysis"
+        },
+        {
+          "id": "mo047",
+          "english": "model governance",
+          "chinese": "模型治理",
+          "pronunciation": "/ˈmɑːdl ˈɡʌvərnəns/",
+          "example": "Model governance defines approval gates and audit trails.",
+          "category": "governance"
+        },
+        {
+          "id": "mo048",
+          "english": "ML platform",
+          "chinese": "ML 平台（内部）",
+          "pronunciation": "/ˌem ˈel ˈplætfɔːrm/",
+          "example": "The ML platform team builds the paved road for all data scientists.",
+          "category": "core"
+        },
+        {
+          "id": "mo049",
+          "english": "cost per prediction",
+          "chinese": "单次预测成本",
+          "pronunciation": "/kɔːst pər prɪˈdɪkʃən/",
+          "example": "Batching cut cost per prediction by 60%.",
+          "category": "economics"
+        },
+        {
+          "id": "mo050",
+          "english": "model card",
+          "chinese": "模型卡片（说明文档）",
+          "pronunciation": "/ˈmɑːdl kɑːrd/",
+          "example": "Every published model ships a model card with intended use and limits.",
+          "category": "governance"
+        }
+      ]
+    },
+    {
+      "id": "compilers",
+      "name": "Compilers & Language Theory",
+      "nameCN": "编译原理",
+      "description": "Lexing, parsing, optimization and linking vocabulary",
+      "items": [
+        {
+          "id": "cp001",
+          "english": "compiler",
+          "chinese": "编译器",
+          "pronunciation": "/kəmˈpaɪlər/",
+          "example": "The compiler turns source code into machine code.",
+          "category": "core"
+        },
+        {
+          "id": "cp002",
+          "english": "interpreter",
+          "chinese": "解释器",
+          "pronunciation": "/ɪnˈtɜːrprɪtər/",
+          "example": "The interpreter executes the AST directly, no binary output.",
+          "category": "core"
+        },
+        {
+          "id": "cp003",
+          "english": "source code",
+          "chinese": "源代码",
+          "pronunciation": "/sɔːrs koʊd/",
+          "example": "Ship the source code and let users build locally.",
+          "category": "core"
+        },
+        {
+          "id": "cp004",
+          "english": "lexical analysis",
+          "chinese": "词法分析",
+          "pronunciation": "/ˈleksɪkl əˈnæləsɪs/",
+          "example": "Lexical analysis turns a character stream into lexemes.",
+          "category": "frontend"
+        },
+        {
+          "id": "cp005",
+          "english": "lexer",
+          "chinese": "词法分析器",
+          "pronunciation": "/ˈleksər/",
+          "example": "The lexer flags the unclosed string literal at line 3.",
+          "category": "frontend"
+        },
+        {
+          "id": "cp006",
+          "english": "lexeme",
+          "chinese": "词素",
+          "pronunciation": "/ˈleksiːm/",
+          "example": "Each lexeme is matched against the language's token patterns.",
+          "category": "frontend"
+        },
+        {
+          "id": "cp007",
+          "english": "parser",
+          "chinese": "语法分析器",
+          "pronunciation": "/ˈpɑːrsər/",
+          "example": "The parser checks the sequence against the grammar.",
+          "category": "frontend"
+        },
+        {
+          "id": "cp008",
+          "english": "parse tree",
+          "chinese": "解析树",
+          "pronunciation": "/pɑːrs triː/",
+          "example": "The parse tree records every rule application, even parentheses.",
+          "category": "frontend"
+        },
+        {
+          "id": "cp009",
+          "english": "abstract syntax tree",
+          "chinese": "抽象语法树（AST）",
+          "pronunciation": "/ˈæbstrækt ˈsɪntæks triː/",
+          "example": "Linters walk the abstract syntax tree, not the text.",
+          "category": "frontend"
+        },
+        {
+          "id": "cp010",
+          "english": "production rule",
+          "chinese": "产生式规则",
+          "pronunciation": "/prəˈdʌkʃən ruːl/",
+          "example": "Every nonterminal expands via one or more production rules.",
+          "category": "grammar"
+        },
+        {
+          "id": "cp011",
+          "english": "recursive descent parser",
+          "chinese": "递归下降解析器",
+          "pronunciation": "/rɪˈkɜːrsɪv dɪˈsent ˈpɑːrsər/",
+          "example": "A recursive descent parser is easy to read and easy to debug.",
+          "category": "grammar"
+        },
+        {
+          "id": "cp012",
+          "english": "operator precedence",
+          "chinese": "运算符优先级",
+          "pronunciation": "/ˈɑːpəreɪtər ˈpresɪdəns/",
+          "example": "Multiplication binds tighter because of operator precedence.",
+          "category": "grammar"
+        },
+        {
+          "id": "cp013",
+          "english": "associativity",
+          "chinese": "结合性",
+          "pronunciation": "/əˌsoʊʃiˈeɪtɪvəti/",
+          "example": "Left associativity makes a-b-c parse as (a-b)-c.",
+          "category": "grammar"
+        },
+        {
+          "id": "cp014",
+          "english": "syntax error",
+          "chinese": "语法错误",
+          "pronunciation": "/ˈsɪntæks ˈerər/",
+          "example": "A syntax error stops compilation before semantics even start.",
+          "category": "diagnostics"
+        },
+        {
+          "id": "cp015",
+          "english": "semantic analysis",
+          "chinese": "语义分析",
+          "pronunciation": "/sɪˈmæntɪk əˈnæləsɪs/",
+          "example": "Semantic analysis catches type errors the parser can't see.",
+          "category": "frontend"
+        },
+        {
+          "id": "cp016",
+          "english": "type checker",
+          "chinese": "类型检查器",
+          "pronunciation": "/taɪp ˈtʃekər/",
+          "example": "The type checker rejects comparing a string to an int.",
+          "category": "types"
+        },
+        {
+          "id": "cp017",
+          "english": "type inference",
+          "chinese": "类型推断",
+          "pronunciation": "/taɪp ˈɪnfərəns/",
+          "example": "Type inference fills in the types you left out.",
+          "category": "types"
+        },
+        {
+          "id": "cp018",
+          "english": "symbol table",
+          "chinese": "符号表",
+          "pronunciation": "/ˈsɪmbl ˈteɪbl/",
+          "example": "The symbol table maps identifiers to their declared types.",
+          "category": "frontend"
+        },
+        {
+          "id": "cp019",
+          "english": "scope resolution",
+          "chinese": "作用域解析",
+          "pronunciation": "/skoʊp ˌrezəˈluːʃən/",
+          "example": "Scope resolution decides which 'x' the inner block means.",
+          "category": "frontend"
+        },
+        {
+          "id": "cp020",
+          "english": "name mangling",
+          "chinese": "名字修饰（符号改编）",
+          "pronunciation": "/neɪm ˈmæŋɡlɪŋ/",
+          "example": "C++ name mangling encodes parameter types into the symbol.",
+          "category": "linking"
+        },
+        {
+          "id": "cp021",
+          "english": "intermediate representation",
+          "chinese": "中间表示（IR）",
+          "pronunciation": "/ˌɪntərˈmiːdiət ˌreprɪzenˈteɪʃən/",
+          "example": "LLVM's IR lets many languages share one optimizer.",
+          "category": "middle"
+        },
+        {
+          "id": "cp022",
+          "english": "three-address code",
+          "chinese": "三地址码",
+          "pronunciation": "/θriː əˈdres koʊd/",
+          "example": "Three-address code breaks every expression into simple steps.",
+          "category": "middle"
+        },
+        {
+          "id": "cp023",
+          "english": "optimization pass",
+          "chinese": "优化遍",
+          "pronunciation": "/ˌɑːptɪməˈzeɪʃən pæs/",
+          "example": "Each optimization pass rewrites the IR toward faster code.",
+          "category": "optimizer"
+        },
+        {
+          "id": "cp024",
+          "english": "constant folding",
+          "chinese": "常量折叠",
+          "pronunciation": "/ˈkɑːnstənt ˈfoʊldɪŋ/",
+          "example": "Constant folding computes 2*10 at compile time.",
+          "category": "optimizer"
+        },
+        {
+          "id": "cp025",
+          "english": "dead code elimination",
+          "chinese": "死代码消除",
+          "pronunciation": "/ded koʊd ɪˌlɪmɪˈneɪʃən/",
+          "example": "Dead code removal removed 30% of the binary.",
+          "category": "optimizer"
+        },
+        {
+          "id": "cp026",
+          "english": "loop-invariant code motion",
+          "chinese": "循环不变量外提",
+          "pronunciation": "/luːp ɪnˈveriənt koʊd ˈmoʊʃən/",
+          "example": "Loop-invariant code motion hoists the length calc out of the loop.",
+          "category": "optimizer"
+        },
+        {
+          "id": "cp027",
+          "english": "peephole optimization",
+          "chinese": "窥孔优化",
+          "pronunciation": "/ˈpiːphoʊl ˌɑːptɪməˈzeɪʃən/",
+          "example": "Peephole optimization rewrites tiny local instruction patterns.",
+          "category": "optimizer"
+        },
+        {
+          "id": "cp028",
+          "english": "register allocation",
+          "chinese": "寄存器分配",
+          "pronunciation": "/ˈredʒɪstər ˌæləˈkeɪʃən/",
+          "example": "Register allocation maps live variables onto limited registers.",
+          "category": "backend"
+        },
+        {
+          "id": "cp029",
+          "english": "calling convention",
+          "chinese": "调用约定",
+          "pronunciation": "/ˈkɔːlɪŋ kənˈvenʃən/",
+          "example": "Mixing calling conventions corrupts the stack.",
+          "category": "backend"
+        },
+        {
+          "id": "cp030",
+          "english": "code generation",
+          "chinese": "代码生成",
+          "pronunciation": "/koʊd ˌdʒenəˈreɪʃən/",
+          "example": "Code generation emits assembly from the optimized IR.",
+          "category": "backend"
+        },
+        {
+          "id": "cp031",
+          "english": "bytecode",
+          "chinese": "字节码",
+          "pronunciation": "/ˈbaɪtkoʊd/",
+          "example": "The VM executes portable bytecode, not machine code.",
+          "category": "runtime"
+        },
+        {
+          "id": "cp032",
+          "english": "assembly language",
+          "chinese": "汇编语言",
+          "pronunciation": "/əˈsembli ˈlæŋɡwɪdʒ/",
+          "example": "Read the assembly when the optimizer does something suspicious.",
+          "category": "runtime"
+        },
+        {
+          "id": "cp033",
+          "english": "object file",
+          "chinese": "目标文件",
+          "pronunciation": "/ˈɑːbdʒɪkt faɪl/",
+          "example": "Each translation unit compiles to one object file.",
+          "category": "linking"
+        },
+        {
+          "id": "cp034",
+          "english": "linker",
+          "chinese": "链接器",
+          "pronunciation": "/ˈlɪŋkər/",
+          "example": "The linker stitches object files into one executable.",
+          "category": "linking"
+        },
+        {
+          "id": "cp035",
+          "english": "static linking",
+          "chinese": "静态链接",
+          "pronunciation": "/ˈstætɪk ˈlɪŋkɪŋ/",
+          "example": "Static linking makes a big binary with zero dependency drama.",
+          "category": "linking"
+        },
+        {
+          "id": "cp036",
+          "english": "dynamic linking",
+          "chinese": "动态链接",
+          "pronunciation": "/daɪˈnæmɪk ˈlɪŋkɪŋ/",
+          "example": "Dynamic linking shares one libc across every process.",
+          "category": "linking"
+        },
+        {
+          "id": "cp037",
+          "english": "shared library",
+          "chinese": "共享库",
+          "pronunciation": "/ʃerd ˈlaɪbreri/",
+          "example": "Bump the shared library version before changing its ABI.",
+          "category": "linking"
+        },
+        {
+          "id": "cp038",
+          "english": "linker script",
+          "chinese": "链接脚本",
+          "pronunciation": "/ˈlɪŋkər skrɪpt/",
+          "example": "The linker script places sections in flash or RAM.",
+          "category": "linking"
+        },
+        {
+          "id": "cp039",
+          "english": "relocation",
+          "chinese": "重定位",
+          "pronunciation": "/ˌriːloʊˈkeɪʃən/",
+          "example": "Relocation patches final addresses into the code at link time.",
+          "category": "linking"
+        },
+        {
+          "id": "cp040",
+          "english": "symbol resolution",
+          "chinese": "符号解析",
+          "pronunciation": "/ˈsɪmbl ˌrezəˈluːʃən/",
+          "example": "Symbol resolution fails when two libraries define the same name.",
+          "category": "linking"
+        },
+        {
+          "id": "cp041",
+          "english": "ABI",
+          "chinese": "应用二进制接口",
+          "pronunciation": "/ˌeɪ biː ˈaɪ/",
+          "example": "A stable ABI is why C libraries live for decades.",
+          "category": "runtime"
+        },
+        {
+          "id": "cp042",
+          "english": "undefined reference",
+          "chinese": "未定义引用（链接错误）",
+          "pronunciation": "/ˌʌndɪˈfaɪnd ˈrefrəns/",
+          "example": "That 'undefined reference' means you forgot to link the lib.",
+          "category": "diagnostics"
+        },
+        {
+          "id": "cp043",
+          "english": "source-to-source compiler",
+          "chinese": "源到源编译器（转译器）",
+          "pronunciation": "/sɔːrs tuː sɔːrs kəmˈpaɪlər/",
+          "example": "A source-to-source compiler emits TypeScript from Python types.",
+          "category": "core"
+        },
+        {
+          "id": "cp044",
+          "english": "macro expansion",
+          "chinese": "宏展开",
+          "pronunciation": "/ˈmækroʊ ɪkˈspænʃən/",
+          "example": "Debugging macro expansion is debugging the preprocessor.",
+          "category": "preprocessor"
+        },
+        {
+          "id": "cp045",
+          "english": "preprocessor directive",
+          "chinese": "预处理指令",
+          "pronunciation": "/priːˈproʊsesər dəˈrektɪv/",
+          "example": "The #include preprocessor directive pastes the header in place.",
+          "category": "preprocessor"
+        },
+        {
+          "id": "cp046",
+          "english": "conditional compilation",
+          "chinese": "条件编译",
+          "pronunciation": "/kənˈdɪʃənəl ˌkɑːmpɪˈleɪʃən/",
+          "example": "Conditional compilation switches platform-specific code paths.",
+          "category": "preprocessor"
+        },
+        {
+          "id": "cp047",
+          "english": "build artifact",
+          "chinese": "构建产物",
+          "pronunciation": "/bɪld ˈɑːrtɪfækt/",
+          "example": "Cache build artifacts between CI runs.",
+          "category": "build"
+        },
+        {
+          "id": "cp048",
+          "english": "compiler frontend",
+          "chinese": "编译器前端",
+          "pronunciation": "/kəmˈpaɪlər ˈfrʌntend/",
+          "example": "The compiler frontend stops at the IR.",
+          "category": "core"
+        },
+        {
+          "id": "cp049",
+          "english": "compiler backend",
+          "chinese": "编译器后端",
+          "pronunciation": "/kəmˈpaɪlər ˈbækend/",
+          "example": "The compiler backend lowers IR to x86 or ARM.",
+          "category": "core"
+        },
+        {
+          "id": "cp050",
+          "english": "compiler warning",
+          "chinese": "编译器警告",
+          "pronunciation": "/kəmˈpaɪlər ˈwɔːrnɪŋ/",
+          "example": "Treat every compiler warning as a future bug.",
+          "category": "diagnostics"
+        }
+      ]
     }
   ]
 };
