@@ -8175,6 +8175,1638 @@ const computerEnglishData = {
           "category": "platform"
         }
       ]
+    },
+    {
+      "id": "soft-skills",
+      "name": "Collaboration & Soft Skills",
+      "nameCN": "协作与软技能",
+      "description": "Workplace communication and collaboration vocabulary",
+      "items": [
+        {
+          "id": "ss001",
+          "english": "alignment",
+          "chinese": "对齐（目标一致）",
+          "pronunciation": "/əˈlaɪnmənt/",
+          "example": "We need alignment on the launch date before we commit.",
+          "category": "communication"
+        },
+        {
+          "id": "ss002",
+          "english": "cross-functional",
+          "chinese": "跨职能的",
+          "pronunciation": "/krɔːs ˈfʌŋkʃənəl/",
+          "example": "The migration needs a cross-functional team of devs, DBAs and SREs.",
+          "category": "teamwork"
+        },
+        {
+          "id": "ss003",
+          "english": "unblock",
+          "chinese": "解除阻塞",
+          "pronunciation": "/ʌnˈblɑːk/",
+          "example": "Can you review my PR today to unblock the release?",
+          "category": "teamwork"
+        },
+        {
+          "id": "ss004",
+          "english": "disagree and commit",
+          "chinese": "保留异议但执行",
+          "pronunciation": "/ˌdɪsəˈɡriː ænd kəˈmɪt/",
+          "example": "I still have doubts, but disagree and commit — let's ship it.",
+          "category": "communication"
+        },
+        {
+          "id": "ss005",
+          "english": "push back",
+          "chinese": "提出反对",
+          "pronunciation": "/pʊʃ bæk/",
+          "example": "I had to push back on the timeline; it's simply not feasible.",
+          "category": "communication"
+        },
+        {
+          "id": "ss006",
+          "english": "concern",
+          "chinese": "顾虑／担忧",
+          "pronunciation": "/kənˈsɜːrn/",
+          "example": "My main concern is the migration path for existing users.",
+          "category": "communication"
+        },
+        {
+          "id": "ss007",
+          "english": "compromise",
+          "chinese": "妥协／折中",
+          "pronunciation": "/ˈkɑːmprəmaɪz/",
+          "example": "We compromised on weekly releases instead of daily.",
+          "category": "communication"
+        },
+        {
+          "id": "ss008",
+          "english": "win-win",
+          "chinese": "双赢",
+          "pronunciation": "/wɪn wɪn/",
+          "example": "Open-sourcing the library is a win-win for us and the community.",
+          "category": "communication"
+        },
+        {
+          "id": "ss009",
+          "english": "empathy",
+          "chinese": "同理心",
+          "pronunciation": "/ˈempəθi/",
+          "example": "Review the code with empathy — the author is a human.",
+          "category": "communication"
+        },
+        {
+          "id": "ss010",
+          "english": "active listening",
+          "chinese": "积极倾听",
+          "pronunciation": "/ˈæktɪv ˈlɪsənɪŋ/",
+          "example": "Active listening means paraphrasing before you reply.",
+          "category": "communication"
+        },
+        {
+          "id": "ss011",
+          "english": "paraphrase",
+          "chinese": "复述／改述",
+          "pronunciation": "/ˈpærəfreɪz/",
+          "example": "Let me paraphrase your idea to make sure I got it.",
+          "category": "communication"
+        },
+        {
+          "id": "ss012",
+          "english": "clarification",
+          "chinese": "澄清",
+          "pronunciation": "/ˌklærɪfɪˈkeɪʃən/",
+          "example": "Just to ask for clarification: is this blocking or best-effort?",
+          "category": "communication"
+        },
+        {
+          "id": "ss013",
+          "english": "expectation",
+          "chinese": "期望",
+          "pronunciation": "/ˌekspekˈteɪʃən/",
+          "example": "Set expectations early: review may take up to two days.",
+          "category": "management"
+        },
+        {
+          "id": "ss014",
+          "english": "underpromise, overdeliver",
+          "chinese": "低承诺高交付",
+          "pronunciation": "/ˌʌndərˈprɑːmɪs ˌoʊvərdɪˈlɪvər/",
+          "example": "Underpromise, overdeliver — quote three days and ship in two.",
+          "category": "management"
+        },
+        {
+          "id": "ss015",
+          "english": "milestone",
+          "chinese": "里程碑",
+          "pronunciation": "/ˈmaɪlstoʊn/",
+          "example": "The next milestone is a working demo on Friday.",
+          "category": "planning"
+        },
+        {
+          "id": "ss016",
+          "english": "timebox",
+          "chinese": "时间盒（限时）",
+          "pronunciation": "/ˈtaɪmbɑːks/",
+          "example": "Let's timebox this discussion to fifteen minutes.",
+          "category": "planning"
+        },
+        {
+          "id": "ss017",
+          "english": "de-scope",
+          "chinese": "缩减范围",
+          "pronunciation": "/diː skoʊp/",
+          "example": "To hit the date, we de-scoped the export feature.",
+          "category": "planning"
+        },
+        {
+          "id": "ss018",
+          "english": "scope creep",
+          "chinese": "范围蔓延",
+          "pronunciation": "/skoʊp kriːp/",
+          "example": "Scope creep killed the original timeline.",
+          "category": "planning"
+        },
+        {
+          "id": "ss019",
+          "english": "requirement",
+          "chinese": "需求",
+          "pronunciation": "/rɪˈkwaɪərmənt/",
+          "example": "That's a nice idea, but it's not a requirement for v1.",
+          "category": "planning"
+        },
+        {
+          "id": "ss020",
+          "english": "requirements gathering",
+          "chinese": "需求收集",
+          "pronunciation": "/rɪˈkwaɪərmənts ˈɡæðərɪŋ/",
+          "example": "Two days of requirements gathering saved two months of rework.",
+          "category": "planning"
+        },
+        {
+          "id": "ss021",
+          "english": "acceptance criteria",
+          "chinese": "验收标准",
+          "pronunciation": "/əkˈseptəns kraɪˈtɪriə/",
+          "example": "Write acceptance criteria before writing the code.",
+          "category": "planning"
+        },
+        {
+          "id": "ss022",
+          "english": "definition of done",
+          "chinese": "完成定义",
+          "pronunciation": "/ˌdefɪˈnɪʃən əv dʌn/",
+          "example": "Our definition of done includes tests and docs.",
+          "category": "planning"
+        },
+        {
+          "id": "ss023",
+          "english": "handover",
+          "chinese": "交接",
+          "pronunciation": "/ˈhændoʊvər/",
+          "example": "Write a handover doc before you rotate off the project.",
+          "category": "process"
+        },
+        {
+          "id": "ss024",
+          "english": "onboarding",
+          "chinese": "入职引导",
+          "pronunciation": "/ˈɔːnbɔːrdɪŋ/",
+          "example": "Good onboarding gets a new hire shipping in week one.",
+          "category": "process"
+        },
+        {
+          "id": "ss025",
+          "english": "knowledge transfer",
+          "chinese": "知识移交",
+          "pronunciation": "/ˈnɑːlɪdʒ ˈtrænsfɜːr/",
+          "example": "Schedule a knowledge transfer session with the new owner.",
+          "category": "process"
+        },
+        {
+          "id": "ss026",
+          "english": "initiative",
+          "chinese": "主动性",
+          "pronunciation": "/ɪˈnɪʃətɪv/",
+          "example": "She took the initiative and fixed the flaky test herself.",
+          "category": "attitude"
+        },
+        {
+          "id": "ss027",
+          "english": "accountability",
+          "chinese": "担当／问责",
+          "pronunciation": "/əˌkaʊntəˈbɪləti/",
+          "example": "Ownership means accountability, not just credit.",
+          "category": "attitude"
+        },
+        {
+          "id": "ss028",
+          "english": "autonomy",
+          "chinese": "自主性",
+          "pronunciation": "/ɔːˈtɑːnəmi/",
+          "example": "Senior engineers get more autonomy over their projects.",
+          "category": "attitude"
+        },
+        {
+          "id": "ss029",
+          "english": "psychological safety",
+          "chinese": "心理安全",
+          "pronunciation": "/ˌsaɪkəˈlɑːdʒɪkl ˈseɪfti/",
+          "example": "Psychological safety lets juniors challenge seniors in review.",
+          "category": "culture"
+        },
+        {
+          "id": "ss030",
+          "english": "blameless culture",
+          "chinese": "无责文化",
+          "pronunciation": "/ˈbleɪmləs ˈkʌltʃər/",
+          "example": "In a blameless culture, postmortems fix systems, not people.",
+          "category": "culture"
+        },
+        {
+          "id": "ss031",
+          "english": "constructive criticism",
+          "chinese": "建设性批评",
+          "pronunciation": "/kənˈstrʌktɪv ˈkrɪtɪsɪzəm/",
+          "example": "Constructive criticism attacks the code, never the coder.",
+          "category": "feedback"
+        },
+        {
+          "id": "ss032",
+          "english": "feedback loop",
+          "chinese": "反馈回路",
+          "pronunciation": "/ˈfiːdbæk luːp/",
+          "example": "Shorten the feedback loop: deploy to staging on every commit.",
+          "category": "feedback"
+        },
+        {
+          "id": "ss033",
+          "english": "difficult conversation",
+          "chinese": "困难对话",
+          "pronunciation": "/ˈdɪfɪkəlt ˌkɑːnvərˈseɪʃən/",
+          "example": "Have the difficult conversation now; delaying only makes it worse.",
+          "category": "communication"
+        },
+        {
+          "id": "ss034",
+          "english": "deliverable",
+          "chinese": "交付物",
+          "pronunciation": "/dɪˈlɪvərəbl/",
+          "example": "The deliverable for this sprint is a working API endpoint.",
+          "category": "planning"
+        },
+        {
+          "id": "ss035",
+          "english": "commitment",
+          "chinese": "承诺",
+          "pronunciation": "/kəˈmɪtmənt/",
+          "example": "Once we make a commitment, we manage scope, not the date.",
+          "category": "management"
+        },
+        {
+          "id": "ss036",
+          "english": "capacity planning",
+          "chinese": "容量规划",
+          "pronunciation": "/kəˈpæsəti ˈplænɪŋ/",
+          "example": "Capacity planning says we can staff two projects, not three.",
+          "category": "management"
+        },
+        {
+          "id": "ss037",
+          "english": "workload",
+          "chinese": "工作量／负荷",
+          "pronunciation": "/ˈwɜːrkloʊd/",
+          "example": "My workload is full until the release — ask me next sprint.",
+          "category": "management"
+        },
+        {
+          "id": "ss038",
+          "english": "maker's schedule",
+          "chinese": "创作者时间表（整块时间）",
+          "pronunciation": "/ˈmeɪkərz ˈskedʒuːl/",
+          "example": "Meetings shatter the maker's schedule into useless fragments.",
+          "category": "productivity"
+        },
+        {
+          "id": "ss039",
+          "english": "deep work",
+          "chinese": "深度工作",
+          "pronunciation": "/diːp wɜːrk/",
+          "example": "I block two hours of deep work every morning.",
+          "category": "productivity"
+        },
+        {
+          "id": "ss040",
+          "english": "focus time",
+          "chinese": "专注时间",
+          "pronunciation": "/ˈfoʊkəs taɪm/",
+          "example": "My calendar shows focus time from 9 to 11 — please don't book it.",
+          "category": "productivity"
+        },
+        {
+          "id": "ss041",
+          "english": "meeting fatigue",
+          "chinese": "会议疲劳",
+          "pronunciation": "/ˈmiːtɪŋ fəˈtiːɡ/",
+          "example": "Too many syncs cause meeting fatigue and kill actual output.",
+          "category": "productivity"
+        },
+        {
+          "id": "ss042",
+          "english": "agenda",
+          "chinese": "议程",
+          "pronunciation": "/əˈdʒendə/",
+          "example": "No agenda, no meeting — it's that simple.",
+          "category": "meetings"
+        },
+        {
+          "id": "ss043",
+          "english": "action item",
+          "chinese": "行动项",
+          "pronunciation": "/ˈækʃən ˈaɪtəm/",
+          "example": "Each meeting ends with owners on every action item.",
+          "category": "meetings"
+        },
+        {
+          "id": "ss044",
+          "english": "recap",
+          "chinese": "总结回顾",
+          "pronunciation": "/ˈriːkæp/",
+          "example": "Posting a quick recap in the channel keeps everyone aligned.",
+          "category": "meetings"
+        },
+        {
+          "id": "ss045",
+          "english": "takeaways",
+          "chinese": "要点收获",
+          "pronunciation": "/ˈteɪkəweɪz/",
+          "example": "Key takeaways: ship the fix, then write the postmortem.",
+          "category": "meetings"
+        },
+        {
+          "id": "ss046",
+          "english": "silo",
+          "chinese": "孤岛（部门隔阂）",
+          "pronunciation": "/ˈsaɪloʊ/",
+          "example": "Data silos mean the mobile team repeats the backend team's mistakes.",
+          "category": "culture"
+        },
+        {
+          "id": "ss047",
+          "english": "shared understanding",
+          "chinese": "共同理解／共识",
+          "pronunciation": "/ʃerd ˌʌndərˈstændɪŋ/",
+          "example": "The design doc created a shared understanding before any code.",
+          "category": "culture"
+        },
+        {
+          "id": "ss048",
+          "english": "communication style",
+          "chinese": "沟通风格",
+          "pronunciation": "/kəˌmjuːnɪˈkeɪʃən staɪl/",
+          "example": "Adapt your communication style to the audience.",
+          "category": "communication"
+        },
+        {
+          "id": "ss049",
+          "english": "written communication",
+          "chinese": "书面沟通",
+          "pronunciation": "/ˈrɪtən kəˌmjuːnɪˈkeɪʃən/",
+          "example": "In a remote team, written communication is the default.",
+          "category": "communication"
+        },
+        {
+          "id": "ss050",
+          "english": "conflict resolution",
+          "chinese": "冲突解决",
+          "pronunciation": "/ˈkɑːnflɪkt ˌrezəˈluːʃən/",
+          "example": "Good conflict resolution focuses on interests, not positions.",
+          "category": "communication"
+        }
+      ]
+    },
+    {
+      "id": "tech-writing",
+      "name": "Technical Writing",
+      "nameCN": "技术写作",
+      "description": "Documentation types and writing style vocabulary",
+      "items": [
+        {
+          "id": "tw001",
+          "english": "documentation",
+          "chinese": "文档",
+          "pronunciation": "/ˌdɑːkjumenˈteɪʃən/",
+          "example": "Good documentation is a feature, not an afterthought.",
+          "category": "general"
+        },
+        {
+          "id": "tw002",
+          "english": "documentation site",
+          "chinese": "文档站点",
+          "pronunciation": "/ˌdɑːkjumenˈteɪʃən saɪt/",
+          "example": "The documentation site is versioned per release.",
+          "category": "general"
+        },
+        {
+          "id": "tw003",
+          "english": "tutorial",
+          "chinese": "教程",
+          "pronunciation": "/tuːˈtɔːriəl/",
+          "example": "A tutorial should get the reader to a win in 15 minutes.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw004",
+          "english": "how-to guide",
+          "chinese": "操作指南",
+          "pronunciation": "/ˈhaʊ tuː ɡaɪd/",
+          "example": "The how-to guide assumes you already know the basics.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw005",
+          "english": "specification",
+          "chinese": "规格说明",
+          "pronunciation": "/ˌspesɪfɪˈkeɪʃən/",
+          "example": "The spec defines the wire format down to the byte.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw006",
+          "english": "explanation",
+          "chinese": "原理说明",
+          "pronunciation": "/ˌekspləˈneɪʃən/",
+          "example": "An explanation answers why, not how.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw007",
+          "english": "quickstart",
+          "chinese": "快速开始",
+          "pronunciation": "/ˈkwɪkstɑːrt/",
+          "example": "The quickstart should be copy-paste runnable.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw008",
+          "english": "prerequisite",
+          "chinese": "前置条件",
+          "pronunciation": "/priːˈrekwəzɪt/",
+          "example": "List the prerequisites at the top of the guide.",
+          "category": "structure"
+        },
+        {
+          "id": "tw009",
+          "english": "step-by-step",
+          "chinese": "分步的",
+          "pronunciation": "/step baɪ step/",
+          "example": "Give step-by-step instructions with expected output at each step.",
+          "category": "structure"
+        },
+        {
+          "id": "tw010",
+          "english": "code sample",
+          "chinese": "代码示例",
+          "pronunciation": "/koʊd ˈsæmpl/",
+          "example": "Every code sample must actually compile.",
+          "category": "content"
+        },
+        {
+          "id": "tw011",
+          "english": "snippet",
+          "chinese": "代码片段",
+          "pronunciation": "/ˈsnɪpɪt/",
+          "example": "Keep the snippet short — link to the full file.",
+          "category": "content"
+        },
+        {
+          "id": "tw012",
+          "english": "placeholder",
+          "chinese": "占位符",
+          "pronunciation": "/ˈpleɪshoʊldər/",
+          "example": "Replace YOUR_API_KEY with the placeholder from the console.",
+          "category": "content"
+        },
+        {
+          "id": "tw013",
+          "english": "boilerplate",
+          "chinese": "样板文字／代码",
+          "pronunciation": "/ˈbɔɪlərpleɪt/",
+          "example": "Hide the boilerplate so the key logic stands out.",
+          "category": "content"
+        },
+        {
+          "id": "tw014",
+          "english": "caveat",
+          "chinese": "注意事项",
+          "pronunciation": "/ˈkæviæt/",
+          "example": "One caveat: this only works on Linux.",
+          "category": "content"
+        },
+        {
+          "id": "tw015",
+          "english": "gotcha",
+          "chinese": "坑／易错点",
+          "pronunciation": "/ˈɡɑːtʃə/",
+          "example": "The docs have a whole section on common gotchas.",
+          "category": "content"
+        },
+        {
+          "id": "tw016",
+          "english": "callout",
+          "chinese": "提示框（警示块）",
+          "pronunciation": "/ˈkɔːlaʊt/",
+          "example": "Put the deprecation warning in a callout box.",
+          "category": "structure"
+        },
+        {
+          "id": "tw017",
+          "english": "TL;DR",
+          "chinese": "太长不看版／摘要",
+          "pronunciation": "/ˌtiː el ˌdiː ɑːr/",
+          "example": "Start long docs with a TL;DR for busy readers.",
+          "category": "structure"
+        },
+        {
+          "id": "tw018",
+          "english": "table of contents",
+          "chinese": "目录",
+          "pronunciation": "/ˈteɪbl əv ˈkɑːntents/",
+          "example": "Auto-generate the table of contents from the headings.",
+          "category": "structure"
+        },
+        {
+          "id": "tw019",
+          "english": "release note",
+          "chinese": "发布说明",
+          "pronunciation": "/rɪˈliːs noʊt/",
+          "example": "Write release notes users actually care about.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw020",
+          "english": "glossary",
+          "chinese": "术语表",
+          "pronunciation": "/ˈɡlɔːsəri/",
+          "example": "Add new jargon to the glossary, not a footnote.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw021",
+          "english": "style guide",
+          "chinese": "风格指南",
+          "pronunciation": "/staɪl ɡaɪd/",
+          "example": "Follow the Microsoft style guide for UI text.",
+          "category": "style"
+        },
+        {
+          "id": "tw022",
+          "english": "tone",
+          "chinese": "语气",
+          "pronunciation": "/toʊn/",
+          "example": "Keep the tone friendly but precise.",
+          "category": "style"
+        },
+        {
+          "id": "tw023",
+          "english": "active voice",
+          "chinese": "主动语态",
+          "pronunciation": "/ˈæktɪv vɔɪs/",
+          "example": "Prefer active voice: 'the server sends', not 'it is sent'.",
+          "category": "style"
+        },
+        {
+          "id": "tw024",
+          "english": "passive voice",
+          "chinese": "被动语态",
+          "pronunciation": "/ˈpæsɪv vɔɪs/",
+          "example": "Passive voice hides who is responsible for the action.",
+          "category": "style"
+        },
+        {
+          "id": "tw025",
+          "english": "second person",
+          "chinese": "第二人称（用“你”）",
+          "pronunciation": "/ˈsekənd ˈpɜːrsən/",
+          "example": "Address the reader in the second person: 'you will see…'.",
+          "category": "style"
+        },
+        {
+          "id": "tw026",
+          "english": "present tense",
+          "chinese": "一般现在时",
+          "pronunciation": "/ˈprezənt tens/",
+          "example": "Write instructions in the present tense: 'click Save'.",
+          "category": "style"
+        },
+        {
+          "id": "tw027",
+          "english": "concise",
+          "chinese": "简洁的",
+          "pronunciation": "/kənˈsaɪs/",
+          "example": "Be concise: cut every word that doesn't earn its place.",
+          "category": "style"
+        },
+        {
+          "id": "tw028",
+          "english": "jargon",
+          "chinese": "行话／术语",
+          "pronunciation": "/ˈdʒɑːrɡən/",
+          "example": "Explain jargon on first use or drop it.",
+          "category": "style"
+        },
+        {
+          "id": "tw029",
+          "english": "plain language",
+          "chinese": "平实语言",
+          "pronunciation": "/pleɪn ˈlæŋɡwɪdʒ/",
+          "example": "Plain language beats clever language in documentation.",
+          "category": "style"
+        },
+        {
+          "id": "tw030",
+          "english": "readability",
+          "chinese": "可读性",
+          "pronunciation": "/ˌriːdəˈbɪləti/",
+          "example": "Short sentences improve readability scores.",
+          "category": "style"
+        },
+        {
+          "id": "tw031",
+          "english": "proofread",
+          "chinese": "校对",
+          "pronunciation": "/ˈpruːfriːd/",
+          "example": "Always proofread before publishing — typos erode trust.",
+          "category": "editing"
+        },
+        {
+          "id": "tw032",
+          "english": "errata",
+          "chinese": "勘误",
+          "pronunciation": "/eˈrɑːtə/",
+          "example": "The errata page lists mistakes found after printing.",
+          "category": "editing"
+        },
+        {
+          "id": "tw033",
+          "english": "grammar",
+          "chinese": "语法",
+          "pronunciation": "/ˈɡræmər/",
+          "example": "Perfect grammar matters less than perfect clarity.",
+          "category": "editing"
+        },
+        {
+          "id": "tw034",
+          "english": "punctuation",
+          "chinese": "标点",
+          "pronunciation": "/ˌpʌŋktʃuˈeɪʃən/",
+          "example": "In tech writing, punctuation is part of the interface.",
+          "category": "editing"
+        },
+        {
+          "id": "tw035",
+          "english": "versioned docs",
+          "chinese": "版本化文档",
+          "pronunciation": "/ˈvɜːrʒənd dɑːks/",
+          "example": "Versioned docs let v1 users avoid v2-only features.",
+          "category": "process"
+        },
+        {
+          "id": "tw036",
+          "english": "canonical URL",
+          "chinese": "规范链接",
+          "pronunciation": "/kəˈnɑːnɪkl ˌjuː ɑːr ˈel/",
+          "example": "Point all mirrors at the canonical URL to avoid SEO splits.",
+          "category": "process"
+        },
+        {
+          "id": "tw037",
+          "english": "deprecation notice",
+          "chinese": "弃用通告",
+          "pronunciation": "/ˌdeprəˈkeɪʃən ˈnoʊtɪs/",
+          "example": "The deprecation notice includes a migration deadline.",
+          "category": "process"
+        },
+        {
+          "id": "tw038",
+          "english": "migration guide",
+          "chinese": "迁移指南",
+          "pronunciation": "/maɪˈɡreɪʃən ɡaɪd/",
+          "example": "Every breaking release ships with a migration guide.",
+          "category": "process"
+        },
+        {
+          "id": "tw039",
+          "english": "FAQ",
+          "chinese": "常见问题",
+          "pronunciation": "/ˌef eɪ ˈkjuː/",
+          "example": "Move recurring support tickets into the FAQ.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw040",
+          "english": "known issue",
+          "chinese": "已知问题",
+          "pronunciation": "/noʊn ˈɪʃuː/",
+          "example": "List it as a known issue with a workaround.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw041",
+          "english": "disclaimer",
+          "chinese": "免责声明",
+          "pronunciation": "/dɪsˈkleɪmər/",
+          "example": "The benchmark page carries a disclaimer about test conditions.",
+          "category": "doc-types"
+        },
+        {
+          "id": "tw042",
+          "english": "attribution",
+          "chinese": "署名／来源标注",
+          "pronunciation": "/ˌætrɪˈbjuːʃən/",
+          "example": "CC-BY requires attribution to the original author.",
+          "category": "licensing"
+        },
+        {
+          "id": "tw043",
+          "english": "footnote",
+          "chinese": "脚注",
+          "pronunciation": "/ˈfʊtnoʊt/",
+          "example": "Move the tangent into a footnote to protect the main flow.",
+          "category": "structure"
+        },
+        {
+          "id": "tw044",
+          "english": "cross-reference",
+          "chinese": "交叉引用",
+          "pronunciation": "/krɔːs ˈrefrəns/",
+          "example": "Use cross-references instead of repeating the same content.",
+          "category": "structure"
+        },
+        {
+          "id": "tw045",
+          "english": "anchor",
+          "chinese": "锚点",
+          "pronunciation": "/ˈæŋkər/",
+          "example": "Link directly to the anchor of the relevant section.",
+          "category": "structure"
+        },
+        {
+          "id": "tw046",
+          "english": "screenshot",
+          "chinese": "截图",
+          "pronunciation": "/ˈskriːnʃɑːt/",
+          "example": "Update the screenshot after the UI redesign.",
+          "category": "visuals"
+        },
+        {
+          "id": "tw047",
+          "english": "diagram",
+          "chinese": "示意图",
+          "pronunciation": "/ˈdaɪəɡræm/",
+          "example": "One architecture diagram replaces three paragraphs.",
+          "category": "visuals"
+        },
+        {
+          "id": "tw048",
+          "english": "sequence diagram",
+          "chinese": "时序图",
+          "pronunciation": "/ˈsiːkwəns ˈdaɪəɡræm/",
+          "example": "The sequence diagram shows the OAuth handshake step by step.",
+          "category": "visuals"
+        },
+        {
+          "id": "tw049",
+          "english": "ASCII art",
+          "chinese": "字符画",
+          "pronunciation": "/ˈæski ɑːrt/",
+          "example": "ASCII art diagrams survive any terminal and any diff.",
+          "category": "visuals"
+        },
+        {
+          "id": "tw050",
+          "english": "commit message",
+          "chinese": "提交信息",
+          "pronunciation": "/kəˈmɪt ˈmesɪdʒ/",
+          "example": "A good commit message explains why, not what.",
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "id": "interview-english",
+      "name": "Interview English",
+      "nameCN": "面试英语",
+      "description": "Technical and behavioral interview vocabulary",
+      "items": [
+        {
+          "id": "iv001",
+          "english": "walk me through",
+          "chinese": "请带我梳理一遍",
+          "pronunciation": "/wɔːk miː θruː/",
+          "example": "Walk me through how you'd design this system.",
+          "category": "phrases"
+        },
+        {
+          "id": "iv002",
+          "english": "tell me about yourself",
+          "chinese": "请自我介绍",
+          "pronunciation": "/tel miː əˈbaʊt jɔːrˈself/",
+          "example": "Tell me about yourself — keep it to two minutes.",
+          "category": "phrases"
+        },
+        {
+          "id": "iv003",
+          "english": "behavioral question",
+          "chinese": "行为面试题",
+          "pronunciation": "/bɪˈheɪvjərəl ˈkwestʃən/",
+          "example": "Behavioral questions probe how you acted in real situations.",
+          "category": "types"
+        },
+        {
+          "id": "iv004",
+          "english": "STAR method",
+          "chinese": "STAR 叙事法",
+          "pronunciation": "/stɑːr ˈmeθəd/",
+          "example": "Answer with the STAR method: Situation, Task, Action, Result.",
+          "category": "types"
+        },
+        {
+          "id": "iv005",
+          "english": "situational question",
+          "chinese": "情境题",
+          "pronunciation": "/ˌsɪtʃuˈeɪʃənəl ˈkwestʃən/",
+          "example": "Situational questions ask what you would do, hypothetically.",
+          "category": "types"
+        },
+        {
+          "id": "iv006",
+          "english": "technical screen",
+          "chinese": "技术初筛",
+          "pronunciation": "/ˈteknɪkl skriːn/",
+          "example": "The technical screen is a 60-minute coding call.",
+          "category": "process"
+        },
+        {
+          "id": "iv007",
+          "english": "coding round",
+          "chinese": "编程轮",
+          "pronunciation": "/ˈkoʊdɪŋ raʊnd/",
+          "example": "The coding round covers data structures and algorithms.",
+          "category": "process"
+        },
+        {
+          "id": "iv008",
+          "english": "system design",
+          "chinese": "系统设计（面试）",
+          "pronunciation": "/ˈsɪstəm dɪˈzaɪn/",
+          "example": "In system design interviews, clarify requirements before drawing boxes.",
+          "category": "process"
+        },
+        {
+          "id": "iv009",
+          "english": "onsite interview",
+          "chinese": "现场面试",
+          "pronunciation": "/ˈɑːnsaɪt ˈɪntərvjuː/",
+          "example": "The onsite interview has four rounds back to back.",
+          "category": "process"
+        },
+        {
+          "id": "iv010",
+          "english": "phone screen",
+          "chinese": "电话初筛",
+          "pronunciation": "/foʊn skriːn/",
+          "example": "The recruiter does a 15-minute phone screen first.",
+          "category": "process"
+        },
+        {
+          "id": "iv011",
+          "english": "recruiter",
+          "chinese": "招聘官",
+          "pronunciation": "/rɪˈkruːtər/",
+          "example": "The recruiter will call you with the offer details.",
+          "category": "people"
+        },
+        {
+          "id": "iv012",
+          "english": "hiring manager",
+          "chinese": "用人经理",
+          "pronunciation": "/ˈhaɪrɪŋ ˈmænɪdʒər/",
+          "example": "The hiring manager cares most about team fit and ownership.",
+          "category": "people"
+        },
+        {
+          "id": "iv013",
+          "english": "panel interview",
+          "chinese": "多考官面试",
+          "pronunciation": "/ˈpænl ˈɪntərvjuː/",
+          "example": "The panel interview had three engineers and a manager.",
+          "category": "process"
+        },
+        {
+          "id": "iv014",
+          "english": "whiteboarding",
+          "chinese": "白板演算",
+          "pronunciation": "/ˈwaɪtbɔːrdɪŋ/",
+          "example": "Whiteboarding tests how you think, not just the final answer.",
+          "category": "process"
+        },
+        {
+          "id": "iv015",
+          "english": "take-home assignment",
+          "chinese": "带回家作业",
+          "pronunciation": "/teɪk hoʊm əˈsaɪnmənt/",
+          "example": "The take-home assignment is capped at four hours.",
+          "category": "process"
+        },
+        {
+          "id": "iv016",
+          "english": "portfolio",
+          "chinese": "作品集",
+          "pronunciation": "/pɔːrtˈfoʊlioʊ/",
+          "example": "Your portfolio should show depth, not just volume.",
+          "category": "application"
+        },
+        {
+          "id": "iv017",
+          "english": "resume",
+          "chinese": "简历",
+          "pronunciation": "/ˈrezəmeɪ/",
+          "example": "Tailor your resume to the job description's keywords.",
+          "category": "application"
+        },
+        {
+          "id": "iv018",
+          "english": "cover letter",
+          "chinese": "求职信",
+          "pronunciation": "/ˈkʌvər ˈletər/",
+          "example": "A short cover letter should say why this company, why now.",
+          "category": "application"
+        },
+        {
+          "id": "iv019",
+          "english": "screening call",
+          "chinese": "初筛电话",
+          "pronunciation": "/ˈskriːnɪŋ kɔːl/",
+          "example": "The screening call covers salary expectations and logistics.",
+          "category": "process"
+        },
+        {
+          "id": "iv020",
+          "english": "culture fit",
+          "chinese": "文化契合",
+          "pronunciation": "/ˈkʌltʃər fɪt/",
+          "example": "Culture fit questions check how you collaborate, not if you'd be fun at lunch.",
+          "category": "types"
+        },
+        {
+          "id": "iv021",
+          "english": "elevator pitch",
+          "chinese": "电梯陈述",
+          "pronunciation": "/ˈelɪveɪtər pɪtʃ/",
+          "example": "Your elevator pitch should land in 30 seconds.",
+          "category": "phrases"
+        },
+        {
+          "id": "iv022",
+          "english": "strengths and weaknesses",
+          "chinese": "优势与不足",
+          "pronunciation": "/streŋθs ænd ˈwiːknəsɪz/",
+          "example": "For weaknesses, name a real one and how you're fixing it.",
+          "category": "phrases"
+        },
+        {
+          "id": "iv023",
+          "english": "conflict",
+          "chinese": "冲突",
+          "pronunciation": "/ˈkɑːnflɪkt/",
+          "example": "Tell me about a conflict with a teammate and how you resolved it.",
+          "category": "behavioral"
+        },
+        {
+          "id": "iv024",
+          "english": "disagreement",
+          "chinese": "分歧",
+          "pronunciation": "/ˌdɪsəˈɡriːmənt/",
+          "example": "Describe a technical disagreement where you changed your mind.",
+          "category": "behavioral"
+        },
+        {
+          "id": "iv025",
+          "english": "trade-off",
+          "chinese": "权衡取舍",
+          "pronunciation": "/ˈtreɪd ɔːf/",
+          "example": "Every design answer should name its trade-offs.",
+          "category": "technical"
+        },
+        {
+          "id": "iv026",
+          "english": "requirement clarification",
+          "chinese": "需求澄清",
+          "pronunciation": "/rɪˈkwaɪərmənt ˌklærɪfɪˈkeɪʃən/",
+          "example": "Start the design round with requirement clarification.",
+          "category": "technical"
+        },
+        {
+          "id": "iv027",
+          "english": "back-of-envelope calculation",
+          "chinese": "粗略估算",
+          "pronunciation": "/bæk əv ˈenveloʊp ˌkælkjuˈleɪʃən/",
+          "example": "Do a back-of-envelope calculation: 10M writes per day is ~115 per second.",
+          "category": "technical"
+        },
+        {
+          "id": "iv028",
+          "english": "think out loud",
+          "chinese": "边想边说",
+          "pronunciation": "/θɪŋk aʊt laʊd/",
+          "example": "Think out loud so the interviewer can follow your reasoning.",
+          "category": "phrases"
+        },
+        {
+          "id": "iv029",
+          "english": "rationale",
+          "chinese": "理由／依据",
+          "pronunciation": "/ˌræʃəˈnæl/",
+          "example": "Explain your rationale for choosing a queue over a database.",
+          "category": "technical"
+        },
+        {
+          "id": "iv030",
+          "english": "assumption",
+          "chinese": "假设",
+          "pronunciation": "/əˈsʌmpʃən/",
+          "example": "State your assumptions before estimating.",
+          "category": "technical"
+        },
+        {
+          "id": "iv031",
+          "english": "brute force",
+          "chinese": "暴力解法",
+          "pronunciation": "/bruːt fɔːrs/",
+          "example": "Start with the brute force solution, then optimize.",
+          "category": "technical"
+        },
+        {
+          "id": "iv032",
+          "english": "optimal solution",
+          "chinese": "最优解",
+          "pronunciation": "/ˈɑːptɪməl səˈluːʃən/",
+          "example": "The optimal solution runs in linear time.",
+          "category": "technical"
+        },
+        {
+          "id": "iv033",
+          "english": "naive solution",
+          "chinese": "朴素解法",
+          "pronunciation": "/naɪˈiːv səˈluːʃən/",
+          "example": "The naive solution is correct but O(n²).",
+          "category": "technical"
+        },
+        {
+          "id": "iv034",
+          "english": "clarifying question",
+          "chinese": "澄清性问题",
+          "pronunciation": "/ˈklærɪfaɪɪŋ ˈkwestʃən/",
+          "example": "Asking a good clarifying question scores points in itself.",
+          "category": "phrases"
+        },
+        {
+          "id": "iv035",
+          "english": "impact",
+          "chinese": "影响力／成果",
+          "pronunciation": "/ˈɪmpækt/",
+          "example": "Describe your impact with numbers: latency down 40%.",
+          "category": "behavioral"
+        },
+        {
+          "id": "iv036",
+          "english": "quantify",
+          "chinese": "量化",
+          "pronunciation": "/ˈkwɑːntɪfaɪ/",
+          "example": "Quantify your achievements — 'improved performance' means nothing alone.",
+          "category": "behavioral"
+        },
+        {
+          "id": "iv037",
+          "english": "measurable results",
+          "chinese": "可衡量的成果",
+          "pronunciation": "/ˈmeʒərəbl rɪˈzʌlts/",
+          "example": "Interviewers remember measurable results, not tasks.",
+          "category": "behavioral"
+        },
+        {
+          "id": "iv038",
+          "english": "negotiation",
+          "chinese": "谈判（薪酬）",
+          "pronunciation": "/nɪˌɡoʊʃiˈeɪʃən/",
+          "example": "Salary negotiation is expected, not rude.",
+          "category": "offer"
+        },
+        {
+          "id": "iv039",
+          "english": "offer",
+          "chinese": "录用通知",
+          "pronunciation": "/ˈɔːfər/",
+          "example": "I received an offer from the platform team.",
+          "category": "offer"
+        },
+        {
+          "id": "iv040",
+          "english": "compensation package",
+          "chinese": "薪酬方案",
+          "pronunciation": "/ˌkɑːmpenˈseɪʃən ˈpækɪdʒ/",
+          "example": "Evaluate the whole compensation package, not just base salary.",
+          "category": "offer"
+        },
+        {
+          "id": "iv041",
+          "english": "sign-on bonus",
+          "chinese": "签约奖金",
+          "pronunciation": "/ˈsaɪn ɔːn ˈboʊnəs/",
+          "example": "They added a sign-on bonus to offset my unvested equity.",
+          "category": "offer"
+        },
+        {
+          "id": "iv042",
+          "english": "equity",
+          "chinese": "股权",
+          "pronunciation": "/ˈekwəti/",
+          "example": "The equity vests over four years with a one-year cliff.",
+          "category": "offer"
+        },
+        {
+          "id": "iv043",
+          "english": "counteroffer",
+          "chinese": "反报价",
+          "pronunciation": "/ˈkaʊntərˌɔːfər/",
+          "example": "I made a counteroffer based on competing market data.",
+          "category": "offer"
+        },
+        {
+          "id": "iv044",
+          "english": "notice period",
+          "chinese": "离职通知期",
+          "pronunciation": "/ˈnoʊtɪs ˈpɪriəd/",
+          "example": "I have a one-month notice period at my current job.",
+          "category": "offer"
+        },
+        {
+          "id": "iv045",
+          "english": "background check",
+          "chinese": "背景调查",
+          "pronunciation": "/ˈbækɡraʊnd tʃek/",
+          "example": "The background check takes about a week.",
+          "category": "offer"
+        },
+        {
+          "id": "iv046",
+          "english": "reference check",
+          "chinese": "推荐人核查",
+          "pronunciation": "/ˈrefrəns tʃek/",
+          "example": "They'll do a reference check with your previous manager.",
+          "category": "offer"
+        },
+        {
+          "id": "iv047",
+          "english": "follow-up question",
+          "chinese": "追问",
+          "pronunciation": "/ˈfɑːloʊ ʌp ˈkwestʃən/",
+          "example": "Expect follow-up questions that dig into your specific role.",
+          "category": "phrases"
+        },
+        {
+          "id": "iv048",
+          "english": "rejection",
+          "chinese": "拒信／被拒",
+          "pronunciation": "/rɪˈdʒekʃən/",
+          "example": "A rejection after five rounds still stings.",
+          "category": "process"
+        },
+        {
+          "id": "iv049",
+          "english": "ghosting",
+          "chinese": "失联（已读不回）",
+          "pronunciation": "/ˈɡoʊstɪŋ/",
+          "example": "After the final round, the company started ghosting me.",
+          "category": "process"
+        },
+        {
+          "id": "iv050",
+          "english": "salary expectations",
+          "chinese": "期望薪资",
+          "pronunciation": "/ˈsæləri ˌekspekˈteɪʃənz/",
+          "example": "Ask about the band first before stating salary expectations.",
+          "category": "offer"
+        }
+      ]
+    },
+    {
+      "id": "career-development",
+      "name": "Career Development",
+      "nameCN": "职业发展",
+      "description": "Growth, roles and workplace culture vocabulary",
+      "items": [
+        {
+          "id": "cd001",
+          "english": "career ladder",
+          "chinese": "职级阶梯",
+          "pronunciation": "/kəˈrɪr ˈlædər/",
+          "example": "Read the career ladder before your promotion packet.",
+          "category": "growth"
+        },
+        {
+          "id": "cd002",
+          "english": "promotion",
+          "chinese": "晋升",
+          "pronunciation": "/prəˈmoʊʃən/",
+          "example": "The promotion requires impact beyond your own team.",
+          "category": "growth"
+        },
+        {
+          "id": "cd003",
+          "english": "performance review",
+          "chinese": "绩效评估",
+          "pronunciation": "/pərˈfɔːrməns rɪˈvjuː/",
+          "example": "Bring evidence to your performance review, not adjectives.",
+          "category": "review"
+        },
+        {
+          "id": "cd004",
+          "english": "peer feedback",
+          "chinese": "同事互评",
+          "pronunciation": "/pɪr ˈfiːdbæk/",
+          "example": "Peer feedback carries real weight in the calibration.",
+          "category": "review"
+        },
+        {
+          "id": "cd005",
+          "english": "self-assessment",
+          "chinese": "自评",
+          "pronunciation": "/self əˈsesmənt/",
+          "example": "Write your self-assessment in outcomes, not activities.",
+          "category": "review"
+        },
+        {
+          "id": "cd006",
+          "english": "goal setting",
+          "chinese": "目标制定",
+          "pronunciation": "/ɡoʊl ˈsetɪŋ/",
+          "example": "Quarterly goal setting keeps priorities visible.",
+          "category": "review"
+        },
+        {
+          "id": "cd007",
+          "english": "OKR",
+          "chinese": "目标与关键成果",
+          "pronunciation": "/ˌoʊ keɪ ˈɑːr/",
+          "example": "Our OKR is 99.9% uptime with a 20% latency cut.",
+          "category": "review"
+        },
+        {
+          "id": "cd008",
+          "english": "KPI",
+          "chinese": "关键绩效指标",
+          "pronunciation": "/ˌkeɪ piː ˈaɪ/",
+          "example": "Pick KPIs you can actually influence.",
+          "category": "review"
+        },
+        {
+          "id": "cd009",
+          "english": "one-on-one",
+          "chinese": "一对一沟通",
+          "pronunciation": "/wʌn ɒn wʌn/",
+          "example": "Use the one-on-one for career talk, not status updates.",
+          "category": "management"
+        },
+        {
+          "id": "cd010",
+          "english": "skip-level meeting",
+          "chinese": "越级会议",
+          "pronunciation": "/skɪp ˈlevl ˈmiːtɪŋ/",
+          "example": "The skip-level meeting gives your manager's manager direct signal.",
+          "category": "management"
+        },
+        {
+          "id": "cd011",
+          "english": "360-degree feedback",
+          "chinese": "360 度反馈",
+          "pronunciation": "/θriː ˈsɪksti ˌdɪɡriː ˈfiːdbæk/",
+          "example": "360-degree feedback surfaces blind spots early.",
+          "category": "review"
+        },
+        {
+          "id": "cd012",
+          "english": "mentor",
+          "chinese": "导师",
+          "pronunciation": "/ˈmentɔːr/",
+          "example": "Find a mentor who's two steps ahead of where you want to be.",
+          "category": "growth"
+        },
+        {
+          "id": "cd013",
+          "english": "mentee",
+          "chinese": "学员／被辅导者",
+          "pronunciation": "/menˈtiː/",
+          "example": "Being a good mentee means coming prepared with questions.",
+          "category": "growth"
+        },
+        {
+          "id": "cd014",
+          "english": "sponsorship",
+          "chinese": "提携（为你发声）",
+          "pronunciation": "/ˈspɑːnsərʃɪp/",
+          "example": "A mentor advises you; sponsorship gets you the promotion.",
+          "category": "growth"
+        },
+        {
+          "id": "cd015",
+          "english": "career switch",
+          "chinese": "转行",
+          "pronunciation": "/kəˈrɪr swɪtʃ/",
+          "example": "Her career switch from QA to SRE took about a year.",
+          "category": "growth"
+        },
+        {
+          "id": "cd016",
+          "english": "upskilling",
+          "chinese": "技能提升",
+          "pronunciation": "/ˈʌpskɪlɪŋ/",
+          "example": "The company funds upskilling in cloud certification.",
+          "category": "learning"
+        },
+        {
+          "id": "cd017",
+          "english": "reskilling",
+          "chinese": "技能重塑（转岗培训）",
+          "pronunciation": "/ˌriːˈskɪlɪŋ/",
+          "example": "Reskilling the QA team into automation engineers worked well.",
+          "category": "learning"
+        },
+        {
+          "id": "cd018",
+          "english": "continuous learning",
+          "chinese": "持续学习",
+          "pronunciation": "/kənˈtɪnjuəs ˈlɜːrnɪŋ/",
+          "example": "Continuous learning is survival in this industry.",
+          "category": "learning"
+        },
+        {
+          "id": "cd019",
+          "english": "conference",
+          "chinese": "技术大会",
+          "pronunciation": "/ˈkɑːnfərəns/",
+          "example": "Submit a talk to the conference before dismissing the idea.",
+          "category": "community"
+        },
+        {
+          "id": "cd020",
+          "english": "tech talk",
+          "chinese": "技术分享",
+          "pronunciation": "/tek tɔːk/",
+          "example": "Give a tech talk on what your team learned from the outage.",
+          "category": "community"
+        },
+        {
+          "id": "cd021",
+          "english": "lightning talk",
+          "chinese": "闪电演讲",
+          "pronunciation": "/ˈlaɪtnɪŋ tɔːk/",
+          "example": "A lightning talk is five minutes and one idea.",
+          "category": "community"
+        },
+        {
+          "id": "cd022",
+          "english": "open source contribution",
+          "chinese": "开源贡献",
+          "pronunciation": "/ˈoʊpən sɔːrs ˌkɑːntrɪˈbjuːʃən/",
+          "example": "One meaningful open source contribution beats ten toy repos.",
+          "category": "community"
+        },
+        {
+          "id": "cd023",
+          "english": "side project",
+          "chinese": "副业项目",
+          "pronunciation": "/saɪd ˈprɑːdʒekt/",
+          "example": "The side project became the portfolio piece that got her hired.",
+          "category": "community"
+        },
+        {
+          "id": "cd024",
+          "english": "pet project",
+          "chinese": "兴趣项目",
+          "pronunciation": "/pet ˈprɑːdʒekt/",
+          "example": "My pet project is a CLI for tracking reading lists.",
+          "category": "community"
+        },
+        {
+          "id": "cd025",
+          "english": "personal brand",
+          "chinese": "个人品牌",
+          "pronunciation": "/ˈpɜːrsənəl brænd/",
+          "example": "Consistent writing builds a personal brand faster than any course.",
+          "category": "community"
+        },
+        {
+          "id": "cd026",
+          "english": "technical blog",
+          "chinese": "技术博客",
+          "pronunciation": "/ˈteknɪkl blɔːɡ/",
+          "example": "A technical blog is proof you can explain hard things.",
+          "category": "community"
+        },
+        {
+          "id": "cd027",
+          "english": "public speaking",
+          "chinese": "公开演讲",
+          "pronunciation": "/ˈpʌblɪk ˈspiːkɪŋ/",
+          "example": "Public speaking is a skill you build by reps, not talent.",
+          "category": "community"
+        },
+        {
+          "id": "cd028",
+          "english": "impostor syndrome",
+          "chinese": "冒名顶替综合征",
+          "pronunciation": "/ɪmˈpɑːstər ˈsɪndroʊm/",
+          "example": "Impostor syndrome fades as you accumulate evidence of competence.",
+          "category": "wellbeing"
+        },
+        {
+          "id": "cd029",
+          "english": "burnout",
+          "chinese": "职业倦怠",
+          "pronunciation": "/ˈbɜːrnaʊt/",
+          "example": "Burnout is a signal to fix the system, not just take a vacation.",
+          "category": "wellbeing"
+        },
+        {
+          "id": "cd030",
+          "english": "work-life balance",
+          "chinese": "工作生活平衡",
+          "pronunciation": "/wɜːrk laɪf ˈbæləns/",
+          "example": "Sustainable pace beats heroics; that's work-life balance.",
+          "category": "wellbeing"
+        },
+        {
+          "id": "cd031",
+          "english": "remote work",
+          "chinese": "远程工作",
+          "pronunciation": "/rɪˈmoʊt wɜːrk/",
+          "example": "Remote work trades commutes for communication overhead.",
+          "category": "workstyle"
+        },
+        {
+          "id": "cd032",
+          "english": "hybrid work",
+          "chinese": "混合办公",
+          "pronunciation": "/ˈhaɪbrɪd wɜːrk/",
+          "example": "Hybrid work needs anchor days so the office trip is worth it.",
+          "category": "workstyle"
+        },
+        {
+          "id": "cd033",
+          "english": "asynchronous work",
+          "chinese": "异步协作",
+          "pronunciation": "/eɪˈsɪŋkrənəs wɜːrk/",
+          "example": "Asynchronous work makes writing your core skill.",
+          "category": "workstyle"
+        },
+        {
+          "id": "cd034",
+          "english": "time zone overlap",
+          "chinese": "时区重叠",
+          "pronunciation": "/taɪm zoʊn ˈoʊvərlæp/",
+          "example": "We keep four hours of time zone overlap for pairing.",
+          "category": "workstyle"
+        },
+        {
+          "id": "cd035",
+          "english": "documentation-first",
+          "chinese": "文档先行",
+          "pronunciation": "/ˌdɑːkjumenˈteɪʃən fɜːrst/",
+          "example": "Documentation-first companies decide in writing, then meet.",
+          "category": "workstyle"
+        },
+        {
+          "id": "cd036",
+          "english": "knowledge sharing",
+          "chinese": "知识分享",
+          "pronunciation": "/ˈnɑːlɪdʒ ˈʃerɪŋ/",
+          "example": "Weekly demos keep knowledge sharing alive.",
+          "category": "culture"
+        },
+        {
+          "id": "cd037",
+          "english": "brown-bag session",
+          "chinese": "午餐学习会",
+          "pronunciation": "/braʊn bæɡ ˈseʃən/",
+          "example": "Thursday's brown-bag session covers WebAssembly basics.",
+          "category": "culture"
+        },
+        {
+          "id": "cd038",
+          "english": "guild",
+          "chinese": "行会（跨团队社区）",
+          "pronunciation": "/ɡɪld/",
+          "example": "The frontend guild sets shared standards across squads.",
+          "category": "culture"
+        },
+        {
+          "id": "cd039",
+          "english": "community of practice",
+          "chinese": "实践社区",
+          "pronunciation": "/kəˈmjuːnəti əv ˈpræktɪs/",
+          "example": "The SRE community of practice owns the incident guide.",
+          "category": "culture"
+        },
+        {
+          "id": "cd040",
+          "english": "engineering culture",
+          "chinese": "工程文化",
+          "pronunciation": "/ˌendʒɪˈnɪrɪŋ ˈkʌltʃər/",
+          "example": "Engineering culture is what happens when the manager isn't looking.",
+          "category": "culture"
+        },
+        {
+          "id": "cd041",
+          "english": "tech lead",
+          "chinese": "技术负责人",
+          "pronunciation": "/tek liːd/",
+          "example": "The tech lead spends half the time unblocking others.",
+          "category": "roles"
+        },
+        {
+          "id": "cd042",
+          "english": "staff engineer",
+          "chinese": "资深主管工程师",
+          "pronunciation": "/stæf ˌendʒɪˈnɪr/",
+          "example": "A staff engineer multiplies the output of several teams.",
+          "category": "roles"
+        },
+        {
+          "id": "cd043",
+          "english": "principal engineer",
+          "chinese": "首席工程师",
+          "pronunciation": "/ˈprɪnsəpl ˌendʒɪˈnɪr/",
+          "example": "The principal engineer owns multi-year technical direction.",
+          "category": "roles"
+        },
+        {
+          "id": "cd044",
+          "english": "people manager",
+          "chinese": "线经理（管人）",
+          "pronunciation": "/ˈpiːpl ˈmænɪdʒər/",
+          "example": "You can switch from IC to people manager and back.",
+          "category": "roles"
+        },
+        {
+          "id": "cd045",
+          "english": "individual contributor",
+          "chinese": "个人贡献者（IC）",
+          "pronunciation": "/ˌɪndɪˈvɪdʒuəl kənˈtrɪbjətər/",
+          "example": "Individual contributor tracks now reach staff and principal levels.",
+          "category": "roles"
+        },
+        {
+          "id": "cd046",
+          "english": "management track",
+          "chinese": "管理路线",
+          "pronunciation": "/ˈmænɪdʒmənt træk/",
+          "example": "The management track trades coding time for context and coaching.",
+          "category": "roles"
+        },
+        {
+          "id": "cd047",
+          "english": "technical track",
+          "chinese": "技术路线",
+          "pronunciation": "/ˈteknɪkl træk/",
+          "example": "The technical track rewards depth and influence without reports.",
+          "category": "roles"
+        },
+        {
+          "id": "cd048",
+          "english": "succession plan",
+          "chinese": "接班计划",
+          "pronunciation": "/səkˈseʃən plæn/",
+          "example": "A succession plan means no one is a single point of failure.",
+          "category": "management"
+        },
+        {
+          "id": "cd049",
+          "english": "career plateau",
+          "chinese": "职业平台期",
+          "pronunciation": "/kəˈrɪr plæˈtoʊ/",
+          "example": "A career plateau is often a scope problem, not a skill problem.",
+          "category": "growth"
+        },
+        {
+          "id": "cd050",
+          "english": "90-day plan",
+          "chinese": "入职 90 天计划",
+          "pronunciation": "/naɪnti deɪ plæn/",
+          "example": "A 90-day plan: learn in month one, contribute in month two, own in month three.",
+          "category": "growth"
+        }
+      ]
     }
   ]
 };
