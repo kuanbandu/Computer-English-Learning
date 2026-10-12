@@ -6119,6 +6119,838 @@ const computerEnglishData = {
           "category": "planning"
         }
       ]
+    },
+    {
+      "id": "cloud-computing",
+      "name": "Cloud Computing",
+      "nameCN": "云计算",
+      "description": "Cloud infrastructure, scaling and deployment vocabulary",
+      "items": [
+        {
+          "id": "cloud001",
+          "english": "region",
+          "chinese": "区域（云服务的地理部署单元）",
+          "pronunciation": "/ˈriːdʒən/",
+          "example": "Deploy the cluster in the us-east-1 region.",
+          "category": "infrastructure"
+        },
+        {
+          "id": "cloud002",
+          "english": "availability zone (AZ)",
+          "chinese": "可用区",
+          "pronunciation": "/əˌveɪləˈbɪləti zoʊn/",
+          "example": "Spread replicas across three availability zones.",
+          "category": "infrastructure"
+        },
+        {
+          "id": "cloud003",
+          "english": "auto scaling",
+          "chinese": "自动扩缩容",
+          "pronunciation": "/ˈɔːtoʊ ˈskeɪlɪŋ/",
+          "example": "Configure auto scaling based on CPU utilization.",
+          "category": "scaling"
+        },
+        {
+          "id": "cloud004",
+          "english": "load balancer",
+          "chinese": "负载均衡器",
+          "pronunciation": "/loʊd ˈbælənsər/",
+          "example": "The load balancer distributes traffic to healthy instances.",
+          "category": "networking"
+        },
+        {
+          "id": "cloud005",
+          "english": "cold start",
+          "chinese": "冷启动（首次调用的延迟）",
+          "pronunciation": "/koʊld stɑːrt/",
+          "example": "Serverless functions suffer from cold start latency.",
+          "category": "performance"
+        },
+        {
+          "id": "cloud006",
+          "english": "serverless",
+          "chinese": "无服务器（架构）",
+          "pronunciation": "/ˈsɜːrvərləs/",
+          "example": "We moved cron jobs to a serverless scheduler.",
+          "category": "architecture"
+        },
+        {
+          "id": "cloud007",
+          "english": "bucket",
+          "chinese": "存储桶",
+          "pronunciation": "/ˈbʌkɪt/",
+          "example": "Upload the backup to the S3 bucket.",
+          "category": "storage"
+        },
+        {
+          "id": "cloud008",
+          "english": "object storage",
+          "chinese": "对象存储",
+          "pronunciation": "/ˈɑːbdʒɪkt ˈstɔːrɪdʒ/",
+          "example": "Static assets are served from object storage.",
+          "category": "storage"
+        },
+        {
+          "id": "cloud009",
+          "english": "IAM role",
+          "chinese": "IAM 角色（身份与访问管理）",
+          "pronunciation": "/ˈaɪæm roʊl/",
+          "example": "The instance assumes an IAM role to access the database.",
+          "category": "security"
+        },
+        {
+          "id": "cloud010",
+          "english": "virtual private cloud (VPC)",
+          "chinese": "虚拟私有云",
+          "pronunciation": "/ˈvɜːrtʃuəl ˈpraɪvət klaʊd/",
+          "example": "Deploy the database inside a private subnet of the VPC.",
+          "category": "networking"
+        },
+        {
+          "id": "cloud011",
+          "english": "subnet",
+          "chinese": "子网",
+          "pronunciation": "/ˈsʌbnet/",
+          "example": "Public subnets hold the load balancers; private subnets hold the app.",
+          "category": "networking"
+        },
+        {
+          "id": "cloud012",
+          "english": "elastic IP",
+          "chinese": "弹性 IP",
+          "pronunciation": "/ɪˈlæstɪk ˌaɪˈpiː/",
+          "example": "Reserve an elastic IP for the NAT gateway.",
+          "category": "networking"
+        },
+        {
+          "id": "cloud013",
+          "english": "snapshot",
+          "chinese": "快照",
+          "pronunciation": "/ˈsnæpʃɑːt/",
+          "example": "Restore the volume from last night's snapshot.",
+          "category": "backup"
+        },
+        {
+          "id": "cloud014",
+          "english": "on-demand instance",
+          "chinese": "按需实例",
+          "pronunciation": "/ɑːn dɪˈmænd ˈɪnstəns/",
+          "example": "On-demand instances cost more but need no commitment.",
+          "category": "billing"
+        },
+        {
+          "id": "cloud015",
+          "english": "spot instance",
+          "chinese": "竞价实例",
+          "pronunciation": "/spɑːt ˈɪnstəns/",
+          "example": "Batch jobs run on cheap spot instances.",
+          "category": "billing"
+        },
+        {
+          "id": "cloud016",
+          "english": "reserved instance",
+          "chinese": "预留实例",
+          "pronunciation": "/rɪˈzɜːrvd ˈɪnstəns/",
+          "example": "We saved 40% by switching to reserved instances.",
+          "category": "billing"
+        },
+        {
+          "id": "cloud017",
+          "english": "multi-tenant",
+          "chinese": "多租户",
+          "pronunciation": "/ˈmʌlti ˈtenənt/",
+          "example": "A multi-tenant database isolates customer data by tenant id.",
+          "category": "architecture"
+        },
+        {
+          "id": "cloud018",
+          "english": "control plane",
+          "chinese": "控制平面",
+          "pronunciation": "/kənˈtroʊl pleɪn/",
+          "example": "The control plane schedules workloads onto worker nodes.",
+          "category": "orchestration"
+        },
+        {
+          "id": "cloud019",
+          "english": "data plane",
+          "chinese": "数据平面",
+          "pronunciation": "/ˈdeɪtə pleɪn/",
+          "example": "The data plane forwards packets at line rate.",
+          "category": "orchestration"
+        },
+        {
+          "id": "cloud020",
+          "english": "managed service",
+          "chinese": "托管服务",
+          "pronunciation": "/ˈmænɪdʒd ˈsɜːrvɪs/",
+          "example": "Prefer managed services so you don't patch the OS yourself.",
+          "category": "architecture"
+        },
+        {
+          "id": "cloud021",
+          "english": "vertical scaling (scale up)",
+          "chinese": "垂直扩展（纵向扩容）",
+          "pronunciation": "/ˈvɜːrtɪkl ˈskeɪlɪŋ/",
+          "example": "Vertical scaling just means buying a bigger machine.",
+          "category": "scaling"
+        },
+        {
+          "id": "cloud022",
+          "english": "horizontal scaling (scale out)",
+          "chinese": "水平扩展（横向扩容）",
+          "pronunciation": "/ˌhɔːrɪˈzɑːntl ˈskeɪlɪŋ/",
+          "example": "Horizontal scaling adds more instances behind the balancer.",
+          "category": "scaling"
+        },
+        {
+          "id": "cloud023",
+          "english": "failover",
+          "chinese": "故障转移",
+          "pronunciation": "/ˈfeɪloʊvər/",
+          "example": "Automatic failover promotes the standby database.",
+          "category": "reliability"
+        },
+        {
+          "id": "cloud024",
+          "english": "quota",
+          "chinese": "配额",
+          "pronunciation": "/ˈkwoʊtə/",
+          "example": "We hit the vCPU quota in this region.",
+          "category": "limits"
+        },
+        {
+          "id": "cloud025",
+          "english": "provision",
+          "chinese": "开通／配置（资源）",
+          "pronunciation": "/prəˈvɪʒn/",
+          "example": "Terraform provisions the whole stack in one apply.",
+          "category": "deployment"
+        }
+      ]
+    },
+    {
+      "id": "cicd-devops",
+      "name": "CI/CD & DevOps",
+      "nameCN": "持续集成与运维",
+      "description": "Continuous integration, delivery and operations vocabulary",
+      "items": [
+        {
+          "id": "ci001",
+          "english": "pipeline",
+          "chinese": "流水线",
+          "pronunciation": "/ˈpaɪplaɪn/",
+          "example": "The build pipeline failed at the test stage.",
+          "category": "general"
+        },
+        {
+          "id": "ci002",
+          "english": "stage",
+          "chinese": "阶段（流水线中的一环）",
+          "pronunciation": "/steɪdʒ/",
+          "example": "Add a lint stage before running the tests.",
+          "category": "pipeline"
+        },
+        {
+          "id": "ci003",
+          "english": "artifact",
+          "chinese": "构建产物",
+          "pronunciation": "/ˈɑːrtɪfækt/",
+          "example": "Upload the build artifact to the registry.",
+          "category": "build"
+        },
+        {
+          "id": "ci004",
+          "english": "rollback",
+          "chinese": "回滚",
+          "pronunciation": "/ˈroʊlbæk/",
+          "example": "The deploy was bad, so we triggered a rollback.",
+          "category": "deployment"
+        },
+        {
+          "id": "ci005",
+          "english": "blue-green deployment",
+          "chinese": "蓝绿部署",
+          "pronunciation": "/bluː griːn dɪˈplɔɪmənt/",
+          "example": "Blue-green deployment swaps traffic between two identical environments.",
+          "category": "deployment"
+        },
+        {
+          "id": "ci006",
+          "english": "canary release",
+          "chinese": "金丝雀发布",
+          "pronunciation": "/kəˈneri rɪˈliːs/",
+          "example": "Route 5% of traffic to the canary release first.",
+          "category": "deployment"
+        },
+        {
+          "id": "ci007",
+          "english": "feature flag",
+          "chinese": "功能开关",
+          "pronunciation": "/ˈfiːtʃər flæɡ/",
+          "example": "Hide the new UI behind a feature flag.",
+          "category": "release"
+        },
+        {
+          "id": "ci008",
+          "english": "hotfix",
+          "chinese": "紧急修复",
+          "pronunciation": "/ˈhɑːtfɪks/",
+          "example": "A hotfix was shipped outside the normal release train.",
+          "category": "release"
+        },
+        {
+          "id": "ci009",
+          "english": "release candidate (RC)",
+          "chinese": "发布候选版本",
+          "pronunciation": "/rɪˈliːs ˈkændɪdət/",
+          "example": "RC 2 fixes the last two blocker bugs.",
+          "category": "release"
+        },
+        {
+          "id": "ci010",
+          "english": "version tag",
+          "chinese": "版本标签",
+          "pronunciation": "/ˈvɜːrʒən tæɡ/",
+          "example": "Tag the release as v2.1.0 before building.",
+          "category": "release"
+        },
+        {
+          "id": "ci011",
+          "english": "changelog",
+          "chinese": "变更日志",
+          "pronunciation": "/ˈtʃeɪndʒlɔːɡ/",
+          "example": "Update the changelog with this fix.",
+          "category": "documentation"
+        },
+        {
+          "id": "ci012",
+          "english": "infrastructure as code (IaC)",
+          "chinese": "基础设施即代码",
+          "pronunciation": "/ˈɪnfrəstrʌktʃər æz koʊd/",
+          "example": "All servers are defined as code with Terraform.",
+          "category": "infrastructure"
+        },
+        {
+          "id": "ci013",
+          "english": "configuration drift",
+          "chinese": "配置漂移",
+          "pronunciation": "/kənˌfɪɡjəˈreɪʃən drɪft/",
+          "example": "Manual SSH edits cause configuration drift.",
+          "category": "infrastructure"
+        },
+        {
+          "id": "ci014",
+          "english": "runbook",
+          "chinese": "运维手册",
+          "pronunciation": "/ˈrʌnbʊk/",
+          "example": "Follow the runbook when the disk fills up.",
+          "category": "operations"
+        },
+        {
+          "id": "ci015",
+          "english": "on-call",
+          "chinese": "值班（待命）",
+          "pronunciation": "/ɒn kɔːl/",
+          "example": "I'm on-call this weekend, wish me luck.",
+          "category": "operations"
+        },
+        {
+          "id": "ci016",
+          "english": "postmortem",
+          "chinese": "复盘（事后分析）",
+          "pronunciation": "/ˈpoʊstmɔːrtəm/",
+          "example": "The incident postmortem found a missing health check.",
+          "category": "operations"
+        },
+        {
+          "id": "ci017",
+          "english": "build matrix",
+          "chinese": "构建矩阵",
+          "pronunciation": "/bɪld ˈmeɪtrɪks/",
+          "example": "The build matrix tests Node 18, 20 and 22.",
+          "category": "build"
+        },
+        {
+          "id": "ci018",
+          "english": "flaky test",
+          "chinese": "不稳定测试（偶发失败）",
+          "pronunciation": "/ˈfleɪki test/",
+          "example": "Quarantine the flaky test until it's fixed.",
+          "category": "testing"
+        },
+        {
+          "id": "ci019",
+          "english": "smoke test",
+          "chinese": "冒烟测试",
+          "pronunciation": "/smoʊk test/",
+          "example": "Run the smoke tests right after deployment.",
+          "category": "testing"
+        },
+        {
+          "id": "ci020",
+          "english": "golden master",
+          "chinese": "基准版本（黄金母版）",
+          "pronunciation": "/ˈɡoʊldən ˈmæstər/",
+          "example": "Compare the output against the golden master.",
+          "category": "testing"
+        },
+        {
+          "id": "ci021",
+          "english": "deployment freeze",
+          "chinese": "部署冻结",
+          "pronunciation": "/dɪˈplɔɪmənt friːz/",
+          "example": "No releases during the deployment freeze.",
+          "category": "release"
+        },
+        {
+          "id": "ci022",
+          "english": "job",
+          "chinese": "作业（CI 中的任务）",
+          "pronunciation": "/dʒɑːb/",
+          "example": "The lint job runs in under a minute.",
+          "category": "pipeline"
+        },
+        {
+          "id": "ci023",
+          "english": "runner",
+          "chinese": "运行器（执行 CI 的机器）",
+          "pronunciation": "/ˈrʌnər/",
+          "example": "Self-hosted runners execute jobs on our own hardware.",
+          "category": "pipeline"
+        },
+        {
+          "id": "ci024",
+          "english": "environment",
+          "chinese": "环境（dev/staging/prod）",
+          "pronunciation": "/ɪnˈvaɪrənmənt/",
+          "example": "The bug only reproduces in the staging environment.",
+          "category": "general"
+        },
+        {
+          "id": "ci025",
+          "english": "mean time to recovery (MTTR)",
+          "chinese": "平均恢复时间",
+          "pronunciation": "/miːn taɪm tuː rɪˈkʌvəri/",
+          "example": "MTTR dropped after we added auto-restart.",
+          "category": "metrics"
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "nameCN": "信息安全",
+      "description": "Application and infrastructure security vocabulary",
+      "items": [
+        {
+          "id": "sec001",
+          "english": "authentication",
+          "chinese": "身份认证",
+          "pronunciation": "/ɔːˌθentɪˈkeɪʃən/",
+          "example": "Authentication is handled by the OAuth2 provider.",
+          "category": "identity"
+        },
+        {
+          "id": "sec002",
+          "english": "authorization",
+          "chinese": "授权",
+          "pronunciation": "/ˌɔːθərəˈzeɪʃən/",
+          "example": "Authentication proves who you are; authorization defines what you may do.",
+          "category": "identity"
+        },
+        {
+          "id": "sec003",
+          "english": "encryption",
+          "chinese": "加密",
+          "pronunciation": "/ɪnˈkrɪpʃən/",
+          "example": "Enable encryption at rest for the database.",
+          "category": "crypto"
+        },
+        {
+          "id": "sec004",
+          "english": "hash",
+          "chinese": "哈希（散列）",
+          "pronunciation": "/hæʃ/",
+          "example": "Store the hash of the file to verify integrity.",
+          "category": "crypto"
+        },
+        {
+          "id": "sec005",
+          "english": "salt",
+          "chinese": "盐（随机附加值）",
+          "pronunciation": "/sɔːlt/",
+          "example": "Each password hash uses a unique random salt.",
+          "category": "crypto"
+        },
+        {
+          "id": "sec006",
+          "english": "TLS",
+          "chinese": "传输层安全协议",
+          "pronunciation": "/ˌtiː el ˈes/",
+          "example": "All traffic must go over TLS 1.3.",
+          "category": "crypto"
+        },
+        {
+          "id": "sec007",
+          "english": "certificate",
+          "chinese": "证书",
+          "pronunciation": "/sərˈtɪfɪkət/",
+          "example": "The TLS certificate expires next month.",
+          "category": "crypto"
+        },
+        {
+          "id": "sec008",
+          "english": "vulnerability",
+          "chinese": "漏洞",
+          "pronunciation": "/ˌvʌlnərəˈbɪləti/",
+          "example": "The scan found one critical vulnerability.",
+          "category": "risk"
+        },
+        {
+          "id": "sec009",
+          "english": "exploit",
+          "chinese": "利用（漏洞的攻击）",
+          "pronunciation": "/ˈeksplɔɪt/",
+          "example": "The exploit chains two weaknesses together.",
+          "category": "attack"
+        },
+        {
+          "id": "sec010",
+          "english": "patch",
+          "chinese": "补丁",
+          "pronunciation": "/pætʃ/",
+          "example": "Patch the server before Friday's disclosure.",
+          "category": "remediation"
+        },
+        {
+          "id": "sec011",
+          "english": "penetration testing",
+          "chinese": "渗透测试",
+          "pronunciation": "/ˌpenɪˈtreɪʃən ˈtestɪŋ/",
+          "example": "An outside firm runs penetration testing yearly.",
+          "category": "testing"
+        },
+        {
+          "id": "sec012",
+          "english": "injection",
+          "chinese": "注入（攻击）",
+          "pronunciation": "/ɪnˈdʒekʃən/",
+          "example": "SQL injection is prevented by parameterized queries.",
+          "category": "attack"
+        },
+        {
+          "id": "sec013",
+          "english": "cross-site scripting (XSS)",
+          "chinese": "跨站脚本攻击",
+          "pronunciation": "/krɔːs saɪt ˈskrɪptɪŋ/",
+          "example": "Escape user input to prevent cross-site scripting.",
+          "category": "attack"
+        },
+        {
+          "id": "sec014",
+          "english": "cross-site request forgery (CSRF)",
+          "chinese": "跨站请求伪造",
+          "pronunciation": "/krɔːs saɪt rɪˈkwest ˈfɔːrdʒəri/",
+          "example": "The form posts with a CSRF token.",
+          "category": "attack"
+        },
+        {
+          "id": "sec015",
+          "english": "least privilege",
+          "chinese": "最小权限原则",
+          "pronunciation": "/liːst ˈprɪvəlɪdʒ/",
+          "example": "Grant the service account least privilege.",
+          "category": "principle"
+        },
+        {
+          "id": "sec016",
+          "english": "audit log",
+          "chinese": "审计日志",
+          "pronunciation": "/ˈɔːdɪt lɔːɡ/",
+          "example": "Every admin action lands in the audit log.",
+          "category": "operations"
+        },
+        {
+          "id": "sec017",
+          "english": "incident response",
+          "chinese": "应急响应",
+          "pronunciation": "/ˈɪnsɪdənt rɪˈspɑːns/",
+          "example": "The incident response plan was activated at 2 a.m.",
+          "category": "operations"
+        },
+        {
+          "id": "sec018",
+          "english": "threat model",
+          "chinese": "威胁建模",
+          "pronunciation": "/θret ˈmɑːdl/",
+          "example": "Update the threat model for the new payment flow.",
+          "category": "risk"
+        },
+        {
+          "id": "sec019",
+          "english": "zero trust",
+          "chinese": "零信任（架构）",
+          "pronunciation": "/ˈzɪroʊ trʌst/",
+          "example": "Zero trust means never trusting the internal network.",
+          "category": "architecture"
+        },
+        {
+          "id": "sec020",
+          "english": "brute force attack",
+          "chinese": "暴力破解",
+          "pronunciation": "/bruːt fɔːrs əˈtæk/",
+          "example": "Rate limiting blocks the brute force attack.",
+          "category": "attack"
+        },
+        {
+          "id": "sec021",
+          "english": "man-in-the-middle attack",
+          "chinese": "中间人攻击",
+          "pronunciation": "/mæn ɪn ðə ˈmɪdl əˈtæk/",
+          "example": "Certificate pinning defeats man-in-the-middle attacks.",
+          "category": "attack"
+        },
+        {
+          "id": "sec022",
+          "english": "secrets management",
+          "chinese": "密钥管理",
+          "pronunciation": "/ˈsiːkrəts ˈmænɪdʒmənt/",
+          "example": "Never commit credentials; use secrets management.",
+          "category": "operations"
+        },
+        {
+          "id": "sec023",
+          "english": "security through obscurity",
+          "chinese": "隐蔽式安全",
+          "pronunciation": "/sɪˈkjʊrəti θruː əbˈskjʊrəti/",
+          "example": "Security through obscurity is not security.",
+          "category": "principle"
+        },
+        {
+          "id": "sec024",
+          "english": "denial of service (DoS)",
+          "chinese": "拒绝服务攻击",
+          "pronunciation": "/dɪˈnaɪəl əv ˈsɜːrvɪs/",
+          "example": "The WAF mitigated the denial of service attempt.",
+          "category": "attack"
+        },
+        {
+          "id": "sec025",
+          "english": "privilege escalation",
+          "chinese": "权限提升（提权）",
+          "pronunciation": "/ˈprɪvəlɪdʒ ˌeskəˈleɪʃən/",
+          "example": "The bug allowed local privilege escalation to root.",
+          "category": "attack"
+        }
+      ]
+    },
+    {
+      "id": "api-design",
+      "name": "API Design",
+      "nameCN": "API 设计",
+      "description": "HTTP API, protocol and integration vocabulary",
+      "items": [
+        {
+          "id": "api001",
+          "english": "endpoint",
+          "chinese": "接口端点",
+          "pronunciation": "/ˈendpɔɪnt/",
+          "example": "The health endpoint returns 200 OK.",
+          "category": "rest"
+        },
+        {
+          "id": "api002",
+          "english": "request",
+          "chinese": "请求",
+          "pronunciation": "/rɪˈkwest/",
+          "example": "The request body must be valid JSON.",
+          "category": "http"
+        },
+        {
+          "id": "api003",
+          "english": "response",
+          "chinese": "响应",
+          "pronunciation": "/rɪˈspɑːns/",
+          "example": "A 201 response confirms the resource was created.",
+          "category": "http"
+        },
+        {
+          "id": "api004",
+          "english": "header",
+          "chinese": "请求头",
+          "pronunciation": "/ˈhedər/",
+          "example": "Send the API key in the Authorization header.",
+          "category": "http"
+        },
+        {
+          "id": "api005",
+          "english": "payload",
+          "chinese": "载荷（请求体数据）",
+          "pronunciation": "/ˈpeɪloʊd/",
+          "example": "The webhook payload contains the event id.",
+          "category": "data"
+        },
+        {
+          "id": "api006",
+          "english": "status code",
+          "chinese": "状态码",
+          "pronunciation": "/ˈstætəs koʊd/",
+          "example": "A 429 status code means too many requests.",
+          "category": "http"
+        },
+        {
+          "id": "api007",
+          "english": "idempotent",
+          "chinese": "幂等的",
+          "pronunciation": "/ˌaɪdəmˈpoʊtənt/",
+          "example": "PUT is idempotent: calling it twice changes nothing.",
+          "category": "semantics"
+        },
+        {
+          "id": "api008",
+          "english": "rate limiting",
+          "chinese": "限流",
+          "pronunciation": "/reɪt ˈlɪmɪtɪŋ/",
+          "example": "The API returns 429 when rate limiting kicks in.",
+          "category": "throttle"
+        },
+        {
+          "id": "api009",
+          "english": "pagination",
+          "chinese": "分页",
+          "pronunciation": "/ˌpædʒɪˈneɪʃən/",
+          "example": "Use cursor-based pagination for large collections.",
+          "category": "data"
+        },
+        {
+          "id": "api010",
+          "english": "cursor",
+          "chinese": "游标",
+          "pronunciation": "/ˈkɜːrsər/",
+          "example": "Pass the cursor to fetch the next page.",
+          "category": "data"
+        },
+        {
+          "id": "api011",
+          "english": "webhook",
+          "chinese": "回调通知",
+          "pronunciation": "/ˈwebhʊk/",
+          "example": "Subscribe to push events via webhook.",
+          "category": "integration"
+        },
+        {
+          "id": "api012",
+          "english": "REST",
+          "chinese": "表述性状态转移（架构风格）",
+          "pronunciation": "/rest/",
+          "example": "The service exposes a REST API over HTTP.",
+          "category": "style"
+        },
+        {
+          "id": "api013",
+          "english": "GraphQL",
+          "chinese": "GraphQL 查询语言",
+          "pronunciation": "/ˌɡræf kjuː el/",
+          "example": "GraphQL lets clients pick exactly the fields they need.",
+          "category": "style"
+        },
+        {
+          "id": "api014",
+          "english": "schema",
+          "chinese": "模式（数据结构定义）",
+          "pronunciation": "/ˈskiːmə/",
+          "example": "Validate the payload against the schema first.",
+          "category": "data"
+        },
+        {
+          "id": "api015",
+          "english": "API versioning",
+          "chinese": "API 版本控制",
+          "pronunciation": "/ˌeɪ piː ˈaɪ ˈvɜːrʒənɪŋ/",
+          "example": "Versioning in the URL keeps old clients working.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "api016",
+          "english": "deprecation",
+          "chinese": "弃用（废弃）",
+          "pronunciation": "/ˌdeprəˈkeɪʃən/",
+          "example": "The v1 endpoint is scheduled for deprecation.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "api017",
+          "english": "backward compatibility",
+          "chinese": "向后兼容",
+          "pronunciation": "/ˈbækwərd kəmˌpætɪˈbɪləti/",
+          "example": "Renaming a field breaks backward compatibility.",
+          "category": "lifecycle"
+        },
+        {
+          "id": "api018",
+          "english": "sandbox",
+          "chinese": "沙箱（测试环境）",
+          "pronunciation": "/ˈsændbɑːks/",
+          "example": "Test your integration against the sandbox first.",
+          "category": "testing"
+        },
+        {
+          "id": "api019",
+          "english": "throttling",
+          "chinese": "节流",
+          "pronunciation": "/ˈθrɑːtlɪŋ/",
+          "example": "Throttling protects the backend from burst traffic.",
+          "category": "throttle"
+        },
+        {
+          "id": "api020",
+          "english": "OAuth",
+          "chinese": "开放授权协议",
+          "pronunciation": "/ˈoʊˌɔːθ/",
+          "example": "We use OAuth 2.0 for delegated access.",
+          "category": "auth"
+        },
+        {
+          "id": "api021",
+          "english": "bearer token",
+          "chinese": "持有者令牌",
+          "pronunciation": "/ˈberər ˈtoʊkən/",
+          "example": "Send the bearer token in every request.",
+          "category": "auth"
+        },
+        {
+          "id": "api022",
+          "english": "request timeout",
+          "chinese": "请求超时",
+          "pronunciation": "/rɪˈkwest ˈtaɪmaʊt/",
+          "example": "Set the request timeout to five seconds.",
+          "category": "http"
+        },
+        {
+          "id": "api023",
+          "english": "retry with backoff",
+          "chinese": "带退避的重试",
+          "pronunciation": "/ˈriːtraɪ wɪð ˈbækɔːf/",
+          "example": "Retry with exponential backoff on 503.",
+          "category": "resilience"
+        },
+        {
+          "id": "api024",
+          "english": "graceful degradation",
+          "chinese": "优雅降级",
+          "pronunciation": "/ˈɡreɪsfəl ˌdeɡrəˈdeɪʃən/",
+          "example": "The page uses graceful degradation when the API is down.",
+          "category": "resilience"
+        },
+        {
+          "id": "api025",
+          "english": "contract testing",
+          "chinese": "契约测试",
+          "pronunciation": "/ˈkɑːntrækt ˈtestɪŋ/",
+          "example": "Contract testing catches API mismatches in CI.",
+          "category": "testing"
+        }
+      ]
     }
   ]
 };
