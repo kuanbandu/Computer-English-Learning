@@ -1,0 +1,140 @@
+name: Release
+
+# Creates a GitHub Release for every v* tag.
+# - Pushing a new tag vX.Y.Z -> publishes that release immediately.
+# - Changing this workflow file -> backfills releases for any tags that
+#   do not have one yet (idempotent, safe to re-run).
+
+on:
+  push:
+    tags: ['v*']
+    branches: [main]
+    paths: ['.github/workflows/release.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history incl. tags)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create releases for tags that do not have one yet
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          notes_for() {
+            case "$1" in
+          v1.0.0)
+            cat <<'EOF'
+          ## 🎉 Initial release
+
+          - 6 categories / 300 words: Git Commands, Error Messages, Programming Terms, Web Development, System Terms and more
+          - Flashcard learning with flip animation
+          - Learning progress persisted in localStorage
+          - Dark mode and mobile responsive UI
+          EOF
+          ;;
+          v1.1.0)
+            cat <<'EOF'
+          ## 🔒 Security hardening
+
+          - Escape HTML in card templates to prevent XSS
+          - Stop auto-marking cards as learned when flipping
+          EOF
+          ;;
+          v1.2.0)
+            cat <<'EOF'
+          ## 🧠 SRS + dictation mode
+
+          - SM-2 spaced repetition scheduling with 4-button rating (Again / Hard / Good / Easy)
+          - Dictation mode: listen to the word, type the spelling
+          - Mode toggle between card and dictation views
+          EOF
+          ;;
+          v1.3.0)
+            cat <<'EOF'
+          ## ⌨️ Interaction improvements
+
+          - Keyboard shortcuts: Space to flip, 1-4 to rate, arrow keys to navigate
+          - Touch gestures: swipe left/right to move between cards
+          EOF
+          ;;
+          v1.4.0)
+            cat <<'EOF'
+          ## 📝 Quiz mode + heatmap
+
+          - Multiple-choice quiz mode (3 learning modes in total)
+          - GitHub-style learning heatmap showing daily activity
+          EOF
+          ;;
+          v1.5.0)
+            cat <<'EOF'
+          ## 🤖 CI pipeline
+
+          - GitHub Actions workflow: JS syntax check, data integrity validation (unique item ids), SRS unit tests
+          - Every push to main is validated automatically
+          EOF
+          ;;
+          v2.0.0)
+            cat <<'EOF'
+          ## 📚 Content expansion: 30 categories / 1400 words
+
+          Batches 2-5 (+1100 words):
+
+          - **Agile dev, soft skills, tech writing, interview, career development**
+          - **Microservices, observability, modern web**
+          - **Data engineering, performance optimization, testing quality, open source**
+          EOF
+          ;;
+          v2.1.0)
+            cat <<'EOF'
+          ## 💾 Data backup
+
+          - Export all learning progress (word status, SRS schedule, heatmap, streaks) to a JSON file
+          - Import / restore from a backup file with validation
+          EOF
+          ;;
+          v2.2.0)
+            cat <<'EOF'
+          ## 📚 Content expansion: 42 categories / 2000 words
+
+          Batches 6-9 (+600 words):
+
+          - **Blockchain / Web3, game development, embedded systems**
+          - **Product / UX design, data visualization, browser DevTools**
+          - **Mobile, desktop, MLOps, compilers**
+          - **Digital electronics / FPGA, math for developers**
+          EOF
+          ;;
+          v2.2.1)
+            cat <<'EOF'
+          ## 🐛 Bug fix
+
+          - Hide the dictation bar in card and quiz modes: a `display: flex` rule on `.dictation-bar` overrode the `hidden` attribute, so the listen-and-spell bar leaked into all three modes. A global `[hidden] { display: none !important }` rule now guarantees the attribute always wins.
+          EOF
+          ;;
+          *)
+            # Unknown tag: fall back to the annotated tag message
+            git tag -l --format='%(contents)' "$1"
+            ;;
+            esac
+          }
+
+          for tag in $(git tag -l 'v*'); do
+            if gh release view "$tag" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+              echo "Release $tag already exists, skipping"
+            else
+              echo "Creating release $tag"
+              notes="$(notes_for "$tag")"
+              gh release create "$tag" -R "$GITHUB_REPOSITORY" \
+                --verify-tag \
+                --title "$tag" \
+                --notes "$notes"
+            fi
+          done
