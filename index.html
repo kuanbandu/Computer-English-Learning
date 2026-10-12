@@ -230,6 +230,20 @@
           </div>
         </div>
 
+        <div class="backup-section">
+          <h3>数据备份</h3>
+          <p class="backup-hint">导出学习进度、收藏、复习计划与热力图数据，或从备份文件恢复。</p>
+          <div class="backup-buttons">
+            <button class="backup-btn" id="export-data-btn">
+              <span>⬇️</span> 导出数据
+            </button>
+            <button class="backup-btn" id="import-data-btn">
+              <span>⬆️</span> 导入数据
+            </button>
+            <input type="file" id="import-data-input" accept=".json,application/json" hidden>
+          </div>
+        </div>
+
         <div class="reset-section">
           <button class="reset-btn" id="reset-progress-btn">
             <span>🗑️</span> 重置所有进度

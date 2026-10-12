@@ -927,13 +927,137 @@
           this.favorites = [];
           this.learned = [];
           this.srsState = {};
+          this.activity = {};
           this.saveFavorites();
           this.saveLearned();
           this.saveSrs();
+          try {
+            localStorage.setItem(STORAGE_KEYS.ACTIVITY, JSON.stringify(this.activity));
+          } catch (e) { /* ignore */ }
           this.updateProgressView();
           this.showToast('已重置所有进度');
         }
       });
+
+      // Data backup: export all learning state to a JSON file, or
+      // restore it from a previously exported file.
+      const exportBtn = document.getElementById('export-data-btn');
+      const importBtn = document.getElementById('import-data-btn');
+      const importInput = document.getElementById('import-data-input');
+      if (exportBtn) exportBtn.addEventListener('click', () => this.exportData());
+      if (importBtn) {
+        importBtn.addEventListener('click', () => importInput.click());
+      }
+      if (importInput) {
+        importInput.addEventListener('change', () => {
+          const file = importInput.files && importInput.files[0];
+          if (file) this.importData(file);
+          importInput.value = '';
+        });
+      }
+    }
+
+    /**
+     * Collect every persisted learning state into one portable object.
+     * Format: { app, version, exportedAt, data: { favorites, learned,
+     * srs, activity, streak, lastVisit, theme } }
+     */
+    buildBackupObject() {
+      return {
+        app: 'computer-english-learning',
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        data: {
+          favorites: this.favorites,
+          learned: this.learned,
+          srs: this.srsState,
+          activity: this.activity,
+          streak: this.streak,
+          lastVisit: localStorage.getItem(STORAGE_KEYS.LAST_VISIT),
+          theme: localStorage.getItem(STORAGE_KEYS.THEME) || 'light'
+        }
+      };
+    }
+
+    exportData() {
+      try {
+        const backup = this.buildBackupObject();
+        const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        const d = new Date();
+        const stamp = d.getFullYear() + String(d.getMonth() + 1).padStart(2, '0') + String(d.getDate()).padStart(2, '0');
+        a.href = url;
+        a.download = `computer-english-backup-${stamp}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        this.showToast('备份文件已导出');
+      } catch (e) {
+        this.showToast('导出失败：' + e.message);
+      }
+    }
+
+    /**
+     * Restore state from a backup file. The file must carry our app
+     * marker and a valid data object; the user must confirm the
+     * overwrite before anything is written.
+     */
+    importData(file) {
+      const reader = new FileReader();
+      reader.onerror = () => this.showToast('无法读取文件');
+      reader.onload = () => {
+        let backup;
+        try {
+          backup = JSON.parse(reader.result);
+        } catch (e) {
+          this.showToast('导入失败：文件不是有效的 JSON');
+          return;
+        }
+        if (!backup || backup.app !== 'computer-english-learning' ||
+            !backup.data || typeof backup.data !== 'object') {
+          this.showToast('导入失败：不是本应用的备份文件');
+          return;
+        }
+        const d = backup.data;
+        const isValidArray = v => Array.isArray(v);
+        if (!isValidArray(d.favorites) || !isValidArray(d.learned) ||
+            typeof d.srs !== 'object' || d.srs === null) {
+          this.showToast('导入失败：备份数据结构不完整');
+          return;
+        }
+
+        const msg = `确定要导入这份备份吗？\n\n导出时间：${backup.exportedAt || '未知'}\n已学：${d.learned.length} 词 | 收藏：${d.favorites.length} 词\n\n当前的所有进度将被覆盖。`;
+        if (!confirm(msg)) return;
+
+        try {
+          this.favorites = d.favorites.filter(id => typeof id === 'string');
+          this.learned = d.learned.filter(id => typeof id === 'string');
+          this.srsState = d.srs;
+          this.activity = (d.activity && typeof d.activity === 'object') ? d.activity : {};
+
+          this.saveFavorites();
+          this.saveLearned();
+          this.saveSrs();
+          localStorage.setItem(STORAGE_KEYS.ACTIVITY, JSON.stringify(this.activity));
+          if (typeof d.lastVisit === 'string') localStorage.setItem(STORAGE_KEYS.LAST_VISIT, d.lastVisit);
+          if (d.streak && !isNaN(parseInt(d.streak, 10))) {
+            localStorage.setItem(STORAGE_KEYS.STREAK, String(parseInt(d.streak, 10)));
+          }
+          if (d.theme === 'light' || d.theme === 'dark') this.setTheme(d.theme);
+
+          // Rebuild the study queue with the imported SRS state.
+          this.currentItems = this.buildSrsQueue(this.allItems);
+          this.currentIndex = 0;
+          this.updateProgressView();
+          this.loadCard();
+          this.showToast('数据导入成功');
+        } catch (e) {
+          this.showToast('导入失败：' + e.message);
+        }
+      };
+      reader.readAsText(file);
     }
 
     updateProgressView() {
