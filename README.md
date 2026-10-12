@@ -2,7 +2,7 @@
 
 一个专为程序员设计的计算机英语词汇学习工具，帮助你在日常开发中熟悉常用英语表达。
 
-🌐 **在线访问**: https://kuanbandu.github.io/computer-english/
+🌐 **在线访问**: https://kuanbandu.github.io/Computer-English-Learning/
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![PWA](https://img.shields.io/badge/PWA-Supported-green.svg)
@@ -42,12 +42,12 @@
 ## 🚀 使用方法
 
 ### 在线使用
-直接访问：https://kuanbandu.github.io/computer-english/
+直接访问：https://kuanbandu.github.io/Computer-English-Learning/
 
 ### 本地使用
 ```bash
-git clone https://github.com/kuanbandu/computer-english.git
-cd computer-english
+git clone https://github.com/kuanbandu/Computer-English-Learning.git
+cd Computer-English-Learning
 # 用浏览器打开 index.html
 ```
 
@@ -60,7 +60,7 @@ cd computer-english
 ## 📁 项目结构
 
 ```
-computer-english/
+Computer-English-Learning/
 ├── index.html          # 主页面
 ├── css/
 │   └── style.css       # 样式文件
