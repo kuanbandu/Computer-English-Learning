@@ -6951,6 +6951,1230 @@ const computerEnglishData = {
           "category": "testing"
         }
       ]
+    },
+    {
+      "id": "microservices",
+      "name": "Microservices & Distributed Systems",
+      "nameCN": "微服务与分布式",
+      "description": "Distributed architecture patterns and reliability vocabulary",
+      "items": [
+        {
+          "id": "ms001",
+          "english": "monolith",
+          "chinese": "单体应用",
+          "pronunciation": "/ˈmɑːnəlɪθ/",
+          "example": "We are slowly breaking the monolith apart.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms002",
+          "english": "microservice",
+          "chinese": "微服务",
+          "pronunciation": "/ˈmaɪkroʊsɜːrvɪs/",
+          "example": "Each microservice owns its own database.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms003",
+          "english": "service mesh",
+          "chinese": "服务网格",
+          "pronunciation": "/ˈsɜːrvɪs meʃ/",
+          "example": "The service mesh handles retries so the app code doesn't have to.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms004",
+          "english": "sidecar",
+          "chinese": "边车（伴生容器）",
+          "pronunciation": "/ˈsaɪdkɑːr/",
+          "example": "A sidecar proxy sits next to every service instance.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms005",
+          "english": "API gateway",
+          "chinese": "API 网关",
+          "pronunciation": "/ˌeɪ piː ˈaɪ ˈɡeɪtweɪ/",
+          "example": "All external traffic enters through the API gateway.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms006",
+          "english": "circuit breaker",
+          "chinese": "熔断器",
+          "pronunciation": "/ˈsɜːrkɪt ˈbreɪkər/",
+          "example": "The circuit breaker opens after five consecutive failures.",
+          "category": "resilience"
+        },
+        {
+          "id": "ms007",
+          "english": "fallback",
+          "chinese": "回退（降级方案）",
+          "pronunciation": "/ˈfɔːlbæk/",
+          "example": "Show cached data as a fallback when the API is down.",
+          "category": "resilience"
+        },
+        {
+          "id": "ms008",
+          "english": "bulkhead",
+          "chinese": "舱壁隔离",
+          "pronunciation": "/ˈbʌlkhed/",
+          "example": "Bulkheads stop one failing service from exhausting the whole thread pool.",
+          "category": "resilience"
+        },
+        {
+          "id": "ms009",
+          "english": "retry",
+          "chinese": "重试",
+          "pronunciation": "/ˌriːˈtraɪ/",
+          "example": "Add a retry for transient network errors.",
+          "category": "resilience"
+        },
+        {
+          "id": "ms010",
+          "english": "exponential backoff",
+          "chinese": "指数退避",
+          "pronunciation": "/ˌekspəˈnenʃl ˈbækɔːf/",
+          "example": "Retries use exponential backoff starting at 100 ms.",
+          "category": "resilience"
+        },
+        {
+          "id": "ms011",
+          "english": "heartbeat",
+          "chinese": "心跳（存活信号）",
+          "pronunciation": "/ˈhɑːrtbiːt/",
+          "example": "The agent sends a heartbeat every ten seconds.",
+          "category": "resilience"
+        },
+        {
+          "id": "ms012",
+          "english": "rate limiter",
+          "chinese": "限流器",
+          "pronunciation": "/reɪt ˈlɪmɪtər/",
+          "example": "The rate limiter rejects requests above 100 per second.",
+          "category": "resilience"
+        },
+        {
+          "id": "ms013",
+          "english": "service discovery",
+          "chinese": "服务发现",
+          "pronunciation": "/ˈsɜːrvɪs dɪˈskʌvəri/",
+          "example": "Service discovery tells clients where the healthy instances are.",
+          "category": "networking"
+        },
+        {
+          "id": "ms014",
+          "english": "registry",
+          "chinese": "注册中心",
+          "pronunciation": "/ˈredʒɪstri/",
+          "example": "New instances register themselves in the registry on boot.",
+          "category": "networking"
+        },
+        {
+          "id": "ms015",
+          "english": "readiness probe",
+          "chinese": "就绪探针",
+          "pronunciation": "/ˈredinəs proʊb/",
+          "example": "Kubernetes routes traffic only after the readiness probe passes.",
+          "category": "orchestration"
+        },
+        {
+          "id": "ms016",
+          "english": "eventual consistency",
+          "chinese": "最终一致性",
+          "pronunciation": "/ɪˈventʃuəl kənˈsɪstənsi/",
+          "example": "The replicas are eventually consistent within about a second.",
+          "category": "consistency"
+        },
+        {
+          "id": "ms017",
+          "english": "strong consistency",
+          "chinese": "强一致性",
+          "pronunciation": "/strɔːŋ kənˈsɪstənsi/",
+          "example": "Payments require strong consistency, so we use a synchronous write.",
+          "category": "consistency"
+        },
+        {
+          "id": "ms018",
+          "english": "consensus",
+          "chinese": "共识（算法）",
+          "pronunciation": "/kənˈsensəs/",
+          "example": "Raft reaches consensus through a leader-based protocol.",
+          "category": "consistency"
+        },
+        {
+          "id": "ms019",
+          "english": "leader election",
+          "chinese": "主节点选举",
+          "pronunciation": "/ˈliːdər ɪˈlekʃən/",
+          "example": "When the master dies, leader election picks a replacement automatically.",
+          "category": "consistency"
+        },
+        {
+          "id": "ms020",
+          "english": "quorum",
+          "chinese": "法定人数（多数派）",
+          "pronunciation": "/ˈkwɔːrəm/",
+          "example": "A write succeeds if a quorum of nodes acknowledges it.",
+          "category": "consistency"
+        },
+        {
+          "id": "ms021",
+          "english": "replication",
+          "chinese": "副本复制",
+          "pronunciation": "/ˌreplɪˈkeɪʃən/",
+          "example": "Replication gives us three copies of every partition.",
+          "category": "data"
+        },
+        {
+          "id": "ms022",
+          "english": "consistent hashing",
+          "chinese": "一致性哈希",
+          "pronunciation": "/kənˈsɪstənt ˈhæʃɪŋ/",
+          "example": "Consistent hashing minimizes data movement when nodes leave.",
+          "category": "data"
+        },
+        {
+          "id": "ms023",
+          "english": "partition tolerance",
+          "chinese": "分区容忍性",
+          "pronunciation": "/pɑːrˈtɪʃən ˈtɑːlərəns/",
+          "example": "CAP theorem says partition tolerance is non-negotiable in a network.",
+          "category": "consistency"
+        },
+        {
+          "id": "ms024",
+          "english": "CAP theorem",
+          "chinese": "CAP 定理",
+          "pronunciation": "/kæp ˈθɪrəm/",
+          "example": "Under a network split, the CAP theorem forces a choice between consistency and availability.",
+          "category": "theory"
+        },
+        {
+          "id": "ms025",
+          "english": "saga",
+          "chinese": "Saga 模式（长事务拆分）",
+          "pronunciation": "/ˈsɑːɡə/",
+          "example": "A saga coordinates the order, payment and shipping steps.",
+          "category": "transactions"
+        },
+        {
+          "id": "ms026",
+          "english": "two-phase commit",
+          "chinese": "两阶段提交",
+          "pronunciation": "/tuː feɪz kəˈmɪt/",
+          "example": "Two-phase commit is correct but blocks during failures.",
+          "category": "transactions"
+        },
+        {
+          "id": "ms027",
+          "english": "compensating transaction",
+          "chinese": "补偿事务",
+          "pronunciation": "/ˈkɑːmpenseɪtɪŋ trænˈzækʃən/",
+          "example": "If shipping fails, a compensating transaction refunds the payment.",
+          "category": "transactions"
+        },
+        {
+          "id": "ms028",
+          "english": "distributed tracing",
+          "chinese": "分布式链路追踪",
+          "pronunciation": "/dɪˈstrɪbjuːtɪd ˈtreɪsɪŋ/",
+          "example": "Distributed tracing shows where the 300 ms went.",
+          "category": "observability"
+        },
+        {
+          "id": "ms029",
+          "english": "correlation id",
+          "chinese": "关联 ID",
+          "pronunciation": "/ˌkɔːrəˈleɪʃən aɪ ˈdiː/",
+          "example": "Attach a correlation id so logs across services can be joined.",
+          "category": "observability"
+        },
+        {
+          "id": "ms030",
+          "english": "message queue",
+          "chinese": "消息队列",
+          "pronunciation": "/ˈmesɪdʒ kjuː/",
+          "example": "Put the email job on a message queue instead of blocking the request.",
+          "category": "messaging"
+        },
+        {
+          "id": "ms031",
+          "english": "dead letter queue",
+          "chinese": "死信队列",
+          "pronunciation": "/ded ˈletər kjuː/",
+          "example": "Poison messages land in the dead letter queue for inspection.",
+          "category": "messaging"
+        },
+        {
+          "id": "ms032",
+          "english": "at-least-once delivery",
+          "chinese": "至少一次投递",
+          "pronunciation": "/æt liːst wʌns dɪˈlɪvəri/",
+          "example": "With at-least-once delivery, consumers must handle duplicates.",
+          "category": "messaging"
+        },
+        {
+          "id": "ms033",
+          "english": "exactly-once semantics",
+          "chinese": "恰好一次语义",
+          "pronunciation": "/ɪɡˈzæktli wʌns sɪˈmæntɪks/",
+          "example": "Exactly-once semantics costs throughput but simplifies consumers.",
+          "category": "messaging"
+        },
+        {
+          "id": "ms034",
+          "english": "idempotency key",
+          "chinese": "幂等键",
+          "pronunciation": "/ˌaɪdəmˈpoʊtənsi kiː/",
+          "example": "Send an idempotency key so retried payments aren't charged twice.",
+          "category": "messaging"
+        },
+        {
+          "id": "ms035",
+          "english": "backpressure",
+          "chinese": "背压（下游反压）",
+          "pronunciation": "/ˈbækˌpreʃər/",
+          "example": "When the consumer slows down, backpressure propagates upstream.",
+          "category": "messaging"
+        },
+        {
+          "id": "ms036",
+          "english": "fan-out",
+          "chinese": "扇出（一消息多订阅）",
+          "pronunciation": "/fæn aʊt/",
+          "example": "The exchange uses fan-out to broadcast to every queue.",
+          "category": "messaging"
+        },
+        {
+          "id": "ms037",
+          "english": "event sourcing",
+          "chinese": "事件溯源",
+          "pronunciation": "/ɪˈvent ˈsɔːrsɪŋ/",
+          "example": "With event sourcing, state is derived by replaying the event log.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms038",
+          "english": "CQRS",
+          "chinese": "命令查询职责分离",
+          "pronunciation": "/ˌsiː kjuː ɑːr ˈes/",
+          "example": "CQRS lets the read model use a totally different store.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms039",
+          "english": "bounded context",
+          "chinese": "限界上下文",
+          "pronunciation": "/ˈbaʊndɪd ˈkɑːntekst/",
+          "example": "Order and Inventory are separate bounded contexts in the domain model.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms040",
+          "english": "strangler fig pattern",
+          "chinese": "绞杀者模式（渐进迁移）",
+          "pronunciation": "/ˈstræŋɡlər fɪɡ ˈpætərn/",
+          "example": "Use the strangler fig pattern to migrate the monolith route by route.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms041",
+          "english": "anti-corruption layer",
+          "chinese": "防腐层",
+          "pronunciation": "/ˌænti kəˈrʌpʃən ˈleɪər/",
+          "example": "An anti-corruption layer translates the legacy data model.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms042",
+          "english": "event-driven architecture",
+          "chinese": "事件驱动架构",
+          "pronunciation": "/ɪˈvent ˈdrɪvn ˈɑːrkɪtektʃər/",
+          "example": "In an event-driven architecture, services react to domain events.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms043",
+          "english": "choreography",
+          "chinese": "协同（无中心编排）",
+          "pronunciation": "/ˌkɔːriˈɑːɡrəfi/",
+          "example": "With choreography, each service subscribes to the events it cares about.",
+          "category": "architecture"
+        },
+        {
+          "id": "ms044",
+          "english": "downstream service",
+          "chinese": "下游服务",
+          "pronunciation": "/ˈdaʊnstriːm ˈsɜːrvɪs/",
+          "example": "If the downstream service is slow, our request times out.",
+          "category": "networking"
+        },
+        {
+          "id": "ms045",
+          "english": "synchronous call",
+          "chinese": "同步调用",
+          "pronunciation": "/ˈsɪŋkrənəs kɔːl/",
+          "example": "Every synchronous call adds a availability risk.",
+          "category": "networking"
+        },
+        {
+          "id": "ms046",
+          "english": "asynchronous messaging",
+          "chinese": "异步消息",
+          "pronunciation": "/eɪˈsɪŋkrənəs ˈmesɪdʒɪŋ/",
+          "example": "Asynchronous messaging decouples producers from consumers.",
+          "category": "messaging"
+        },
+        {
+          "id": "ms047",
+          "english": "latency budget",
+          "chinese": "延迟预算",
+          "pronunciation": "/ˈleɪtənsi ˈbʌdʒɪt/",
+          "example": "Each hop gets a share of the 200 ms latency budget.",
+          "category": "performance"
+        },
+        {
+          "id": "ms048",
+          "english": "thundering herd",
+          "chinese": "惊群效应",
+          "pronunciation": "/ˈθʌndərɪŋ hɜːrd/",
+          "example": "All caches expiring at once causes a thundering herd on the database.",
+          "category": "performance"
+        },
+        {
+          "id": "ms049",
+          "english": "cache stampede",
+          "chinese": "缓存击穿",
+          "pronunciation": "/kæʃ stæmˈpiːd/",
+          "example": "Request coalescing prevents a cache stampede on the hot key.",
+          "category": "performance"
+        },
+        {
+          "id": "ms050",
+          "english": "single point of failure",
+          "chinese": "单点故障",
+          "pronunciation": "/ˈsɪŋɡəl pɔɪnt əv ˈfeɪljər/",
+          "example": "That unreplicated database is our single point of failure.",
+          "category": "reliability"
+        }
+      ]
+    },
+    {
+      "id": "observability",
+      "name": "Observability",
+      "nameCN": "可观测性",
+      "description": "Metrics, logs, traces and SRE monitoring vocabulary",
+      "items": [
+        {
+          "id": "ob001",
+          "english": "observability",
+          "chinese": "可观测性",
+          "pronunciation": "/əbˌzɜːrvəˈbɪləti/",
+          "example": "Observability means you can answer new questions without shipping new code.",
+          "category": "core"
+        },
+        {
+          "id": "ob002",
+          "english": "telemetry",
+          "chinese": "遥测数据",
+          "pronunciation": "/təˈlemətri/",
+          "example": "The agent collects telemetry from every host.",
+          "category": "core"
+        },
+        {
+          "id": "ob003",
+          "english": "instrumentation",
+          "chinese": "埋点／插桩",
+          "pronunciation": "/ˌɪnstrəmenˈteɪʃən/",
+          "example": "Add instrumentation around the database calls.",
+          "category": "core"
+        },
+        {
+          "id": "ob004",
+          "english": "log",
+          "chinese": "日志",
+          "pronunciation": "/lɔːɡ/",
+          "example": "Check the application log for stack traces.",
+          "category": "logs"
+        },
+        {
+          "id": "ob005",
+          "english": "log level",
+          "chinese": "日志级别",
+          "pronunciation": "/lɔːɡ ˈlevl/",
+          "example": "Lower the log level to DEBUG in staging only.",
+          "category": "logs"
+        },
+        {
+          "id": "ob006",
+          "english": "structured logging",
+          "chinese": "结构化日志",
+          "pronunciation": "/ˈstrʌktʃərd ˈlɔːɡɪŋ/",
+          "example": "Structured logging makes logs queryable by field.",
+          "category": "logs"
+        },
+        {
+          "id": "ob007",
+          "english": "log aggregation",
+          "chinese": "日志聚合",
+          "pronunciation": "/lɔːɡ ˌæɡrɪˈɡeɪʃən/",
+          "example": "Log aggregation pipes every service's output into one search index.",
+          "category": "logs"
+        },
+        {
+          "id": "ob008",
+          "english": "metric",
+          "chinese": "指标",
+          "pronunciation": "/ˈmetrɪk/",
+          "example": "The dashboard plots one metric per panel.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob009",
+          "english": "counter",
+          "chinese": "计数器（只增不减）",
+          "pronunciation": "/ˈkaʊntər/",
+          "example": "A counter for total requests resets to zero on restart.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob010",
+          "english": "gauge",
+          "chinese": "瞬时值指标",
+          "pronunciation": "/ɡeɪdʒ/",
+          "example": "Memory usage is a gauge that can go up or down.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob011",
+          "english": "histogram",
+          "chinese": "直方图",
+          "pronunciation": "/ˈhɪstəɡræm/",
+          "example": "A histogram buckets request durations into ranges.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob012",
+          "english": "summary metric",
+          "chinese": "摘要型指标（分位数）",
+          "pronunciation": "/ˈsʌməri ˈmetrɪk/",
+          "example": "The summary metric exposes precomputed quantiles.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob013",
+          "english": "percentile",
+          "chinese": "百分位数",
+          "pronunciation": "/pərˈsentaɪl/",
+          "example": "The 95th percentile latency is under 120 ms.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob014",
+          "english": "p99 latency",
+          "chinese": "P99 延迟",
+          "pronunciation": "/piː naɪnti naɪn ˈleɪtənsi/",
+          "example": "The p99 latency spikes during the nightly batch job.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob015",
+          "english": "long-tail latency",
+          "chinese": "长尾延迟",
+          "pronunciation": "/lɔːŋ teɪl ˈleɪtənsi/",
+          "example": "The average looks fine, but long-tail latency is awful.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob016",
+          "english": "trace",
+          "chinese": "调用链",
+          "pronunciation": "/treɪs/",
+          "example": "Open the trace to see every span in the request.",
+          "category": "tracing"
+        },
+        {
+          "id": "ob017",
+          "english": "span",
+          "chinese": "跨度（一段调用）",
+          "pronunciation": "/spæn/",
+          "example": "Each span records the service, operation and duration.",
+          "category": "tracing"
+        },
+        {
+          "id": "ob018",
+          "english": "trace id",
+          "chinese": "追踪 ID",
+          "pronunciation": "/treɪs aɪ ˈdiː/",
+          "example": "Carry the trace id through every hop.",
+          "category": "tracing"
+        },
+        {
+          "id": "ob019",
+          "english": "context propagation",
+          "chinese": "上下文传播",
+          "pronunciation": "/ˈkɑːntekst ˌprɑːpəˈɡeɪʃən/",
+          "example": "Context propagation broke because one library dropped the headers.",
+          "category": "tracing"
+        },
+        {
+          "id": "ob020",
+          "english": "sampling",
+          "chinese": "采样",
+          "pronunciation": "/ˈsæmplɪŋ/",
+          "example": "We sample one trace in a hundred to control cost.",
+          "category": "tracing"
+        },
+        {
+          "id": "ob021",
+          "english": "dashboard",
+          "chinese": "仪表盘",
+          "pronunciation": "/ˈdæʃbɔːrd/",
+          "example": "Share the latency dashboard link during the incident.",
+          "category": "monitoring"
+        },
+        {
+          "id": "ob022",
+          "english": "panel",
+          "chinese": "面板（图表单元）",
+          "pronunciation": "/ˈpænl/",
+          "example": "Add a panel for error rate per region.",
+          "category": "monitoring"
+        },
+        {
+          "id": "ob023",
+          "english": "alert",
+          "chinese": "告警",
+          "pronunciation": "/əˈlɜːrt/",
+          "example": "The alert fired twice last night for the same issue.",
+          "category": "alerting"
+        },
+        {
+          "id": "ob024",
+          "english": "alert threshold",
+          "chinese": "告警阈值",
+          "pronunciation": "/əˈlɜːrt ˈθreʃhoʊld/",
+          "example": "Raise the alert threshold to cut the noise.",
+          "category": "alerting"
+        },
+        {
+          "id": "ob025",
+          "english": "alert fatigue",
+          "chinese": "告警疲劳",
+          "pronunciation": "/əˈlɜːrt fəˈtiːɡ/",
+          "example": "Alert fatigue makes engineers ignore real pages.",
+          "category": "alerting"
+        },
+        {
+          "id": "ob026",
+          "english": "escalation",
+          "chinese": "升级上报",
+          "pronunciation": "/ˌeskəˈleɪʃən/",
+          "example": "After 15 minutes without a fix, the escalation policy pages the secondary.",
+          "category": "alerting"
+        },
+        {
+          "id": "ob027",
+          "english": "severity",
+          "chinese": "严重级别",
+          "pronunciation": "/sɪˈverəti/",
+          "example": "A sev-1 incident triggers the full response process.",
+          "category": "incident"
+        },
+        {
+          "id": "ob028",
+          "english": "incident",
+          "chinese": "事故／故障",
+          "pronunciation": "/ˈɪnsɪdənt/",
+          "example": "The incident lasted 40 minutes and hit 5% of users.",
+          "category": "incident"
+        },
+        {
+          "id": "ob029",
+          "english": "SLI",
+          "chinese": "服务水平指标",
+          "pronunciation": "/ˌes el ˈaɪ/",
+          "example": "Our main SLI is the fraction of requests under 300 ms.",
+          "category": "sre"
+        },
+        {
+          "id": "ob030",
+          "english": "SLO",
+          "chinese": "服务水平目标",
+          "pronunciation": "/ˌes el ˈoʊ/",
+          "example": "The 99.9% availability SLO leaves us a monthly error budget.",
+          "category": "sre"
+        },
+        {
+          "id": "ob031",
+          "english": "SLA",
+          "chinese": "服务水平协议",
+          "pronunciation": "/ˌes el ˈeɪ/",
+          "example": "Missing the SLA triggers contractual penalties.",
+          "category": "sre"
+        },
+        {
+          "id": "ob032",
+          "english": "error budget",
+          "chinese": "错误预算",
+          "pronunciation": "/ˈerər ˈbʌdʒɪt/",
+          "example": "We burned the error budget, so feature launches are paused.",
+          "category": "sre"
+        },
+        {
+          "id": "ob033",
+          "english": "burn rate",
+          "chinese": "错误预算燃烧率",
+          "pronunciation": "/bɜːrn reɪt/",
+          "example": "A burn rate of 10x means the SLO fails in three hours.",
+          "category": "sre"
+        },
+        {
+          "id": "ob034",
+          "english": "uptime",
+          "chinese": "可用时长",
+          "pronunciation": "/ˈʌptaɪm/",
+          "example": "The service kept 99.95% uptime this quarter.",
+          "category": "reliability"
+        },
+        {
+          "id": "ob035",
+          "english": "downtime",
+          "chinese": "停机时间",
+          "pronunciation": "/ˈdaʊntaɪm/",
+          "example": "Scheduled maintenance counts against planned downtime.",
+          "category": "reliability"
+        },
+        {
+          "id": "ob036",
+          "english": "golden signals",
+          "chinese": "黄金信号（延迟/流量/错误/饱和）",
+          "pronunciation": "/ˈɡoʊldən ˈsɪɡnəlz/",
+          "example": "Start with the four golden signals when instrumenting a service.",
+          "category": "sre"
+        },
+        {
+          "id": "ob037",
+          "english": "latency",
+          "chinese": "延迟",
+          "pronunciation": "/ˈleɪtənsi/",
+          "example": "Latency doubled after the last deploy.",
+          "category": "signals"
+        },
+        {
+          "id": "ob038",
+          "english": "traffic",
+          "chinese": "流量",
+          "pronunciation": "/ˈtræfɪk/",
+          "example": "Traffic ramps up sharply at 9 a.m.",
+          "category": "signals"
+        },
+        {
+          "id": "ob039",
+          "english": "saturation",
+          "chinese": "饱和度",
+          "pronunciation": "/ˌsætʃəˈreɪʃən/",
+          "example": "Disk saturation above 85% predicts trouble.",
+          "category": "signals"
+        },
+        {
+          "id": "ob040",
+          "english": "cardinality",
+          "chinese": "基数（标签组合数）",
+          "pronunciation": "/kɑːrˈdɪnələti/",
+          "example": "Tagging metrics with user id explodes cardinality.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob041",
+          "english": "time series",
+          "chinese": "时间序列",
+          "pronunciation": "/taɪm ˈsɪriːz/",
+          "example": "The store keeps two years of time series data.",
+          "category": "metrics"
+        },
+        {
+          "id": "ob042",
+          "english": "retention period",
+          "chinese": "数据保留期",
+          "pronunciation": "/rɪˈtenʃən ˈpɪriəd/",
+          "example": "Raw traces have a 7-day retention period.",
+          "category": "storage"
+        },
+        {
+          "id": "ob043",
+          "english": "scrape",
+          "chinese": "抓取（指标采集）",
+          "pronunciation": "/skreɪp/",
+          "example": "The server exposes /metrics for the scraper to scrape.",
+          "category": "collection"
+        },
+        {
+          "id": "ob044",
+          "english": "exporter",
+          "chinese": "导出器",
+          "pronunciation": "/ɪkˈspɔːrtər/",
+          "example": "Install the Postgres exporter to collect database metrics.",
+          "category": "collection"
+        },
+        {
+          "id": "ob045",
+          "english": "pull model",
+          "chinese": "拉取模式",
+          "pronunciation": "/pʊl ˈmɑːdl/",
+          "example": "The pull model makes the monitor the active party.",
+          "category": "collection"
+        },
+        {
+          "id": "ob046",
+          "english": "push model",
+          "chinese": "推送模式",
+          "pronunciation": "/pʊʃ ˈmɑːdl/",
+          "example": "Short-lived jobs use the push model via a gateway.",
+          "category": "collection"
+        },
+        {
+          "id": "ob047",
+          "english": "anomaly detection",
+          "chinese": "异常检测",
+          "pronunciation": "/əˈnɑːməli dɪˈtekʃən/",
+          "example": "Anomaly detection flagged the unusual Sunday traffic.",
+          "category": "analysis"
+        },
+        {
+          "id": "ob048",
+          "english": "baseline",
+          "chinese": "基线",
+          "pronunciation": "/ˈbeɪslaɪn/",
+          "example": "Compare against the two-week baseline before declaring a regression.",
+          "category": "analysis"
+        },
+        {
+          "id": "ob049",
+          "english": "root cause",
+          "chinese": "根因",
+          "pronunciation": "/ruːt kɔːz/",
+          "example": "The root cause was a certificate that expired silently.",
+          "category": "analysis"
+        },
+        {
+          "id": "ob050",
+          "english": "signal-to-noise ratio",
+          "chinese": "信噪比",
+          "pronunciation": "/ˈsɪɡnəl tuː nɔɪz ˈreɪʃioʊ/",
+          "example": "Fewer, smarter alerts improved the signal-to-noise ratio.",
+          "category": "analysis"
+        }
+      ]
+    },
+    {
+      "id": "modern-web",
+      "name": "Modern Web Development",
+      "nameCN": "现代 Web 开发",
+      "description": "Frontend rendering, bundling and browser platform vocabulary",
+      "items": [
+        {
+          "id": "mw001",
+          "english": "single-page application",
+          "chinese": "单页应用",
+          "pronunciation": "/ˈsɪŋɡəl peɪdʒ ˌæplɪˈkeɪʃən/",
+          "example": "A single-page application swaps views without full reloads.",
+          "category": "rendering"
+        },
+        {
+          "id": "mw002",
+          "english": "client-side rendering",
+          "chinese": "客户端渲染",
+          "pronunciation": "/ˈklaɪənt saɪd ˈrendərɪŋ/",
+          "example": "Pure client-side rendering ships an empty HTML shell.",
+          "category": "rendering"
+        },
+        {
+          "id": "mw003",
+          "english": "static site generation",
+          "chinese": "静态站点生成",
+          "pronunciation": "/ˈstætɪk saɪt ˌdʒenəˈreɪʃən/",
+          "example": "Static site generation pre-builds every page at deploy time.",
+          "category": "rendering"
+        },
+        {
+          "id": "mw004",
+          "english": "hydration",
+          "chinese": "水合（激活静态 HTML）",
+          "pronunciation": "/haɪˈdreɪʃən/",
+          "example": "The page renders instantly, then hydration attaches the event listeners.",
+          "category": "rendering"
+        },
+        {
+          "id": "mw005",
+          "english": "island architecture",
+          "chinese": "岛屿架构",
+          "pronunciation": "/ˈaɪlənd ˈɑːrkɪtektʃər/",
+          "example": "Island architecture hydrates only the interactive widgets.",
+          "category": "rendering"
+        },
+        {
+          "id": "mw006",
+          "english": "virtual DOM",
+          "chinese": "虚拟 DOM",
+          "pronunciation": "/ˈvɜːrtʃuəl dɑːm/",
+          "example": "The framework diffs the virtual DOM before touching the real one.",
+          "category": "rendering"
+        },
+        {
+          "id": "mw007",
+          "english": "diffing",
+          "chinese": "差异比较",
+          "pronunciation": "/ˈdɪfɪŋ/",
+          "example": "Diffing two trees finds the minimum set of DOM updates.",
+          "category": "rendering"
+        },
+        {
+          "id": "mw008",
+          "english": "reconciliation",
+          "chinese": "渲染协调",
+          "pronunciation": "/ˌrekənsɪliˈeɪʃən/",
+          "example": "Reconciliation decides which components to re-render.",
+          "category": "rendering"
+        },
+        {
+          "id": "mw009",
+          "english": "component",
+          "chinese": "组件",
+          "pronunciation": "/kəmˈpoʊnənt/",
+          "example": "Keep each component small and focused.",
+          "category": "component"
+        },
+        {
+          "id": "mw010",
+          "english": "props",
+          "chinese": "属性（父传子数据）",
+          "pronunciation": "/prɑːps/",
+          "example": "Pass the user data down as props.",
+          "category": "component"
+        },
+        {
+          "id": "mw011",
+          "english": "state",
+          "chinese": "状态",
+          "pronunciation": "/steɪt/",
+          "example": "Lift state up when two siblings need the same data.",
+          "category": "component"
+        },
+        {
+          "id": "mw012",
+          "english": "two-way data binding",
+          "chinese": "双向数据绑定",
+          "pronunciation": "/tuː weɪ ˈdeɪtə ˈbaɪndɪŋ/",
+          "example": "Two-way data binding syncs the input and the model automatically.",
+          "category": "component"
+        },
+        {
+          "id": "mw013",
+          "english": "hooks",
+          "chinese": "钩子函数",
+          "pronunciation": "/hʊks/",
+          "example": "Custom hooks let you reuse stateful logic.",
+          "category": "component"
+        },
+        {
+          "id": "mw014",
+          "english": "lifecycle",
+          "chinese": "生命周期",
+          "pronunciation": "/ˈlaɪfˌsaɪkl/",
+          "example": "Fetch data in the mount phase of the lifecycle.",
+          "category": "component"
+        },
+        {
+          "id": "mw015",
+          "english": "bundler",
+          "chinese": "打包器",
+          "pronunciation": "/ˈbʌndlər/",
+          "example": "The bundler resolves imports and emits one optimized file.",
+          "category": "build"
+        },
+        {
+          "id": "mw016",
+          "english": "tree shaking",
+          "chinese": "摇树优化（删无用代码）",
+          "pronunciation": "/triː ˈʃeɪkɪŋ/",
+          "example": "Tree shaking removed 60% of the unused library code.",
+          "category": "build"
+        },
+        {
+          "id": "mw017",
+          "english": "code splitting",
+          "chinese": "代码分割",
+          "pronunciation": "/koʊd ˈsplɪtɪŋ/",
+          "example": "Code splitting loads the admin bundle only for admins.",
+          "category": "build"
+        },
+        {
+          "id": "mw018",
+          "english": "lazy loading",
+          "chinese": "懒加载",
+          "pronunciation": "/ˈleɪzi ˈloʊdɪŋ/",
+          "example": "Images below the fold use lazy loading.",
+          "category": "build"
+        },
+        {
+          "id": "mw019",
+          "english": "minification",
+          "chinese": "压缩（混淆）",
+          "pronunciation": "/ˌmɪnɪfɪˈkeɪʃən/",
+          "example": "Minification cut the bundle from 400 KB to 150 KB.",
+          "category": "build"
+        },
+        {
+          "id": "mw020",
+          "english": "source map",
+          "chinese": "源码映射",
+          "pronunciation": "/sɔːrs mæp/",
+          "example": "Upload source maps so production errors point to real code.",
+          "category": "build"
+        },
+        {
+          "id": "mw021",
+          "english": "transpile",
+          "chinese": "转译",
+          "pronunciation": "/trænˈspaɪl/",
+          "example": "Babel transpiles JSX into plain function calls.",
+          "category": "build"
+        },
+        {
+          "id": "mw022",
+          "english": "polyfill",
+          "chinese": "垫片（兼容补丁）",
+          "pronunciation": "/ˈpɑːlifɪl/",
+          "example": "Older Safari needs a polyfill for structuredClone.",
+          "category": "build"
+        },
+        {
+          "id": "mw023",
+          "english": "progressive enhancement",
+          "chinese": "渐进增强",
+          "pronunciation": "/prəˈɡresɪv ɪnˈhænsmənt/",
+          "example": "Progressive enhancement keeps the form usable without JavaScript.",
+          "category": "principle"
+        },
+        {
+          "id": "mw024",
+          "english": "mobile-first design",
+          "chinese": "移动优先设计",
+          "pronunciation": "/ˈmoʊbaɪl fɜːrst dɪˈzaɪn/",
+          "example": "Mobile-first design starts with the smallest screen.",
+          "category": "design"
+        },
+        {
+          "id": "mw025",
+          "english": "media query",
+          "chinese": "媒体查询",
+          "pronunciation": "/ˈmiːdiə ˈkwɪri/",
+          "example": "The media query switches the layout at 768 px.",
+          "category": "design"
+        },
+        {
+          "id": "mw026",
+          "english": "breakpoint",
+          "chinese": "响应式断点",
+          "pronunciation": "/ˈbreɪkpɔɪnt/",
+          "example": "We added a breakpoint for tablets.",
+          "category": "design"
+        },
+        {
+          "id": "mw027",
+          "english": "accessibility",
+          "chinese": "无障碍",
+          "pronunciation": "/əkˌsesəˈbɪləti/",
+          "example": "Accessibility isn't optional — add the aria labels.",
+          "category": "a11y"
+        },
+        {
+          "id": "mw028",
+          "english": "semantic HTML",
+          "chinese": "语义化 HTML",
+          "pronunciation": "/sɪˈmæntɪk eɪtʃ tiː em ˈel/",
+          "example": "Semantic HTML helps screen readers and SEO alike.",
+          "category": "a11y"
+        },
+        {
+          "id": "mw029",
+          "english": "screen reader",
+          "chinese": "屏幕阅读器",
+          "pronunciation": "/skriːn ˈriːdər/",
+          "example": "Test the checkout flow with a screen reader.",
+          "category": "a11y"
+        },
+        {
+          "id": "mw030",
+          "english": "origin",
+          "chinese": "源（协议+域名+端口）",
+          "pronunciation": "/ˈɔːrɪdʒɪn/",
+          "example": "Two pages share an origin only if scheme, host and port all match.",
+          "category": "platform"
+        },
+        {
+          "id": "mw031",
+          "english": "safe area",
+          "chinese": "安全区（刘海屏等）",
+          "pronunciation": "/seɪf ˈeriə/",
+          "example": "Respect the safe area so the notch doesn't cover the button.",
+          "category": "design"
+        },
+        {
+          "id": "mw032",
+          "english": "Intersection Observer",
+          "chinese": "交叉观察器",
+          "pronunciation": "/ˌɪntərˈsekʃən əbˈzɜːrvər/",
+          "example": "Use Intersection Observer to trigger the reveal animation.",
+          "category": "platform"
+        },
+        {
+          "id": "mw033",
+          "english": "Web Components",
+          "chinese": "Web 组件标准",
+          "pronunciation": "/web kəmˈpoʊnənts/",
+          "example": "Web Components work in every framework because they're a platform feature.",
+          "category": "platform"
+        },
+        {
+          "id": "mw034",
+          "english": "custom element",
+          "chinese": "自定义元素",
+          "pronunciation": "/ˈkʌstəm ˈelɪmənt/",
+          "example": "Register <date-picker> as a custom element.",
+          "category": "platform"
+        },
+        {
+          "id": "mw035",
+          "english": "shadow DOM",
+          "chinese": "影子 DOM",
+          "pronunciation": "/ˈʃædoʊ dɑːm/",
+          "example": "Shadow DOM keeps the component's styles from leaking out.",
+          "category": "platform"
+        },
+        {
+          "id": "mw036",
+          "english": "web worker",
+          "chinese": "工作线程",
+          "pronunciation": "/web ˈwɜːrkər/",
+          "example": "Move the heavy parsing into a web worker.",
+          "category": "platform"
+        },
+        {
+          "id": "mw037",
+          "english": "fetch",
+          "chinese": "fetch 请求 API",
+          "pronunciation": "/fetʃ/",
+          "example": "Call fetch with credentials to include the cookie.",
+          "category": "platform"
+        },
+        {
+          "id": "mw038",
+          "english": "CORS",
+          "chinese": "跨域资源共享",
+          "pronunciation": "/kɔːrz/",
+          "example": "The request failed because the server didn't allow CORS.",
+          "category": "security"
+        },
+        {
+          "id": "mw039",
+          "english": "same-origin policy",
+          "chinese": "同源策略",
+          "pronunciation": "/seɪm ˈɔːrɪdʒɪn ˈpɑːləsi/",
+          "example": "The same-origin policy blocks scripts from reading cross-origin responses.",
+          "category": "security"
+        },
+        {
+          "id": "mw040",
+          "english": "content security policy",
+          "chinese": "内容安全策略",
+          "pronunciation": "/ˈkɑːntent sɪˈkjʊrəti ˈpɑːləsi/",
+          "example": "A strict content security policy blocks inline scripts.",
+          "category": "security"
+        },
+        {
+          "id": "mw041",
+          "english": "cross-origin isolation",
+          "chinese": "跨域隔离",
+          "pronunciation": "/krɔːs ˈɔːrɪdʒɪn ˌaɪsəˈleɪʃən/",
+          "example": "SharedArrayBuffer requires cross-origin isolation.",
+          "category": "security"
+        },
+        {
+          "id": "mw042",
+          "english": "IndexedDB",
+          "chinese": "浏览器数据库",
+          "pronunciation": "/ˈɪndekst diː biː/",
+          "example": "Cache the API response in IndexedDB for offline reads.",
+          "category": "storage"
+        },
+        {
+          "id": "mw043",
+          "english": "prefetch",
+          "chinese": "预取",
+          "pronunciation": "/ˌpriːˈfetʃ/",
+          "example": "Prefetch the likely next page during idle time.",
+          "category": "performance"
+        },
+        {
+          "id": "mw044",
+          "english": "preload",
+          "chinese": "预加载",
+          "pronunciation": "/ˌpriːˈloʊd/",
+          "example": "Preload the hero font so text doesn't flash.",
+          "category": "performance"
+        },
+        {
+          "id": "mw045",
+          "english": "critical rendering path",
+          "chinese": "关键渲染路径",
+          "pronunciation": "/ˈkrɪtɪkl ˈrendərɪŋ pæθ/",
+          "example": "Blocking scripts on the critical rendering path delay first paint.",
+          "category": "performance"
+        },
+        {
+          "id": "mw046",
+          "english": "layout thrashing",
+          "chinese": "布局抖动（读写交替）",
+          "pronunciation": "/ˈlaɪaʊt ˈθræʃɪŋ/",
+          "example": "Layout thrashing happens when you read offsets inside a write loop.",
+          "category": "performance"
+        },
+        {
+          "id": "mw047",
+          "english": "repaint",
+          "chinese": "重绘",
+          "pronunciation": "/ˌriːˈpeɪnt/",
+          "example": "Changing color triggers a repaint but not a reflow.",
+          "category": "performance"
+        },
+        {
+          "id": "mw048",
+          "english": "reflow",
+          "chinese": "重排（回流）",
+          "pronunciation": "/ˌriːˈfloʊ/",
+          "example": "Animating width forces a reflow every frame.",
+          "category": "performance"
+        },
+        {
+          "id": "mw049",
+          "english": "compositing",
+          "chinese": "合成（图层合并）",
+          "pronunciation": "/kəmˈpɑːzɪtɪŋ/",
+          "example": "Compositing on the GPU makes transform animations cheap.",
+          "category": "performance"
+        },
+        {
+          "id": "mw050",
+          "english": "event loop",
+          "chinese": "事件循环",
+          "pronunciation": "/ɪˈvent luːp/",
+          "example": "The event loop drains microtasks before the next macrotask.",
+          "category": "platform"
+        }
+      ]
     }
   ]
 };
