@@ -7,7 +7,8 @@
     LAST_VISIT: 'computer-english-last-visit',
     STREAK: 'computer-english-streak',
     THEME: 'computer-english-theme',
-    SRS: 'computer-english-srs-v1'
+    SRS: 'computer-english-srs-v1',
+    ACTIVITY: 'computer-english-activity-v1'
   };
 
   /**
@@ -37,8 +38,11 @@
       this.currentItems = this.buildSrsQueue(this.allItems);
       this.synth = window.speechSynthesis;
       this.isSpeaking = false;
-      this.currentMode = 'card'; // dialog | flashcard
+      this.currentMode = 'card'; // card | dictation | quiz
       this.dictation = { active: false, targetId: null, attempts: 0 };
+      this.quizOptions = [];
+      this.quizLocked = false;
+      this.activity = this.loadActivity();
 
       this.init();
     }
@@ -108,6 +112,61 @@
 
     saveSrs() {
       localStorage.setItem(STORAGE_KEYS.SRS, JSON.stringify(this.srsState));
+    }
+
+    /** Daily activity log for the heatmap: { 'YYYY-MM-DD': count } */
+    loadActivity() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEYS.ACTIVITY);
+        const parsed = stored ? JSON.parse(stored) : {};
+        return (parsed && typeof parsed === 'object') ? parsed : {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    recordActivity() {
+      const d = new Date();
+      const key = d.getFullYear() + '-' +
+        String(d.getMonth() + 1).padStart(2, '0') + '-' +
+        String(d.getDate()).padStart(2, '0');
+      this.activity[key] = (this.activity[key] || 0) + 1;
+      try {
+        localStorage.setItem(STORAGE_KEYS.ACTIVITY, JSON.stringify(this.activity));
+      } catch (e) { /* storage full is not fatal here */ }
+    }
+
+    /**
+     * Render a GitHub-style contribution heatmap for the last 365 days.
+     * Columns are weeks (oldest on the left), rows are weekdays
+     * (Sun..Sat top to bottom). Color levels: 0 / 1-4 / 5-9 / 10-19 / 20+.
+     */
+    renderHeatmap() {
+      const box = document.getElementById('heatmap');
+      if (!box) return;
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      // Start 52 weeks back, aligned to Sunday so the grid is complete.
+      const start = new Date(today);
+      start.setDate(start.getDate() - 364);
+      start.setDate(start.getDate() - start.getDay());
+
+      const totalDays = Math.round((today - start) / 86400000) + 1;
+      let html = '';
+      for (let i = 0; i < totalDays; i++) {
+        const day = new Date(start);
+        day.setDate(start.getDate() + i);
+        const key = day.getFullYear() + '-' +
+          String(day.getMonth() + 1).padStart(2, '0') + '-' +
+          String(day.getDate()).padStart(2, '0');
+        const count = this.activity[key] || 0;
+        const level = count === 0 ? 0 : count < 5 ? 1 : count < 10 ? 2 : count < 20 ? 3 : 4;
+        const label = day.toDateString();
+        html += `<span class="hm-cell hm-${level}" title="${label}${count ? '：' + count + ' 次练习' : '：无记录'}"></span>`;
+      }
+      box.innerHTML = html;
     }
 
     /**
@@ -301,12 +360,12 @@
     }
 
     /**
-     * Switch between flashcard and dictation modes. The card is rebuilt so
-     * the new mode's UI is shown and any leftover rating/dictation state
+     * Switch between flashcard / dictation / quiz modes. The card is rebuilt
+     * so the new mode's UI is shown and any leftover rating/dictation state
      * is cleared.
      */
     setMode(mode) {
-      if (mode !== 'card' && mode !== 'dictation') return;
+      if (mode !== 'card' && mode !== 'dictation' && mode !== 'quiz') return;
       this.currentMode = mode;
       document.querySelectorAll('.mode-toggle button').forEach(btn => {
         const active = btn.dataset.mode === mode;
@@ -397,6 +456,7 @@
       const prev = this.srsState[item.id];
       this.srsState[item.id] = SRS.review(prev, q, new Date());
       this.saveSrs();
+      this.recordActivity();
 
       if (q >= 3 && !this.learned.includes(item.id)) {
         this.learned.push(item.id);
@@ -432,7 +492,10 @@
       if (dictBar) dictBar.hidden = this.currentMode !== 'dictation';
       const dictFb = document.getElementById('dictation-feedback');
       if (dictFb) dictFb.hidden = true;
+      const quizBar = document.getElementById('quiz-bar');
+      if (quizBar) quizBar.hidden = this.currentMode !== 'quiz';
       this.dictation = { active: this.currentMode === 'dictation', targetId: item.id, attempts: 0 };
+      this.quizLocked = false;
 
       const card = document.getElementById('learning-card');
       card.classList.remove('flipped');
@@ -466,7 +529,86 @@
           const di = document.getElementById('dictation-input');
           if (di) { di.value = ''; di.focus(); }
         }
+
+        // In quiz mode the Chinese meaning is the question and the four
+        // English options (one correct + three distractors) are shown below.
+        if (this.currentMode === 'quiz') {
+          document.getElementById('card-english').textContent = item.chinese;
+          document.getElementById('card-pronunciation').textContent = '—— 选择正确答案 ——';
+          this.renderQuizOptions(item);
+        }
       }, 150);
+    }
+
+    /**
+     * Build 4 options for the quiz: the correct item plus three random
+     * distractors, preferably from the same category so the options are
+     * plausible. Options are shuffled with Fisher-Yates.
+     */
+    renderQuizOptions(item) {
+      const bar = document.getElementById('quiz-bar');
+      const optsBox = document.getElementById('quiz-options');
+      if (!bar || !optsBox) return;
+      bar.hidden = false;
+
+      const pool = this.allItems.filter(i =>
+        i.categoryName === item.categoryName && i.id !== item.id
+      );
+      // Fisher-Yates shuffle the pool, then take the first three.
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      // Fallback: if the category is too small, fill from all items.
+      while (pool.length < 3) {
+        const extra = this.allItems[Math.floor(Math.random() * this.allItems.length)];
+        if (extra.id !== item.id && !pool.some(p => p.id === extra.id)) pool.push(extra);
+      }
+      const options = [item, pool[0], pool[1], pool[2]];
+      for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+      }
+      this.quizOptions = options;
+
+      optsBox.innerHTML = options.map((o, idx) => `
+        <button class="quiz-option" data-id="${escapeHtml(o.id)}">
+          <span class="quiz-option-key">${idx + 1}</span>
+          <span class="quiz-option-text">${escapeHtml(o.english)}</span>
+        </button>
+      `).join('');
+
+      optsBox.querySelectorAll('.quiz-option').forEach(btn => {
+        btn.addEventListener('click', () => this.checkQuizAnswer(btn.dataset.id, btn));
+      });
+    }
+
+    /**
+     * Grade a quiz answer: correct -> SRS Good; wrong -> reveal the right
+     * answer briefly, then SRS Forgot. The card advances after a short
+     * delay so the user can see which option was correct.
+     */
+    checkQuizAnswer(selectedId, btn) {
+      if (this.quizLocked) return;
+      const item = this.currentItems[this.currentIndex];
+      if (!item) return;
+      this.quizLocked = true;
+
+      const optionBtns = document.querySelectorAll('.quiz-option');
+      optionBtns.forEach(b => {
+        b.disabled = true;
+        if (b.dataset.id === item.id) b.classList.add('correct');
+      });
+
+      const correct = selectedId === item.id;
+      if (correct) {
+        btn.classList.add('correct');
+        setTimeout(() => this.rateCurrent(SRS.RATING.GOOD), 900);
+      } else {
+        btn.classList.add('wrong');
+        this.showToast(`正确答案：${item.english}`);
+        setTimeout(() => this.rateCurrent(SRS.RATING.FORGOT), 1600);
+      }
     }
 
     updateProgressIndicator() {
@@ -810,6 +952,8 @@
         document.getElementById('srs-mastered').textContent = stats.mastered;
       }
 
+      this.renderHeatmap();
+
       const categoryBars = document.getElementById('category-bars');
       categoryBars.innerHTML = this.data.categories.map(cat => {
         const catItems = cat.items.map(i => i.id);
@@ -906,6 +1050,13 @@
             this.rateCurrent(ratingKeyMap[key]);
             return;
           }
+        }
+        if (this.currentMode === 'quiz' && ['1', '2', '3', '4'].indexOf(key) !== -1) {
+          e.preventDefault();
+          const idx = parseInt(key, 10) - 1;
+          const btn = document.querySelectorAll('#quiz-options .quiz-option')[idx];
+          if (btn && !btn.disabled) this.checkQuizAnswer(btn.dataset.id, btn);
+          return;
         }
       });
     }

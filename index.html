@@ -49,6 +49,7 @@
             <div class="mode-toggle" role="tablist" aria-label="学习模式">
               <button id="mode-card" class="active" data-mode="card" role="tab" aria-selected="true">🃏 卡片</button>
               <button id="mode-dictation" data-mode="dictation" role="tab" aria-selected="false">✏️ 听写</button>
+              <button id="mode-quiz" data-mode="quiz" role="tab" aria-selected="false">📝 选择题</button>
             </div>
           </div>
         </div>
@@ -118,6 +119,11 @@
           </div>
 
           <div class="dictation-feedback" id="dictation-feedback" hidden></div>
+
+          <div class="quiz-bar" id="quiz-bar" hidden>
+            <p class="quiz-question">这个中文对应的英文是？</p>
+            <div class="quiz-options" id="quiz-options"></div>
+          </div>
         </div>
 
         <div class="progress-indicator">
@@ -199,6 +205,22 @@
           <div class="stat-card stat-mastered">
             <span class="stat-number" id="srs-mastered">0</span>
             <span class="stat-label">已掌握</span>
+          </div>
+        </div>
+
+        <div class="heatmap-section">
+          <h3>学习热力图（近 365 天）</h3>
+          <div class="heatmap-scroll">
+            <div class="heatmap" id="heatmap"></div>
+          </div>
+          <div class="heatmap-legend">
+            <span>少</span>
+            <span class="hm-cell hm-0"></span>
+            <span class="hm-cell hm-1"></span>
+            <span class="hm-cell hm-2"></span>
+            <span class="hm-cell hm-3"></span>
+            <span class="hm-cell hm-4"></span>
+            <span>多</span>
           </div>
         </div>
 
