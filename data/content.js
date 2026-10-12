@@ -12663,6 +12663,1230 @@ const computerEnglishData = {
           "category": "applications"
         }
       ]
+    },
+    {
+      "id": "product-design",
+      "name": "Product & UX Design",
+      "nameCN": "产品与用户体验设计",
+      "description": "Product thinking, UX research and design workflow vocabulary",
+      "items": [
+        {
+          "id": "pd001",
+          "english": "user experience",
+          "chinese": "用户体验（UX）",
+          "pronunciation": "/ˈjuːzər ɪkˈspɪriəns/",
+          "example": "Great user experience is invisible — everything just works.",
+          "category": "core"
+        },
+        {
+          "id": "pd002",
+          "english": "user interface",
+          "chinese": "用户界面（UI）",
+          "pronunciation": "/ˈjuːzər ˈɪntərfeɪs/",
+          "example": "Keep the user interface consistent across every screen.",
+          "category": "core"
+        },
+        {
+          "id": "pd003",
+          "english": "user-centered design",
+          "chinese": "以用户为中心的设计",
+          "pronunciation": "/ˈjuːzər ˈsentərd dɪˈzaɪn/",
+          "example": "User-centered design starts with research, not screens.",
+          "category": "core"
+        },
+        {
+          "id": "pd004",
+          "english": "product requirements document",
+          "chinese": "产品需求文档（PRD）",
+          "pronunciation": "/ˈprɑːdʌkt rɪˈkwaɪərmənts ˈdɑːkjumənt/",
+          "example": "The PRD lists goals, scope and success metrics.",
+          "category": "process"
+        },
+        {
+          "id": "pd005",
+          "english": "minimum viable product",
+          "chinese": "最小可行产品（MVP）",
+          "pronunciation": "/ˈmɪnəməm ˈvaɪəbl ˈprɑːdʌkt/",
+          "example": "Ship an MVP in six weeks, then let usage data decide v2.",
+          "category": "process"
+        },
+        {
+          "id": "pd006",
+          "english": "product-market fit",
+          "chinese": "产品市场契合（PMF）",
+          "pronunciation": "/ˈprɑːdʌkt ˈmɑːrkɪt fɪt/",
+          "example": "Retention is the honest signal of product-market fit.",
+          "category": "strategy"
+        },
+        {
+          "id": "pd007",
+          "english": "value proposition",
+          "chinese": "价值主张",
+          "pronunciation": "/ˈvæljuː ˌprɑːpəˈzɪʃən/",
+          "example": "The value proposition must be clear in five seconds.",
+          "category": "strategy"
+        },
+        {
+          "id": "pd008",
+          "english": "user persona",
+          "chinese": "用户画像",
+          "pronunciation": "/ˈjuːzər pɜːrˈsoʊnə/",
+          "example": "Build the feature for one user persona, not everyone.",
+          "category": "research"
+        },
+        {
+          "id": "pd009",
+          "english": "user journey",
+          "chinese": "用户旅程",
+          "pronunciation": "/ˈjuːzər ˈdʒɜːrni/",
+          "example": "Map the user journey from first ad click to renewal.",
+          "category": "research"
+        },
+        {
+          "id": "pd010",
+          "english": "user story mapping",
+          "chinese": "用户故事地图",
+          "pronunciation": "/ˈjuːzər ˈstɔːri ˈmæpɪŋ/",
+          "example": "Story mapping keeps the backlog tied to the journey.",
+          "category": "research"
+        },
+        {
+          "id": "pd011",
+          "english": "usability testing",
+          "chinese": "可用性测试",
+          "pronunciation": "/ˌjuːzəˈbɪləti ˈtestɪŋ/",
+          "example": "Five usability testing sessions find most of the big problems.",
+          "category": "research"
+        },
+        {
+          "id": "pd012",
+          "english": "A/B testing",
+          "chinese": "A/B 测试（对照实验）",
+          "pronunciation": "/ˌeɪ ˈbiː ˈtestɪŋ/",
+          "example": "A/B testing showed the green button converts 12% better.",
+          "category": "research"
+        },
+        {
+          "id": "pd013",
+          "english": "heuristic evaluation",
+          "chinese": "启发式评估",
+          "pronunciation": "/hjʊˈrɪstɪk ɪˌvæljuˈeɪʃən/",
+          "example": "Run a heuristic evaluation against Nielsen's ten rules first.",
+          "category": "research"
+        },
+        {
+          "id": "pd014",
+          "english": "information architecture",
+          "chinese": "信息架构（IA）",
+          "pronunciation": "/ˌɪnfərˈmeɪʃən ˈɑːrkɪtektʃər/",
+          "example": "Fix the information architecture before polishing visuals.",
+          "category": "design"
+        },
+        {
+          "id": "pd015",
+          "english": "wireframe",
+          "chinese": "线框图",
+          "pronunciation": "/ˈwaɪərfreɪm/",
+          "example": "Sketch cheap wireframes; argue structure, not colors.",
+          "category": "design"
+        },
+        {
+          "id": "pd016",
+          "english": "mockup",
+          "chinese": "视觉稿（静态设计稿）",
+          "pronunciation": "/ˈmɑːkʌp/",
+          "example": "The mockup shows the final look with real content.",
+          "category": "design"
+        },
+        {
+          "id": "pd017",
+          "english": "interactive prototype",
+          "chinese": "交互原型",
+          "pronunciation": "/ˌɪntərˈæktɪv ˈproʊtətaɪp/",
+          "example": "Test the interactive prototype before writing any code.",
+          "category": "design"
+        },
+        {
+          "id": "pd018",
+          "english": "design system",
+          "chinese": "设计系统",
+          "pronunciation": "/dɪˈzaɪn ˈsɪstəm/",
+          "example": "The design system ships components with design tokens.",
+          "category": "design"
+        },
+        {
+          "id": "pd019",
+          "english": "design token",
+          "chinese": "设计令牌（变量化的样式值）",
+          "pronunciation": "/dɪˈzaɪn ˈtoʊkən/",
+          "example": "Change the design token once and the whole theme follows.",
+          "category": "design"
+        },
+        {
+          "id": "pd020",
+          "english": "component library",
+          "chinese": "组件库",
+          "pronunciation": "/kəmˈpoʊnənt ˈlaɪbreri/",
+          "example": "The component library keeps product and marketing in sync.",
+          "category": "design"
+        },
+        {
+          "id": "pd021",
+          "english": "affordance",
+          "chinese": "可供性（控件暗示）",
+          "pronunciation": "/əˈfɔːrdəns/",
+          "example": "A raised button's affordance says 'press me'.",
+          "category": "principles"
+        },
+        {
+          "id": "pd022",
+          "english": "signifier",
+          "chinese": "意符（操作提示）",
+          "pronunciation": "/ˈsɪɡnɪfaɪər/",
+          "example": "The underline is the signifier that text is clickable.",
+          "category": "principles"
+        },
+        {
+          "id": "pd023",
+          "english": "mental model",
+          "chinese": "心智模型",
+          "pronunciation": "/ˈmentl ˈmɑːdl/",
+          "example": "Match the UI to the user's mental model, not the database.",
+          "category": "principles"
+        },
+        {
+          "id": "pd024",
+          "english": "cognitive load",
+          "chinese": "认知负荷",
+          "pronunciation": "/ˈkɑːɡnətɪv loʊd/",
+          "example": "Each extra field adds cognitive load and drops completion.",
+          "category": "principles"
+        },
+        {
+          "id": "pd025",
+          "english": "progressive disclosure",
+          "chinese": "渐进式披露",
+          "pronunciation": "/prəˈɡresɪv dɪsˈkloʊʒər/",
+          "example": "Progressive disclosure hides expert options behind 'Advanced'.",
+          "category": "principles"
+        },
+        {
+          "id": "pd026",
+          "english": "skeleton screen",
+          "chinese": "骨架屏",
+          "pronunciation": "/ˈskelɪtn skriːn/",
+          "example": "A skeleton screen feels faster than a spinner.",
+          "category": "patterns"
+        },
+        {
+          "id": "pd027",
+          "english": "empty state",
+          "chinese": "空状态",
+          "pronunciation": "/ˈempti steɪt/",
+          "example": "Design the empty state to teach the first action.",
+          "category": "patterns"
+        },
+        {
+          "id": "pd028",
+          "english": "micro-interaction",
+          "chinese": "微交互",
+          "pronunciation": "/ˈmaɪkroʊ ˌɪntərˈækʃən/",
+          "example": "A subtle micro-interaction confirms the like was counted.",
+          "category": "patterns"
+        },
+        {
+          "id": "pd029",
+          "english": "dark pattern",
+          "chinese": "暗黑模式（诱导设计）",
+          "pronunciation": "/dɑːrk ˈpætərn/",
+          "example": "Hiding the cancel button is a textbook dark pattern.",
+          "category": "ethics"
+        },
+        {
+          "id": "pd030",
+          "english": "conversion rate",
+          "chinese": "转化率",
+          "pronunciation": "/kənˈvɜːrʒən reɪt/",
+          "example": "The redesign lifted checkout conversion rate from 2.1% to 2.8%.",
+          "category": "metrics"
+        },
+        {
+          "id": "pd031",
+          "english": "activation",
+          "chinese": "激活（首次价值时刻）",
+          "pronunciation": "/ˌæktɪˈveɪʃən/",
+          "example": "Define activation as 'created first project within 24 h'.",
+          "category": "metrics"
+        },
+        {
+          "id": "pd032",
+          "english": "acquisition",
+          "chinese": "获客",
+          "pronunciation": "/ˌækwɪˈzɪʃən/",
+          "example": "Paid acquisition is a faucet; SEO is a well.",
+          "category": "metrics"
+        },
+        {
+          "id": "pd033",
+          "english": "retention",
+          "chinese": "留存",
+          "pronunciation": "/rɪˈtenʃən/",
+          "example": "Week-4 retention is the metric that matters for a habit app.",
+          "category": "metrics"
+        },
+        {
+          "id": "pd034",
+          "english": "churn",
+          "chinese": "流失率",
+          "pronunciation": "/tʃɜːrn/",
+          "example": "Churn above 5% monthly means you're bailing a leaky bucket.",
+          "category": "metrics"
+        },
+        {
+          "id": "pd035",
+          "english": "conversion funnel",
+          "chinese": "转化漏斗",
+          "pronunciation": "/kənˈvɜːrʒən ˈfʌnl/",
+          "example": "The funnel loses half the users at the pricing page.",
+          "category": "metrics"
+        },
+        {
+          "id": "pd036",
+          "english": "north star metric",
+          "chinese": "北极星指标",
+          "pronunciation": "/nɔːrθ stɑːr ˈmetrɪk/",
+          "example": "Our north star metric is weekly active projects.",
+          "category": "metrics"
+        },
+        {
+          "id": "pd037",
+          "english": "cohort analysis",
+          "chinese": "同期群分析",
+          "pronunciation": "/ˈkoʊhɔːrt əˈnæləsɪs/",
+          "example": "Cohort analysis shows the new onboarding actually works.",
+          "category": "metrics"
+        },
+        {
+          "id": "pd038",
+          "english": "feature adoption",
+          "chinese": "功能采用率",
+          "pronunciation": "/ˈfiːtʃər əˈdɑːpʃən/",
+          "example": "Feature adoption is 8% — bury it less or cut it.",
+          "category": "metrics"
+        },
+        {
+          "id": "pd039",
+          "english": "usability heuristic",
+          "chinese": "可用性启发原则",
+          "pronunciation": "/ˌjuːzəˈbɪləti hjʊˈrɪstɪk/",
+          "example": "'Visibility of system status' is usability heuristic number one.",
+          "category": "principles"
+        },
+        {
+          "id": "pd040",
+          "english": "accessibility-first",
+          "chinese": "无障碍优先",
+          "pronunciation": "/əkˌsesəˈbɪləti fɜːrst/",
+          "example": "Accessibility-first design improves every user, not just some.",
+          "category": "ethics"
+        },
+        {
+          "id": "pd041",
+          "english": "form follows function",
+          "chinese": "形式追随功能",
+          "pronunciation": "/fɔːrm ˈfɑːloʊz ˈfʌŋkʃən/",
+          "example": "Form follows function: the button is big because the action is primary.",
+          "category": "principles"
+        },
+        {
+          "id": "pd042",
+          "english": "white space",
+          "chinese": "留白",
+          "pronunciation": "/waɪt speɪs/",
+          "example": "Generous white space reads as premium; clutter reads as cheap.",
+          "category": "design"
+        },
+        {
+          "id": "pd043",
+          "english": "visual hierarchy",
+          "chinese": "视觉层级",
+          "pronunciation": "/ˈvɪʒuəl ˈhaɪərɑːrki/",
+          "example": "Visual hierarchy tells the eye where to go first.",
+          "category": "design"
+        },
+        {
+          "id": "pd044",
+          "english": "typography",
+          "chinese": "排版（字体设计）",
+          "pronunciation": "/taɪˈpɑːɡrəfi/",
+          "example": "Consistent typography does half the design work.",
+          "category": "design"
+        },
+        {
+          "id": "pd045",
+          "english": "color contrast",
+          "chinese": "颜色对比度",
+          "pronunciation": "/ˈkʌlər ˈkɑːntræst/",
+          "example": "The gray text failed the 4.5:1 color contrast check.",
+          "category": "design"
+        },
+        {
+          "id": "pd046",
+          "english": "grid system",
+          "chinese": "栅格系统",
+          "pronunciation": "/ɡrɪd ˈsɪstəm/",
+          "example": "An 8-point grid system keeps spacing predictable.",
+          "category": "design"
+        },
+        {
+          "id": "pd047",
+          "english": "brand guideline",
+          "chinese": "品牌规范",
+          "pronunciation": "/brænd ˈɡaɪdlaɪn/",
+          "example": "Follow the brand guideline for the logo clear space.",
+          "category": "design"
+        },
+        {
+          "id": "pd048",
+          "english": "stakeholder interview",
+          "chinese": "干系人访谈",
+          "pronunciation": "/ˈsteɪkhoʊldər ˈɪntərvjuː/",
+          "example": "Run stakeholder interviews before the kickoff workshop.",
+          "category": "process"
+        },
+        {
+          "id": "pd049",
+          "english": "design review",
+          "chinese": "设计评审",
+          "pronunciation": "/dɪˈzaɪn rɪˈvjuː/",
+          "example": "Bring data to the design review, not just taste.",
+          "category": "process"
+        },
+        {
+          "id": "pd050",
+          "english": "product discovery",
+          "chinese": "产品探索（发现问题）",
+          "pronunciation": "/ˈprɑːdʌkt dɪˈskʌvəri/",
+          "example": "Spend 30% of capacity on product discovery.",
+          "category": "strategy"
+        }
+      ]
+    },
+    {
+      "id": "data-visualization",
+      "name": "Data Visualization",
+      "nameCN": "数据可视化",
+      "description": "Chart types, visual encoding and analytical chart vocabulary",
+      "items": [
+        {
+          "id": "dv001",
+          "english": "data visualization",
+          "chinese": "数据可视化",
+          "pronunciation": "/ˈdeɪtə ˌvɪʒuələˈzeɪʃən/",
+          "example": "Good data visualization answers a question at a glance.",
+          "category": "core"
+        },
+        {
+          "id": "dv002",
+          "english": "line chart",
+          "chinese": "折线图",
+          "pronunciation": "/laɪn tʃɑːrt/",
+          "example": "A line chart shows the trend of p99 latency over time.",
+          "category": "charts"
+        },
+        {
+          "id": "dv003",
+          "english": "bar chart",
+          "chinese": "柱状图",
+          "pronunciation": "/bɑːr tʃɑːrt/",
+          "example": "Use a bar chart to compare categories, not time.",
+          "category": "charts"
+        },
+        {
+          "id": "dv004",
+          "english": "scatter plot",
+          "chinese": "散点图",
+          "pronunciation": "/ˈskætər plɑːt/",
+          "example": "The scatter plot reveals a correlation between size and price.",
+          "category": "charts"
+        },
+        {
+          "id": "dv005",
+          "english": "pie chart",
+          "chinese": "饼图",
+          "pronunciation": "/paɪ tʃɑːrt/",
+          "example": "A pie chart with 12 slices is a table in disguise.",
+          "category": "charts"
+        },
+        {
+          "id": "dv006",
+          "english": "donut chart",
+          "chinese": "环形图",
+          "pronunciation": "/ˈdoʊnət tʃɑːrt/",
+          "example": "The donut chart puts the total in the hole.",
+          "category": "charts"
+        },
+        {
+          "id": "dv007",
+          "english": "heatmap",
+          "chinese": "热力图",
+          "pronunciation": "/ˈhiːtmæp/",
+          "example": "The heatmap shows usage peaking on weekday evenings.",
+          "category": "charts"
+        },
+        {
+          "id": "dv008",
+          "english": "box plot",
+          "chinese": "箱线图",
+          "pronunciation": "/bɑːks plɑːt/",
+          "example": "A box plot exposes the median and the outliers.",
+          "category": "charts"
+        },
+        {
+          "id": "dv009",
+          "english": "violin plot",
+          "chinese": "小提琴图（密度分布）",
+          "pronunciation": "/ˌvaɪəˈlɪn plɑːt/",
+          "example": "The violin plot shows the bimodal distribution a box plot hides.",
+          "category": "charts"
+        },
+        {
+          "id": "dv010",
+          "english": "candlestick chart",
+          "chinese": "K 线图（蜡烛图）",
+          "pronunciation": "/ˈkændlstɪk tʃɑːrt/",
+          "example": "Each candlestick chart bar encodes open, close, high and low.",
+          "category": "charts"
+        },
+        {
+          "id": "dv011",
+          "english": "area chart",
+          "chinese": "面积图",
+          "pronunciation": "/ˈeriə tʃɑːrt/",
+          "example": "A stacked area chart shows each region's share over time.",
+          "category": "charts"
+        },
+        {
+          "id": "dv012",
+          "english": "Gantt chart",
+          "chinese": "甘特图",
+          "pronunciation": "/ɡænt tʃɑːrt/",
+          "example": "The Gantt chart shows who's blocked on whom.",
+          "category": "charts"
+        },
+        {
+          "id": "dv013",
+          "english": "sparkline",
+          "chinese": "迷你趋势图",
+          "pronunciation": "/ˈspɑːrklaɪn/",
+          "example": "A sparkline fits a whole trend inside a table cell.",
+          "category": "charts"
+        },
+        {
+          "id": "dv014",
+          "english": "sankey diagram",
+          "chinese": "桑基图（流向图）",
+          "pronunciation": "/ˈsæŋki ˈdaɪəɡræm/",
+          "example": "The sankey diagram traces users from landing page to churn.",
+          "category": "charts"
+        },
+        {
+          "id": "dv015",
+          "english": "choropleth map",
+          "chinese": "地区分布图（填色地图）",
+          "pronunciation": "/ˈkɔːrəpleθ mæp/",
+          "example": "The choropleth map shades provinces by adoption rate.",
+          "category": "charts"
+        },
+        {
+          "id": "dv016",
+          "english": "axis label",
+          "chinese": "坐标轴标签",
+          "pronunciation": "/ˈæksɪs ˈleɪbl/",
+          "example": "Never ship a chart without axis labels and units.",
+          "category": "components"
+        },
+        {
+          "id": "dv017",
+          "english": "legend",
+          "chinese": "图例",
+          "pronunciation": "/ˈledʒənd/",
+          "example": "The legend maps each line color to a region.",
+          "category": "components"
+        },
+        {
+          "id": "dv018",
+          "english": "tooltip",
+          "chinese": "悬浮提示",
+          "pronunciation": "/ˈtuːltɪp/",
+          "example": "Hovering a bar shows the exact value in a tooltip.",
+          "category": "components"
+        },
+        {
+          "id": "dv019",
+          "english": "crosshair",
+          "chinese": "十字准线（联动指示）",
+          "pronunciation": "/ˈkrɔːsher/",
+          "example": "A shared crosshair aligns the time under the cursor across panels.",
+          "category": "components"
+        },
+        {
+          "id": "dv020",
+          "english": "color scale",
+          "chinese": "色阶",
+          "pronunciation": "/ˈkʌlər skeɪl/",
+          "example": "Use a sequential color scale for magnitude, diverging for change.",
+          "category": "encoding"
+        },
+        {
+          "id": "dv021",
+          "english": "colorblind-safe palette",
+          "chinese": "色盲友好配色",
+          "pronunciation": "/ˈkʌlərblaɪnd seɪf ˈpælət/",
+          "example": "Pick a colorblind-safe palette by default, not as an afterthought.",
+          "category": "encoding"
+        },
+        {
+          "id": "dv022",
+          "english": "visual encoding",
+          "chinese": "视觉编码（用图形属性表数据）",
+          "pronunciation": "/ˈvɪʒuəl ɪnˈkoʊdɪŋ/",
+          "example": "Position is the strongest visual encoding; hue is weaker.",
+          "category": "encoding"
+        },
+        {
+          "id": "dv023",
+          "english": "pre-attentive attribute",
+          "chinese": "前注意属性（一眼可见）",
+          "pronunciation": "/priː əˈtentɪv ˈætrɪbjuːt/",
+          "example": "Color and motion are pre-attentive attributes — they pop.",
+          "category": "encoding"
+        },
+        {
+          "id": "dv024",
+          "english": "data-to-ink ratio",
+          "chinese": "数据墨水比",
+          "pronunciation": "/ˈdeɪtə tuː ɪŋk ˈreɪʃioʊ/",
+          "example": "Kill gridlines and 3D effects to raise the data-to-ink ratio.",
+          "category": "principles"
+        },
+        {
+          "id": "dv025",
+          "english": "chartjunk",
+          "chinese": "图表垃圾（冗余装饰）",
+          "pronunciation": "/ˈtʃɑːrtdʒʌŋk/",
+          "example": "Drop shadows and 3D bevels are pure chartjunk.",
+          "category": "principles"
+        },
+        {
+          "id": "dv026",
+          "english": "misleading axis",
+          "chinese": "误导性坐标轴",
+          "pronunciation": "/mɪsˈliːdɪŋ ˈæksɪs/",
+          "example": "Truncating the y-axis creates a misleading axis and fake drama.",
+          "category": "ethics"
+        },
+        {
+          "id": "dv027",
+          "english": "distribution",
+          "chinese": "分布",
+          "pronunciation": "/ˌdɪstrɪˈbjuːʃən/",
+          "example": "Plot the distribution before quoting any average.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv028",
+          "english": "normal distribution",
+          "chinese": "正态分布",
+          "pronunciation": "/ˈnɔːrml ˌdɪstrɪˈbjuːʃən/",
+          "example": "Latency is rarely a normal distribution — it has a long tail.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv029",
+          "english": "skewed distribution",
+          "chinese": "偏态分布",
+          "pronunciation": "/skjuːd ˌdɪstrɪˈbjuːʃən/",
+          "example": "Income is a skewed distribution; report the median.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv030",
+          "english": "outlier",
+          "chinese": "异常值",
+          "pronunciation": "/ˈaʊtlaɪər/",
+          "example": "Investigate the outlier before deleting it — it might be the story.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv031",
+          "english": "correlation",
+          "chinese": "相关性",
+          "pronunciation": "/ˌkɔːrəˈleɪʃən/",
+          "example": "Correlation is not causation — say it twice.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv032",
+          "english": "causation",
+          "chinese": "因果关系",
+          "pronunciation": "/kɔːˈzeɪʃən/",
+          "example": "Only a controlled experiment can claim causation.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv033",
+          "english": "binning",
+          "chinese": "分箱（分桶）",
+          "pronunciation": "/ˈbɪnɪŋ/",
+          "example": "Binning ages into decades makes the histogram readable.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv034",
+          "english": "bin",
+          "chinese": "区间（桶）",
+          "pronunciation": "/bɪn/",
+          "example": "Too few bins hides shape; too many bins hides signal.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv035",
+          "english": "kernel density estimate",
+          "chinese": "核密度估计（KDE）",
+          "pronunciation": "/ˈkɜːrnl ˈdensəti ˈestɪmət/",
+          "example": "The KDE smooths the histogram into a continuous curve.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv036",
+          "english": "regression line",
+          "chinese": "回归线（趋势线）",
+          "pronunciation": "/rɪˈɡreʃən laɪn/",
+          "example": "The regression line summarizes the upward trend.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv037",
+          "english": "moving average",
+          "chinese": "移动平均",
+          "pronunciation": "/ˈmuːvɪŋ ˈævərɪdʒ/",
+          "example": "A 7-day moving average smooths the weekend spikes.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv038",
+          "english": "confidence interval",
+          "chinese": "置信区间",
+          "pronunciation": "/ˈkɑːnfɪdəns ˈɪntərvl/",
+          "example": "Show the confidence interval as a shaded band.",
+          "category": "statistics"
+        },
+        {
+          "id": "dv039",
+          "english": "y-axis",
+          "chinese": "Y 轴（纵轴）",
+          "pronunciation": "/ˈwaɪ æksɪs/",
+          "example": "Always start the y-axis at zero for bar charts.",
+          "category": "components"
+        },
+        {
+          "id": "dv040",
+          "english": "dual-axis chart",
+          "chinese": "双轴图",
+          "pronunciation": "/ˈduːəl ˈæksɪs tʃɑːrt/",
+          "example": "A dual-axis chart can lie; use two stacked panels instead.",
+          "category": "ethics"
+        },
+        {
+          "id": "dv041",
+          "english": "annotation",
+          "chinese": "标注（图上注释）",
+          "pronunciation": "/ˌænəˈteɪʃən/",
+          "example": "Add an annotation marking the deploy that caused the spike.",
+          "category": "components"
+        },
+        {
+          "id": "dv042",
+          "english": "drill-down",
+          "chinese": "下钻（逐层细看）",
+          "pronunciation": "/ˈdrɪl daʊn/",
+          "example": "Click a bar to drill-down into that region's data.",
+          "category": "interaction"
+        },
+        {
+          "id": "dv043",
+          "english": "brushing and linking",
+          "chinese": "刷选联动",
+          "pronunciation": "/ˈbrʌʃɪŋ ænd ˈlɪŋkɪŋ/",
+          "example": "Brushing and linking highlights the same rows across all charts.",
+          "category": "interaction"
+        },
+        {
+          "id": "dv044",
+          "english": "zoom and pan",
+          "chinese": "缩放与平移",
+          "pronunciation": "/zuːm ænd pæn/",
+          "example": "Add zoom and pan for dense time series.",
+          "category": "interaction"
+        },
+        {
+          "id": "dv045",
+          "english": "small multiple",
+          "chinese": "分面小图（重复小倍数）",
+          "pronunciation": "/smɔːl ˈmʌltɪpl/",
+          "example": "Small multiples beat one overloaded chart for many categories.",
+          "category": "charts"
+        },
+        {
+          "id": "dv046",
+          "english": "dashboard design",
+          "chinese": "仪表盘设计",
+          "pronunciation": "/ˈdæʃbɔːrd dɪˈzaɪn/",
+          "example": "Dashboard design rule one: one question per screen.",
+          "category": "principles"
+        },
+        {
+          "id": "dv047",
+          "english": "data storytelling",
+          "chinese": "数据叙事",
+          "pronunciation": "/ˈdeɪtə ˈstɔːritelɪŋ/",
+          "example": "Data storytelling frames the chart around a decision.",
+          "category": "principles"
+        },
+        {
+          "id": "dv048",
+          "english": "rendering performance",
+          "chinese": "渲染性能",
+          "pronunciation": "/ˈrendərɪŋ pərˈfɔːrməns/",
+          "example": "Canvas beats SVG for rendering performance with 100k points.",
+          "category": "engineering"
+        },
+        {
+          "id": "dv049",
+          "english": "canvas rendering",
+          "chinese": "Canvas 画布渲染",
+          "pronunciation": "/ˈkænvəs ˈrendərɪŋ/",
+          "example": "Switch to canvas rendering when DOM nodes hit five digits.",
+          "category": "engineering"
+        },
+        {
+          "id": "dv050",
+          "english": "webgl",
+          "chinese": "WebGL（GPU 渲染接口）",
+          "pronunciation": "/ˈwebˌdʒiː el/",
+          "example": "WebGL handles million-point scatter plots at 60 fps.",
+          "category": "engineering"
+        }
+      ]
+    },
+    {
+      "id": "browser-devtools",
+      "name": "Browser DevTools & Debugging",
+      "nameCN": "浏览器调试工具",
+      "description": "DevTools panels, debugging workflow and console vocabulary",
+      "items": [
+        {
+          "id": "bd001",
+          "english": "DevTools",
+          "chinese": "开发者工具",
+          "pronunciation": "/dev tuːlz/",
+          "example": "Open DevTools with F12 to inspect the page.",
+          "category": "core"
+        },
+        {
+          "id": "bd002",
+          "english": "Elements panel",
+          "chinese": "元素面板",
+          "pronunciation": "/ˈelɪmənts ˈpænl/",
+          "example": "Edit CSS live in the Elements panel and watch it repaint.",
+          "category": "panels"
+        },
+        {
+          "id": "bd003",
+          "english": "Console panel",
+          "chinese": "控制台面板",
+          "pronunciation": "/kənˈsoʊl ˈpænl/",
+          "example": "The Console panel shows the uncaught error with a stack trace.",
+          "category": "panels"
+        },
+        {
+          "id": "bd004",
+          "english": "Network panel",
+          "chinese": "网络面板",
+          "pronunciation": "/ˈnetwɜːrk ˈpænl/",
+          "example": "The Network panel reveals the 3-second API call blocking render.",
+          "category": "panels"
+        },
+        {
+          "id": "bd005",
+          "english": "Sources panel",
+          "chinese": "源代码面板",
+          "pronunciation": "/ˈsɔːrsɪz ˈpænl/",
+          "example": "Set breakpoints in the Sources panel on the bundled file.",
+          "category": "panels"
+        },
+        {
+          "id": "bd006",
+          "english": "Performance panel",
+          "chinese": "性能面板",
+          "pronunciation": "/pərˈfɔːrməns ˈpænl/",
+          "example": "Record a trace in the Performance panel to find the long task.",
+          "category": "panels"
+        },
+        {
+          "id": "bd007",
+          "english": "Memory panel",
+          "chinese": "内存面板",
+          "pronunciation": "/ˈmeməri ˈpænl/",
+          "example": "Take heap snapshots in the Memory panel to find the leak.",
+          "category": "panels"
+        },
+        {
+          "id": "bd008",
+          "english": "Application panel",
+          "chinese": "应用面板（存储查看）",
+          "pronunciation": "/ˌæplɪˈkeɪʃən ˈpænl/",
+          "example": "Inspect localStorage and cookies in the Application panel.",
+          "category": "panels"
+        },
+        {
+          "id": "bd009",
+          "english": "device toolbar",
+          "chinese": "设备模拟工具栏",
+          "pronunciation": "/dɪˈvaɪs ˈtuːlbɑːr/",
+          "example": "Toggle the device toolbar to test the mobile layout.",
+          "category": "tools"
+        },
+        {
+          "id": "bd010",
+          "english": "device emulation",
+          "chinese": "设备模拟",
+          "pronunciation": "/dɪˈvaɪs ˌemjuˈleɪʃən/",
+          "example": "Device emulation fakes touch events and screen size.",
+          "category": "tools"
+        },
+        {
+          "id": "bd011",
+          "english": "inspect element",
+          "chinese": "审查元素",
+          "pronunciation": "/ɪnˈspekt ˈelɪmənt/",
+          "example": "Right-click → Inspect element to find the selector.",
+          "category": "workflow"
+        },
+        {
+          "id": "bd012",
+          "english": "debugger statement",
+          "chinese": "debugger 断点语句",
+          "pronunciation": "/dɪˈbʌɡər ˈsteɪtmənt/",
+          "example": "Drop a debugger statement where a conditional breakpoint is clumsy.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd013",
+          "english": "debugger breakpoint",
+          "chinese": "调试断点",
+          "pronunciation": "/diːˈbʌɡər ˈbreɪkpɔɪnt/",
+          "example": "Pause on the debugger breakpoint and inspect local variables.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd014",
+          "english": "conditional breakpoint",
+          "chinese": "条件断点",
+          "pronunciation": "/kənˈdɪʃənl ˈbreɪkpɔɪnt/",
+          "example": "A conditional breakpoint fires only when user.id === 42.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd015",
+          "english": "logpoint",
+          "chinese": "日志断点（不暂停）",
+          "pronunciation": "/ˈlɔːɡpɔɪnt/",
+          "example": "A logpoint logs to console without pausing execution.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd016",
+          "english": "step over",
+          "chinese": "单步跳过",
+          "pronunciation": "/step ˈoʊvər/",
+          "example": "Step over the helper — you trust it — and stop inside the loop.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd017",
+          "english": "step into",
+          "chinese": "单步进入",
+          "pronunciation": "/step ˈɪntuː/",
+          "example": "Step into the failing function to see which line throws.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd018",
+          "english": "step out",
+          "chinese": "单步跳出",
+          "pronunciation": "/step aʊt/",
+          "example": "Step out of the deep call and back to your own code.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd019",
+          "english": "resume execution",
+          "chinese": "继续执行",
+          "pronunciation": "/rɪˈzuːm ˌeksɪˈkjuːʃən/",
+          "example": "Hit resume execution to run until the next breakpoint.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd020",
+          "english": "call stack",
+          "chinese": "调用栈",
+          "pronunciation": "/kɔːl stæk/",
+          "example": "Read the call stack bottom-up to find your own code.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd021",
+          "english": "scope inspection",
+          "chinese": "作用域查看",
+          "pronunciation": "/skoʊp ɪnˈspekʃən/",
+          "example": "Scope inspection shows closures and their captured variables.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd022",
+          "english": "watch expression",
+          "chinese": "监视表达式",
+          "pronunciation": "/wɑːtʃ ɪkˈspreʃən/",
+          "example": "Add items.length as a watch expression while stepping.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd023",
+          "english": "blackbox script",
+          "chinese": "屏蔽脚本（黑盒化）",
+          "pronunciation": "/ˈblækbɑːks skrɪpt/",
+          "example": "Blackbox the framework source so stepping stays in your code.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd024",
+          "english": "pause on exceptions",
+          "chinese": "异常时暂停",
+          "pronunciation": "/pɔːz ɑːn ɪkˈsepʃənz/",
+          "example": "Enable pause on exceptions to stop exactly where it throws.",
+          "category": "debugging"
+        },
+        {
+          "id": "bd025",
+          "english": "console.log",
+          "chinese": "控制台日志输出",
+          "pronunciation": "/kənˈsoʊl lɔːɡ/",
+          "example": "console.log debugging is fine; lying to yourself is not.",
+          "category": "console"
+        },
+        {
+          "id": "bd026",
+          "english": "console.table",
+          "chinese": "表格化日志输出",
+          "pronunciation": "/kənˈsoʊl ˈteɪbl/",
+          "example": "console.table renders the array of objects readably.",
+          "category": "console"
+        },
+        {
+          "id": "bd027",
+          "english": "console.trace",
+          "chinese": "调用链打印",
+          "pronunciation": "/kənˈsoʊl treɪs/",
+          "example": "console.trace reveals who keeps calling this function.",
+          "category": "console"
+        },
+        {
+          "id": "bd028",
+          "english": "stack trace",
+          "chinese": "堆栈跟踪",
+          "pronunciation": "/stæk treɪs/",
+          "example": "The stack trace points to line 42 of the minified bundle.",
+          "category": "console"
+        },
+        {
+          "id": "bd029",
+          "english": "verbose logging",
+          "chinese": "详细日志级别",
+          "pronunciation": "/vɜːrˈboʊs ˈlɔːɡɪŋ/",
+          "example": "Filter to Verbose to see the framework's internal logs.",
+          "category": "console"
+        },
+        {
+          "id": "bd030",
+          "english": "console filter",
+          "chinese": "控制台过滤器",
+          "pronunciation": "/kənˈsoʊl ˈfɪltər/",
+          "example": "Use the console filter to silence the noisy extension logs.",
+          "category": "console"
+        },
+        {
+          "id": "bd031",
+          "english": "network throttling profile",
+          "chinese": "网络限速档位",
+          "pronunciation": "/ˈnetwɜːrk ˈthrɔtlɪŋ ˈproʊfaɪl/",
+          "example": "Pick 'Slow 3G' as the network throttling profile.",
+          "category": "network"
+        },
+        {
+          "id": "bd032",
+          "english": "request header",
+          "chinese": "请求头",
+          "pronunciation": "/rɪˈkwest ˈhedər/",
+          "example": "Check the request header — the auth token is missing.",
+          "category": "network"
+        },
+        {
+          "id": "bd033",
+          "english": "response payload",
+          "chinese": "响应报文体",
+          "pronunciation": "/rɪˈspɑːns ˈpeɪloʊd/",
+          "example": "The response payload is 8 MB of JSON — that's the real problem.",
+          "category": "network"
+        },
+        {
+          "id": "bd034",
+          "english": "status code",
+          "chinese": "状态码",
+          "pronunciation": "/ˈstætəs koʊd/",
+          "example": "A 429 status code means rate-limited, not broken.",
+          "category": "network"
+        },
+        {
+          "id": "bd035",
+          "english": "waterfall view",
+          "chinese": "瀑布图视图",
+          "pronunciation": "/ˈwɔːtərfɔːl vjuː/",
+          "example": "The waterfall view shows DNS, TLS and TTFB for each request.",
+          "category": "network"
+        },
+        {
+          "id": "bd036",
+          "english": "time to first byte",
+          "chinese": "首字节时间（TTFB）",
+          "pronunciation": "/taɪm tuː fɜːrst baɪt/",
+          "example": "Time to first byte is 900 ms — the backend is the bottleneck.",
+          "category": "network"
+        },
+        {
+          "id": "bd037",
+          "english": "blocking request",
+          "chinese": "阻塞请求",
+          "pronunciation": "/ˈblɑːkɪŋ rɪˈkwest/",
+          "example": "That sync script is a blocking request stalling first paint.",
+          "category": "network"
+        },
+        {
+          "id": "bd038",
+          "english": "blocked response",
+          "chinese": "被拦截的响应",
+          "pronunciation": "/blɑːkt rɪˈspɑːns/",
+          "example": "A CORS error shows as a blocked response in red.",
+          "category": "network"
+        },
+        {
+          "id": "bd039",
+          "english": "replay request",
+          "chinese": "重发请求（Replay/XHR）",
+          "pronunciation": "/ˌriːˈpleɪ rɪˈkwest/",
+          "example": "Edit the body and replay the request without touching the UI.",
+          "category": "network"
+        },
+        {
+          "id": "bd040",
+          "english": "heap snapshot",
+          "chinese": "堆快照",
+          "pronunciation": "/hiːp ˈsnæpʃɑːt/",
+          "example": "Compare two heap snapshots to see which objects grew.",
+          "category": "memory"
+        },
+        {
+          "id": "bd041",
+          "english": "detached DOM node",
+          "chinese": "已分离 DOM 节点（泄漏源）",
+          "pronunciation": "/dɪˈtætʃt dɑːm noʊd/",
+          "example": "The listener kept a detached DOM node alive — a classic leak.",
+          "category": "memory"
+        },
+        {
+          "id": "bd042",
+          "english": "flame chart",
+          "chinese": "火焰图（时间轴）",
+          "pronunciation": "/fleɪm tʃɑːrt/",
+          "example": "The flame chart shows one long task pinning the main thread.",
+          "category": "performance"
+        },
+        {
+          "id": "bd043",
+          "english": "long task",
+          "chinese": "长任务（阻塞主线程 >50ms）",
+          "pronunciation": "/lɔːŋ tæsk/",
+          "example": "Break the long task into chunks with scheduler.yield().",
+          "category": "performance"
+        },
+        {
+          "id": "bd044",
+          "english": "main thread",
+          "chinese": "主线程",
+          "pronunciation": "/meɪn θred/",
+          "example": "The main thread must stay under ~50 ms per task.",
+          "category": "performance"
+        },
+        {
+          "id": "bd045",
+          "english": "layout shift",
+          "chinese": "布局偏移（CLS）",
+          "pronunciation": "/ˈlaɪaʊt ʃɪft/",
+          "example": "The banner injection caused a layout shift of 0.28.",
+          "category": "performance"
+        },
+        {
+          "id": "bd046",
+          "english": "Lighthouse audit",
+          "chinese": "Lighthouse 审计",
+          "pronunciation": "/ˈlaɪthaʊs ˈɔːdɪt/",
+          "example": "Run a Lighthouse audit in incognito to avoid extension noise.",
+          "category": "performance"
+        },
+        {
+          "id": "bd047",
+          "english": "coverage tool",
+          "chinese": "代码覆盖率工具",
+          "pronunciation": "/ˈkʌvərɪdʒ tuːl/",
+          "example": "The coverage tool says 70% of the CSS is unused on load.",
+          "category": "tools"
+        },
+        {
+          "id": "bd048",
+          "english": "local override",
+          "chinese": "本地覆盖（替换远程文件）",
+          "pronunciation": "/ˈloʊkl ˈoʊvərraɪd/",
+          "example": "Use a local override to patch the minified JS in production.",
+          "category": "tools"
+        },
+        {
+          "id": "bd049",
+          "english": "remote debugging",
+          "chinese": "远程调试（真机）",
+          "pronunciation": "/rɪˈmoʊt diːˈbʌɡɪŋ/",
+          "example": "Remote debugging over USB lets you inspect the page on a real phone.",
+          "category": "tools"
+        },
+        {
+          "id": "bd050",
+          "english": "debugging session",
+          "chinese": "调试会话",
+          "pronunciation": "/dɪˈbʌɡɪŋ ˈseʃən/",
+          "example": "Attach the debugging session to the Node process in VS Code.",
+          "category": "workflow"
+        }
+      ]
     }
   ]
 };
