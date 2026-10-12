@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![PWA](https://img.shields.io/badge/PWA-Supported-green.svg)
 ![CI](https://github.com/kuanbandu/Computer-English-Learning/actions/workflows/lint.yml/badge.svg)
-![Words](https://img.shields.io/badge/词汇量-1700+-blueviolet.svg)
+![Words](https://img.shields.io/badge/词汇量-2000+-blueviolet.svg)
 
 ## 📱 特点
 
@@ -19,7 +19,7 @@
 - **学习热力图** - GitHub 风格的 365 天学习活动图，坚持打卡一目了然
 - **数据备份** - 一键导出/导入全部学习数据，换设备不丢进度
 - **深色模式** - 自动记忆主题偏好
-- **分类学习** - 36 个分类，1700 个常用词条
+- **分类学习** - 42 个分类，2000 个常用词条
 - **进度追踪** - 自动记录学习进度和连续学习天数
 - **收藏功能** - 收藏重点内容，方便复习
 - **响应式设计** - 完美适配手机、平板、电脑
@@ -65,8 +65,14 @@
 | Product & UX Design | 50 | 产品与用户体验设计 |
 | Data Visualization | 50 | 数据可视化 |
 | Browser DevTools & Debugging | 50 | 浏览器调试工具 |
+| Mobile Development | 50 | 移动开发 |
+| Desktop Development | 50 | 桌面开发 |
+| MLOps & Model Lifecycle | 50 | MLOps 机器学习工程 |
+| Compilers & Language Theory | 50 | 编译原理 |
+| Digital Electronics & FPGA | 50 | 数字电路与 FPGA |
+| Math for Developers | 50 | 开发者数学基础 |
 
-**总计：36 个分类，1700 个词条**（每个词条均含音标与实用例句）
+**总计：42 个分类，2000 个词条**（每个词条均含音标与实用例句）
 
 ## 🚀 使用方法
 
@@ -99,7 +105,7 @@ Computer-English-Learning/
 │   │   └── srs.js          # SM-2 间隔重复算法
 │   └── app.js              # 核心逻辑
 ├── data/
-│   └── content.js          # 学习内容数据（1700 词条）
+│   └── content.js          # 学习内容数据（2000 词条）
 ├── scripts/
 │   ├── validate-data.js    # 数据完整性校验
 │   ├── test-srs.js         # SRS 算法单元测试
@@ -219,7 +225,7 @@ MIT License - 自由使用和修改
 ## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request：
-- 补充更多计算机英语词条（目标 2000+）
+- 补充更多计算机英语词条（2000 词已达成，迈向 3000）
 - 改进 UI/UX 设计
 - 修复 bug
 - 添加新功能
