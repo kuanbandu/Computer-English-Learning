@@ -15519,6 +15519,822 @@ const computerEnglishData = {
           "category": "diagnostics"
         }
       ]
+    },
+    {
+      "id": "digital-electronics",
+      "name": "Digital Electronics & FPGA",
+      "nameCN": "数字电路与 FPGA",
+      "description": "Logic design, timing and hardware description vocabulary",
+      "items": [
+        {
+          "id": "dg001",
+          "english": "logic gate",
+          "chinese": "逻辑门",
+          "pronunciation": "/ˈlɑːdʒɪk ɡeɪt/",
+          "example": "Every digital circuit reduces to logic gates.",
+          "category": "basics"
+        },
+        {
+          "id": "dg002",
+          "english": "truth table",
+          "chinese": "真值表",
+          "pronunciation": "/truːθ ˈteɪbl/",
+          "example": "Write the truth table before wiring anything.",
+          "category": "basics"
+        },
+        {
+          "id": "dg003",
+          "english": "boolean algebra",
+          "chinese": "布尔代数",
+          "pronunciation": "/ˈbuːliən ˈældʒɪbrə/",
+          "example": "Boolean algebra simplifies the expression to two gates.",
+          "category": "basics"
+        },
+        {
+          "id": "dg004",
+          "english": "multiplexer",
+          "chinese": "多路选择器（MUX）",
+          "pronunciation": "/ˈmʌltipleksər/",
+          "example": "The multiplexer routes one of eight inputs to the output.",
+          "category": "combinational"
+        },
+        {
+          "id": "dg005",
+          "english": "demultiplexer",
+          "chinese": "多路分配器（DEMUX）",
+          "pronunciation": "/diːˈmʌltipleksər/",
+          "example": "A demultiplexer sends one input to a selected output line.",
+          "category": "combinational"
+        },
+        {
+          "id": "dg006",
+          "english": "decoder",
+          "chinese": "译码器",
+          "pronunciation": "/diːˈkoʊdər/",
+          "example": "The 3-to-8 decoder activates one of eight chip-select lines.",
+          "category": "combinational"
+        },
+        {
+          "id": "dg007",
+          "english": "adder",
+          "chinese": "加法器",
+          "pronunciation": "/ˈædər/",
+          "example": "The carry-lookahead adder beats the ripple adder at speed.",
+          "category": "combinational"
+        },
+        {
+          "id": "dg008",
+          "english": "flip-flop",
+          "chinese": "触发器",
+          "pronunciation": "/ˈflɪp flɑːp/",
+          "example": "Each flip-flop stores exactly one bit.",
+          "category": "sequential"
+        },
+        {
+          "id": "dg009",
+          "english": "combinational logic",
+          "chinese": "组合逻辑",
+          "pronunciation": "/ˌkɑːmbɪˈneɪʃənəl ˈlɑːdʒɪk/",
+          "example": "Combinational logic has no memory — outputs follow inputs.",
+          "category": "sequential"
+        },
+        {
+          "id": "dg010",
+          "english": "sequential logic",
+          "chinese": "时序逻辑",
+          "pronunciation": "/sɪˈkwenʃəl ˈlɑːdʒɪk/",
+          "example": "Sequential logic depends on clock and state.",
+          "category": "sequential"
+        },
+        {
+          "id": "dg011",
+          "english": "state diagram",
+          "chinese": "状态图（状态机）",
+          "pronunciation": "/steɪt ˈdaɪəɡræm/",
+          "example": "Draw the state diagram before writing any HDL.",
+          "category": "sequential"
+        },
+        {
+          "id": "dg012",
+          "english": "clock signal",
+          "chinese": "时钟信号",
+          "pronunciation": "/klɑːk ˈsɪɡnəl/",
+          "example": "Every register updates on the rising edge of the clock signal.",
+          "category": "timing"
+        },
+        {
+          "id": "dg013",
+          "english": "clock domain",
+          "chinese": "时钟域",
+          "pronunciation": "/klɑːk dəˈmeɪn/",
+          "example": "Passing data between clock domains needs a synchronizer.",
+          "category": "timing"
+        },
+        {
+          "id": "dg014",
+          "english": "clock domain crossing",
+          "chinese": "跨时钟域（CDC）",
+          "pronunciation": "/klɑːk dəˈmeɪn ˈkrɔːsɪŋ/",
+          "example": "Most silicon bugs are clock domain crossing bugs.",
+          "category": "timing"
+        },
+        {
+          "id": "dg015",
+          "english": "setup time",
+          "chinese": "建立时间",
+          "pronunciation": "/ˈsetʌp taɪm/",
+          "example": "Data must be stable before setup time at the flip-flop.",
+          "category": "timing"
+        },
+        {
+          "id": "dg016",
+          "english": "hold time",
+          "chinese": "保持时间",
+          "pronunciation": "/hoʊld taɪm/",
+          "example": "A hold-time violation can't be fixed by slowing the clock.",
+          "category": "timing"
+        },
+        {
+          "id": "dg017",
+          "english": "propagation delay",
+          "chinese": "传播延迟",
+          "pronunciation": "/ˌprɑːpəˈɡeɪʃən dɪˈleɪ/",
+          "example": "Sum the propagation delays along the critical path.",
+          "category": "timing"
+        },
+        {
+          "id": "dg018",
+          "english": "critical path",
+          "chinese": "关键路径（最长时序路径）",
+          "pronunciation": "/ˈkrɪtɪkl pæθ/",
+          "example": "Pipelining the critical path raised fmax by 40%.",
+          "category": "timing"
+        },
+        {
+          "id": "dg019",
+          "english": "timing closure",
+          "chinese": "时序收敛",
+          "pronunciation": "/ˈtaɪmɪŋ ˈkloʊʒər/",
+          "example": "We spent two weeks on timing closure for the 200 MHz target.",
+          "category": "timing"
+        },
+        {
+          "id": "dg020",
+          "english": "metastability",
+          "chinese": "亚稳态",
+          "pronunciation": "/ˌmetəstəˈbɪləti/",
+          "example": "A metastable flip-flop settles to a random value — that's metastability.",
+          "category": "timing"
+        },
+        {
+          "id": "dg021",
+          "english": "synchronizer",
+          "chinese": "同步器（双触发器）",
+          "pronunciation": "/ˈsɪŋkrənaɪzər/",
+          "example": "A two-flop synchronizer makes metastability statistically rare.",
+          "category": "design"
+        },
+        {
+          "id": "dg022",
+          "english": "glitch",
+          "chinese": "毛刺（瞬时错误脉冲）",
+          "pronunciation": "/ɡlɪtʃ/",
+          "example": "Combinational glitches disappear if you register the output.",
+          "category": "design"
+        },
+        {
+          "id": "dg023",
+          "english": "hardware description language",
+          "chinese": "硬件描述语言（HDL）",
+          "pronunciation": "/ˈhɑːrdwer dɪˈskrɪpʃən ˈlæŋɡwɪdʒ/",
+          "example": "Verilog and VHDL are the two main hardware description languages.",
+          "category": "hdl"
+        },
+        {
+          "id": "dg024",
+          "english": "Verilog",
+          "chinese": "Verilog 语言",
+          "pronunciation": "/ˈverɪlɔːɡ/",
+          "example": "The Verilog module describes behavior, not gates.",
+          "category": "hdl"
+        },
+        {
+          "id": "dg025",
+          "english": "RTL design",
+          "chinese": "寄存器传输级设计（RTL）",
+          "pronunciation": "/ˌɑːr tiː ˈel dɪˈzaɪn/",
+          "example": "RTL design happens before synthesis, after the spec.",
+          "category": "flow"
+        },
+        {
+          "id": "dg026",
+          "english": "synthesis",
+          "chinese": "综合（RTL→门级）",
+          "pronunciation": "/ˈsɪnθəsɪs/",
+          "example": "Synthesis maps RTL to the target FPGA's resources.",
+          "category": "flow"
+        },
+        {
+          "id": "dg027",
+          "english": "place and route",
+          "chinese": "布局布线",
+          "pronunciation": "/pleɪs ænd ruːt/",
+          "example": "Place and route decides where logic sits and how wires run.",
+          "category": "flow"
+        },
+        {
+          "id": "dg028",
+          "english": "bitstream",
+          "chinese": "比特流（烧写文件）",
+          "pronunciation": "/ˈbɪtstriːm/",
+          "example": "The toolchain generates the bitstream for programming the FPGA.",
+          "category": "flow"
+        },
+        {
+          "id": "dg029",
+          "english": "field-programmable gate array",
+          "chinese": "现场可编程门阵列（FPGA）",
+          "pronunciation": "/fiːld ˈproʊɡræməbl ɡeɪt əˈreɪ/",
+          "example": "An FPGA lets you change hardware like software.",
+          "category": "devices"
+        },
+        {
+          "id": "dg030",
+          "english": "lookup table",
+          "chinese": "查找表（FPGA 逻辑单元）",
+          "pronunciation": "/ˈlʊkʌp ˈteɪbl/",
+          "example": "FPGA logic is built from small lookup tables.",
+          "category": "devices"
+        },
+        {
+          "id": "dg031",
+          "english": "testbench",
+          "chinese": "测试平台（仿真环境）",
+          "pronunciation": "/ˈtestbentʃ/",
+          "example": "The testbench drives stimulus and checks the waveform.",
+          "category": "verification"
+        },
+        {
+          "id": "dg032",
+          "english": "simulation waveform",
+          "chinese": "仿真波形",
+          "pronunciation": "/ˌsɪmjuˈleɪʃən ˈwɜːrmfoʊrm/",
+          "example": "Read the simulation waveform before blaming the tools.",
+          "category": "verification"
+        },
+        {
+          "id": "dg033",
+          "english": "assertion",
+          "chinese": "断言（形式验证）",
+          "pronunciation": "/əˈsɜːrʃən/",
+          "example": "Write assertions for every protocol rule you assume.",
+          "category": "verification"
+        },
+        {
+          "id": "dg034",
+          "english": "formal verification",
+          "chinese": "形式验证",
+          "pronunciation": "/ˈfɔːrml ˌverɪfɪˈkeɪʃən/",
+          "example": "Formal verification proves the property for all inputs.",
+          "category": "verification"
+        },
+        {
+          "id": "dg035",
+          "english": "code coverage",
+          "chinese": "代码覆盖率（RTL）",
+          "pronunciation": "/koʊd ˈkʌvərɪdʒ/",
+          "example": "100% code coverage still misses untested corner scenarios.",
+          "category": "verification"
+        },
+        {
+          "id": "dg036",
+          "english": "linting",
+          "chinese": "静态检查（RTL）",
+          "pronunciation": "/ˈlɪntɪŋ/",
+          "example": "RTL linting catches latches inferred by accident.",
+          "category": "verification"
+        },
+        {
+          "id": "dg037",
+          "english": "inferred latch",
+          "chinese": "意外推断出的锁存器",
+          "pronunciation": "/ɪnˈfɜːrd lætʃ/",
+          "example": "A missing else branch created an inferred latch.",
+          "category": "pitfalls"
+        },
+        {
+          "id": "dg038",
+          "english": "reset strategy",
+          "chinese": "复位策略（同步/异步）",
+          "pronunciation": "/ˈriːset ˈstrætədʒi/",
+          "example": "Pick one reset strategy and apply it everywhere.",
+          "category": "design"
+        },
+        {
+          "id": "dg039",
+          "english": "asynchronous reset",
+          "chinese": "异步复位",
+          "pronunciation": "/eɪˈsɪŋkrənəs ˈriːset/",
+          "example": "An asynchronous reset works even without a clock.",
+          "category": "design"
+        },
+        {
+          "id": "dg040",
+          "english": "pipelining",
+          "chinese": "流水线（硬件）",
+          "pronunciation": "/ˈpaɪplaɪnɪŋ/",
+          "example": "Pipelining trades registers for a higher clock.",
+          "category": "design"
+        },
+        {
+          "id": "dg041",
+          "english": "parallelism",
+          "chinese": "并行性",
+          "pronunciation": "/ˈpærəlelɪzəm/",
+          "example": "Hardware parallelism is why FPGA can crush a CPU on some workloads.",
+          "category": "design"
+        },
+        {
+          "id": "dg042",
+          "english": "resource utilization",
+          "chinese": "资源利用率（LUT/FF）",
+          "pronunciation": "/ˈriːsɔːrs ˌjuːtələˈzeɪʃən/",
+          "example": "Resource utilization hit 92% — timing will suffer.",
+          "category": "flow"
+        },
+        {
+          "id": "dg043",
+          "english": "bus protocol",
+          "chinese": "总线协议（AXI/AHB）",
+          "pronunciation": "/bʌs ˈproʊtəkɔːl/",
+          "example": "Implement the AXI bus protocol for the memory interface.",
+          "category": "interconnect"
+        },
+        {
+          "id": "dg044",
+          "english": "handshake signal",
+          "chinese": "握手信号（valid/ready）",
+          "pronunciation": "/ˈhændʃeɪk ˈsɪɡnəl/",
+          "example": "The handshake signal stalls the pipeline when ready is low.",
+          "category": "interconnect"
+        },
+        {
+          "id": "dg045",
+          "english": "backpressure signal",
+          "chinese": "反压信号（硬件）",
+          "pronunciation": "/ˈbækˌpreʃər ˈsɪɡnəl/",
+          "example": "Assert the backpressure signal when the FIFO is nearly full.",
+          "category": "interconnect"
+        },
+        {
+          "id": "dg046",
+          "english": "FIFO buffer",
+          "chinese": "先进先出缓冲器",
+          "pronunciation": "/ˈfiːfoʊ ˈbʌfər/",
+          "example": "A FIFO buffer absorbs the burst between two clock domains.",
+          "category": "design"
+        },
+        {
+          "id": "dg047",
+          "english": "memory-mapped register",
+          "chinese": "内存映射寄存器（外设）",
+          "pronunciation": "/ˈmeməri mæpt ˈredʒɪstər/",
+          "example": "Write the config memory-mapped register to start the DMA.",
+          "category": "soc"
+        },
+        {
+          "id": "dg048",
+          "english": "interrupt request",
+          "chinese": "中断请求（IRQ）",
+          "pronunciation": "/ˈɪntərʌpt rɪˈkwest/",
+          "example": "The UART raises an interrupt request when a byte arrives.",
+          "category": "soc"
+        },
+        {
+          "id": "dg049",
+          "english": "hardware acceleration unit",
+          "chinese": "硬件加速模块",
+          "pronunciation": "/ˈhɑːrdwer əkˌseləˈreɪʃən ˈjuːnɪt/",
+          "example": "Offload CRC to a hardware acceleration unit.",
+          "category": "soc"
+        },
+        {
+          "id": "dg050",
+          "english": "silicon bug",
+          "chinese": "芯片级缺陷（流片错误）",
+          "pronunciation": "/ˈsɪlɪkən bʌɡ/",
+          "example": "A silicon bug costs a million-dollar mask set to fix.",
+          "category": "pitfalls"
+        }
+      ]
+    },
+    {
+      "id": "math-for-developers",
+      "name": "Math for Developers",
+      "nameCN": "开发者数学基础",
+      "description": "Discrete math, linear algebra and probability vocabulary",
+      "items": [
+        {
+          "id": "mf001",
+          "english": "set theory",
+          "chinese": "集合论",
+          "pronunciation": "/set ˈθɪri/",
+          "example": "Set theory gives us union, intersection and difference ops.",
+          "category": "discrete"
+        },
+        {
+          "id": "mf002",
+          "english": "subset",
+          "chinese": "子集",
+          "pronunciation": "/ˈsʌbset/",
+          "example": "Every test set is a subset of all possible inputs.",
+          "category": "discrete"
+        },
+        {
+          "id": "mf003",
+          "english": "union",
+          "chinese": "并集",
+          "pronunciation": "/ˈjuːnjən/",
+          "example": "SQL UNION merges two result sets.",
+          "category": "discrete"
+        },
+        {
+          "id": "mf004",
+          "english": "intersection",
+          "chinese": "交集",
+          "pronunciation": "/ˌɪntərˈsekʃən/",
+          "example": "The INNER JOIN returns the intersection of the two tables.",
+          "category": "discrete"
+        },
+        {
+          "id": "mf005",
+          "english": "cartesian product",
+          "chinese": "笛卡尔积",
+          "pronunciation": "/kɑːrˈtiːʒən ˈprɑːdʌkt/",
+          "example": "A missing WHERE clause triggers a cartesian product.",
+          "category": "discrete"
+        },
+        {
+          "id": "mf006",
+          "english": "power set",
+          "chinese": "幂集",
+          "pronunciation": "/ˈpaʊər set/",
+          "example": "The power set of n elements has 2^n members.",
+          "category": "discrete"
+        },
+        {
+          "id": "mf007",
+          "english": "permutation",
+          "chinese": "排列",
+          "pronunciation": "/ˌpɜːrmjuˈteɪʃən/",
+          "example": "Order matters in a permutation, not in a combination.",
+          "category": "combinatorics"
+        },
+        {
+          "id": "mf008",
+          "english": "combination",
+          "chinese": "组合",
+          "pronunciation": "/ˌkɑːmbɪˈneɪʃən/",
+          "example": "Choose 2 of 5: that's a combination, 10 ways.",
+          "category": "combinatorics"
+        },
+        {
+          "id": "mf009",
+          "english": "factorial",
+          "chinese": "阶乘",
+          "pronunciation": "/fækˈtɔːriəl/",
+          "example": "Brute-force TSP checks n factorial routes — don't.",
+          "category": "combinatorics"
+        },
+        {
+          "id": "mf010",
+          "english": "pigeonhole principle",
+          "chinese": "鸽巢原理",
+          "pronunciation": "/ˈpɪdʒinhoʊl ˈprɪnsəpl/",
+          "example": "By the pigeonhole principle, two of 367 people share a birthday.",
+          "category": "discrete"
+        },
+        {
+          "id": "mf011",
+          "english": "induction",
+          "chinese": "归纳法",
+          "pronunciation": "/ɪnˈdʌkʃən/",
+          "example": "Prove the loop invariant by induction on the iteration count.",
+          "category": "proof"
+        },
+        {
+          "id": "mf012",
+          "english": "proof by contradiction",
+          "chinese": "反证法",
+          "pronunciation": "/pruːf baɪ ˌkɑːntrəˈdɪkʃən/",
+          "example": "The classic halting proof is a proof by contradiction.",
+          "category": "proof"
+        },
+        {
+          "id": "mf013",
+          "english": "inductive step",
+          "chinese": "归纳步骤",
+          "pronunciation": "/ɪnˈdʌktɪv step/",
+          "example": "The inductive step assumes the claim for n and proves n+1.",
+          "category": "proof"
+        },
+        {
+          "id": "mf014",
+          "english": "graph theory",
+          "chinese": "图论",
+          "pronunciation": "/ɡræf ˈθɪri/",
+          "example": "Graph theory models the dependency graph of the build.",
+          "category": "graphs"
+        },
+        {
+          "id": "mf015",
+          "english": "vertex",
+          "chinese": "顶点（图）",
+          "pronunciation": "/ˈvɜːrteks/",
+          "example": "Each vertex represents a service; edges are calls.",
+          "category": "graphs"
+        },
+        {
+          "id": "mf016",
+          "english": "edge",
+          "chinese": "边（图）",
+          "pronunciation": "/edʒ/",
+          "example": "A directed edge means the dependency goes one way.",
+          "category": "graphs"
+        },
+        {
+          "id": "mf017",
+          "english": "degree of a vertex",
+          "chinese": "顶点的度",
+          "pronunciation": "/dɪˈɡriː əv ə ˈvɜːrteks/",
+          "example": "A vertex with degree 0 is isolated.",
+          "category": "graphs"
+        },
+        {
+          "id": "mf018",
+          "english": "connected component",
+          "chinese": "连通分量",
+          "pronunciation": "/kəˈnektɪd kəmˈpoʊnənt/",
+          "example": "The cluster split into two connected components.",
+          "category": "graphs"
+        },
+        {
+          "id": "mf019",
+          "english": "cycle detection",
+          "chinese": "环检测",
+          "pronunciation": "/ˈsaɪkl dɪˈtekʃən/",
+          "example": "Run cycle detection before topological sorting.",
+          "category": "graphs"
+        },
+        {
+          "id": "mf020",
+          "english": "topological sort",
+          "chinese": "拓扑排序",
+          "pronunciation": "/ˌtɑːpəˈlɑːdʒɪkl sɔːrt/",
+          "example": "Topological sort orders build steps by dependency.",
+          "category": "graphs"
+        },
+        {
+          "id": "mf021",
+          "english": "bipartite graph",
+          "chinese": "二分图",
+          "pronunciation": "/baɪˈpɑːrtaɪt ɡræf/",
+          "example": "The job/worker matching problem is a bipartite graph.",
+          "category": "graphs"
+        },
+        {
+          "id": "mf022",
+          "english": "tree traversal",
+          "chinese": "树的遍历",
+          "pronunciation": "/triː trəˈvɜːrsəl/",
+          "example": "Pre-order tree traversal emits parents before children.",
+          "category": "graphs"
+        },
+        {
+          "id": "mf023",
+          "english": "matrix multiplication",
+          "chinese": "矩阵乘法",
+          "pronunciation": "/ˈmeɪtrɪks ˌmʌltɪplɪˈkeɪʃən/",
+          "example": "Matrix multiplication is associative but not commutative.",
+          "category": "linear-algebra"
+        },
+        {
+          "id": "mf024",
+          "english": "identity matrix",
+          "chinese": "单位矩阵",
+          "pronunciation": "/aɪˈdentəti ˈmeɪtrɪks/",
+          "example": "Multiplying by the identity matrix changes nothing.",
+          "category": "linear-algebra"
+        },
+        {
+          "id": "mf025",
+          "english": "transpose",
+          "chinese": "转置",
+          "pronunciation": "/trænˈspoʊz/",
+          "example": "Transpose the table so each column is a feature.",
+          "category": "linear-algebra"
+        },
+        {
+          "id": "mf026",
+          "english": "dot product",
+          "chinese": "点积",
+          "pronunciation": "/dɑːt ˈprɑːdʌkt/",
+          "example": "The dot product of two vectors measures their alignment.",
+          "category": "linear-algebra"
+        },
+        {
+          "id": "mf027",
+          "english": "norm",
+          "chinese": "范数（向量长度）",
+          "pronunciation": "/nɔːrm/",
+          "example": "Normalize each vector to unit norm before comparing.",
+          "category": "linear-algebra"
+        },
+        {
+          "id": "mf028",
+          "english": "orthogonal",
+          "chinese": "正交的（垂直）",
+          "pronunciation": "/ɔːrˈθɑːɡənəl/",
+          "example": "Orthogonal vectors carry independent information.",
+          "category": "linear-algebra"
+        },
+        {
+          "id": "mf029",
+          "english": "eigenvalue",
+          "chinese": "特征值",
+          "pronunciation": "/ˈaɪɡənˌvæljuː/",
+          "example": "The largest eigenvalue bounds the matrix's growth factor.",
+          "category": "linear-algebra"
+        },
+        {
+          "id": "mf030",
+          "english": "vector space",
+          "chinese": "向量空间",
+          "pronunciation": "/ˈvektər speɪs/",
+          "example": "Word embeddings live in a high-dimensional vector space.",
+          "category": "linear-algebra"
+        },
+        {
+          "id": "mf031",
+          "english": "probability distribution",
+          "chinese": "概率分布",
+          "pronunciation": "/ˌprɑːbəˈbɪləti ˌdɪstrɪˈbjuːʃən/",
+          "example": "Pick the probability distribution that matches your load test.",
+          "category": "probability"
+        },
+        {
+          "id": "mf032",
+          "english": "uniform distribution",
+          "chinese": "均匀分布",
+          "pronunciation": "/ˈjuːnɪfɔːrm ˌdɪstrɪˈbjuːʃən/",
+          "example": "A good hash spreads keys in a near-uniform distribution.",
+          "category": "probability"
+        },
+        {
+          "id": "mf033",
+          "english": "exponential distribution",
+          "chinese": "指数分布",
+          "pronunciation": "/ˌekspəˈnenʃəl ˌdɪstrɪˈbjuːʃən/",
+          "example": "Inter-arrival times often follow an exponential distribution.",
+          "category": "probability"
+        },
+        {
+          "id": "mf034",
+          "english": "expected value",
+          "chinese": "期望值",
+          "pronunciation": "/ɪkˈspektɪd ˈvæljuː/",
+          "example": "The expected value of one retry with p=0.5 success is 2 tries.",
+          "category": "probability"
+        },
+        {
+          "id": "mf035",
+          "english": "variance",
+          "chinese": "方差",
+          "pronunciation": "/ˈveriəns/",
+          "example": "High variance across runs means your benchmark lies.",
+          "category": "statistics"
+        },
+        {
+          "id": "mf036",
+          "english": "standard deviation",
+          "chinese": "标准差",
+          "pronunciation": "/ˈstændərd ˌdiːviˈeɪʃən/",
+          "example": "Report mean plus standard deviation, never mean alone.",
+          "category": "statistics"
+        },
+        {
+          "id": "mf037",
+          "english": "sample size",
+          "chinese": "样本量",
+          "pronunciation": "/ˈsæmpl saɪz/",
+          "example": "With a sample size of 10, don't trust the percentages.",
+          "category": "statistics"
+        },
+        {
+          "id": "mf038",
+          "english": "statistical significance",
+          "chinese": "统计显著性",
+          "pronunciation": "/stəˈtɪstɪkl sɪɡˈnɪfɪkəns/",
+          "example": "The uplift wasn't statistically significant — don't ship the claim.",
+          "category": "statistics"
+        },
+        {
+          "id": "mf039",
+          "english": "null hypothesis",
+          "chinese": "零假设",
+          "pronunciation": "/nʌl haɪˈpɑːθəsɪs/",
+          "example": "The null hypothesis says the change did nothing.",
+          "category": "statistics"
+        },
+        {
+          "id": "mf040",
+          "english": "p-value",
+          "chinese": "P 值",
+          "pronunciation": "/ˈpiː ˌvæljuː/",
+          "example": "A p-value below 0.05 is convention, not law.",
+          "category": "statistics"
+        },
+        {
+          "id": "mf041",
+          "english": "conditional probability",
+          "chinese": "条件概率",
+          "pronunciation": "/kənˈdɪʃənəl ˌprɑːbəˈbɪləti/",
+          "example": "Conditional probability answers: given the test is positive, are you sick?",
+          "category": "probability"
+        },
+        {
+          "id": "mf042",
+          "english": "Bayes' theorem",
+          "chinese": "贝叶斯定理",
+          "pronunciation": "/beɪz ˈθɪrəm/",
+          "example": "Bayes' theorem explains why rare-condition tests mostly false-alarm.",
+          "category": "probability"
+        },
+        {
+          "id": "mf043",
+          "english": "false positive rate",
+          "chinese": "假阳性率",
+          "pronunciation": "/fɔːls ˈpɑːzətɪv reɪt/",
+          "example": "Even a 1% false positive rate floods a million-user alerting system.",
+          "category": "probability"
+        },
+        {
+          "id": "mf044",
+          "english": "base rate",
+          "chinese": "基础率（先验发生率）",
+          "pronunciation": "/beɪs reɪt/",
+          "example": "Ignore the base rate and every screening test looks great.",
+          "category": "probability"
+        },
+        {
+          "id": "mf045",
+          "english": "law of large numbers",
+          "chinese": "大数定律",
+          "pronunciation": "/lɔː əv lɑːrdʒ ˈnʌmbərz/",
+          "example": "The law of large numbers is why we average 10,000 requests.",
+          "category": "probability"
+        },
+        {
+          "id": "mf046",
+          "english": "central limit theorem",
+          "chinese": "中心极限定理",
+          "pronunciation": "/ˈsentrəl ˈlɪmɪt ˈθɪrəm/",
+          "example": "The central limit theorem is why averages look bell-shaped.",
+          "category": "statistics"
+        },
+        {
+          "id": "mf047",
+          "english": "modulo operation",
+          "chinese": "取模运算",
+          "pronunciation": "/ˈmɑːdʒəloʊ ˌɑːpəˈreɪʃən/",
+          "example": "The modulo operation maps any key into the ring's range.",
+          "category": "number-theory"
+        },
+        {
+          "id": "mf048",
+          "english": "prime number",
+          "chinese": "质数",
+          "pronunciation": "/praɪm ˈnʌmbər/",
+          "example": "RSA's security rests on factoring the product of two prime numbers.",
+          "category": "number-theory"
+        },
+        {
+          "id": "mf049",
+          "english": "greatest common divisor",
+          "chinese": "最大公约数（GCD）",
+          "pronunciation": "/ˈɡreɪtəst ˈkɑːmən dɪˈvaɪzər/",
+          "example": "Euclid's greatest common divisor algorithm is the oldest code we still run.",
+          "category": "number-theory"
+        },
+        {
+          "id": "mf050",
+          "english": "order of magnitude",
+          "chinese": "数量级",
+          "pronunciation": "/ˈɔːrdər əv ˈmæɡnɪtuːd/",
+          "example": "An SSD is three orders of magnitude faster than an HDD on random reads.",
+          "category": "estimation"
+        }
+      ]
     }
   ]
 };
