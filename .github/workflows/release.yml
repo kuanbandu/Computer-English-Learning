@@ -123,7 +123,7 @@ jobs:
             cat <<'EOF'
           ## 🧠 Programmer context: imagery, scenarios and error lookup
 
-          - New optional insight fields for词条: `imagery` / `scenarios` / `codeContext` / `wordFamily`, validated by CI
+          - New optional insight fields for terms: `imagery` / `scenarios` / `codeContext` / `wordFamily`, validated by CI
           - 16 high-frequency terms enriched, starting with the `stack` sample (plates, LIFO, call stack, memory stack)
           - "程序员语境" panel under the flipped card, plus the same detail in the browse modal
           - "🧠 意象精选" filter in both learn and browse views
