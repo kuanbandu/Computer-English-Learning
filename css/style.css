@@ -96,6 +96,17 @@ option {
   background-clip: text;
 }
 
+.version-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+  white-space: nowrap;
+}
+
 .main-nav {
   display: flex;
   gap: 0.5rem;

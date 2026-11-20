@@ -119,6 +119,19 @@ jobs:
           - Hide the dictation bar in card and quiz modes: a `display: flex` rule on `.dictation-bar` overrode the `hidden` attribute, so the listen-and-spell bar leaked into all three modes. A global `[hidden] { display: none !important }` rule now guarantees the attribute always wins.
           EOF
           ;;
+          v2.3.0)
+            cat <<'EOF'
+          ## 🧠 Programmer context: imagery, scenarios and error lookup
+
+          - New optional insight fields for词条: `imagery` / `scenarios` / `codeContext` / `wordFamily`, validated by CI
+          - 16 high-frequency terms enriched, starting with the `stack` sample (plates, LIFO, call stack, memory stack)
+          - "程序员语境" panel under the flipped card, plus the same detail in the browse modal
+          - "🧠 意象精选" filter in both learn and browse views
+          - Error reverse lookup: paste `NullPointerException` / `StackOverflowError` / `Bus error` to find related terms
+          - Data validator checks insight field shapes; `CONTRIBUTING.md` documents the schema for community PRs
+          - PWA cache bumped to v6
+          EOF
+          ;;
           *)
             # Unknown tag: fall back to the annotated tag message
             git tag -l --format='%(contents)' "$1"

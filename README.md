@@ -3,7 +3,9 @@
 一个专为程序员设计的计算机英语词汇学习工具，帮助你在日常开发中熟悉常用英语表达。
 
 🌐 **在线访问**: https://kuanbandu.github.io/Computer-English-Learning/
+🏷️ **当前版本**: v2.3.0（[Release 记录](https://github.com/kuanbandu/Computer-English-Learning/releases)）
 
+![Version](https://img.shields.io/badge/version-v2.3.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![PWA](https://img.shields.io/badge/PWA-Supported-green.svg)
 ![CI](https://github.com/kuanbandu/Computer-English-Learning/actions/workflows/lint.yml/badge.svg)

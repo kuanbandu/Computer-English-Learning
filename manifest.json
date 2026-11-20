@@ -1,6 +1,7 @@
 {
   "name": "Computer English Learning",
   "short_name": "CompEng",
+  "version": "2.3.0",
   "description": "计算机英语学习工具",
   "start_url": ".",
   "display": "standalone",
