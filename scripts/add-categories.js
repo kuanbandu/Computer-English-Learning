@@ -7,7 +7,8 @@
  * The JSON file must contain an array of category objects with the same
  * shape as data/content.js entries:
  *   [{ "id", "name", "nameCN", "description", "items": [
- *        { "id", "english", "chinese", "pronunciation", "example", "category" } ] }]
+ *        { "id", "english", "chinese", "pronunciation", "example", "category",
+ *          "imagery"?, "scenarios"?, "codeContext"?, "wordFamily"? } ] }]
  *
  * - Refuses to merge if any category id already exists.
  * - Preserves the existing file's indentation and line-ending style.

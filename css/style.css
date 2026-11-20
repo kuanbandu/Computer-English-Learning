@@ -314,6 +314,131 @@ option {
   color: var(--secondary);
 }
 
+/* ---------- 程序员语境：意象指引 / 常用场景 / 代码语境 ---------- */
+.insight-toggle {
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.insight-toggle:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.insight-toggle[aria-pressed="true"] {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+  border-color: var(--primary);
+  color: white;
+}
+
+.insight-panel {
+  width: 100%;
+  max-width: 500px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  animation: fadeIn 0.25s ease;
+}
+
+.insight-panel-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.insight-panel-title span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+.insight-section + .insight-section {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--border);
+}
+
+.insight-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.insight-imagery {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.insight-scenarios {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.insight-scenarios li + li {
+  margin-top: 0.4rem;
+}
+
+.insight-scenarios strong {
+  color: var(--text-primary);
+}
+
+.insight-code {
+  margin: 0;
+  padding: 0.75rem;
+  background: var(--background);
+  border-radius: var(--radius-sm);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.insight-family {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.insight-family-chip {
+  padding: 0.2rem 0.55rem;
+  background: var(--surface-hover);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.insight-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--surface-hover);
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  white-space: nowrap;
+}
+
 .speak-btn {
   position: absolute;
   bottom: 1rem;
@@ -479,6 +604,55 @@ option {
   color: var(--text-muted);
 }
 
+.browse-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.error-lookup-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.error-lookup-box input {
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+  width: 260px;
+}
+
+.error-lookup-box input:focus {
+  outline: none;
+}
+
+.error-lookup-box:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.error-lookup-btn {
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.75rem 0.9rem;
+  cursor: pointer;
+}
+
+.error-lookup-btn:hover {
+  background: var(--primary-dark);
+}
+
 .category-tabs {
   display: flex;
   gap: 0.5rem;
@@ -564,6 +738,13 @@ option {
   font-size: 0.75rem;
   color: var(--text-muted);
   font-style: italic;
+}
+
+.item-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
 .item-card .item-category {
@@ -1155,4 +1336,44 @@ option {
 
 .backup-btn span {
   font-size: 1rem;
+}
+
+/* ============================================================
+   v2.3 — Insights / error reverse lookup (responsive tweaks)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .learn-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .category-filter {
+    flex-wrap: wrap;
+  }
+
+  .browse-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .browse-tools {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .browse-tools .search-box,
+  .error-lookup-box {
+    width: 100%;
+  }
+
+  .browse-tools .search-box input,
+  .error-lookup-box input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .insight-panel {
+    padding: 0.85rem 1rem;
+  }
 }

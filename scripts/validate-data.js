@@ -9,7 +9,9 @@
  *   3. Every item has id / english / chinese / pronunciation / example
  *   4. All item ids are globally unique
  *   5. Category ids are unique
- *   6. Every file referenced by index.html (script/link) exists on disk
+ *   6. Optional insight fields (imagery / scenarios / codeContext /
+ *      wordFamily) have the right shape when present
+ *   7. Every file referenced by index.html (script/link) exists on disk
  */
 'use strict';
 
@@ -52,6 +54,7 @@ if (!Array.isArray(data.categories) || data.categories.length === 0) {
 const categoryIds = new Set();
 const seenIds = new Set();
 let itemCount = 0;
+let insightCount = 0;
 
 for (const cat of data.categories) {
   if (!cat.id || typeof cat.id !== 'string') error(`category missing id: ${JSON.stringify(cat).slice(0, 80)}`);
@@ -70,10 +73,45 @@ for (const cat of data.categories) {
     }
     if (seenIds.has(item.id)) error(`duplicate item id: ${item.id} (in ${cat.id})`);
     seenIds.add(item.id);
+
+    // Optional programmer-context fields. They are intentionally optional so
+    // the other ~2000 entries stay valid, but must be well-formed when used.
+    if (item.imagery !== undefined &&
+        (typeof item.imagery !== 'string' || !item.imagery.trim())) {
+      error(`item ${item.id}: imagery must be a non-empty string`);
+    }
+    if (item.scenarios !== undefined) {
+      if (!Array.isArray(item.scenarios) || item.scenarios.length === 0) {
+        error(`item ${item.id}: scenarios must be a non-empty array`);
+      } else {
+        item.scenarios.forEach((s, idx) => {
+          if (!s || typeof s !== 'object' ||
+              typeof s.name !== 'string' || !s.name.trim() ||
+              typeof s.text !== 'string' || !s.text.trim()) {
+            error(`item ${item.id}: scenarios[${idx}] needs non-empty name and text`);
+          }
+        });
+      }
+    }
+    if (item.codeContext !== undefined &&
+        (typeof item.codeContext !== 'string' || !item.codeContext.trim())) {
+      error(`item ${item.id}: codeContext must be a non-empty string`);
+    }
+    if (item.wordFamily !== undefined) {
+      if (!Array.isArray(item.wordFamily) || item.wordFamily.length === 0 ||
+          item.wordFamily.some(w => typeof w !== 'string' || !w.trim())) {
+        error(`item ${item.id}: wordFamily must be a non-empty array of strings`);
+      }
+    }
+    if ((typeof item.imagery === 'string' && item.imagery.trim()) ||
+        (Array.isArray(item.scenarios) && item.scenarios.length > 0)) {
+      insightCount++;
+    }
   }
 }
 
 ok(`${data.categories.length} categories, ${itemCount} items`);
+ok(`${insightCount} items with imagery / scenario insights`);
 if (categoryIds.size === data.categories.length) ok('category ids unique');
 if (seenIds.size === itemCount) ok('item ids globally unique');
 

@@ -908,6 +908,27 @@ const computerEnglishData = {
           "chinese": "空指针异常",
           "pronunciation": "/nʌl ˈpɔɪntər ɪkˈsɛpʃən/",
           "example": "java.lang.NullPointerException",
+          "imagery": "房卡上写着“0 号房间”——根本不存在。你拿它去开门，前台立刻报错：NullPointerException。",
+          "scenarios": [
+            {
+              "name": "触发时机",
+              "text": "在值为 null 的引用上调用方法或访问属性；Java 17+ 的报错信息会直接指出是哪个表达式为 null。"
+            },
+            {
+              "name": "常见来源",
+              "text": "没初始化的字段、查找失败返回 null、参数没校验、容器里根本没有这个 key。"
+            },
+            {
+              "name": "防御手法",
+              "text": "提前判空、用 Optional / 非空注解、构造时保证不变量，让问题在最早的地方暴露。"
+            }
+          ],
+          "codeContext": "user.getAddress().getCity();\n// java.lang.NullPointerException: Cannot invoke ... because the return value of ... is null",
+          "wordFamily": [
+            "pointer",
+            "null safety",
+            "optional"
+          ],
           "category": "runtime"
         },
         {
@@ -916,6 +937,22 @@ const computerEnglishData = {
           "chinese": "栈溢出",
           "pronunciation": "/stæk ˈoʊvərˌfloʊ/",
           "example": "Stack overflow error",
+          "imagery": "一摞盘子摞到了天花板：再放一个就倒了。递归不收敛，或者栈帧太大，把这块固定大小的调用栈写满了。",
+          "scenarios": [
+            {
+              "name": "递归失控",
+              "text": "缺少 base case 或递归链过长，典型报错：RangeError: Maximum call stack size exceeded / java.lang.StackOverflowError。"
+            },
+            {
+              "name": "栈上分配过大",
+              "text": "函数里开一个超大局部数组、函数嵌套过深，也会吃掉线程栈；栈空间通常只有 MB 级。"
+            },
+            {
+              "name": "排查与缓解",
+              "text": "先确认递归是否收敛，再考虑改迭代或调大线程栈（如 -Xss、ulimit -s）；调大只是治标。"
+            }
+          ],
+          "codeContext": "function recurse() { return recurse(); }\n// RangeError: Maximum call stack size exceeded",
           "category": "runtime"
         },
         {
@@ -1100,6 +1137,22 @@ const computerEnglishData = {
           "chinese": "总线错误",
           "pronunciation": "/bʌs ˈɛrər/",
           "example": "Bus error (core dumped)",
+          "imagery": "在共享走廊上敲了一扇不存在的门——硬件说：这个地址我送不到，于是进程收到 Bus error。",
+          "scenarios": [
+            {
+              "name": "常见原因",
+              "text": "未对齐访问（比如用 int* 读奇数地址）、指针偏移越界、访问已解映射的内存或 DMA 地址非法。"
+            },
+            {
+              "name": "与 Segmentation fault 的区别",
+              "text": "Segfault 多由内存保护/虚拟地址违规触发；Bus error 更偏硬件层面的地址或对齐错误，两者具体表现依架构而异。"
+            },
+            {
+              "name": "排查思路",
+              "text": "检查指针算术与对齐要求，缩小到具体那条访存指令；core dump + 调试器能直接看到出错地址。"
+            }
+          ],
+          "codeContext": "int *p = (int *)(buf + 1);  // 未对齐访问可能触发\n// Bus error (core dumped)",
           "category": "runtime"
         },
         {
@@ -1444,6 +1497,23 @@ const computerEnglishData = {
           "chinese": "栈溢出",
           "pronunciation": "/stæk ˈoʊvərˌfloʊ/",
           "example": "Stack overflow in recursion",
+          "imagery": "栈的容量是画好的：盘子摞过这条线就会倒——这就是 Stack Overflow，程序员最熟悉的报错之一。",
+          "scenarios": [
+            {
+              "name": "概念层",
+              "text": "栈溢出指调用栈超出了分配给线程的固定容量；不是内存整体不够，而是这块栈区不够。"
+            },
+            {
+              "name": "报错层",
+              "text": "Java 抛 java.lang.StackOverflowError，JavaScript 抛 RangeError，C/C++ 往往直接进程崩溃。"
+            }
+          ],
+          "codeContext": "fn f() { f() }\n// thread 'main' has overflowed its stack",
+          "wordFamily": [
+            "call stack",
+            "recursion",
+            "stack frame"
+          ],
           "category": "basics"
         },
         {
@@ -1452,6 +1522,28 @@ const computerEnglishData = {
           "chinese": "堆",
           "pronunciation": "/hiːp/",
           "example": "Objects are stored on the heap",
+          "imagery": "一大片可随手取用的空地：想要多大就喊一声 malloc / new，系统找一块给你；用完了要自己还（free / delete），不像栈那样自动收走。",
+          "scenarios": [
+            {
+              "name": "内存区域",
+              "text": "动态分配的内存区，生命周期由程序员决定；忘记释放在 C/C++ 里是 memory leak，反复分配释放还可能产生碎片。"
+            },
+            {
+              "name": "数据结构“堆”",
+              "text": "另一层意思是优先队列用的完全二叉树，parent 总是不大于（或小于）孩子，用于堆排序。它和内存里的 heap 只是同名，别混为一谈。"
+            },
+            {
+              "name": "带 GC 的语言",
+              "text": "Java/Go/JS 由垃圾回收器自动回收堆对象，但“可达即存活”，无意的强引用仍会造成逻辑上的泄漏。"
+            }
+          ],
+          "codeContext": "Node* p = new Node();\n// ... use p ...\ndelete p;  // 忘了这一步就是 memory leak",
+          "wordFamily": [
+            "heap snapshot",
+            "heap sort",
+            "off-heap memory",
+            "memory leak"
+          ],
           "category": "memory"
         },
         {
@@ -1460,6 +1552,27 @@ const computerEnglishData = {
           "chinese": "指针",
           "pronunciation": "/ˈpɔɪntər/",
           "example": "Dereference the pointer",
+          "imagery": "酒店房卡：它本身不是房间，只写着房间号；拿它可以改里面的东西，卡上写着 0 号（null）就根本开不了门。",
+          "scenarios": [
+            {
+              "name": "C / C++",
+              "text": "指针保存内存地址，&x 取地址、*p 解引用；链表、树等结构就是靠指针把节点串起来的。"
+            },
+            {
+              "name": "空指针与悬垂指针",
+              "text": "指向 null 就直接崩溃；指向已释放的内存则是悬垂指针（dangling pointer），行为未定义，比崩溃更难查。"
+            },
+            {
+              "name": "其他语言",
+              "text": "Java/C# 用引用（reference）替代裸指针，Python 里一切皆引用；概念相同，只是不能直接做地址算术。"
+            }
+          ],
+          "codeContext": "int x = 42;\nint *p = &x;\nprintf(\"%d\", *p);  // 42",
+          "wordFamily": [
+            "null pointer exception",
+            "dangling pointer",
+            "dereference"
+          ],
           "category": "memory"
         },
         {
@@ -2068,6 +2181,22 @@ const computerEnglishData = {
           "chinese": "守护进程",
           "pronunciation": "/ˈdiːmən/",
           "example": "Start the system daemon",
+          "imagery": "后台值夜班的保安：没有终端窗口，也不跟你对话，开机就躲在系统里等着响应请求或定时干活。",
+          "scenarios": [
+            {
+              "name": "Unix / Linux",
+              "text": "脱离控制终端、在后台长期运行的进程，名字常以 d 结尾：sshd、httpd、systemd。"
+            },
+            {
+              "name": "如何管理",
+              "text": "现代系统多用 systemd 的 service 单元管理；日志走 journald，用 systemctl status / journalctl -u 查看。"
+            },
+            {
+              "name": "Windows 与容器",
+              "text": "Windows 里对应“服务（service）”；容器里通常让主进程前台运行，由 Docker/K8s 当守护者。"
+            }
+          ],
+          "codeContext": "systemctl status sshd\njournalctl -u sshd -f",
           "category": "processes"
         },
         {
@@ -2140,6 +2269,22 @@ const computerEnglishData = {
           "chinese": "内存",
           "pronunciation": "/ˈmɛməri/",
           "example": "Allocate memory for the buffer",
+          "imagery": "书桌与书柜：桌面（内存）放正在用的书和纸，拿取快但地方有限；书柜（磁盘）容量大，但每次都要走过去拿。",
+          "scenarios": [
+            {
+              "name": "日常义 vs 计算机义",
+              "text": "日常 memory 是“记忆”；计算机里通常指 RAM——CPU 能直接寻址的临时工作区，断电即失。"
+            },
+            {
+              "name": "内存 vs 磁盘",
+              "text": "内存快、贵、易失；磁盘慢、便宜、持久。程序的数据要先装进内存，CPU 才能真正处理。"
+            },
+            {
+              "name": "栈和堆都在内存里",
+              "text": "stack 与 heap 是内存中的两块区域，管理方式不同；内存泄漏就是该还回去的空间一直被占着。"
+            }
+          ],
+          "codeContext": "free -h   # 看剩余内存\ntop       # 看进程占用",
           "category": "hardware"
         },
         {
@@ -2220,6 +2365,28 @@ const computerEnglishData = {
           "chinese": "缓存",
           "pronunciation": "/kæʃ/",
           "example": "Clear the DNS cache",
+          "imagery": "把常喝的杯子放在手边，而不是每次走到厨房柜子去拿。cache 就是给慢速来源准备的“近处小仓库”。",
+          "scenarios": [
+            {
+              "name": "CPU cache",
+              "text": "L1/L2/L3 比内存快一到两个数量级；能否命中决定性能，所以才有“数组比链表缓存友好”的说法。"
+            },
+            {
+              "name": "Web 缓存",
+              "text": "浏览器缓存、CDN、反向代理都靠 HTTP 头（Cache-Control / ETag）决定能不能复用旧结果。"
+            },
+            {
+              "name": "应用缓存",
+              "text": "Redis/Memcached 把热点数据挡在数据库前面；难点是 cache invalidation——数据更新后旧副本怎么失效。"
+            }
+          ],
+          "codeContext": "Cache-Control: public, max-age=3600\n// hit -> 直接返回；miss -> 回源并回填",
+          "wordFamily": [
+            "cache hit rate",
+            "cache miss",
+            "cache invalidation",
+            "cache stampede"
+          ],
           "category": "memory"
         },
         {
@@ -4124,6 +4291,22 @@ const computerEnglishData = {
           "chinese": "递归",
           "pronunciation": "/rɪˈkɜːrʒən/",
           "example": "Use recursion to solve this problem",
+          "imagery": "镜子对着镜子：一个问题不断照出自己的缩小版，直到照到一面普通镜子（基线条件）才停下，然后一层层把答案带回来。",
+          "scenarios": [
+            {
+              "name": "算法写法",
+              "text": "函数自己调用自己，必须有 base case（终止条件）且每次递归都向它靠近，否则调用栈会爆。"
+            },
+            {
+              "name": "编译与解析",
+              "text": "语法树的嵌套结构天然适合递归处理，典型例子是递归下降解析器（recursive descent parser）。"
+            },
+            {
+              "name": "工程权衡",
+              "text": "代码短但每层都有栈帧开销；深度不确定时可改成显式栈的迭代写法，尾递归能否优化取决于语言/运行时。"
+            }
+          ],
+          "codeContext": "function fact(n) {\n  return n <= 1 ? 1 : n * fact(n - 1);\n}",
           "category": "techniques"
         },
         {
@@ -4140,6 +4323,22 @@ const computerEnglishData = {
           "chinese": "哈希表",
           "pronunciation": "/hæʃ ˈteɪbl/",
           "example": "Store data in a hash table for O(1) lookup",
+          "imagery": "按座位号找书：把任意键丢进哈希函数算出一个位置，直接去那个格子取；两本书撞到同一格就叫冲突（collision）。",
+          "scenarios": [
+            {
+              "name": "数据结构",
+              "text": "把 key 映射到桶（bucket），理想情况下查找是 O(1)；实际速度取决于哈希函数质量与负载因子。"
+            },
+            {
+              "name": "冲突处理",
+              "text": "常见做法是链地址法或开放寻址；元素变多后触发 rehash 扩容，否则冲突飙升、性能退化。"
+            },
+            {
+              "name": "语言与系统",
+              "text": "Python 的 dict、Java 的 HashMap、Go 的 map 底层都是哈希表；Redis 的哈希结构也是同一思路。"
+            }
+          ],
+          "codeContext": "const map = new Map();\nmap.set('user:42', user);\nmap.get('user:42');",
           "category": "structures"
         },
         {
@@ -4156,6 +4355,32 @@ const computerEnglishData = {
           "chinese": "栈",
           "pronunciation": "/stæk/",
           "example": "Use a stack for LIFO operations",
+          "imagery": "一摞盘子：后放上去的盘子压在最上面，取的时候也只能从最上面拿——后进先出（LIFO）。push = 放一个盘子，pop = 拿走最上面那个。",
+          "scenarios": [
+            {
+              "name": "数据结构栈",
+              "text": "只能在栈顶 push / pop 的线性表，用于括号匹配、表达式求值，以及深度优先搜索（DFS）的显式栈。"
+            },
+            {
+              "name": "调用栈",
+              "text": "每次函数调用压入一个栈帧（stack frame），里面保存局部变量、参数和返回地址；函数返回时弹出。递归太深就会 Stack overflow。"
+            },
+            {
+              "name": "内存栈区",
+              "text": "线程私有的连续内存，分配与释放只是移动栈指针，速度比堆快但容量有限；超出容量触发 stack overflow，局部变量的生命周期随栈帧一起结束。"
+            },
+            {
+              "name": "日常义 vs 计算机义",
+              "text": "日常的 stack 只是“一摞、一堆”；计算机里强调“只能从顶端操作”的秩序，不是随便堆。"
+            }
+          ],
+          "codeContext": "stack.push(frame);\nconst top = stack.pop();\n// RangeError: Maximum call stack size exceeded",
+          "wordFamily": [
+            "call stack",
+            "stack frame",
+            "stack trace",
+            "stack overflow"
+          ],
           "category": "structures"
         },
         {
@@ -4164,6 +4389,28 @@ const computerEnglishData = {
           "chinese": "队列",
           "pronunciation": "/kjuː/",
           "example": "Implement a queue for BFS",
+          "imagery": "排队买咖啡：先来的人先被服务，后来的人只能站到队尾——先进先出（FIFO）。enqueue = 排到队尾，dequeue = 从队头离开。",
+          "scenarios": [
+            {
+              "name": "数据结构队列",
+              "text": "只允许尾部入队、头部出队；广度优先搜索（BFS）靠它逐层展开节点。"
+            },
+            {
+              "name": "消息队列",
+              "text": "生产者投递、消费者按顺序取走，用来削峰填谷、解耦服务；处理失败的消息可进死信队列（dead letter queue）。"
+            },
+            {
+              "name": "日常义 vs 计算机义",
+              "text": "日常的 queue 是“排队”，计算机里保留了这个顺序含义，但队伍里的“人”往往是任务或消息。"
+            }
+          ],
+          "codeContext": "queue.enqueue(job);\nconst job = queue.dequeue();",
+          "wordFamily": [
+            "message queue",
+            "deque",
+            "priority queue",
+            "dead letter queue"
+          ],
           "category": "structures"
         },
         {
@@ -13644,6 +13891,22 @@ const computerEnglishData = {
           "chinese": "调用栈",
           "pronunciation": "/kɔːl stæk/",
           "example": "Read the call stack bottom-up to find your own code.",
+          "imagery": "调试器右侧那一叠“返回地址”：main 在最底下，当前函数在最顶上。顺着它往上读，就是“我是怎么走到这儿的”。",
+          "scenarios": [
+            {
+              "name": "断点调试",
+              "text": "在最内层函数打断点，Call Stack 面板列出从入口到当前位置的完整路径，点任意一帧可跳到对应源码。"
+            },
+            {
+              "name": "栈帧内容",
+              "text": "每一帧保存该次调用的参数、局部变量和返回地址；函数返回时这一帧被弹出。"
+            },
+            {
+              "name": "异步的坑",
+              "text": "Promise/setTimeout 的回调可能看不到完整链条，需要开启 Async Stack Traces 才能跨异步边界追踪。"
+            }
+          ],
+          "codeContext": "function b() { debugger; }\nfunction a() { b(); }\na();  // call stack: b ← a ← main",
           "category": "debugging"
         },
         {
@@ -13708,6 +13971,22 @@ const computerEnglishData = {
           "chinese": "堆栈跟踪",
           "pronunciation": "/stæk treɪs/",
           "example": "The stack trace points to line 42 of the minified bundle.",
+          "imagery": "事故现场留下的脚印链：报错那一刻把调用栈拍成照片，一行一帧，顺着脚印就能找到出错的那行代码。",
+          "scenarios": [
+            {
+              "name": "读法",
+              "text": "从最上面的异常点往下看，找到第一个属于自己代码的帧；框架内部的几十帧通常可以直接略过。"
+            },
+            {
+              "name": "生产环境",
+              "text": "线上代码被压缩过，行号没意义；配合 sourcemap 才能还原到源文件。"
+            },
+            {
+              "name": "主动打印",
+              "text": "catch 里用 e.stack 能拿到完整字符串，写日志时比只记 e.message 有用得多。"
+            }
+          ],
+          "codeContext": "try { risky(); } catch (e) {\n  console.error(e.stack);\n}",
           "category": "console"
         },
         {
@@ -15868,6 +16147,22 @@ const computerEnglishData = {
           "chinese": "总线协议（AXI/AHB）",
           "pronunciation": "/bʌs ˈproʊtəkɔːl/",
           "example": "Implement the AXI bus protocol for the memory interface.",
+          "imagery": "一条共享走廊：所有部件都挂在同一条线上，谁要说话都得按规矩排队、报地址，免得大家同时喊谁也听不清。",
+          "scenarios": [
+            {
+              "name": "日常义 vs 计算机义",
+              "text": "日常 bus 是“公交车”；计算机里是共享的传输通道，一组成员共用它传递地址和数据。"
+            },
+            {
+              "name": "片内总线",
+              "text": "AXI / AHB 连接 CPU、内存控制器与外设；握手信号与突发传输（burst）决定吞吐。"
+            },
+            {
+              "name": "系统总线",
+              "text": "PCIe、USB 也是总线思路；访问了总线上不存在的设备或地址，就可能看到 Bus error。"
+            }
+          ],
+          "codeContext": "AXI 五通道：read address / read data / write address / write data / write response",
           "category": "interconnect"
         },
         {

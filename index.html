@@ -46,6 +46,7 @@
             <select id="learn-category-select">
               <option value="all">全部类别</option>
             </select>
+            <button class="insight-toggle" id="learn-insight-toggle" aria-pressed="false" title="只看带意象指引的词条">🧠 意象精选</button>
             <div class="mode-toggle" role="tablist" aria-label="学习模式">
               <button id="mode-card" class="active" data-mode="card" role="tab" aria-selected="true">🃏 卡片</button>
               <button id="mode-dictation" data-mode="dictation" role="tab" aria-selected="false">✏️ 听写</button>
@@ -72,7 +73,27 @@
               </div>
             </div>
           </div>
-          
+
+          <div class="insight-panel" id="insight-panel" hidden>
+            <div class="insight-panel-title">🧠 程序员语境 <span>意象 · 场景 · 代码</span></div>
+            <div class="insight-section">
+              <div class="insight-label">意象指引</div>
+              <p class="insight-imagery" id="insight-imagery"></p>
+            </div>
+            <div class="insight-section">
+              <div class="insight-label">常用场景</div>
+              <ol class="insight-scenarios" id="insight-scenarios"></ol>
+            </div>
+            <div class="insight-section" id="insight-code-block" hidden>
+              <div class="insight-label">代码 / 报错语境</div>
+              <pre class="insight-code"><code id="insight-code"></code></pre>
+            </div>
+            <div class="insight-section" id="insight-family-block" hidden>
+              <div class="insight-label">同根词族</div>
+              <div class="insight-family" id="insight-family"></div>
+            </div>
+          </div>
+
           <div class="card-actions">
             <button class="action-btn prev-btn" id="prev-btn">
               <span>⬅️</span> 上一个
@@ -137,9 +158,16 @@
       <section class="view browse-view" id="browse-view">
         <div class="browse-header">
           <h2>内容浏览</h2>
-          <div class="search-box">
-            <input type="text" id="search-input" placeholder="搜索英文、中文或拼音...">
-            <span class="search-icon">🔍</span>
+          <div class="browse-tools">
+            <div class="search-box">
+              <input type="text" id="search-input" placeholder="搜索英文、中文或拼音...">
+              <span class="search-icon">🔍</span>
+            </div>
+            <div class="error-lookup-box">
+              <input type="text" id="error-lookup-input" placeholder="粘贴报错反查术语，如 NullPointerException">
+              <button class="error-lookup-btn" id="error-lookup-btn" title="从报错信息反查术语">反查</button>
+            </div>
+            <button class="insight-toggle" id="browse-insight-toggle" aria-pressed="false" title="只看带意象指引的词条">🧠 意象精选</button>
           </div>
         </div>
         

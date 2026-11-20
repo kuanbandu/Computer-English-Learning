@@ -35,6 +35,7 @@
       this.srsState = this.loadSrs();
       this.currentIndex = 0;
       this.currentCategory = 'all';
+      this.insightOnly = false; // "意象精选" filter, shared by learn + browse views
       this.currentItems = this.buildSrsQueue(this.allItems);
       this.synth = window.speechSynthesis;
       this.isSpeaking = false;
@@ -72,6 +73,36 @@
         });
       });
       return items;
+    }
+
+    /** An item is "enriched" when it carries an imagery or scenario insight. */
+    hasInsight(item) {
+      return !!(item && (
+        (typeof item.imagery === 'string' && item.imagery.trim()) ||
+        (Array.isArray(item.scenarios) && item.scenarios.length > 0)
+      ));
+    }
+
+    /** Resolve a category id to flattened items, keeping the category labels. */
+    itemsForCategory(categoryId) {
+      if (categoryId === 'all') return this.allItems.slice();
+      const cat = this.data.categories.find(c => c.id === categoryId);
+      if (!cat) return [];
+      const ids = new Set(cat.items.map(i => i.id));
+      return this.allItems.filter(item => ids.has(item.id));
+    }
+
+    applyInsightFilter(items) {
+      return this.insightOnly ? items.filter(item => this.hasInsight(item)) : items.slice();
+    }
+
+    /** Shared markup for the "常用场景" list in the card panel and detail modal. */
+    scenarioListHtml(item) {
+      return (item.scenarios || []).map(s => {
+        const name = escapeHtml(s.name || '场景');
+        const text = escapeHtml(s.text || '');
+        return `<li><strong>${name}</strong>${text ? '：' + text : ''}</li>`;
+      }).join('');
     }
 
     loadFavorites() {
@@ -279,18 +310,17 @@
 
       categorySelect.addEventListener('change', (e) => {
         this.currentCategory = e.target.value;
-        if (this.currentCategory === 'all') {
-          this.currentItems = [...this.allItems];
-        } else {
-          this.currentItems = this.allItems.filter(item => {
-            const category = this.data.categories.find(c => c.id === this.currentCategory);
-            return category && category.items.some(i => i.id === item.id);
-          });
-        }
-        this.currentItems = this.buildSrsQueue(this.currentItems);
-        this.currentIndex = 0;
-        this.loadCard();
+        this.rebuildLearnQueue();
       });
+
+      const insightToggle = document.getElementById('learn-insight-toggle');
+      if (insightToggle) {
+        insightToggle.addEventListener('click', () => {
+          this.insightOnly = !this.insightOnly;
+          this.syncInsightToggles();
+          this.rebuildLearnQueue();
+        });
+      }
 
       document.getElementById('flip-btn').addEventListener('click', () => {
         const card = document.getElementById('learning-card');
@@ -357,6 +387,21 @@
           }
         });
       }
+    }
+
+    /** Rebuild the study queue after a category or "意象精选" filter change. */
+    rebuildLearnQueue() {
+      const items = this.applyInsightFilter(this.itemsForCategory(this.currentCategory));
+      this.currentItems = this.buildSrsQueue(items);
+      this.currentIndex = 0;
+      this.loadCard();
+    }
+
+    /** Keep both "意象精选" buttons in sync with the shared filter state. */
+    syncInsightToggles() {
+      document.querySelectorAll('.insight-toggle').forEach(btn => {
+        btn.setAttribute('aria-pressed', this.insightOnly ? 'true' : 'false');
+      });
     }
 
     /**
@@ -436,6 +481,7 @@
      * card is unflipped (i.e. on a fresh card or after a rating).
      */
     syncRatingBar() {
+      this.syncInsightPanel();
       const flipped = document.getElementById('learning-card').classList.contains('flipped');
       const bar = document.getElementById('rating-bar');
       if (this.currentMode !== 'card') {
@@ -443,6 +489,19 @@
         return;
       }
       bar.hidden = !flipped;
+    }
+
+    /**
+     * The insight panel is a detail view shown under the flashcard once the
+     * card is flipped. It keeps the 300px card layout intact while giving
+     * enriched terms room for imagery, scenarios and code/error context.
+     */
+    syncInsightPanel() {
+      const panel = document.getElementById('insight-panel');
+      if (!panel) return;
+      const item = this.currentItems[this.currentIndex];
+      const flipped = document.getElementById('learning-card').classList.contains('flipped');
+      panel.hidden = !(this.currentMode === 'card' && flipped && this.hasInsight(item));
     }
 
     /**
@@ -506,6 +565,29 @@
         document.getElementById('card-pronunciation').textContent = item.pronunciation;
         document.getElementById('card-chinese').textContent = item.chinese;
         document.getElementById('card-example').textContent = item.example;
+
+        // Fill the optional programmer-context panel. It is revealed only
+        // after the card is flipped (see syncInsightPanel).
+        const insightPanel = document.getElementById('insight-panel');
+        if (insightPanel) {
+          document.getElementById('insight-imagery').textContent = item.imagery || '';
+          document.getElementById('insight-scenarios').innerHTML = this.scenarioListHtml(item);
+
+          const codeBlock = document.getElementById('insight-code-block');
+          const codeText = document.getElementById('insight-code');
+          codeBlock.hidden = !item.codeContext;
+          if (item.codeContext) codeText.textContent = item.codeContext;
+
+          const familyBlock = document.getElementById('insight-family-block');
+          const familyBox = document.getElementById('insight-family');
+          const family = Array.isArray(item.wordFamily) ? item.wordFamily : [];
+          familyBlock.hidden = family.length === 0;
+          familyBox.innerHTML = family.map(w =>
+            `<span class="insight-family-chip">${escapeHtml(w)}</span>`
+          ).join('');
+
+          insightPanel.hidden = true;
+        }
 
         const favoriteBtn = document.getElementById('favorite-btn');
         if (this.favorites.includes(item.id)) {
@@ -730,42 +812,116 @@
         });
       });
 
-      document.getElementById('search-input').addEventListener('input', (e) => {
-        this.searchItems(e.target.value);
-      });
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.addEventListener('input', (e) => this.searchItems(e.target.value));
 
-      this.renderBrowseItems(this.allItems);
+      const browseToggle = document.getElementById('browse-insight-toggle');
+      if (browseToggle) {
+        browseToggle.addEventListener('click', () => {
+          this.insightOnly = !this.insightOnly;
+          this.syncInsightToggles();
+          this.refreshBrowse();
+        });
+      }
+
+      // Reverse lookup: paste an English error and find the terms inside it.
+      const lookupInput = document.getElementById('error-lookup-input');
+      const lookupBtn = document.getElementById('error-lookup-btn');
+      if (lookupBtn) {
+        lookupBtn.addEventListener('click', () => this.lookupErrorText(lookupInput ? lookupInput.value : ''));
+      }
+      if (lookupInput) {
+        lookupInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            this.lookupErrorText(lookupInput.value);
+          }
+        });
+      }
+
+      this.renderBrowseItems(this.applyInsightFilter(this.allItems));
     }
 
     filterBrowseItems(category) {
-      let items;
-      if (category === 'all') {
-        items = this.allItems;
+      this.renderBrowseItems(this.applyInsightFilter(this.itemsForCategory(category)));
+    }
+
+    /** Re-apply the current tab + search query after toggling a filter. */
+    refreshBrowse() {
+      const searchInput = document.getElementById('search-input');
+      const query = searchInput ? searchInput.value : '';
+      if (query.trim()) {
+        this.searchItems(query);
       } else {
-        const cat = this.data.categories.find(c => c.id === category);
-        items = cat ? cat.items.map(item => ({
-          ...item,
-          categoryName: cat.name,
-          categoryNameCN: cat.nameCN
-        })) : [];
+        const activeTab = document.querySelector('#category-tabs .tab-btn.active');
+        this.filterBrowseItems(activeTab ? activeTab.dataset.category : 'all');
       }
-      this.renderBrowseItems(items);
     }
 
     searchItems(query) {
       if (!query.trim()) {
-        const activeTab = document.querySelector('.tab-btn.active');
+        const activeTab = document.querySelector('#category-tabs .tab-btn.active');
         this.filterBrowseItems(activeTab ? activeTab.dataset.category : 'all');
         return;
       }
 
       const lowerQuery = query.toLowerCase();
-      const filtered = this.allItems.filter(item => 
+      const pool = this.applyInsightFilter(this.allItems);
+      const filtered = pool.filter(item =>
         item.english.toLowerCase().includes(lowerQuery) ||
         item.chinese.includes(query) ||
-        item.pronunciation.toLowerCase().includes(lowerQuery)
+        item.pronunciation.toLowerCase().includes(lowerQuery) ||
+        (typeof item.imagery === 'string' && item.imagery.includes(query))
       );
       this.renderBrowseItems(filtered);
+    }
+
+    /**
+     * Split an error message / identifier into lower-case words.
+     * "NullPointerException: StackOverflowError" ->
+     *   ["null", "pointer", "exception", "stack", "overflow", "error"]
+     */
+    tokenizeErrorText(text) {
+      return String(text || '')
+        .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2')
+        .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+        .toLowerCase()
+        .match(/[a-z0-9]+/g) || [];
+    }
+
+    /**
+     * Error-driven lookup: score every term by how many words of the pasted
+     * error it shares, with a bonus for a direct phrase hit. Results appear
+     * in the browse grid, richest match first.
+     */
+    lookupErrorText(raw) {
+      const stopWords = new Set(['the', 'a', 'an', 'at', 'in', 'of', 'to', 'is', 'are',
+        'was', 'were', 'on', 'for', 'with', 'and', 'or', 'from', 'this', 'that',
+        'as', 'by', 'not', 'has', 'have', 'its']);
+      const tokens = this.tokenizeErrorText(raw).filter(t => t.length > 2 && !stopWords.has(t));
+      if (tokens.length === 0) {
+        this.showToast('请输入英文报错内容');
+        return;
+      }
+
+      const tokenSet = new Set(tokens);
+      const lowerRaw = String(raw || '').toLowerCase();
+      const matches = this.allItems.map(item => {
+        const itemTokens = new Set(this.tokenizeErrorText(item.english + ' ' + item.chinese));
+        let score = 0;
+        tokenSet.forEach(t => { if (itemTokens.has(t)) score++; });
+        if (item.english.length >= 4 && lowerRaw.includes(item.english.toLowerCase())) score += 3;
+        if (item.chinese && lowerRaw.includes(item.chinese.toLowerCase())) score += 2;
+        return { item, score };
+      }).filter(x => x.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map(x => x.item);
+
+      const visible = this.applyInsightFilter(matches);
+      this.renderBrowseItems(visible);
+      this.showToast(visible.length
+        ? `从报错匹配到 ${visible.length} 个术语（按相关度排序）`
+        : '没有匹配的术语，试试更短的关键词');
     }
 
     renderBrowseItems(items) {
@@ -789,7 +945,10 @@
           </div>
           <div class="item-chinese">${escapeHtml(item.chinese)}</div>
           <div class="item-pronunciation">${escapeHtml(item.pronunciation)}</div>
-          <span class="item-category">${escapeHtml(item.categoryNameCN)}</span>
+          <div class="item-meta">
+            <span class="item-category">${escapeHtml(item.categoryNameCN)}</span>
+            ${this.hasInsight(item) ? '<span class="insight-badge">🧠 意象</span>' : ''}
+          </div>
         </div>
       `).join('');
 
@@ -828,6 +987,21 @@
             <span class="label">示例:</span>
             <code>${escapeHtml(item.example)}</code>
           </div>
+          ${this.hasInsight(item) ? `
+          <div class="modal-insight">
+            <div class="modal-insight-title">🧠 程序员语境</div>
+            <div class="modal-insight-label">意象指引</div>
+            <p class="modal-insight-imagery">${escapeHtml(item.imagery || '')}</p>
+            ${(item.scenarios || []).length ? `
+            <div class="modal-insight-label">常用场景</div>
+            <ol class="modal-insight-scenarios">${this.scenarioListHtml(item)}</ol>` : ''}
+            ${item.codeContext ? `
+            <div class="modal-insight-label">代码 / 报错语境</div>
+            <pre class="modal-insight-code"><code>${escapeHtml(item.codeContext)}</code></pre>` : ''}
+            ${Array.isArray(item.wordFamily) && item.wordFamily.length ? `
+            <div class="modal-insight-label">同根词族</div>
+            <div class="insight-family">${item.wordFamily.map(w => `<span class="insight-family-chip">${escapeHtml(w)}</span>`).join('')}</div>` : ''}
+          </div>` : ''}
           <button class="speak-btn-large" data-action="speak">
             <span>🔊</span> 朗读
           </button>
@@ -881,7 +1055,10 @@
           </div>
           <div class="item-chinese">${escapeHtml(item.chinese)}</div>
           <div class="item-pronunciation">${escapeHtml(item.pronunciation)}</div>
-          <span class="item-category">${escapeHtml(item.categoryNameCN)}</span>
+          <div class="item-meta">
+            <span class="item-category">${escapeHtml(item.categoryNameCN)}</span>
+            ${this.hasInsight(item) ? '<span class="insight-badge">🧠 意象</span>' : ''}
+          </div>
           <button class="remove-favorite" data-id="${escapeHtml(item.id)}">❌</button>
         </div>
       `).join('');
@@ -1242,6 +1419,8 @@
       border-radius: 1rem;
       padding: 2rem;
       max-width: 500px;
+      max-height: 88vh;
+      overflow-y: auto;
       width: 90%;
       position: relative;
       animation: slideUp 0.3s ease;
@@ -1287,6 +1466,60 @@
     .modal-content .example code {
       color: var(--secondary);
       font-family: monospace;
+    }
+
+    .modal-insight {
+      background: var(--background);
+      border-left: 3px solid var(--primary);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-insight-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.6rem;
+    }
+
+    .modal-insight-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0.7rem 0 0.3rem;
+    }
+
+    .modal-insight-imagery {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    .modal-insight-scenarios {
+      margin: 0;
+      padding-left: 1.2rem;
+      font-size: 0.8rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+    .modal-insight-scenarios strong {
+      color: var(--text-primary);
+    }
+
+    .modal-insight-code {
+      margin: 0;
+      padding: 0.7rem;
+      background: var(--surface);
+      border-radius: 0.375rem;
+      font-family: monospace;
+      font-size: 0.75rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: var(--text-secondary);
     }
     
     .speak-btn-large {

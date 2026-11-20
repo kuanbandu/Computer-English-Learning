@@ -16,7 +16,7 @@ python -m http.server 8000
 # or simply open index.html in a browser
 ```
 
-**No tests or build process exist.**
+**Tests**: `node scripts/validate-data.js` (data + asset integrity) and `node scripts/test-srs.js` (SRS unit tests). CI also runs `node --check` on all JS files.
 
 ## Project Structure
 
@@ -110,7 +110,12 @@ const computerEnglishData = {
       chinese: "切换目录",
       pronunciation: "/siː diː/",
       example: "cd /home/user",
-      category: "navigation"
+      category: "navigation",
+      // Optional "programmer context" fields — see CONTRIBUTING.md
+      imagery: "一条走廊，你只能沿着它走到某个房间。",
+      scenarios: [{ name: "场景名", text: "这个场景下它指什么" }],
+      codeContext: "cd /home/user",
+      wordFamily: ["pwd", "ls"]
     }]
   }]
 };
@@ -122,8 +127,14 @@ const computerEnglishData = {
 - **New view**: Add `<section class="view">` in HTML, nav button with `data-view`
 - **New data**: Add to `computerEnglishData.categories` in `content.js`
 
+### Programmer-context insights
+- `hasInsight(item)` checks the optional `imagery` / `scenarios` fields
+- `applyInsightFilter(items)` implements the shared "意象精选" toggle (`this.insightOnly`) in both learn and browse views
+- `syncInsightPanel()` reveals `#insight-panel` only when a card is flipped in card mode
+- `lookupErrorText(raw)` tokenizes pasted errors (including camelCase identifiers) and ranks terms in the browse grid
+
 ### State Management
-- Class instance properties: `this.favorites`, `this.learned`
+- Class instance properties: `this.favorites`, `this.learned`, `this.insightOnly`
 - Persist to LocalStorage with JSON
 - No external state libraries
 
